@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Mat & Vin – Verum Vinum</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwindcss.config = {
+      theme: { extend: {
+        colors: { wine: { 50:'#fdf2f4', 100:'#fce7eb', 200:'#f9d0d9', 300:'#f5a9ba', 400:'#ee7895', 500:'#e44d73', 600:'#d12a5b', 700:'#b01e49', 800:'#8a1a3d', 900:'#6e1735', 950:'#3f0819' }, cream: { 50:'#fefdf8', 100:'#fdf9ed' } },
+        fontFamily: { serif: ['"Playfair Display"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'] }
+      }}
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    html { -webkit-tap-highlight-color: transparent; }
+    a, button { touch-action: manipulation; }
+    details summary { cursor: pointer; list-style: none; }
+    details summary::-webkit-details-marker { display: none; }
+    details[open] .arrow { transform: rotate(180deg); }
+  </style>
+</head>
+<body class="text-stone-800 font-sans antialiased min-h-screen bg-cream-50">
+
+  <nav class="bg-wine-950 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3"><img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-8 brightness-0 invert"></a>
+      <div class="flex items-center gap-6">
+        <a href="index.html#producenter" class="text-sm text-white/70 hover:text-white tracking-wider uppercase font-medium hidden sm:block">Producenter</a>
+        <a href="sok.html" class="text-sm text-white/70 hover:text-white tracking-wider uppercase font-medium hidden sm:block">Sök</a>
+        <a href="index.html" class="text-sm text-white/80 hover:text-white tracking-wider uppercase font-medium">&larr; Hem</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="relative py-20 overflow-hidden" style="background: linear-gradient(135deg, rgba(110,23,53,0.5), rgba(160,50,80,0.4)), url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920&q=80') center/cover;">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <nav class="text-sm text-white/60 mb-6"><a href="index.html" class="hover:text-white">Hem</a> <span class="mx-2">/</span> <span class="text-white">Mat & Vin</span></nav>
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl text-white mb-4">Mat & Vin</h1>
+      <p class="text-white/80 text-lg font-light max-w-2xl mx-auto">Rustika recept matchade med druva och vinstil. Lättlagat, smakfullt och perfekt tillsammans med våra viner.</p>
+      <div class="flex flex-wrap justify-center gap-3 mt-8">
+        <a href="#mousserande" class="px-4 py-2 bg-white/20 text-white rounded-lg text-sm hover:bg-white/30 transition-colors backdrop-blur-sm">Mousserande</a>
+        <a href="#rose" class="px-4 py-2 bg-white/20 text-white rounded-lg text-sm hover:bg-white/30 transition-colors backdrop-blur-sm">Rosé</a>
+        <a href="#vitt" class="px-4 py-2 bg-white/20 text-white rounded-lg text-sm hover:bg-white/30 transition-colors backdrop-blur-sm">Vita viner</a>
+        <a href="#rott" class="px-4 py-2 bg-white/20 text-white rounded-lg text-sm hover:bg-white/30 transition-colors backdrop-blur-sm">Röda viner</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="max-w-6xl mx-auto px-6 lg:px-8 py-12">
+
+
+    <section id="mousserande" class="mb-20">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="text-4xl">🥂</span>
+        <div>
+          <h2 class="font-serif text-3xl sm:text-4xl text-stone-900">Mousserande</h2>
+          <p class="text-stone-500 font-light">Till torra, krispiga mousserande viner & Champagne</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&q=80" alt="Gougères – Franska ostpuffar" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Gougères – Franska ostpuffar</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Klassiska franska ostpuffar med gruyère, krispiga utanpå och mjuka inuti. Perfekt tilltugg till ett glas kall Champagne.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">1 dl vatten, 1 dl mjölk, 100 g smör, 1 krm salt, 1,5 dl vetemjöl, 4 ägg, 150 g riven gruyère, svartpeppar, muskotnöt</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Ugn 200°C. Koka upp vatten, mjölk, smör och salt. Rör ner mjöl, arbeta till klump. Svalna 5 min, rör ner ägg ett i taget. Blanda ner ost och kryddor. Klicka ut på plåt. Grädda 20–25 min.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Champagnens bubblor och syra skär igenom den smöriga degen och smältande gruyèren. Saltigheten lyfter vinets frukt.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80" alt="Crostini med räkor, citron och dill" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Crostini med räkor, citron och dill</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Knapriga brödskivor toppade med sauterade räkor, färsk citron och dill. Medelhavet möter Skandinavien.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">Surdegsbaguette, 300 g räkor, smör, olivolja, vitlök, citron, dill, crème fraîche, flingsalt</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Rosta bröd i ugn 200°C. Stek räkor i smör 2 min. Tillsätt vitlök. Släck med citronsaft, vänd ner dill. Bred crème fraîche på bröd, toppa med räkor och dill.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Torr Champagne och skaldjur är tidlöst. Mineralitet och syra speglar räkornas sälta, bubblorna lyfter smakerna.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1546549032-9571cd6b27df?w=600&q=80" alt="Stekt potatis med gräddfil och forellrom" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Stekt potatis med gräddfil och forellrom</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Knaperstekt potatis med kall gräddfil och glittrande forellrom – lyxig vardagsmat som är löjligt enkel.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">800 g fast potatis (kokt), 3 msk smör, olivolja, flingsalt, 2 dl gräddfil, 80 g forellrom, gräslök</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Skär potatis i halvor. Stek i smör 5–7 min per sida tills gyllene. Salta med flingsalt. Klicka gräddfil och forellrom ovanpå. Toppa med gräslök.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Salt, fett och bubblor – den magiska triangeln. Forellrommens umami får vinets frukt att sjunga.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+      </div>
+    </section>
+
+    <section id="rose" class="mb-20">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="text-4xl">🌸</span>
+        <div>
+          <h2 class="font-serif text-3xl sm:text-4xl text-stone-900">Rosé</h2>
+          <p class="text-stone-500 font-light">Till torra, eleganta roséer</p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1572453800999-e8d2d1589b7c?w=600&q=80" alt="Ratatouille à la rustique" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Ratatouille à la rustique</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Rustik version av den provensalska klassikern med stora bitar sommargrönsaker och tomatsås.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">Aubergine, zucchini, paprikor, lök, vitlök, krossade tomater, olivolja, tomatpuré, timjan, basilika, rödvinsvinäger</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Ugn 220°C. Rosta grönsaker 25 min. Fräs lök, vitlök, tomatpuré. Tillsätt tomater och timjan, puttra 10 min. Vänd ner rostade grönsaker. Toppa med basilika.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Rosé och ratatouille delar samma hem – Provence. Vinets bärtoner och syra möter tomatens sötma perfekt.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=600&q=80" alt="Bruschetta med tomat, burrata och pesto" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Bruschetta med tomat, burrata och pesto</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Grillat surdegsbröd med solgyllene tomater, krämig burrata och hemmagjord basilikapesto.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">Surdegsbröd, mogna tomater, burrata, basilika, pinjenötter, parmesan, vitlök, olivolja, flingsalt</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Mixa pesto av basilika, pinjenötter, parmesan, vitlök och olivolja. Grilla bröd, gnid med vitlök. Bred pesto, toppa med tomater och burrata. Ringla olivolja.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Roséns syra möter tomaternas sötma, burratans krämighet mildras av vinets lätta kropp.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?w=600&q=80" alt="Grillad halloumi med vattenmelon och mynta" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Grillad halloumi med vattenmelon och mynta</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Fräsch sallad med gyllene grillad halloumi, söt vattenmelon och kylande mynta.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">Halloumi, vattenmelon, rödlök, oliver, mynta, ruccola, olivolja, lime, honung</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Vispa dressing av olivolja, lime och honung. Grilla halloumi 2 min/sida. Lägg ut ruccola, vattenmelon, halloumi. Strö oliver och mynta. Ringla dressing.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Roséns svalka speglar salladens fräschör, vinets sötma harmonierar med vattenmelonen.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+      </div>
+    </section>
+
+    <section id="vitt" class="mb-20">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="text-4xl">🍇</span>
+        <div>
+          <h2 class="font-serif text-3xl sm:text-4xl text-stone-900">Vita viner</h2>
+          <p class="text-stone-500 font-light">Uppdelat efter druva och stil</p>
+        </div>
+      </div>
+
+
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6 mt-8">
+          <div class="h-px flex-1 bg-stone-200"></div>
+          <h3 class="font-serif text-2xl text-stone-900">Chardonnay <span class="text-stone-400 text-lg font-light">– Bourgogne-stil</span></h3>
+          <div class="h-px flex-1 bg-stone-200"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=600&q=80" alt="Ugnsbakad kyckling med dragon och crème fraîche" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Ugnsbakad kyckling med dragon och crème fraîche</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Fransk vardagsrätt med kycklingklubbor, dragon och crème fraîche. Smakerna mognar vackert i ugnen.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">4 kycklingklubbor, crème fraîche, dijonsenap, dragon, vitlök, smör, vitt vin, citron</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Ugn 200°C. Bryn kyckling i smör. Blanda crème fraîche, senap, vitlök, dragon och citron. Häll vin i pannan. Bred blandningen över kycklingen. Baka 35–40 min.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Krämigheten skapar en perfekt bro till burgundisk Chardonnays textur. Dragonens anissmak lyfter vinets mineralitet.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=600&q=80" alt="Pilgrimsmusslor med brynt smör och hasselnötter" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Pilgrimsmusslor med brynt smör och hasselnötter</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Stora pilgrimsmusslor steks i brynt smör, toppas med rostade hasselnötter och citron. Under 15 minuter.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">8 pilgrimsmusslor, 60 g smör, hasselnötter, kapris, citron, persilja</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Torka musslor, krydda. Stek i smör 2 min/sida. Ta upp. Bryn smör med hasselnötter. Tillsätt kapris. Citronsaft och persilja. Skeda över musslorna.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Musslors sötma och brynt smörs nötiga karaktär är klassiskt med Bourgogne Chardonnay. Hasselnötterna speglar fatkaraktären.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80" alt="Krämig svamppasta med timjan och parmesan" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Krämig svamppasta med timjan och parmesan</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Rustik pasta med blandad svamp, vitlök, timjan, grädde och parmesan. Redo på 25 minuter.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">400 g tagliatelle, 400 g blandad svamp, smör, olivolja, vitlök, vitt vin, grädde, parmesan, timjan</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Koka pasta. Stek svamp i smör. Tillsätt vitlök och timjan. Häll i vin, reducera. Tillsätt grädde. Vänd ner pasta och parmesan.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Svampens umami och gräddens krämighet är klassiskt med vit Bourgogne. Parmesanens sälta framhäver vinets komplexitet.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+        </div>
+      </div>
+
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6 mt-8">
+          <div class="h-px flex-1 bg-stone-200"></div>
+          <h3 class="font-serif text-2xl text-stone-900">Riesling <span class="text-stone-400 text-lg font-light">– Torr (Trocken)</span></h3>
+          <div class="h-px flex-1 bg-stone-200"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=600&q=80" alt="Stekt öring med citron, kapris och brynt smör" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Stekt öring med citron, kapris och brynt smör</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Öringfiléer stekas krispigt i smör med kapris och citron. Tidlös fiskrätt, redo på 15 min.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">4 öringfiléer, smör, kapris, citron, persilja, salt, peppar, mjöl</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Torka fisk, pudra med mjöl. Stek skinnsidan 3–4 min. Vänd, stek 2 min. Bryn smör, fräs kapris. Pressa citronsaft, strö persilja.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Öringens rena smak lyfts av torr Rieslings syra och mineralitet. Citronen speglar vinets citruskaraktär.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1599921841143-819065a55cc6?w=600&q=80" alt="Sauerkraut med fläskkorv och senap" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Sauerkraut med fläskkorv och senap</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Klassisk tysk husmanskost – surkål med enbär och kummin, grov fläskkorv och skarp senap.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">Sauerkraut, 4 fläskkorvar, lök, gåsfett, vitt vin, enbär, kummin, lagerblad, potatis, senap</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Fräs lök i gåsfett. Tillsätt sauerkraut, enbär, kummin, lagerblad och vin. Puttra 30 min. Lägg korvar ovanpå, 15–20 min. Servera med potatis och senap.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Sauerkrautens syra och enbärens kryddighet är klassiskt med Mosel-Riesling. Vinets syra skär igenom korvens fett.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1515516969-d4008cc6241a?w=600&q=80" alt="Sparris med skirat smör och hackade ägg" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Sparris med skirat smör och hackade ägg</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Grön eller vit sparris med skirat smör och hackade kokta ägg. Enklare och bättre behövs inte.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">500 g sparris, 100 g smör, 3 ägg (hårdkokta), gräslök, persilja, flingsalt, citron</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Koka sparris al dente. Smält och skira smöret. Hacka äggen grovt. Lägg sparris på fat, ringla skirat smör. Strö ägg, gräslök, persilja. Citronsaft.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Torr Riesling är ett av få viner som fungerar med sparris. Syra och mineralitet balanserar de gröna tonerna.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+        </div>
+      </div>
+
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6 mt-8">
+          <div class="h-px flex-1 bg-stone-200"></div>
+          <h3 class="font-serif text-2xl text-stone-900">Riesling <span class="text-stone-400 text-lg font-light">– Kabinett / Feinherb</span></h3>
+          <div class="h-px flex-1 bg-stone-200"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?w=600&q=80" alt="Kycklingwok med chili, ingefära och lime" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Kycklingwok med chili, ingefära och lime</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Snabb kycklingwok med chili, ingefära, lime och koriander. Redo på 20 minuter.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">500 g kyckling, olja, paprika, sockerärtor, vitlök, ingefära, chili, fisksås, soja, lime, socker, koriander, jasminris</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Koka ris. Stek kyckling i het wok. Fräs vitlök, ingefära, chili. Tillsätt grönsaker. Lägg tillbaka kyckling med fisksås, soja, lime och socker. Vänd ner koriander.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Halvtorr Riesling tämjer chilin och skapar balans mot hettan. Limen speglar vinets syra.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1452195100486-9cc805987862?w=600&q=80" alt="Ugnsbakad camembert med honung och valnötter" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Ugnsbakad camembert med honung och valnötter</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Hel camembert som bakas flytande, toppas med honung, valnötter och timjan. 15 minuter.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">1 camembert, honung, valnötter, timjan, vitlök, svartpeppar, surdegsbröd</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Ugn 200°C. Snitt i osten, tryck ner vitlök. Strö valnötter och timjan. Baka 12–15 min. Ringla honung. Servera med bröd.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Camembertens krämighet och honungens sötma gifter sig med Kabinett Feinherbs restsötma. Syran skär igenom fettet.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+        </div>
+      </div>
+
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6 mt-8">
+          <div class="h-px flex-1 bg-stone-200"></div>
+          <h3 class="font-serif text-2xl text-stone-900">Grüner Veltliner <span class="text-stone-400 text-lg font-light">– Torr, österrikisk stil</span></h3>
+          <div class="h-px flex-1 bg-stone-200"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1599921841143-819065a55cc6?w=600&q=80" alt="Wiener Schnitzel med potatissallad" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Wiener Schnitzel med potatissallad</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Österrikes nationalrätt: tunn kalvschnitzel, gyllene panering, serverad med ljummen potatissallad.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">4 kalvschnitzlar, mjöl, ägg, ströbröd, smör, rapsolja, citron. Potatissallad: potatis, rödlök, vinäger, olja, senap, buljong, gräslök</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Koka och skiva potatis, blanda med vinägerdressing. Platta schnitzlar, panera i mjöl-ägg-ströbröd. Stek i rikligt smör/olja 2–3 min/sida. Servera med potatissallad och citron.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Wiener Schnitzel och Grüner Veltliner – gastronomins tidlösa par. Pepprig kryddighet och syra skär igenom fettet.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=600&q=80" alt="Sparrisrisotto med citronskal och pecorino" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Sparrisrisotto med citronskal och pecorino</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Krämig risotto med grön sparris, citronskal och pecorino. Frisk, grön och full av smak.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">Risottoris, grön sparris, grönsaksbuljong, lök, vitlök, vitt vin, pecorino, smör, olivolja, citronskal</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Fräs lök och vitlök. Fräs ris glasigt. Häll i vin. Tillsätt buljong slev för slev i 15 min. Tillsätt sparris, fortsätt 5 min. Rör ner smör, pecorino och citronskal.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Sparris och Grüner Veltliner sjunger tillsammans – pepprigheten speglar sparrisens vegetala toner. Citronen framhäver vinets fräschör.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="rott" class="mb-20">
+      <div class="flex items-center gap-4 mb-8">
+        <span class="text-4xl">🍷</span>
+        <div>
+          <h2 class="font-serif text-3xl sm:text-4xl text-stone-900">Röda viner</h2>
+          <p class="text-stone-500 font-light">Uppdelat efter druva och stil</p>
+        </div>
+      </div>
+
+
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6 mt-8">
+          <div class="h-px flex-1 bg-stone-200"></div>
+          <h3 class="font-serif text-2xl text-stone-900">Nebbiolo <span class="text-stone-400 text-lg font-light">– Piemonte-stil (Barolo/Barbaresco)</span></h3>
+          <div class="h-px flex-1 bg-stone-200"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1534939561126-855b8675edd7?w=600&q=80" alt="Brasato al Barolo – Långbrässerad oxbringa" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Brasato al Barolo – Långbrässerad oxbringa</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Piemontesisk klassiker – oxbringa som smälter samman med Barolo-vin under flera timmars brässering.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">1,2 kg oxbringa, 1 flaska Nebbiolo, morötter, selleri, lök, vitlök, lagerblad, kryddnejlikor, kanel, tomatpuré, olivolja, smör</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Marinera oxbringa i vin med grönsaker och kryddor över natten. Bryn köttet. Fräs grönsaker. Tillsätt tomatpuré och marinadvätska. Ugn 150°C i 3–3,5 timmar. Mixa sås, skiva kött. Servera med polenta.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Barolos kraftfulla tanniner kräver fett, smakstarkt kött. Vinets rosor och tjära smälter samman med den vinbaserade såsen.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1476124369491-e7addf5db371?w=600&q=80" alt="Risotto al Tartufo – Tryffelrisotto" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Risotto al Tartufo – Tryffelrisotto</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Krämig risotto med tryffel – enkel i grunden men extraordinär i smak. Piemontesisk tradition.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">320 g risottoris, kycklingbuljong, lök, vitt vin, Parmigiano, smör, olivolja, svart tryffel eller tryffelolja</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Fräs lök i smör/olja. Fräs ris. Häll i vin. Tillsätt buljong slev för slev i 16–18 min. Ta från värmen, rör ner smör och parmesan. Riv tryffel ovanpå.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Tryffelns jordiga arom är en av de mest klassiska matchningarna till Nebbiolo. Alba är centrum för både Barolo och vita tryfflar.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&q=80" alt="Tajarin med korvragù – Piemontesisk äggpasta" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Tajarin med korvragù – Piemontesisk äggpasta</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Piemontes egen äggpasta med rustik ragù på italiensk korv, rosmarin och rödvin.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">Tipo 00-mjöl, äggulor, salsiccia, lök, morot, selleri, vitlök, rött vin, krossade tomater, rosmarin, Parmigiano</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Gör deg av mjöl och äggulor, vila 30 min. Kavla tunt, skär i smala strimlor. Bryn söndersmulad korv. Fräs grönsaker. Vin, tomater, rosmarin – puttra 30 min. Koka pasta 2–3 min. Blanda med ragù och parmesan.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Den äggrika pastans smöriga karaktär parar sig med Nebbiolos komplexa tanniner. Ragùns kryddiga smak ekar vinets toner.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+        </div>
+      </div>
+
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6 mt-8">
+          <div class="h-px flex-1 bg-stone-200"></div>
+          <h3 class="font-serif text-2xl text-stone-900">Pinot Noir <span class="text-stone-400 text-lg font-light">– Bourgogne-stil</span></h3>
+          <div class="h-px flex-1 bg-stone-200"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80" alt="Coq au Vin – Kycklinggryta i rödvin" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Coq au Vin – Kycklinggryta i rödvin</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Frankrikes mest älskade gryta – kyckling i rödvin med svamp, lök och bacon.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">1 kyckling, bacon, champinjoner, silverlökar, vitlök, Pinot Noir, buljong, tomatpuré, smör, mjöl, timjan, lagerblad</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Stek bacon krispigt. Bryn kyckling. Fräs svamp och lök. Strö mjöl, tillsätt tomatpuré, vin och buljong. Lägg tillbaka allt. Sjud 45–60 min. Koka in sås. Servera med potatis.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Pinot Noirs elegans speglar grytan där samma druva utgör basen. Svampens umami och baconets rökighet lyfts av vinets komplexitet.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Ankbröst med körsbärssås" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Ankbröst med körsbärssås</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Krispigt ankbröst med glansig körsbärssås – elegant men förvånansvärt enkel.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">2 ankbröst, körsbär, buljong, Pinot Noir, honung, rödvinsvinäger, schalottenlök, timjan, smör</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Rista skinnsidan. Stek skinnsidan ner i kall panna 12–15 min. Vänd, stek 3–4 min. Vila 10 min. Gör sås: fräs schalottenlök, vin, körsbär, buljong, honung, vinäger. Koka 8–10 min. Skiva anka, ringla sås.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Pinot Noir och anka – en kärlekshistoria. Körsbärssåsen ekar vinets toner, syran skär igenom ankfettet.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1506354666786-959d6d497f1a?w=600&q=80" alt="Svamptärta med timjan och gruyère" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Svamptärta med timjan och gruyère</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Rustik öppen paj med skogssvampar, gruyère och timjan. Perfekt som lättare middag.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">Pajdeg (mjöl, smör, äggula, vatten), blandade svampar, gruyère, ägg, grädde, schalottenlök, vitlök, timjan, muskotnöt</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Gör pajdeg, kyl 30 min. Klä form, förgrädda 190°C 15 min. Stek svamp i omgångar. Fräs lök, vitlök, timjan. Vispa ägg-grädde. Ost i skal, svamp ovanpå, häll äggstanning. Grädda 180°C 25–30 min.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Svampar och Pinot Noir delar samma jordiga aromprofil. Gruyèrens nötighet och pajens smörighet möter vinets kropp.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+        </div>
+      </div>
+
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6 mt-8">
+          <div class="h-px flex-1 bg-stone-200"></div>
+          <h3 class="font-serif text-2xl text-stone-900">Gamay <span class="text-stone-400 text-lg font-light">– Beaujolais-stil</span></h3>
+          <div class="h-px flex-1 bg-stone-200"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1541014741259-de529411b96a?w=600&q=80" alt="Charcuteriebricka med cornichons och senapskräm" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Charcuteriebricka med cornichons och senapskräm</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Generös bricka med franska och italienska charkuterier. Minimal ansträngning, maximal njutning.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">Rillettes, prosciutto, saucisson sec, coppa, cornichons, oliver, crème fraîche, dijon- och grovkornig senap, honung, baguette</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Blanda senapskräm: crème fraîche, senap och honung. Låt chark nå rumstemperatur. Rosta bröd. Arrangera allt på bricka. Ät med fingrarna och kylslagen Gamay!</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Gamays fruktiga karaktär med låga tanniner är charkens bästa vän. Syran skär igenom fettrikedomen.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1515516969-d4008cc6241a?w=600&q=80" alt="Grillad korv med linssallad" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Grillad korv med linssallad</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Rustika korvar med ljummen Puy-linssallad smaksatt med dijonsenap och rödvinsvinäger.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">6 grillkorvar, Puy-linser, morot, schalottenlök, vitlök, lagerblad, rödvinsvinäger, dijonsenap, olivolja, persilja</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Koka linser med lagerblad och morot 20–25 min. Grilla korvar. Vispa vinägrett av vinäger, senap och olivolja. Blanda varma linser med vinägrett, schalottenlök, persilja. Servera med korv.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Gamays lekfulla fruktighet möter korv och linser utan att ta över. Senapens skärpa matchar vinets syra.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+        </div>
+      </div>
+
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6 mt-8">
+          <div class="h-px flex-1 bg-stone-200"></div>
+          <h3 class="font-serif text-2xl text-stone-900">Sangiovese <span class="text-stone-400 text-lg font-light">– Chianti-stil (Toskana)</span></h3>
+          <div class="h-px flex-1 bg-stone-200"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&q=80" alt="Pappardelle al Ragù Toscano" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Pappardelle al Ragù Toscano</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Bred pasta med toskanskt köttragù – enkelhet och fokus på tomater och örter. Söndagslunch i Chianti.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">Pappardelle, blandfärs, San Marzano-tomater, lök, morot, selleri, vitlök, rött vin, tomatpuré, rosmarin, salvia, chiliflakes, pecorino</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Fräs soffritto 8–10 min. Tillsätt vitlök, rosmarin, salvia. Bryn färs. Häll i vin, koka in. Tillsätt tomater. Puttra 45 min–1,5 timme. Koka pasta, blanda med ragù och pecorino.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Sangiovese och tomat – skrivet i stjärnorna. Vinets syra speglar tomaten, örterna kompletterar Chiantis karaktär.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=600&q=80" alt="Tagliata med rucola och parmigiano" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Tagliata med rucola och parmigiano</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Skivad grillad entrecôte på rucola med parmigianoflagor och citron. 10 minuter, imponerar varje gång.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">2 entrecôter, rucola, Parmigiano (flagor), olivolja, citron, vitlök, flingsalt, svartpeppar, ev. balsamvinäger</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Rumstemperera kött 30 min. Gnid med vitlök och olivolja. Stek i het panna 3–4 min/sida. Vila 5 min. Rucola på fat, skiva kött ovanpå. Olivolja, citronsaft, parmigiano. Flingsalt.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Sangioveses kropp och syra står upp mot grillat nötkött. Rucolans bitterhet och citron samspelar med vinets profil.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+        </div>
+      </div>
+
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6 mt-8">
+          <div class="h-px flex-1 bg-stone-200"></div>
+          <h3 class="font-serif text-2xl text-stone-900">Baga <span class="text-stone-400 text-lg font-light">– Bairrada, Portugal</span></h3>
+          <div class="h-px flex-1 bg-stone-200"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1432139509613-5c4255a4e337?w=600&q=80" alt="Leitão à Bairrada – Kryddig fläskstek (hemmaversion)" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Leitão à Bairrada – Kryddig fläskstek (hemmaversion)</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Portugals mest ikoniska köttanrättning – fläsk med sprött skinn och kryddig pimentón-marinad.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">1,5 kg fläskytterfilé med svål, vitlök, pimentón, svartpeppar, salt, lagerblad, chiliflakes, vitt vin, olivolja, citron</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Dag innan: gör kryddpasta av vitlök, pimentón, peppar, salt, lagerblad, vin, olivolja, citron. Rista svålen. Gnid in köttsidan, kyl över natten. Ugn 230°C 30 min, sedan 160°C 1,5–2 timmar. Vila, skiva.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Bagas kraftfulla tanniner kräver fet, rik mat – spädgris är den historiska regionala matchningen.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=600&q=80" alt="Carne de Porco à Alentejana – Fläsk med musslor" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Carne de Porco à Alentejana – Fläsk med musslor</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Portugals mest unika rätt – fläsk med vitlök och paprika möter färska musslor. Hav och land i perfekt harmoni.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">600 g fläsk i tärningar, musslor, vitlök, paprikapasta/pimentón, vitt vin, vinäger, lagerblad, paprika, olivolja, potatis, koriander</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Marinera fläsk i vitlök, paprika, vinäger över natten. Fritera/ugnsrosta potatis. Bryn fläsket. Häll i marinad och vin. Tillsätt musslor, lock 3–4 min. Vänd ner potatis och koriander.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Bagas intensitet med mörk frukt och saltig mineralitet klarar att möta skaldjur. Genuint portugisisk upplevelse.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+        </div>
+      </div>
+
+      <div class="mb-12">
+        <div class="flex items-center gap-3 mb-6 mt-8">
+          <div class="h-px flex-1 bg-stone-200"></div>
+          <h3 class="font-serif text-2xl text-stone-900">Barbera <span class="text-stone-400 text-lg font-light">– Piemonte – vardagsitalienare</span></h3>
+          <div class="h-px flex-1 bg-stone-200"></div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=600&q=80" alt="Pizza Margherita i gjutjärnspanna" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Pizza Margherita i gjutjärnspanna</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Fantastisk pizza utan pizzaugn – gjutjärn ger knaprig botten. San Marzano, mozzarella, basilika.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">Deg: vetemjöl, vatten, torrjäst, salt, socker, olivolja. Topping: San Marzano-tomater, färsk mozzarella, basilika, olivolja, flingsalt</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Gör deg, jäs 1 timme. Ugn max värme med gjutjärnspanna. Sträck ut deg. Pensla panna med olja, lägg i deg. Tomatsås, mozzarella. Grädda 10–12 min. Basilika och olivolja.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Barberas höga syra och låga tanniner är pizzans idealiska partner. Vin och tomatsås dansar tillsammans.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-hidden hover:shadow-lg transition-shadow">
+      <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=600&q=80" alt="Penne all'Arrabbiata – Ilsken pasta" class="w-full h-52 object-cover">
+      <div class="p-6">
+        <h4 class="font-serif text-xl text-stone-900 mb-2">Penne all'Arrabbiata – Ilsken pasta</h4>
+        <p class="text-stone-500 font-light text-sm mb-4">Chili och vitlök i en enkel tomatsås – klar på tiden det tar att koka pastan. Noll krångel.</p>
+        <details class="border-t border-stone-100 pt-4">
+          <summary class="flex items-center justify-between text-wine-700 font-medium text-sm">
+            Visa recept
+            <svg class="w-4 h-4 arrow transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </summary>
+          <div class="mt-4 space-y-4">
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Ingredienser</h5>
+              <p class="text-stone-600 text-sm font-light">400 g penne, San Marzano-tomater, vitlök, chiliflakes, olivolja, persilja, ev. pecorino</p>
+            </div>
+            <div>
+              <h5 class="text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Tillagning</h5>
+              <p class="text-stone-600 text-sm font-light">Fräs vitlök och chili i olivolja 1–2 min. Tillsätt handkrossade tomater. Puttra 15–18 min. Koka penne al dente. Blanda pasta med sås och pastavatten. Persilja och olivolja.</p>
+            </div>
+            <div class="bg-wine-50 rounded-lg p-4">
+              <h5 class="text-xs uppercase tracking-wider text-wine-700 font-medium mb-2">Vinmatchning</h5>
+              <p class="text-wine-800 text-sm font-light italic">Barberas frukt och syra är gjord för tomatdriven pasta. Chilin framhäver vinets fruktiga sida.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-stone-900 text-stone-500 py-8">
+    <div class="max-w-5xl mx-auto px-6 text-center text-xs">
+      <p>&copy; 2026 Verum Vinum Sverige AB &middot; <a href="index.html" class="hover:text-stone-300">Hem</a> &middot; <a href="sok.html" class="hover:text-stone-300">Sök viner</a></p>
+    </div>
+  </footer>
+</body>
+</html>
