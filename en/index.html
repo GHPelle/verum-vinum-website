@@ -48,11 +48,6 @@
     .producer-detail.open { box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
   </style>
 </head>
-  <!-- Language switcher - fixed top right -->
-  <div class="fixed top-4 right-4 z-[60] flex items-center gap-2 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-lg border border-stone-200">
-    <a href="../index.html" class="opacity-40 hover:opacity-100 transition-opacity"><svg class="w-7 h-5 rounded-sm shadow" viewBox="0 0 24 16"><rect width="24" height="16" fill="#006AA7"/><rect x="7" y="0" width="3" height="16" fill="#FECC00"/><rect x="0" y="6" width="24" height="3" fill="#FECC00"/></svg></a>
-    <span class="ring-2 ring-wine-500 rounded-sm"><svg class="w-7 h-5 rounded-sm shadow" viewBox="0 0 24 16"><rect width="24" height="16" fill="#012169"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" stroke-width="1.5"/><rect x="10" y="0" width="4" height="16" fill="#fff"/><rect x="0" y="6" width="24" height="4" fill="#fff"/><rect x="11" y="0" width="2" height="16" fill="#C8102E"/><rect x="0" y="6.5" width="24" height="3" fill="#C8102E"/></svg></span>
-  </div>
 <body class="bg-cream-50 text-stone-800 font-sans antialiased">
 
   <!-- Navigation -->
@@ -76,6 +71,10 @@
             <a href="#sortiment" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Selection</a>
             <a href="#restaurang" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Restaurant</a>
             <a href="#systembolaget" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Systembolaget</a>
+      <div class="flex items-center justify-center gap-4 mt-6">
+        <a href="../index.html" class="opacity-50 hover:opacity-100 transition-opacity" title="Svenska"><svg class="w-8 h-6 rounded shadow" viewBox="0 0 24 16"><rect width="24" height="16" fill="#006AA7"/><rect x="7" y="0" width="3" height="16" fill="#FECC00"/><rect x="0" y="6" width="24" height="3" fill="#FECC00"/></svg></a>
+        <span class="ring-2 ring-wine-500 rounded"><svg class="w-8 h-6 rounded shadow" viewBox="0 0 24 16"><rect width="24" height="16" fill="#012169"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" stroke-width="1.5"/><rect x="10" y="0" width="4" height="16" fill="#fff"/><rect x="0" y="6" width="24" height="4" fill="#fff"/><rect x="11" y="0" width="2" height="16" fill="#C8102E"/><rect x="0" y="6.5" width="24" height="3" fill="#C8102E"/></svg></span>
+      </div>
             <a href="#om-oss" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">About us</a>
             <a href="mat-vin.html" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Food & Wine</a>
             <a href="blogg.html" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Blog</a>
@@ -95,6 +94,10 @@
         <a href="#sortiment" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Selection</a>
         <a href="#restaurang" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Restaurant</a>
         <a href="#systembolaget" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Systembolaget</a>
+      <div class="flex items-center justify-center gap-4 mt-6">
+        <a href="../index.html" class="opacity-50 hover:opacity-100 transition-opacity" title="Svenska"><svg class="w-8 h-6 rounded shadow" viewBox="0 0 24 16"><rect width="24" height="16" fill="#006AA7"/><rect x="7" y="0" width="3" height="16" fill="#FECC00"/><rect x="0" y="6" width="24" height="3" fill="#FECC00"/></svg></a>
+        <span class="ring-2 ring-wine-500 rounded"><svg class="w-8 h-6 rounded shadow" viewBox="0 0 24 16"><rect width="24" height="16" fill="#012169"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" stroke-width="1.5"/><rect x="10" y="0" width="4" height="16" fill="#fff"/><rect x="0" y="6" width="24" height="4" fill="#fff"/><rect x="11" y="0" width="2" height="16" fill="#C8102E"/><rect x="0" y="6.5" width="24" height="3" fill="#C8102E"/></svg></span>
+      </div>
         <a href="#om-oss" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">About us</a>
         <a href="mat-vin.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Food & Wine</a>
         <a href="blogg.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Blog</a>
@@ -1226,7 +1229,11 @@
             <li><a href="#producenter" class="hover:text-white transition-colors">Producers</a></li>
             <li><a href="#sortiment" class="hover:text-white transition-colors">Selection</a></li>
             <li><a href="#restaurang" class="hover:text-white transition-colors">Restaurant</a></li>
-            <li><a href="#systembolaget" class="hover:text-white transition-colors">Systembolaget</a></li>
+            <li><a href="#systembolaget" class="hover:text-white transition-colors">Systembolaget</a>
+      <div class="flex items-center justify-center gap-4 mt-6">
+        <a href="../index.html" class="opacity-50 hover:opacity-100 transition-opacity" title="Svenska"><svg class="w-8 h-6 rounded shadow" viewBox="0 0 24 16"><rect width="24" height="16" fill="#006AA7"/><rect x="7" y="0" width="3" height="16" fill="#FECC00"/><rect x="0" y="6" width="24" height="3" fill="#FECC00"/></svg></a>
+        <span class="ring-2 ring-wine-500 rounded"><svg class="w-8 h-6 rounded shadow" viewBox="0 0 24 16"><rect width="24" height="16" fill="#012169"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" stroke-width="1.5"/><rect x="10" y="0" width="4" height="16" fill="#fff"/><rect x="0" y="6" width="24" height="4" fill="#fff"/><rect x="11" y="0" width="2" height="16" fill="#C8102E"/><rect x="0" y="6.5" width="24" height="3" fill="#C8102E"/></svg></span>
+      </div></li>
             <li><a href="#om-oss" class="hover:text-white transition-colors">About us</a></li>
           </ul>
         </div>
