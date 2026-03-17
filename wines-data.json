@@ -5,7 +5,8 @@
     "producer": "Alberto Oggero",
     "type": "Rött",
     "country": "Italien",
-    "region": "Roero, Piemonte, Italien"
+    "region": "Roero, Piemonte, Italien",
+    "price": 245
   },
   {
     "slug": "alberto-oggero-roero",
@@ -13,7 +14,8 @@
     "producer": "Alberto Oggero",
     "type": "Vitt",
     "country": "Italien",
-    "region": "Roero, Piemonte, Italien"
+    "region": "Roero, Piemonte, Italien",
+    "price": 180
   },
   {
     "slug": "alberto-oggero-sandro-dpindeta",
@@ -21,7 +23,8 @@
     "producer": "Alberto Oggero",
     "type": "Rött",
     "country": "Italien",
-    "region": "Roero, Piemonte, Italien"
+    "region": "Roero, Piemonte, Italien",
+    "price": 185
   },
   {
     "slug": "alberto-oggero-valle-dei-lunghi",
@@ -29,7 +32,8 @@
     "producer": "Alberto Oggero",
     "type": "Vitt",
     "country": "Italien",
-    "region": "Roero, Piemonte, Italien"
+    "region": "Roero, Piemonte, Italien",
+    "price": 230
   },
   {
     "slug": "christian-clerget-bourgogne-rouge",
@@ -37,7 +41,8 @@
     "producer": "Domaine Christian Clerget",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Vougeot, Bourgogne, Frankrike"
+    "region": "Vougeot, Bourgogne, Frankrike",
+    "price": null
   },
   {
     "slug": "christian-clerget-chambollemusigny-1er-cru-les-charmes",
@@ -45,7 +50,8 @@
     "producer": "Domaine Christian Clerget",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Chambolle-Musigny, Bourgogne, Frankrike"
+    "region": "Chambolle-Musigny, Bourgogne, Frankrike",
+    "price": null
   },
   {
     "slug": "christian-clerget-chambollemusigny-aux-croix",
@@ -53,7 +59,8 @@
     "producer": "Domaine Christian Clerget",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Chambolle-Musigny, Bourgogne, Frankrike"
+    "region": "Chambolle-Musigny, Bourgogne, Frankrike",
+    "price": 570
   },
   {
     "slug": "christian-clerget-chambollemusigny",
@@ -61,7 +68,8 @@
     "producer": "Domaine Christian Clerget",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Chambolle-Musigny, Bourgogne, Frankrike"
+    "region": "Chambolle-Musigny, Bourgogne, Frankrike",
+    "price": 525
   },
   {
     "slug": "christian-clerget-echezeaux-grand-cru-en-orveaux",
@@ -69,7 +77,8 @@
     "producer": "Domaine Christian Clerget",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Vosne-Romanée, Bourgogne, Frankrike"
+    "region": "Vosne-Romanée, Bourgogne, Frankrike",
+    "price": 1500
   },
   {
     "slug": "christian-clerget-moreysaintdenis",
@@ -77,7 +86,8 @@
     "producer": "Domaine Christian Clerget",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Morey-Saint-Denis, Bourgogne, Frankrike"
+    "region": "Morey-Saint-Denis, Bourgogne, Frankrike",
+    "price": 435
   },
   {
     "slug": "christian-clerget-vosneromanee-les-violettes",
@@ -85,7 +95,8 @@
     "producer": "Domaine Christian Clerget",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Vosne-Romanée, Bourgogne, Frankrike"
+    "region": "Vosne-Romanée, Bourgogne, Frankrike",
+    "price": 690
   },
   {
     "slug": "christian-clerget-vougeot-1er-cru-les-petits-vougeots",
@@ -93,7 +104,8 @@
     "producer": "Domaine Christian Clerget",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Vougeot, Bourgogne, Frankrike"
+    "region": "Vougeot, Bourgogne, Frankrike",
+    "price": null
   },
   {
     "slug": "cigliano-di-sopra-chianti-classico",
@@ -101,7 +113,8 @@
     "producer": "Cigliano di Sopra",
     "type": "Rött",
     "country": "Italien",
-    "region": "San Casciano in Val di Pesa, Toscana, Italien"
+    "region": "San Casciano in Val di Pesa, Toscana, Italien",
+    "price": 240
   },
   {
     "slug": "clos-de-la-bonnette-cisselande-vdf",
@@ -109,7 +122,8 @@
     "producer": "Clos de la Bonnette",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Norra Rhône, Frankrike"
+    "region": "Norra Rhône, Frankrike",
+    "price": 255
   },
   {
     "slug": "clos-de-la-bonnette-collines-rhodaniennes-syrah-vieilles-vignes",
@@ -117,7 +131,8 @@
     "producer": "Clos de la Bonnette",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Norra Rhône, Frankrike"
+    "region": "Norra Rhône, Frankrike",
+    "price": 305
   },
   {
     "slug": "clos-de-la-bonnette-condrieu-legende-bonnetta",
@@ -125,7 +140,8 @@
     "producer": "Clos de la Bonnette",
     "type": "Vitt",
     "country": "Frankrike",
-    "region": "Condrieu, Norra Rhône, Frankrike"
+    "region": "Condrieu, Norra Rhône, Frankrike",
+    "price": 605
   },
   {
     "slug": "clos-de-la-bonnette-coterotie-prenelle",
@@ -133,7 +149,8 @@
     "producer": "Clos de la Bonnette",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Côte-Rôtie, Norra Rhône, Frankrike"
+    "region": "Côte-Rôtie, Norra Rhône, Frankrike",
+    "price": 655
   },
   {
     "slug": "coffinetduvernay-btardmontrachet-grand-cru",
@@ -141,7 +158,8 @@
     "producer": "Domaine Coffinet-Duvernay",
     "type": "Vitt",
     "country": "Frankrike",
-    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
+    "price": null
   },
   {
     "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-clos-saint-jean",
@@ -149,7 +167,8 @@
     "producer": "Domaine Coffinet-Duvernay",
     "type": "Vitt",
     "country": "Frankrike",
-    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
+    "price": null
   },
   {
     "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-dent-de-chien",
@@ -157,7 +176,8 @@
     "producer": "Domaine Coffinet-Duvernay",
     "type": "Vitt",
     "country": "Frankrike",
-    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
+    "price": null
   },
   {
     "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-les-caillerets",
@@ -165,7 +185,8 @@
     "producer": "Domaine Coffinet-Duvernay",
     "type": "Vitt",
     "country": "Frankrike",
-    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
+    "price": null
   },
   {
     "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-les-grands-clos",
@@ -173,7 +194,8 @@
     "producer": "Domaine Coffinet-Duvernay",
     "type": "Vitt",
     "country": "Frankrike",
-    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
+    "price": null
   },
   {
     "slug": "coffinetduvernay-chassagnemontrachet-les-blanchots-dessous",
@@ -181,7 +203,8 @@
     "producer": "Domaine Coffinet-Duvernay",
     "type": "Vitt",
     "country": "Frankrike",
-    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
+    "price": null
   },
   {
     "slug": "coffinetduvernay-chassagnemontrachet-rouge",
@@ -189,7 +212,8 @@
     "producer": "Domaine Coffinet-Duvernay",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
+    "price": null
   },
   {
     "slug": "coffinetduvernay-vin-de-france-assemblage",
@@ -197,7 +221,8 @@
     "producer": "Domaine Coffinet-Duvernay",
     "type": "Vitt",
     "country": "Frankrike",
-    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
+    "price": null
   },
   {
     "slug": "diego-morra-barolo-del-comune-di-verduno",
@@ -205,7 +230,8 @@
     "producer": "Diego Morra",
     "type": "Rött",
     "country": "Italien",
-    "region": "Verduno, Piemonte, Italien"
+    "region": "Verduno, Piemonte, Italien",
+    "price": 380
   },
   {
     "slug": "diego-morra-barolo-monvigliero",
@@ -213,7 +239,8 @@
     "producer": "Diego Morra",
     "type": "Rött",
     "country": "Italien",
-    "region": "Verduno, Piemonte, Italien"
+    "region": "Verduno, Piemonte, Italien",
+    "price": 545
   },
   {
     "slug": "diego-morra-barolo-san-lorenzo",
@@ -221,7 +248,8 @@
     "producer": "Diego Morra",
     "type": "Rött",
     "country": "Italien",
-    "region": "Verduno, Piemonte, Italien"
+    "region": "Verduno, Piemonte, Italien",
+    "price": 420
   },
   {
     "slug": "diego-morra-langhe-rosato",
@@ -229,7 +257,8 @@
     "producer": "Diego Morra",
     "type": "Rosé",
     "country": "Italien",
-    "region": "Verduno, Piemonte, Italien"
+    "region": "Verduno, Piemonte, Italien",
+    "price": 120
   },
   {
     "slug": "diego-morra-verduno-pelaverga",
@@ -237,7 +266,8 @@
     "producer": "Diego Morra",
     "type": "Rött",
     "country": "Italien",
-    "region": "Verduno, Piemonte, Italien"
+    "region": "Verduno, Piemonte, Italien",
+    "price": 175
   },
   {
     "slug": "domaine-villet-chardonnay-elevage-2-an-en-fut",
@@ -245,7 +275,8 @@
     "producer": "Domaine Villet",
     "type": "Vitt",
     "country": "Frankrike",
-    "region": "Arbois, Jura, Frankrike"
+    "region": "Arbois, Jura, Frankrike",
+    "price": 235
   },
   {
     "slug": "domaine-villet-pinot-noir",
@@ -253,7 +284,8 @@
     "producer": "Domaine Villet",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Arbois, Jura, Frankrike"
+    "region": "Arbois, Jura, Frankrike",
+    "price": 305
   },
   {
     "slug": "domaine-villet-poulsard",
@@ -261,7 +293,8 @@
     "producer": "Domaine Villet",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Arbois, Jura, Frankrike"
+    "region": "Arbois, Jura, Frankrike",
+    "price": 290
   },
   {
     "slug": "domaine-villet-rouge-tradition",
@@ -269,7 +302,8 @@
     "producer": "Domaine Villet",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Arbois, Jura, Frankrike"
+    "region": "Arbois, Jura, Frankrike",
+    "price": 290
   },
   {
     "slug": "domaine-villet-savagnin-ouille-elevage-24-mois-en-cuve",
@@ -277,7 +311,8 @@
     "producer": "Domaine Villet",
     "type": "Vitt",
     "country": "Frankrike",
-    "region": "Arbois, Jura, Frankrike"
+    "region": "Arbois, Jura, Frankrike",
+    "price": 270
   },
   {
     "slug": "domaine-villet-savagnin-ouille-elevage-30-mois-en-foudre",
@@ -285,7 +320,8 @@
     "producer": "Domaine Villet",
     "type": "Vitt",
     "country": "Frankrike",
-    "region": "Arbois, Jura, Frankrike"
+    "region": "Arbois, Jura, Frankrike",
+    "price": 300
   },
   {
     "slug": "ettore-germano-alta-langa-extra-brut",
@@ -293,7 +329,8 @@
     "producer": "Ettore Germano",
     "type": "Mousserande",
     "country": "Italien",
-    "region": "Alta Langa, Piemonte, Italien"
+    "region": "Alta Langa, Piemonte, Italien",
+    "price": null
   },
   {
     "slug": "ettore-germano-alta-langa-riserva-blanc-de-blanc-pas-dose",
@@ -301,7 +338,8 @@
     "producer": "Ettore Germano",
     "type": "Mousserande",
     "country": "Italien",
-    "region": "Alta Langa, Piemonte, Italien"
+    "region": "Alta Langa, Piemonte, Italien",
+    "price": 440
   },
   {
     "slug": "ettore-germano-alta-langa-riserva-blanc-de-noir-pas-dose",
@@ -309,7 +347,8 @@
     "producer": "Ettore Germano",
     "type": "Mousserande",
     "country": "Italien",
-    "region": "Alta Langa, Piemonte, Italien"
+    "region": "Alta Langa, Piemonte, Italien",
+    "price": 440
   },
   {
     "slug": "ettore-germano-barbera-dalba-superiore",
@@ -317,7 +356,8 @@
     "producer": "Ettore Germano",
     "type": "Rött",
     "country": "Italien",
-    "region": "Alba, Piemonte, Italien"
+    "region": "Alba, Piemonte, Italien",
+    "price": null
   },
   {
     "slug": "ettore-germano-barolo-cerretta",
@@ -325,7 +365,8 @@
     "producer": "Ettore Germano",
     "type": "Rött",
     "country": "Italien",
-    "region": "Serralunga d'Alba, Piemonte, Italien"
+    "region": "Serralunga d'Alba, Piemonte, Italien",
+    "price": 525
   },
   {
     "slug": "ettore-germano-barolo-del-comune-di-serralunga-dalba",
@@ -333,7 +374,8 @@
     "producer": "Ettore Germano",
     "type": "Rött",
     "country": "Italien",
-    "region": "Serralunga d'Alba, Piemonte, Italien"
+    "region": "Serralunga d'Alba, Piemonte, Italien",
+    "price": 355
   },
   {
     "slug": "ettore-germano-barolo-lazzarito-riserva",
@@ -341,7 +383,8 @@
     "producer": "Ettore Germano",
     "type": "Rött",
     "country": "Italien",
-    "region": "Serralunga d'Alba, Piemonte, Italien"
+    "region": "Serralunga d'Alba, Piemonte, Italien",
+    "price": 900
   },
   {
     "slug": "ettore-germano-barolo-prapo",
@@ -349,7 +392,8 @@
     "producer": "Ettore Germano",
     "type": "Rött",
     "country": "Italien",
-    "region": "Serralunga d'Alba, Piemonte, Italien"
+    "region": "Serralunga d'Alba, Piemonte, Italien",
+    "price": 525
   },
   {
     "slug": "ettore-germano-barolo-vignarionda",
@@ -357,7 +401,8 @@
     "producer": "Ettore Germano",
     "type": "Rött",
     "country": "Italien",
-    "region": "Serralunga d'Alba, Piemonte, Italien"
+    "region": "Serralunga d'Alba, Piemonte, Italien",
+    "price": 1070
   },
   {
     "slug": "ettore-germano-binel-langhe-bianco",
@@ -365,7 +410,8 @@
     "producer": "Ettore Germano",
     "type": "Vitt",
     "country": "Italien",
-    "region": "Langhe, Piemonte, Italien"
+    "region": "Langhe, Piemonte, Italien",
+    "price": 240
   },
   {
     "slug": "ettore-germano-herzu-langhe-riesling",
@@ -373,7 +419,8 @@
     "producer": "Ettore Germano",
     "type": "Vitt",
     "country": "Italien",
-    "region": "Langhe, Piemonte, Italien"
+    "region": "Langhe, Piemonte, Italien",
+    "price": 260
   },
   {
     "slug": "ettore-germano-langhe-chardonnay",
@@ -381,7 +428,8 @@
     "producer": "Ettore Germano",
     "type": "Vitt",
     "country": "Italien",
-    "region": "Langhe, Piemonte, Italien"
+    "region": "Langhe, Piemonte, Italien",
+    "price": 170
   },
   {
     "slug": "ettore-germano-langhe-nascetta",
@@ -389,7 +437,8 @@
     "producer": "Ettore Germano",
     "type": "Vitt",
     "country": "Italien",
-    "region": "Langhe, Piemonte, Italien"
+    "region": "Langhe, Piemonte, Italien",
+    "price": 240
   },
   {
     "slug": "ettore-germano-rosanna-extra-brut-rose-metodo-classico",
@@ -397,7 +446,8 @@
     "producer": "Ettore Germano",
     "type": "Mousserande",
     "country": "Italien",
-    "region": "Piemonte, Italien"
+    "region": "Piemonte, Italien",
+    "price": 240
   },
   {
     "slug": "fontanabianca-barbaresco-bordini",
@@ -405,7 +455,8 @@
     "producer": "Fontanabianca",
     "type": "Rött",
     "country": "Italien",
-    "region": "Neive, Piemonte, Italien"
+    "region": "Neive, Piemonte, Italien",
+    "price": 285
   },
   {
     "slug": "fontanabianca-barbaresco-serraboella",
@@ -413,7 +464,8 @@
     "producer": "Fontanabianca",
     "type": "Rött",
     "country": "Italien",
-    "region": "Neive, Piemonte, Italien"
+    "region": "Neive, Piemonte, Italien",
+    "price": 285
   },
   {
     "slug": "fontanabianca-barbaresco",
@@ -421,7 +473,8 @@
     "producer": "Fontanabianca",
     "type": "Rött",
     "country": "Italien",
-    "region": "Neive, Piemonte, Italien"
+    "region": "Neive, Piemonte, Italien",
+    "price": 225
   },
   {
     "slug": "fontanabianca-barbera-dalba-superiore",
@@ -429,7 +482,8 @@
     "producer": "Fontanabianca",
     "type": "Rött",
     "country": "Italien",
-    "region": "Neive, Piemonte, Italien"
+    "region": "Neive, Piemonte, Italien",
+    "price": 135
   },
   {
     "slug": "fontanabianca-dolcetto-dalba",
@@ -437,7 +491,8 @@
     "producer": "Fontanabianca",
     "type": "Rött",
     "country": "Italien",
-    "region": "Neive, Piemonte, Italien"
+    "region": "Neive, Piemonte, Italien",
+    "price": 120
   },
   {
     "slug": "fontanabianca-langhe-arneis-sommo",
@@ -445,7 +500,8 @@
     "producer": "Fontanabianca",
     "type": "Vitt",
     "country": "Italien",
-    "region": "Neive, Piemonte, Italien"
+    "region": "Neive, Piemonte, Italien",
+    "price": 130
   },
   {
     "slug": "fontanabianca-langhe-nebbiolo",
@@ -453,7 +509,8 @@
     "producer": "Fontanabianca",
     "type": "Rött",
     "country": "Italien",
-    "region": "Neive, Piemonte, Italien"
+    "region": "Neive, Piemonte, Italien",
+    "price": 145
   },
   {
     "slug": "la-famille-k-la-mere",
@@ -461,7 +518,8 @@
     "producer": "Domaine La Famille K",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Morancé, Beaujolais, Frankrike"
+    "region": "Morancé, Beaujolais, Frankrike",
+    "price": 135
   },
   {
     "slug": "la-famille-k-le-pere-blanc",
@@ -469,7 +527,8 @@
     "producer": "Domaine La Famille K",
     "type": "Vitt",
     "country": "Frankrike",
-    "region": "Morancé, Beaujolais, Frankrike"
+    "region": "Morancé, Beaujolais, Frankrike",
+    "price": 155
   },
   {
     "slug": "la-famille-k-le-pere-vdf-pinot-noir",
@@ -477,7 +536,8 @@
     "producer": "Domaine La Famille K",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Morancé, Beaujolais, Frankrike"
+    "region": "Morancé, Beaujolais, Frankrike",
+    "price": null
   },
   {
     "slug": "la-famille-k-le-pere",
@@ -485,7 +545,8 @@
     "producer": "Domaine La Famille K",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Morancé, Beaujolais, Frankrike"
+    "region": "Morancé, Beaujolais, Frankrike",
+    "price": 145
   },
   {
     "slug": "la-famille-k-lheritiere",
@@ -493,7 +554,8 @@
     "producer": "Domaine La Famille K",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Morancé, Beaujolais, Frankrike"
+    "region": "Morancé, Beaujolais, Frankrike",
+    "price": 120
   },
   {
     "slug": "la-famille-k-loncle",
@@ -501,7 +563,8 @@
     "producer": "Domaine La Famille K",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Morancé, Beaujolais, Frankrike"
+    "region": "Morancé, Beaujolais, Frankrike",
+    "price": 150
   },
   {
     "slug": "lapo-berti-barolo-del-comune-di-la-morra",
@@ -509,7 +572,8 @@
     "producer": "Lapo Berti",
     "type": "Rött",
     "country": "Italien",
-    "region": "La Morra, Piemonte, Italien"
+    "region": "La Morra, Piemonte, Italien",
+    "price": 545
   },
   {
     "slug": "lapo-berti-barolo-fossati",
@@ -517,7 +581,8 @@
     "producer": "Lapo Berti",
     "type": "Rött",
     "country": "Italien",
-    "region": "La Morra, Piemonte, Italien"
+    "region": "La Morra, Piemonte, Italien",
+    "price": null
   },
   {
     "slug": "lapo-berti-langhe-nebbiolo",
@@ -525,7 +590,8 @@
     "producer": "Lapo Berti",
     "type": "Rött",
     "country": "Italien",
-    "region": "La Morra, Piemonte, Italien"
+    "region": "La Morra, Piemonte, Italien",
+    "price": null
   },
   {
     "slug": "martin-mullen-krover-kirchlay-auslese",
@@ -533,7 +599,8 @@
     "producer": "Weingut Martin Müllen",
     "type": "Vitt",
     "country": "Tyskland",
-    "region": "Traben-Trarbach, Mosel, Tyskland"
+    "region": "Traben-Trarbach, Mosel, Tyskland",
+    "price": null
   },
   {
     "slug": "martin-mullen-krover-letterlay-spatlese-feinherb",
@@ -541,7 +608,8 @@
     "producer": "Weingut Martin Müllen",
     "type": "Vitt",
     "country": "Tyskland",
-    "region": "Traben-Trarbach, Mosel, Tyskland"
+    "region": "Traben-Trarbach, Mosel, Tyskland",
+    "price": null
   },
   {
     "slug": "martin-mullen-krover-paradies-spatlese-trocken",
@@ -549,7 +617,8 @@
     "producer": "Weingut Martin Müllen",
     "type": "Vitt",
     "country": "Tyskland",
-    "region": "Traben-Trarbach, Mosel, Tyskland"
+    "region": "Traben-Trarbach, Mosel, Tyskland",
+    "price": null
   },
   {
     "slug": "martin-mullen-nostel-trocken",
@@ -557,7 +626,8 @@
     "producer": "Weingut Martin Müllen",
     "type": "Vitt",
     "country": "Tyskland",
-    "region": "Traben-Trarbach, Mosel, Tyskland"
+    "region": "Traben-Trarbach, Mosel, Tyskland",
+    "price": null
   },
   {
     "slug": "martin-mullen-riesling-revival-trocken",
@@ -565,7 +635,8 @@
     "producer": "Weingut Martin Müllen",
     "type": "Vitt",
     "country": "Tyskland",
-    "region": "Traben-Trarbach, Mosel, Tyskland"
+    "region": "Traben-Trarbach, Mosel, Tyskland",
+    "price": 150
   },
   {
     "slug": "martin-mullen-trabener-wurzgarten-kabinett-feinherb",
@@ -573,7 +644,8 @@
     "producer": "Weingut Martin Müllen",
     "type": "Vitt",
     "country": "Tyskland",
-    "region": "Traben-Trarbach, Mosel, Tyskland"
+    "region": "Traben-Trarbach, Mosel, Tyskland",
+    "price": 205
   },
   {
     "slug": "martin-mullen-trabener-wurzgarten-spatlese-trocken",
@@ -581,7 +653,8 @@
     "producer": "Weingut Martin Müllen",
     "type": "Vitt",
     "country": "Tyskland",
-    "region": "Traben-Trarbach, Mosel, Tyskland"
+    "region": "Traben-Trarbach, Mosel, Tyskland",
+    "price": 220
   },
   {
     "slug": "martin-mullen-trarbacher-huhnerberg-auslese",
@@ -589,7 +662,8 @@
     "producer": "Weingut Martin Müllen",
     "type": "Vitt",
     "country": "Tyskland",
-    "region": "Traben-Trarbach, Mosel, Tyskland"
+    "region": "Traben-Trarbach, Mosel, Tyskland",
+    "price": 345
   },
   {
     "slug": "michel-rebourgeon-beaune-1er-cru-les-chouacheux",
@@ -597,7 +671,8 @@
     "producer": "Domaine Michel Rebourgeon",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Beaune, Bourgogne, Frankrike"
+    "region": "Beaune, Bourgogne, Frankrike",
+    "price": 435
   },
   {
     "slug": "michel-rebourgeon-beaune-les-epenottes",
@@ -605,7 +680,8 @@
     "producer": "Domaine Michel Rebourgeon",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Pommard, Bourgogne, Frankrike"
+    "region": "Pommard, Bourgogne, Frankrike",
+    "price": 375
   },
   {
     "slug": "michel-rebourgeon-pommard-1er-cru-les-arvelets",
@@ -613,7 +689,8 @@
     "producer": "Domaine Michel Rebourgeon",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Pommard, Bourgogne, Frankrike"
+    "region": "Pommard, Bourgogne, Frankrike",
+    "price": 625
   },
   {
     "slug": "michel-rebourgeon-pommard-1er-cru-les-charmots",
@@ -621,7 +698,8 @@
     "producer": "Domaine Michel Rebourgeon",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Pommard, Bourgogne, Frankrike"
+    "region": "Pommard, Bourgogne, Frankrike",
+    "price": null
   },
   {
     "slug": "michel-rebourgeon-pommard-1er-cru-les-rugiens",
@@ -629,7 +707,8 @@
     "producer": "Domaine Michel Rebourgeon",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Pommard, Bourgogne, Frankrike"
+    "region": "Pommard, Bourgogne, Frankrike",
+    "price": 940
   },
   {
     "slug": "michel-rebourgeon-pommard-cuvee-william",
@@ -637,7 +716,8 @@
     "producer": "Domaine Michel Rebourgeon",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Pommard, Bourgogne, Frankrike"
+    "region": "Pommard, Bourgogne, Frankrike",
+    "price": 505
   },
   {
     "slug": "michel-rebourgeon-pommard-les-noizons",
@@ -645,7 +725,8 @@
     "producer": "Domaine Michel Rebourgeon",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Pommard, Bourgogne, Frankrike"
+    "region": "Pommard, Bourgogne, Frankrike",
+    "price": 575
   },
   {
     "slug": "michel-rebourgeon-pommard-trois-terroirs",
@@ -653,7 +734,8 @@
     "producer": "Domaine Michel Rebourgeon",
     "type": "Rött",
     "country": "Frankrike",
-    "region": "Pommard, Bourgogne, Frankrike"
+    "region": "Pommard, Bourgogne, Frankrike",
+    "price": 485
   },
   {
     "slug": "mori-concetta-morino-chianti-classico",
@@ -661,7 +743,8 @@
     "producer": "Mori Concetta",
     "type": "Rött",
     "country": "Italien",
-    "region": "San Casciano in Val di Pesa, Toscana, Italien"
+    "region": "San Casciano in Val di Pesa, Toscana, Italien",
+    "price": 180
   },
   {
     "slug": "quinta-das-bagerias-abafado",
@@ -669,7 +752,8 @@
     "producer": "Quinta das Bágeiras",
     "type": "Starkvin",
     "country": "Portugal",
-    "region": "Sangalhos, Bairrada, Portugal"
+    "region": "Sangalhos, Bairrada, Portugal",
+    "price": 360
   },
   {
     "slug": "quinta-das-bagerias-espumante-colheita-rose",
@@ -677,7 +761,8 @@
     "producer": "Quinta das Bágeiras",
     "type": "Mousserande",
     "country": "Portugal",
-    "region": "Sangalhos, Bairrada, Portugal"
+    "region": "Sangalhos, Bairrada, Portugal",
+    "price": 120
   },
   {
     "slug": "quinta-das-bagerias-espumante-colheita",
@@ -685,7 +770,8 @@
     "producer": "Quinta das Bágeiras",
     "type": "Mousserande",
     "country": "Portugal",
-    "region": "Sangalhos, Bairrada, Portugal"
+    "region": "Sangalhos, Bairrada, Portugal",
+    "price": null
   },
   {
     "slug": "quinta-das-bagerias-garrafeira-tinto",
@@ -693,7 +779,8 @@
     "producer": "Quinta das Bágeiras",
     "type": "Rött",
     "country": "Portugal",
-    "region": "Sangalhos, Bairrada, Portugal"
+    "region": "Sangalhos, Bairrada, Portugal",
+    "price": 300
   },
   {
     "slug": "quinta-das-bagerias-vinho-branco-reserva",
@@ -701,7 +788,8 @@
     "producer": "Quinta das Bágeiras",
     "type": "Vitt",
     "country": "Portugal",
-    "region": "Sangalhos, Bairrada, Portugal"
+    "region": "Sangalhos, Bairrada, Portugal",
+    "price": 130
   },
   {
     "slug": "quinta-das-bagerias-vinho-tinto-reserva",
@@ -709,7 +797,8 @@
     "producer": "Quinta das Bágeiras",
     "type": "Rött",
     "country": "Portugal",
-    "region": "Sangalhos, Bairrada, Portugal"
+    "region": "Sangalhos, Bairrada, Portugal",
+    "price": 145
   },
   {
     "slug": "quinta-do-javali-clos-bonifata-2",
@@ -717,7 +806,8 @@
     "producer": "Quinta do Javali",
     "type": "Rött",
     "country": "Portugal",
-    "region": "São João da Pesqueira, Douro, Portugal"
+    "region": "São João da Pesqueira, Douro, Portugal",
+    "price": 225
   },
   {
     "slug": "quinta-do-javali-clos-fonte-do-santo",
@@ -725,7 +815,8 @@
     "producer": "Quinta do Javali",
     "type": "Rött",
     "country": "Portugal",
-    "region": "São João da Pesqueira, Douro, Portugal"
+    "region": "São João da Pesqueira, Douro, Portugal",
+    "price": 270
   },
   {
     "slug": "quinta-do-javali-crazy-branco",
@@ -733,7 +824,8 @@
     "producer": "Quinta do Javali",
     "type": "Vitt",
     "country": "Portugal",
-    "region": "São João da Pesqueira, Douro, Portugal"
+    "region": "São João da Pesqueira, Douro, Portugal",
+    "price": 145
   },
   {
     "slug": "quinta-do-javali-crazy-javali-tinto",
@@ -741,7 +833,8 @@
     "producer": "Quinta do Javali",
     "type": "Rött",
     "country": "Portugal",
-    "region": "São João da Pesqueira, Douro, Portugal"
+    "region": "São João da Pesqueira, Douro, Portugal",
+    "price": 145
   },
   {
     "slug": "quinta-do-javali-pet-nat",
@@ -749,7 +842,8 @@
     "producer": "Quinta do Javali",
     "type": "Mousserande",
     "country": "Portugal",
-    "region": "São João da Pesqueira, Douro, Portugal"
+    "region": "São João da Pesqueira, Douro, Portugal",
+    "price": 145
   },
   {
     "slug": "quinta-do-javali-tawny-port-10-year",
@@ -757,7 +851,8 @@
     "producer": "Quinta do Javali",
     "type": "Starkvin",
     "country": "Portugal",
-    "region": "São João da Pesqueira, Douro, Portugal"
+    "region": "São João da Pesqueira, Douro, Portugal",
+    "price": 290
   },
   {
     "slug": "quinta-do-javali-tawny-port",
@@ -765,7 +860,8 @@
     "producer": "Quinta do Javali",
     "type": "Starkvin",
     "country": "Portugal",
-    "region": "São João da Pesqueira, Douro, Portugal"
+    "region": "São João da Pesqueira, Douro, Portugal",
+    "price": 140
   },
   {
     "slug": "quinta-do-javali-tinto",
@@ -773,7 +869,8 @@
     "producer": "Quinta do Javali",
     "type": "Rött",
     "country": "Portugal",
-    "region": "São João da Pesqueira, Douro, Portugal"
+    "region": "São João da Pesqueira, Douro, Portugal",
+    "price": 145
   },
   {
     "slug": "quinta-do-javali-vinhas-dos-lobatos",
@@ -781,7 +878,8 @@
     "producer": "Quinta do Javali",
     "type": "Rött",
     "country": "Portugal",
-    "region": "São João da Pesqueira, Douro, Portugal"
+    "region": "São João da Pesqueira, Douro, Portugal",
+    "price": 235
   },
   {
     "slug": "reva-barbera-dalba-superiore",
@@ -789,7 +887,8 @@
     "producer": "Réva",
     "type": "Rött",
     "country": "Italien",
-    "region": "Monforte d'Alba, Piemonte, Italien"
+    "region": "Monforte d'Alba, Piemonte, Italien",
+    "price": 165
   },
   {
     "slug": "reva-barolo-cannubi",
@@ -797,7 +896,8 @@
     "producer": "Réva",
     "type": "Rött",
     "country": "Italien",
-    "region": "Barolo, Piemonte, Italien"
+    "region": "Barolo, Piemonte, Italien",
+    "price": 1050
   },
   {
     "slug": "reva-barolo-ravera",
@@ -805,7 +905,8 @@
     "producer": "Réva",
     "type": "Rött",
     "country": "Italien",
-    "region": "Monforte d'Alba, Piemonte, Italien"
+    "region": "Monforte d'Alba, Piemonte, Italien",
+    "price": 600
   },
   {
     "slug": "reva-barolo",
@@ -813,7 +914,8 @@
     "producer": "Réva",
     "type": "Rött",
     "country": "Italien",
-    "region": "Monforte d'Alba, Piemonte, Italien"
+    "region": "Monforte d'Alba, Piemonte, Italien",
+    "price": 315
   },
   {
     "slug": "reva-dolcetto-dalba",
@@ -821,7 +923,8 @@
     "producer": "Réva",
     "type": "Rött",
     "country": "Italien",
-    "region": "Monforte d'Alba, Piemonte, Italien"
+    "region": "Monforte d'Alba, Piemonte, Italien",
+    "price": 145
   },
   {
     "slug": "reva-langhe-bianco-grey",
@@ -829,7 +932,8 @@
     "producer": "Réva",
     "type": "Vitt",
     "country": "Italien",
-    "region": "Monforte d'Alba, Piemonte, Italien"
+    "region": "Monforte d'Alba, Piemonte, Italien",
+    "price": 175
   },
   {
     "slug": "reva-nebbiolo-dalba",
@@ -837,7 +941,8 @@
     "producer": "Réva",
     "type": "Rött",
     "country": "Italien",
-    "region": "Monforte d'Alba, Piemonte, Italien"
+    "region": "Monforte d'Alba, Piemonte, Italien",
+    "price": 150
   },
   {
     "slug": "rudi-pichler-gruner-veltliner-achleithen-smaragd",
@@ -845,7 +950,8 @@
     "producer": "Rudi Pichler",
     "type": "Vitt",
     "country": "Österrike",
-    "region": "Wosendorf, Wachau, Österrike"
+    "region": "Wosendorf, Wachau, Österrike",
+    "price": 480
   },
   {
     "slug": "rudi-pichler-gruner-veltliner-hochrain-smaragd",
@@ -853,7 +959,8 @@
     "producer": "Rudi Pichler",
     "type": "Vitt",
     "country": "Österrike",
-    "region": "Wosendorf, Wachau, Österrike"
+    "region": "Wosendorf, Wachau, Österrike",
+    "price": 345
   },
   {
     "slug": "rudi-pichler-gruner-veltliner-kollmutz-smaragd",
@@ -861,7 +968,8 @@
     "producer": "Rudi Pichler",
     "type": "Vitt",
     "country": "Österrike",
-    "region": "Wosendorf, Wachau, Österrike"
+    "region": "Wosendorf, Wachau, Österrike",
+    "price": 335
   },
   {
     "slug": "rudi-pichler-gruner-veltliner-terrassen-smaragd",
@@ -869,7 +977,8 @@
     "producer": "Rudi Pichler",
     "type": "Vitt",
     "country": "Österrike",
-    "region": "Wosendorf, Wachau, Österrike"
+    "region": "Wosendorf, Wachau, Österrike",
+    "price": 240
   },
   {
     "slug": "rudi-pichler-riesling-achleithen-smaragd",
@@ -877,7 +986,8 @@
     "producer": "Rudi Pichler",
     "type": "Vitt",
     "country": "Österrike",
-    "region": "Wosendorf, Wachau, Österrike"
+    "region": "Wosendorf, Wachau, Österrike",
+    "price": 480
   },
   {
     "slug": "rudi-pichler-riesling-hochrain-smaragd",
@@ -885,7 +995,8 @@
     "producer": "Rudi Pichler",
     "type": "Vitt",
     "country": "Österrike",
-    "region": "Wosendorf, Wachau, Österrike"
+    "region": "Wosendorf, Wachau, Österrike",
+    "price": 345
   },
   {
     "slug": "rudi-pichler-riesling-kirchweg-smaragd",
@@ -893,7 +1004,8 @@
     "producer": "Rudi Pichler",
     "type": "Vitt",
     "country": "Österrike",
-    "region": "Wosendorf, Wachau, Österrike"
+    "region": "Wosendorf, Wachau, Österrike",
+    "price": 335
   },
   {
     "slug": "vadio-grande",
@@ -901,7 +1013,8 @@
     "producer": "Vadio",
     "type": "Rött",
     "country": "Portugal",
-    "region": "Poutena, Bairrada, Portugal"
+    "region": "Poutena, Bairrada, Portugal",
+    "price": 285
   },
   {
     "slug": "vadio-perpetuum-white-sparkling",
@@ -909,7 +1022,8 @@
     "producer": "Vadio",
     "type": "Mousserande",
     "country": "Portugal",
-    "region": "Poutena, Bairrada, Portugal"
+    "region": "Poutena, Bairrada, Portugal",
+    "price": 230
   },
   {
     "slug": "vadio-red",
@@ -917,7 +1031,8 @@
     "producer": "Vadio",
     "type": "Rött",
     "country": "Portugal",
-    "region": "Poutena, Bairrada, Portugal"
+    "region": "Poutena, Bairrada, Portugal",
+    "price": 155
   },
   {
     "slug": "vadio-rexarte",
@@ -925,7 +1040,8 @@
     "producer": "Vadio",
     "type": "Rött",
     "country": "Portugal",
-    "region": "Poutena, Bairrada, Portugal"
+    "region": "Poutena, Bairrada, Portugal",
+    "price": 630
   },
   {
     "slug": "vadio-rose-sparkling",
@@ -933,7 +1049,8 @@
     "producer": "Vadio",
     "type": "Mousserande",
     "country": "Portugal",
-    "region": "Poutena, Bairrada, Portugal"
+    "region": "Poutena, Bairrada, Portugal",
+    "price": 230
   },
   {
     "slug": "vadio-white",
@@ -941,7 +1058,8 @@
     "producer": "Vadio",
     "type": "Vitt",
     "country": "Portugal",
-    "region": "Poutena, Bairrada, Portugal"
+    "region": "Poutena, Bairrada, Portugal",
+    "price": 155
   },
   {
     "slug": "victor-charlot-instinct-premier-5050",
@@ -949,7 +1067,8 @@
     "producer": "Victor Charlot",
     "type": "Mousserande",
     "country": "Frankrike",
-    "region": "Moussy, Champagne, Frankrike"
+    "region": "Moussy, Champagne, Frankrike",
+    "price": null
   },
   {
     "slug": "victor-charlot-instinct-premier-7525",
@@ -957,7 +1076,8 @@
     "producer": "Victor Charlot",
     "type": "Mousserande",
     "country": "Frankrike",
-    "region": "Moussy, Champagne, Frankrike"
+    "region": "Moussy, Champagne, Frankrike",
+    "price": 285
   },
   {
     "slug": "victor-charlot-lapprivoisee",
@@ -965,7 +1085,8 @@
     "producer": "Victor Charlot",
     "type": "Mousserande",
     "country": "Frankrike",
-    "region": "Moussy, Champagne, Frankrike"
+    "region": "Moussy, Champagne, Frankrike",
+    "price": null
   },
   {
     "slug": "victor-charlot-lart-de-la-ruse",
@@ -973,7 +1094,8 @@
     "producer": "Victor Charlot",
     "type": "Mousserande",
     "country": "Frankrike",
-    "region": "Moussy, Champagne, Frankrike"
+    "region": "Moussy, Champagne, Frankrike",
+    "price": null
   },
   {
     "slug": "victor-charlot-les-terres-de-la-greve",
@@ -981,7 +1103,8 @@
     "producer": "Victor Charlot",
     "type": "Mousserande",
     "country": "Frankrike",
-    "region": "Moussy, Champagne, Frankrike"
+    "region": "Moussy, Champagne, Frankrike",
+    "price": 370
   },
   {
     "slug": "victor-charlot-noirs-de-jais",
@@ -989,7 +1112,8 @@
     "producer": "Victor Charlot",
     "type": "Mousserande",
     "country": "Frankrike",
-    "region": "Moussy, Champagne, Frankrike"
+    "region": "Moussy, Champagne, Frankrike",
+    "price": 300
   },
   {
     "slug": "villa-i-cipressi-brunello-di-montalcino",
@@ -997,7 +1121,8 @@
     "producer": "Villa i Cipressi",
     "type": "Rött",
     "country": "Italien",
-    "region": "Montalcino, Toscana, Italien"
+    "region": "Montalcino, Toscana, Italien",
+    "price": null
   },
   {
     "slug": "villa-i-cipressi-rosso-di-montalcino",
@@ -1005,7 +1130,8 @@
     "producer": "Villa i Cipressi",
     "type": "Rött",
     "country": "Italien",
-    "region": "Montalcino, Toscana, Italien"
+    "region": "Montalcino, Toscana, Italien",
+    "price": null
   },
   {
     "slug": "villa-i-cipressi-zebras-brunello-di-montalcino",
@@ -1013,6 +1139,7 @@
     "producer": "Villa i Cipressi",
     "type": "Rött",
     "country": "Italien",
-    "region": "Montalcino, Toscana, Italien"
+    "region": "Montalcino, Toscana, Italien",
+    "price": null
   }
 ]
