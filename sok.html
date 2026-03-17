@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sök viner – Verum Vinum</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwindcss.config = {
+      theme: {
+        extend: {
+          colors: {
+            wine: { 50:'#fdf2f4', 100:'#fce7eb', 200:'#f9d0d9', 300:'#f5a9ba', 400:'#ee7895', 500:'#e44d73', 600:'#d12a5b', 700:'#b01e49', 800:'#8a1a3d', 900:'#6e1735', 950:'#3f0819' },
+            cream: { 50:'#fefdf8', 100:'#fdf9ed' },
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    html { -webkit-tap-highlight-color: transparent; }
+    a, button { touch-action: manipulation; }
+    select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }
+  </style>
+</head>
+<body class="bg-cream-50 text-stone-800 font-sans antialiased">
+
+  <!-- Nav -->
+  <nav class="bg-wine-950 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3">
+        <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-8 brightness-0 invert">
+      </a>
+      <div class="flex items-center gap-6">
+        <a href="index.html#producenter" class="text-sm text-white/70 hover:text-white tracking-wider uppercase font-medium hidden sm:block">Producenter</a>
+        <a href="index.html#sortiment" class="text-sm text-white/70 hover:text-white tracking-wider uppercase font-medium hidden sm:block">Sortiment</a>
+        <a href="index.html" class="text-sm text-white/80 hover:text-white tracking-wider uppercase font-medium">&larr; Hem</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="max-w-5xl mx-auto px-6 lg:px-8 py-12">
+    <!-- Header -->
+    <div class="text-center mb-10">
+      <p class="text-wine-600 uppercase tracking-[0.2em] text-sm font-medium mb-3">Sök &amp; filtrera</p>
+      <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-3">Hitta ditt vin</h1>
+      <p class="text-stone-500 font-light max-w-xl mx-auto">Filtrera på land, producent eller typ av vin. Eller sök fritt bland alla 127 viner i vårt sortiment.</p>
+    </div>
+
+    <!-- Filters -->
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 p-6 mb-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Free text search -->
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Fritext</label>
+          <input id="search-text" type="text" placeholder="Sök vinnamn..." class="w-full px-4 py-3 border border-stone-200 rounded-lg text-stone-800 placeholder:text-stone-400 focus:outline-none focus:border-wine-500 focus:ring-1 focus:ring-wine-500 transition-colors">
+        </div>
+        <!-- Country -->
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Land</label>
+          <select id="filter-country" class="w-full px-4 py-3 border border-stone-200 rounded-lg text-stone-800 bg-white focus:outline-none focus:border-wine-500 focus:ring-1 focus:ring-wine-500 transition-colors pr-10 cursor-pointer">
+            <option value="">Alla länder</option>
+          </select>
+        </div>
+        <!-- Producer -->
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Producent</label>
+          <select id="filter-producer" class="w-full px-4 py-3 border border-stone-200 rounded-lg text-stone-800 bg-white focus:outline-none focus:border-wine-500 focus:ring-1 focus:ring-wine-500 transition-colors pr-10 cursor-pointer">
+            <option value="">Alla producenter</option>
+          </select>
+        </div>
+        <!-- Type -->
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Typ</label>
+          <select id="filter-type" class="w-full px-4 py-3 border border-stone-200 rounded-lg text-stone-800 bg-white focus:outline-none focus:border-wine-500 focus:ring-1 focus:ring-wine-500 transition-colors pr-10 cursor-pointer">
+            <option value="">Alla typer</option>
+          </select>
+        </div>
+      </div>
+      <div class="flex items-center justify-between mt-4 pt-4 border-t border-stone-100">
+        <p id="result-count" class="text-stone-500 text-sm">Visar 127 av 127 viner</p>
+        <button id="clear-filters" class="text-wine-600 hover:text-wine-800 text-sm font-medium cursor-pointer transition-colors">Rensa filter</button>
+      </div>
+    </div>
+
+    <!-- Results -->
+    <div id="results" class="space-y-2">
+    </div>
+
+    <!-- No results -->
+    <div id="no-results" class="hidden text-center py-16">
+      <p class="text-stone-400 text-lg font-light">Inga viner matchar din sökning.</p>
+      <button onclick="clearFilters()" class="mt-4 text-wine-600 hover:text-wine-800 font-medium cursor-pointer">Rensa filter</button>
+    </div>
+  </main>
+
+  <footer class="bg-stone-900 text-stone-500 py-8 mt-16">
+    <div class="max-w-5xl mx-auto px-6 text-center text-xs">
+      <p>&copy; 2026 Verum Vinum Sverige AB &middot; <a href="index.html" class="hover:text-stone-300 transition-colors">Tillbaka till startsidan</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const wines = [{"slug": "alberto-oggero-roero-2", "name": "Roero", "producer": "Alberto Oggero", "type": "Rött", "country": "Italien", "region": "Roero, Piemonte, Italien"}, {"slug": "alberto-oggero-roero", "name": "Roero Arneis", "producer": "Alberto Oggero", "type": "Vitt", "country": "Italien", "region": "Roero, Piemonte, Italien"}, {"slug": "alberto-oggero-sandro-dpindeta", "name": "Sandro d'Pindeta 2023", "producer": "Alberto Oggero", "type": "Rött", "country": "Italien", "region": "Roero, Piemonte, Italien"}, {"slug": "alberto-oggero-valle-dei-lunghi", "name": "Valle dei Lunghi", "producer": "Alberto Oggero", "type": "Vitt", "country": "Italien", "region": "Roero, Piemonte, Italien"}, {"slug": "christian-clerget-bourgogne-rouge", "name": "Bourgogne Rouge", "producer": "Domaine Christian Clerget", "type": "Rött", "country": "Frankrike", "region": "Vougeot, Bourgogne, Frankrike"}, {"slug": "christian-clerget-chambollemusigny-1er-cru-les-charmes", "name": "Chambolle-Musigny 1er Cru Les Charmes", "producer": "Domaine Christian Clerget", "type": "Rött", "country": "Frankrike", "region": "Chambolle-Musigny, Bourgogne, Frankrike"}, {"slug": "christian-clerget-chambollemusigny-aux-croix", "name": "Chambolle-Musigny Aux Croix", "producer": "Domaine Christian Clerget", "type": "Rött", "country": "Frankrike", "region": "Chambolle-Musigny, Bourgogne, Frankrike"}, {"slug": "christian-clerget-chambollemusigny", "name": "Chambolle-Musigny", "producer": "Domaine Christian Clerget", "type": "Rött", "country": "Frankrike", "region": "Chambolle-Musigny, Bourgogne, Frankrike"}, {"slug": "christian-clerget-echezeaux-grand-cru-en-orveaux", "name": "Échezeaux Grand Cru En Orveaux", "producer": "Domaine Christian Clerget", "type": "Rött", "country": "Frankrike", "region": "Vosne-Romanée, Bourgogne, Frankrike"}, {"slug": "christian-clerget-moreysaintdenis", "name": "Morey-Saint-Denis", "producer": "Domaine Christian Clerget", "type": "Rött", "country": "Frankrike", "region": "Morey-Saint-Denis, Bourgogne, Frankrike"}, {"slug": "christian-clerget-vosneromanee-les-violettes", "name": "Vosne-Romanée Les Violettes", "producer": "Domaine Christian Clerget", "type": "Rött", "country": "Frankrike", "region": "Vosne-Romanée, Bourgogne, Frankrike"}, {"slug": "christian-clerget-vougeot-1er-cru-les-petits-vougeots", "name": "Vougeot 1er Cru Les Petits Vougeots", "producer": "Domaine Christian Clerget", "type": "Rött", "country": "Frankrike", "region": "Vougeot, Bourgogne, Frankrike"}, {"slug": "cigliano-di-sopra-chianti-classico", "name": "Chianti Classico 2022", "producer": "Cigliano di Sopra", "type": "Rött", "country": "Italien", "region": "San Casciano in Val di Pesa, Toscana, Italien"}, {"slug": "clos-de-la-bonnette-cisselande-vdf", "name": "Cisselande VdF 2023", "producer": "Clos de la Bonnette", "type": "Rött", "country": "Frankrike", "region": "Norra Rhône, Frankrike"}, {"slug": "clos-de-la-bonnette-collines-rhodaniennes-syrah-vieilles-vignes", "name": "Syrah Vieilles Vignes 2023", "producer": "Clos de la Bonnette", "type": "Rött", "country": "Frankrike", "region": "Norra Rhône, Frankrike"}, {"slug": "clos-de-la-bonnette-condrieu-legende-bonnetta", "name": "Condrieu Légende Bonnetta", "producer": "Clos de la Bonnette", "type": "Vitt", "country": "Frankrike", "region": "Condrieu, Norra Rhône, Frankrike"}, {"slug": "clos-de-la-bonnette-coterotie-prenelle", "name": "Côte-Rôtie Prenelle", "producer": "Clos de la Bonnette", "type": "Rött", "country": "Frankrike", "region": "Côte-Rôtie, Norra Rhône, Frankrike"}, {"slug": "coffinetduvernay-btardmontrachet-grand-cru", "name": "Bâtard-Montrachet Grand Cru", "producer": "Domaine Coffinet-Duvernay", "type": "Vitt", "country": "Frankrike", "region": "Chassagne-Montrachet, Bourgogne, Frankrike"}, {"slug": "coffinetduvernay-chassagnemontrachet-1er-cru-clos-saint-jean", "name": "Chassagne-Montrachet 1er Cru Clos Saint Jean", "producer": "Domaine Coffinet-Duvernay", "type": "Vitt", "country": "Frankrike", "region": "Chassagne-Montrachet, Bourgogne, Frankrike"}, {"slug": "coffinetduvernay-chassagnemontrachet-1er-cru-dent-de-chien", "name": "Chassagne-Montrachet 1er Cru Dent de Chien", "producer": "Domaine Coffinet-Duvernay", "type": "Vitt", "country": "Frankrike", "region": "Chassagne-Montrachet, Bourgogne, Frankrike"}, {"slug": "coffinetduvernay-chassagnemontrachet-1er-cru-les-caillerets", "name": "Chassagne-Montrachet 1er Cru Les Caillerets", "producer": "Domaine Coffinet-Duvernay", "type": "Vitt", "country": "Frankrike", "region": "Chassagne-Montrachet, Bourgogne, Frankrike"}, {"slug": "coffinetduvernay-chassagnemontrachet-1er-cru-les-grands-clos", "name": "Chassagne-Montrachet 1er Cru Les Grands Clos", "producer": "Domaine Coffinet-Duvernay", "type": "Vitt", "country": "Frankrike", "region": "Chassagne-Montrachet, Bourgogne, Frankrike"}, {"slug": "coffinetduvernay-chassagnemontrachet-les-blanchots-dessous", "name": "Chassagne-Montrachet Les Blanchots Dessous", "producer": "Domaine Coffinet-Duvernay", "type": "Vitt", "country": "Frankrike", "region": "Chassagne-Montrachet, Bourgogne, Frankrike"}, {"slug": "coffinetduvernay-chassagnemontrachet-rouge", "name": "Chassagne-Montrachet Rouge", "producer": "Domaine Coffinet-Duvernay", "type": "Rött", "country": "Frankrike", "region": "Chassagne-Montrachet, Bourgogne, Frankrike"}, {"slug": "coffinetduvernay-vin-de-france-assemblage", "name": "Vin de France Assemblage", "producer": "Domaine Coffinet-Duvernay", "type": "Vitt", "country": "Frankrike", "region": "Chassagne-Montrachet, Bourgogne, Frankrike"}, {"slug": "diego-morra-barolo-del-comune-di-verduno", "name": "Barolo del Comune di Verduno", "producer": "Diego Morra", "type": "Rött", "country": "Italien", "region": "Verduno, Piemonte, Italien"}, {"slug": "diego-morra-barolo-monvigliero", "name": "Barolo Monvigliero", "producer": "Diego Morra", "type": "Rött", "country": "Italien", "region": "Verduno, Piemonte, Italien"}, {"slug": "diego-morra-barolo-san-lorenzo", "name": "Barolo San Lorenzo", "producer": "Diego Morra", "type": "Rött", "country": "Italien", "region": "Verduno, Piemonte, Italien"}, {"slug": "diego-morra-langhe-rosato", "name": "Langhe Rosato 2022", "producer": "Diego Morra", "type": "Rosé", "country": "Italien", "region": "Verduno, Piemonte, Italien"}, {"slug": "diego-morra-verduno-pelaverga", "name": "Verduno Pelaverga 2023", "producer": "Diego Morra", "type": "Rött", "country": "Italien", "region": "Verduno, Piemonte, Italien"}, {"slug": "domaine-villet-chardonnay-elevage-2-an-en-fut", "name": "Chardonnay (élevage 2 an en fût)", "producer": "Domaine Villet", "type": "Vitt", "country": "Frankrike", "region": "Arbois, Jura, Frankrike"}, {"slug": "domaine-villet-pinot-noir", "name": "Pinot Noir", "producer": "Domaine Villet", "type": "Rött", "country": "Frankrike", "region": "Arbois, Jura, Frankrike"}, {"slug": "domaine-villet-poulsard", "name": "Poulsard", "producer": "Domaine Villet", "type": "Rött", "country": "Frankrike", "region": "Arbois, Jura, Frankrike"}, {"slug": "domaine-villet-rouge-tradition", "name": "Rouge Tradition", "producer": "Domaine Villet", "type": "Rött", "country": "Frankrike", "region": "Arbois, Jura, Frankrike"}, {"slug": "domaine-villet-savagnin-ouille-elevage-24-mois-en-cuve", "name": "Savagnin Ouillé (24 mois en cuve)", "producer": "Domaine Villet", "type": "Vitt", "country": "Frankrike", "region": "Arbois, Jura, Frankrike"}, {"slug": "domaine-villet-savagnin-ouille-elevage-30-mois-en-foudre", "name": "Savagnin Ouillé (30 mois en Foudre)", "producer": "Domaine Villet", "type": "Vitt", "country": "Frankrike", "region": "Arbois, Jura, Frankrike"}, {"slug": "ettore-germano-alta-langa-extra-brut", "name": "Alta Langa Extra Brut 2019", "producer": "Ettore Germano", "type": "Mousserande", "country": "Italien", "region": "Alta Langa, Piemonte, Italien"}, {"slug": "ettore-germano-alta-langa-riserva-blanc-de-blanc-pas-dose", "name": "Alta Langa Riserva Blanc de Blanc Pas Dosé", "producer": "Ettore Germano", "type": "Mousserande", "country": "Italien", "region": "Alta Langa, Piemonte, Italien"}, {"slug": "ettore-germano-alta-langa-riserva-blanc-de-noir-pas-dose", "name": "Alta Langa Riserva Blanc de Noir Pas Dosé", "producer": "Ettore Germano", "type": "Mousserande", "country": "Italien", "region": "Alta Langa, Piemonte, Italien"}, {"slug": "ettore-germano-barbera-dalba-superiore", "name": "Barbera d'Alba Superiore", "producer": "Ettore Germano", "type": "Rött", "country": "Italien", "region": "Alba, Piemonte, Italien"}, {"slug": "ettore-germano-barolo-cerretta", "name": "Barolo Cerretta 2019", "producer": "Ettore Germano", "type": "Rött", "country": "Italien", "region": "Serralunga d'Alba, Piemonte, Italien"}, {"slug": "ettore-germano-barolo-del-comune-di-serralunga-dalba", "name": "Barolo del Comune di Serralunga d'Alba", "producer": "Ettore Germano", "type": "Rött", "country": "Italien", "region": "Serralunga d'Alba, Piemonte, Italien"}, {"slug": "ettore-germano-barolo-lazzarito-riserva", "name": "Barolo Lazzarito Riserva", "producer": "Ettore Germano", "type": "Rött", "country": "Italien", "region": "Serralunga d'Alba, Piemonte, Italien"}, {"slug": "ettore-germano-barolo-prapo", "name": "Barolo Prapò", "producer": "Ettore Germano", "type": "Rött", "country": "Italien", "region": "Serralunga d'Alba, Piemonte, Italien"}, {"slug": "ettore-germano-barolo-vignarionda", "name": "Barolo Vigna Rionda", "producer": "Ettore Germano", "type": "Rött", "country": "Italien", "region": "Serralunga d'Alba, Piemonte, Italien"}, {"slug": "ettore-germano-binel-langhe-bianco", "name": "Binel Langhe Bianco", "producer": "Ettore Germano", "type": "Vitt", "country": "Italien", "region": "Langhe, Piemonte, Italien"}, {"slug": "ettore-germano-herzu-langhe-riesling", "name": "Hérzu Langhe Riesling 2023", "producer": "Ettore Germano", "type": "Vitt", "country": "Italien", "region": "Langhe, Piemonte, Italien"}, {"slug": "ettore-germano-langhe-chardonnay", "name": "Langhe Chardonnay 2023", "producer": "Ettore Germano", "type": "Vitt", "country": "Italien", "region": "Langhe, Piemonte, Italien"}, {"slug": "ettore-germano-langhe-nascetta", "name": "Langhe Nascetta 2021", "producer": "Ettore Germano", "type": "Vitt", "country": "Italien", "region": "Langhe, Piemonte, Italien"}, {"slug": "ettore-germano-rosanna-extra-brut-rose-metodo-classico", "name": "Rosanna Extra Brut Rosé Metodo Classico", "producer": "Ettore Germano", "type": "Mousserande", "country": "Italien", "region": "Piemonte, Italien"}, {"slug": "fontanabianca-barbaresco-bordini", "name": "Barbaresco Bordini 2021", "producer": "Fontanabianca", "type": "Rött", "country": "Italien", "region": "Neive, Piemonte, Italien"}, {"slug": "fontanabianca-barbaresco-serraboella", "name": "Barbaresco Serraboella 2020", "producer": "Fontanabianca", "type": "Rött", "country": "Italien", "region": "Neive, Piemonte, Italien"}, {"slug": "fontanabianca-barbaresco", "name": "Barbaresco", "producer": "Fontanabianca", "type": "Rött", "country": "Italien", "region": "Neive, Piemonte, Italien"}, {"slug": "fontanabianca-barbera-dalba-superiore", "name": "Barbera d'Alba Superiore 2021", "producer": "Fontanabianca", "type": "Rött", "country": "Italien", "region": "Neive, Piemonte, Italien"}, {"slug": "fontanabianca-dolcetto-dalba", "name": "Dolcetto d'Alba 2023", "producer": "Fontanabianca", "type": "Rött", "country": "Italien", "region": "Neive, Piemonte, Italien"}, {"slug": "fontanabianca-langhe-arneis-sommo", "name": "Langhe Arneis \"Sommo\" 2023", "producer": "Fontanabianca", "type": "Vitt", "country": "Italien", "region": "Neive, Piemonte, Italien"}, {"slug": "fontanabianca-langhe-nebbiolo", "name": "Langhe Nebbiolo", "producer": "Fontanabianca", "type": "Rött", "country": "Italien", "region": "Neive, Piemonte, Italien"}, {"slug": "la-famille-k-la-mere", "name": "La Mère", "producer": "Domaine La Famille K", "type": "Rött", "country": "Frankrike", "region": "Morancé, Beaujolais, Frankrike"}, {"slug": "la-famille-k-le-pere-blanc", "name": "Le Père Blanc", "producer": "Domaine La Famille K", "type": "Vitt", "country": "Frankrike", "region": "Morancé, Beaujolais, Frankrike"}, {"slug": "la-famille-k-le-pere-vdf-pinot-noir", "name": "Le Père VdF Pinot Noir 2022", "producer": "Domaine La Famille K", "type": "Rött", "country": "Frankrike", "region": "Morancé, Beaujolais, Frankrike"}, {"slug": "la-famille-k-le-pere", "name": "Le Père Rouge 2020", "producer": "Domaine La Famille K", "type": "Rött", "country": "Frankrike", "region": "Morancé, Beaujolais, Frankrike"}, {"slug": "la-famille-k-lheritiere", "name": "L'Héritière Rouge 2024", "producer": "Domaine La Famille K", "type": "Rött", "country": "Frankrike", "region": "Morancé, Beaujolais, Frankrike"}, {"slug": "la-famille-k-loncle", "name": "L'Oncle", "producer": "Domaine La Famille K", "type": "Rött", "country": "Frankrike", "region": "Morancé, Beaujolais, Frankrike"}, {"slug": "lapo-berti-barolo-del-comune-di-la-morra", "name": "Barolo del Comune di La Morra", "producer": "Lapo Berti", "type": "Rött", "country": "Italien", "region": "La Morra, Piemonte, Italien"}, {"slug": "lapo-berti-barolo-fossati", "name": "Barolo Fossati", "producer": "Lapo Berti", "type": "Rött", "country": "Italien", "region": "La Morra, Piemonte, Italien"}, {"slug": "lapo-berti-langhe-nebbiolo", "name": "Langhe Nebbiolo", "producer": "Lapo Berti", "type": "Rött", "country": "Italien", "region": "La Morra, Piemonte, Italien"}, {"slug": "martin-mullen-krover-kirchlay-auslese", "name": "Kröver Kirchlay Auslese", "producer": "Weingut Martin Müllen", "type": "Vitt", "country": "Tyskland", "region": "Traben-Trarbach, Mosel, Tyskland"}, {"slug": "martin-mullen-krover-letterlay-spatlese-feinherb", "name": "Kröver Letterlay Spätlese Feinherb", "producer": "Weingut Martin Müllen", "type": "Vitt", "country": "Tyskland", "region": "Traben-Trarbach, Mosel, Tyskland"}, {"slug": "martin-mullen-krover-paradies-spatlese-trocken", "name": "Kröver Paradies Spätlese Trocken", "producer": "Weingut Martin Müllen", "type": "Vitt", "country": "Tyskland", "region": "Traben-Trarbach, Mosel, Tyskland"}, {"slug": "martin-mullen-nostel-trocken", "name": "Nostel Trocken", "producer": "Weingut Martin Müllen", "type": "Vitt", "country": "Tyskland", "region": "Traben-Trarbach, Mosel, Tyskland"}, {"slug": "martin-mullen-riesling-revival-trocken", "name": "Riesling Revival Trocken", "producer": "Weingut Martin Müllen", "type": "Vitt", "country": "Tyskland", "region": "Traben-Trarbach, Mosel, Tyskland"}, {"slug": "martin-mullen-trabener-wurzgarten-kabinett-feinherb", "name": "Trabener Würzgarten Kabinett Feinherb", "producer": "Weingut Martin Müllen", "type": "Vitt", "country": "Tyskland", "region": "Traben-Trarbach, Mosel, Tyskland"}, {"slug": "martin-mullen-trabener-wurzgarten-spatlese-trocken", "name": "Trabener Würzgarten Spätlese Trocken 2021", "producer": "Weingut Martin Müllen", "type": "Vitt", "country": "Tyskland", "region": "Traben-Trarbach, Mosel, Tyskland"}, {"slug": "martin-mullen-trarbacher-huhnerberg-auslese", "name": "Trarbacher Hühnerberg Auslese", "producer": "Weingut Martin Müllen", "type": "Vitt", "country": "Tyskland", "region": "Traben-Trarbach, Mosel, Tyskland"}, {"slug": "michel-rebourgeon-beaune-1er-cru-les-chouacheux", "name": "Beaune 1er Cru Les Chouacheux", "producer": "Domaine Michel Rebourgeon", "type": "Rött", "country": "Frankrike", "region": "Beaune, Bourgogne, Frankrike"}, {"slug": "michel-rebourgeon-beaune-les-epenottes", "name": "Beaune Les Epenottes", "producer": "Domaine Michel Rebourgeon", "type": "Rött", "country": "Frankrike", "region": "Pommard, Bourgogne, Frankrike"}, {"slug": "michel-rebourgeon-pommard-1er-cru-les-arvelets", "name": "Pommard 1er Cru Les Arvelets", "producer": "Domaine Michel Rebourgeon", "type": "Rött", "country": "Frankrike", "region": "Pommard, Bourgogne, Frankrike"}, {"slug": "michel-rebourgeon-pommard-1er-cru-les-charmots", "name": "Pommard 1er Cru Les Charmots", "producer": "Domaine Michel Rebourgeon", "type": "Rött", "country": "Frankrike", "region": "Pommard, Bourgogne, Frankrike"}, {"slug": "michel-rebourgeon-pommard-1er-cru-les-rugiens", "name": "Pommard 1er Cru Les Rugiens", "producer": "Domaine Michel Rebourgeon", "type": "Rött", "country": "Frankrike", "region": "Pommard, Bourgogne, Frankrike"}, {"slug": "michel-rebourgeon-pommard-cuvee-william", "name": "Pommard Cuvée William", "producer": "Domaine Michel Rebourgeon", "type": "Rött", "country": "Frankrike", "region": "Pommard, Bourgogne, Frankrike"}, {"slug": "michel-rebourgeon-pommard-les-noizons", "name": "Pommard Les Noizons", "producer": "Domaine Michel Rebourgeon", "type": "Rött", "country": "Frankrike", "region": "Pommard, Bourgogne, Frankrike"}, {"slug": "michel-rebourgeon-pommard-trois-terroirs", "name": "Pommard Trois Terroirs", "producer": "Domaine Michel Rebourgeon", "type": "Rött", "country": "Frankrike", "region": "Pommard, Bourgogne, Frankrike"}, {"slug": "mori-concetta-morino-chianti-classico", "name": "Morino Chianti Classico 2021", "producer": "Mori Concetta", "type": "Rött", "country": "Italien", "region": "San Casciano in Val di Pesa, Toscana, Italien"}, {"slug": "quinta-das-bagerias-abafado", "name": "Abafado", "producer": "Quinta das Bágeiras", "type": "Starkvin", "country": "Portugal", "region": "Sangalhos, Bairrada, Portugal"}, {"slug": "quinta-das-bagerias-espumante-colheita-rose", "name": "Espumante Colheita Rosé 2022", "producer": "Quinta das Bágeiras", "type": "Mousserande", "country": "Portugal", "region": "Sangalhos, Bairrada, Portugal"}, {"slug": "quinta-das-bagerias-espumante-colheita", "name": "Espumante Colheita", "producer": "Quinta das Bágeiras", "type": "Mousserande", "country": "Portugal", "region": "Sangalhos, Bairrada, Portugal"}, {"slug": "quinta-das-bagerias-garrafeira-tinto", "name": "Garrafeira Tinto 2018", "producer": "Quinta das Bágeiras", "type": "Rött", "country": "Portugal", "region": "Sangalhos, Bairrada, Portugal"}, {"slug": "quinta-das-bagerias-vinho-branco-reserva", "name": "Branco Reserva 2022", "producer": "Quinta das Bágeiras", "type": "Vitt", "country": "Portugal", "region": "Sangalhos, Bairrada, Portugal"}, {"slug": "quinta-das-bagerias-vinho-tinto-reserva", "name": "Tinto Reserva 2021", "producer": "Quinta das Bágeiras", "type": "Rött", "country": "Portugal", "region": "Sangalhos, Bairrada, Portugal"}, {"slug": "quinta-do-javali-clos-bonifata-2", "name": "Clos Bonifata", "producer": "Quinta do Javali", "type": "Rött", "country": "Portugal", "region": "São João da Pesqueira, Douro, Portugal"}, {"slug": "quinta-do-javali-clos-fonte-do-santo", "name": "Clos Fonte do Santo", "producer": "Quinta do Javali", "type": "Rött", "country": "Portugal", "region": "São João da Pesqueira, Douro, Portugal"}, {"slug": "quinta-do-javali-crazy-branco", "name": "Crazy Javali Branco", "producer": "Quinta do Javali", "type": "Vitt", "country": "Portugal", "region": "São João da Pesqueira, Douro, Portugal"}, {"slug": "quinta-do-javali-crazy-javali-tinto", "name": "Crazy Javali Tinto", "producer": "Quinta do Javali", "type": "Rött", "country": "Portugal", "region": "São João da Pesqueira, Douro, Portugal"}, {"slug": "quinta-do-javali-pet-nat", "name": "Javali Pet Nat", "producer": "Quinta do Javali", "type": "Mousserande", "country": "Portugal", "region": "São João da Pesqueira, Douro, Portugal"}, {"slug": "quinta-do-javali-tawny-port-10-year", "name": "Tawny Port 10 Year", "producer": "Quinta do Javali", "type": "Starkvin", "country": "Portugal", "region": "São João da Pesqueira, Douro, Portugal"}, {"slug": "quinta-do-javali-tawny-port", "name": "Tawny Port", "producer": "Quinta do Javali", "type": "Starkvin", "country": "Portugal", "region": "São João da Pesqueira, Douro, Portugal"}, {"slug": "quinta-do-javali-tinto", "name": "Javali Tinto", "producer": "Quinta do Javali", "type": "Rött", "country": "Portugal", "region": "São João da Pesqueira, Douro, Portugal"}, {"slug": "quinta-do-javali-vinhas-dos-lobatos", "name": "Vinhas dos Lobatos", "producer": "Quinta do Javali", "type": "Rött", "country": "Portugal", "region": "São João da Pesqueira, Douro, Portugal"}, {"slug": "reva-barbera-dalba-superiore", "name": "Barbera d'Alba Superiore", "producer": "Réva", "type": "Rött", "country": "Italien", "region": "Monforte d'Alba, Piemonte, Italien"}, {"slug": "reva-barolo-cannubi", "name": "Barolo Cannubi", "producer": "Réva", "type": "Rött", "country": "Italien", "region": "Barolo, Piemonte, Italien"}, {"slug": "reva-barolo-ravera", "name": "Barolo Ravera", "producer": "Réva", "type": "Rött", "country": "Italien", "region": "Monforte d'Alba, Piemonte, Italien"}, {"slug": "reva-barolo", "name": "Barolo 2021", "producer": "Réva", "type": "Rött", "country": "Italien", "region": "Monforte d'Alba, Piemonte, Italien"}, {"slug": "reva-dolcetto-dalba", "name": "Dolcetto d'Alba", "producer": "Réva", "type": "Rött", "country": "Italien", "region": "Monforte d'Alba, Piemonte, Italien"}, {"slug": "reva-langhe-bianco-grey", "name": "Langhe Bianco Grey", "producer": "Réva", "type": "Vitt", "country": "Italien", "region": "Monforte d'Alba, Piemonte, Italien"}, {"slug": "reva-nebbiolo-dalba", "name": "Nebbiolo d'Alba", "producer": "Réva", "type": "Rött", "country": "Italien", "region": "Monforte d'Alba, Piemonte, Italien"}, {"slug": "rudi-pichler-gruner-veltliner-achleithen-smaragd", "name": "Grüner Veltliner Achleithen Smaragd", "producer": "Rudi Pichler", "type": "Vitt", "country": "Österrike", "region": "Wosendorf, Wachau, Österrike"}, {"slug": "rudi-pichler-gruner-veltliner-hochrain-smaragd", "name": "Grüner Veltliner Hochrain Smaragd", "producer": "Rudi Pichler", "type": "Vitt", "country": "Österrike", "region": "Wosendorf, Wachau, Österrike"}, {"slug": "rudi-pichler-gruner-veltliner-kollmutz-smaragd", "name": "Grüner Veltliner Kollmutz Smaragd", "producer": "Rudi Pichler", "type": "Vitt", "country": "Österrike", "region": "Wosendorf, Wachau, Österrike"}, {"slug": "rudi-pichler-gruner-veltliner-terrassen-smaragd", "name": "Grüner Veltliner Terrassen Smaragd 2023", "producer": "Rudi Pichler", "type": "Vitt", "country": "Österrike", "region": "Wosendorf, Wachau, Österrike"}, {"slug": "rudi-pichler-riesling-achleithen-smaragd", "name": "Riesling Achleithen Smaragd", "producer": "Rudi Pichler", "type": "Vitt", "country": "Österrike", "region": "Wosendorf, Wachau, Österrike"}, {"slug": "rudi-pichler-riesling-hochrain-smaragd", "name": "Riesling Hochrain Smaragd", "producer": "Rudi Pichler", "type": "Vitt", "country": "Österrike", "region": "Wosendorf, Wachau, Österrike"}, {"slug": "rudi-pichler-riesling-kirchweg-smaragd", "name": "Riesling Kirchweg Smaragd", "producer": "Rudi Pichler", "type": "Vitt", "country": "Österrike", "region": "Wosendorf, Wachau, Österrike"}, {"slug": "vadio-grande", "name": "Grande", "producer": "Vadio", "type": "Rött", "country": "Portugal", "region": "Poutena, Bairrada, Portugal"}, {"slug": "vadio-perpetuum-white-sparkling", "name": "Perpetuum Sparkling NV", "producer": "Vadio", "type": "Mousserande", "country": "Portugal", "region": "Poutena, Bairrada, Portugal"}, {"slug": "vadio-red", "name": "Red 2020", "producer": "Vadio", "type": "Rött", "country": "Portugal", "region": "Poutena, Bairrada, Portugal"}, {"slug": "vadio-rexarte", "name": "Rexarte", "producer": "Vadio", "type": "Rött", "country": "Portugal", "region": "Poutena, Bairrada, Portugal"}, {"slug": "vadio-rose-sparkling", "name": "Rosé Sparkling Bruto 2020", "producer": "Vadio", "type": "Mousserande", "country": "Portugal", "region": "Poutena, Bairrada, Portugal"}, {"slug": "vadio-white", "name": "White 2023", "producer": "Vadio", "type": "Vitt", "country": "Portugal", "region": "Poutena, Bairrada, Portugal"}, {"slug": "victor-charlot-instinct-premier-5050", "name": "Instinct Premier 50-50 NV", "producer": "Victor Charlot", "type": "Mousserande", "country": "Frankrike", "region": "Moussy, Champagne, Frankrike"}, {"slug": "victor-charlot-instinct-premier-7525", "name": "Instinct Premier 75-25 NV", "producer": "Victor Charlot", "type": "Mousserande", "country": "Frankrike", "region": "Moussy, Champagne, Frankrike"}, {"slug": "victor-charlot-lapprivoisee", "name": "L'Apprivoisée", "producer": "Victor Charlot", "type": "Mousserande", "country": "Frankrike", "region": "Moussy, Champagne, Frankrike"}, {"slug": "victor-charlot-lart-de-la-ruse", "name": "L'Art de la Ruse", "producer": "Victor Charlot", "type": "Mousserande", "country": "Frankrike", "region": "Moussy, Champagne, Frankrike"}, {"slug": "victor-charlot-les-terres-de-la-greve", "name": "Les Terres de la Grève", "producer": "Victor Charlot", "type": "Mousserande", "country": "Frankrike", "region": "Moussy, Champagne, Frankrike"}, {"slug": "victor-charlot-noirs-de-jais", "name": "Noirs de Jais", "producer": "Victor Charlot", "type": "Mousserande", "country": "Frankrike", "region": "Moussy, Champagne, Frankrike"}, {"slug": "villa-i-cipressi-brunello-di-montalcino", "name": "Brunello di Montalcino", "producer": "Villa i Cipressi", "type": "Rött", "country": "Italien", "region": "Montalcino, Toscana, Italien"}, {"slug": "villa-i-cipressi-rosso-di-montalcino", "name": "Rosso di Montalcino", "producer": "Villa i Cipressi", "type": "Rött", "country": "Italien", "region": "Montalcino, Toscana, Italien"}, {"slug": "villa-i-cipressi-zebras-brunello-di-montalcino", "name": "Zebras Brunello di Montalcino", "producer": "Villa i Cipressi", "type": "Rött", "country": "Italien", "region": "Montalcino, Toscana, Italien"}];
+
+    const typeColors = {
+      'Rött': 'bg-red-900/80 text-red-100',
+      'Vitt': 'bg-amber-600/80 text-amber-50',
+      'Rosé': 'bg-pink-400/80 text-pink-50',
+      'Mousserande': 'bg-yellow-300/80 text-yellow-900',
+      'Starkvin': 'bg-orange-800/80 text-orange-100',
+    };
+
+    const countryFlags = {
+      'Italien': '🇮🇹',
+      'Frankrike': '🇫🇷',
+      'Portugal': '🇵🇹',
+      'Tyskland': '🇩🇪',
+      'Österrike': '🇦🇹',
+    };
+
+    // Populate dropdowns
+    const countries = [...new Set(wines.map(w => w.country))].sort((a,b) => a.localeCompare(b,'sv'));
+    const producers = [...new Set(wines.map(w => w.producer))].sort((a,b) => a.localeCompare(b,'sv'));
+    const types = [...new Set(wines.map(w => w.type))].sort((a,b) => a.localeCompare(b,'sv'));
+
+    const countryEl = document.getElementById('filter-country');
+    const producerEl = document.getElementById('filter-producer');
+    const typeEl = document.getElementById('filter-type');
+    const searchEl = document.getElementById('search-text');
+
+    countries.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = `${countryFlags[c] || ''} ${c}`; countryEl.appendChild(o); });
+    producers.forEach(p => { const o = document.createElement('option'); o.value = p; o.textContent = p; producerEl.appendChild(o); });
+    types.forEach(t => { const o = document.createElement('option'); o.value = t; o.textContent = t; typeEl.appendChild(o); });
+
+    function renderResults() {
+      const country = countryEl.value;
+      const producer = producerEl.value;
+      const type = typeEl.value;
+      const text = searchEl.value.toLowerCase().trim();
+
+      let filtered = wines;
+      if (country) filtered = filtered.filter(w => w.country === country);
+      if (producer) filtered = filtered.filter(w => w.producer === producer);
+      if (type) filtered = filtered.filter(w => w.type === type);
+      if (text) filtered = filtered.filter(w =>
+        w.name.toLowerCase().includes(text) ||
+        w.producer.toLowerCase().includes(text) ||
+        w.region.toLowerCase().includes(text)
+      );
+
+      // Sort by producer then name
+      filtered.sort((a, b) => {
+        const pc = a.producer.localeCompare(b.producer, 'sv');
+        if (pc !== 0) return pc;
+        return a.name.localeCompare(b.name, 'sv');
+      });
+
+      const resultsEl = document.getElementById('results');
+      const noResultsEl = document.getElementById('no-results');
+      const countEl = document.getElementById('result-count');
+
+      countEl.textContent = `Visar ${filtered.length} av ${wines.length} viner`;
+
+      if (filtered.length === 0) {
+        resultsEl.innerHTML = '';
+        noResultsEl.classList.remove('hidden');
+        return;
+      }
+      noResultsEl.classList.add('hidden');
+
+      resultsEl.innerHTML = filtered.map(w => `
+        <a href="sortiment/${w.slug}.html" class="flex items-center gap-4 p-4 bg-white rounded-lg border border-stone-100 hover:border-wine-200 hover:shadow-md transition-all group">
+          <span class="${typeColors[w.type] || 'bg-stone-500 text-white'} px-2.5 py-1 rounded text-xs font-medium uppercase tracking-wider whitespace-nowrap">${w.type}</span>
+          <div class="flex-1 min-w-0">
+            <h3 class="font-serif text-lg text-stone-900 group-hover:text-wine-800 transition-colors truncate">${w.name}</h3>
+            <p class="text-stone-400 text-sm truncate">${w.producer} &middot; ${w.region}</p>
+          </div>
+          <span class="text-xl hidden sm:block">${countryFlags[w.country] || ''}</span>
+          <svg class="w-5 h-5 text-stone-300 group-hover:text-wine-500 transition-colors shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        </a>
+      `).join('');
+    }
+
+    function clearFilters() {
+      countryEl.value = '';
+      producerEl.value = '';
+      typeEl.value = '';
+      searchEl.value = '';
+      renderResults();
+    }
+
+    // Event listeners
+    countryEl.addEventListener('change', renderResults);
+    producerEl.addEventListener('change', renderResults);
+    typeEl.addEventListener('change', renderResults);
+    searchEl.addEventListener('input', renderResults);
+    document.getElementById('clear-filters').addEventListener('click', clearFilters);
+
+    // Initial render
+    renderResults();
+  </script>
+</body>
+</html>

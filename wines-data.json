@@ -1,0 +1,1018 @@
+[
+  {
+    "slug": "alberto-oggero-roero-2",
+    "name": "Roero",
+    "producer": "Alberto Oggero",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Roero, Piemonte, Italien"
+  },
+  {
+    "slug": "alberto-oggero-roero",
+    "name": "Roero Arneis",
+    "producer": "Alberto Oggero",
+    "type": "Vitt",
+    "country": "Italien",
+    "region": "Roero, Piemonte, Italien"
+  },
+  {
+    "slug": "alberto-oggero-sandro-dpindeta",
+    "name": "Sandro d'Pindeta 2023",
+    "producer": "Alberto Oggero",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Roero, Piemonte, Italien"
+  },
+  {
+    "slug": "alberto-oggero-valle-dei-lunghi",
+    "name": "Valle dei Lunghi",
+    "producer": "Alberto Oggero",
+    "type": "Vitt",
+    "country": "Italien",
+    "region": "Roero, Piemonte, Italien"
+  },
+  {
+    "slug": "christian-clerget-bourgogne-rouge",
+    "name": "Bourgogne Rouge",
+    "producer": "Domaine Christian Clerget",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Vougeot, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "christian-clerget-chambollemusigny-1er-cru-les-charmes",
+    "name": "Chambolle-Musigny 1er Cru Les Charmes",
+    "producer": "Domaine Christian Clerget",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Chambolle-Musigny, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "christian-clerget-chambollemusigny-aux-croix",
+    "name": "Chambolle-Musigny Aux Croix",
+    "producer": "Domaine Christian Clerget",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Chambolle-Musigny, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "christian-clerget-chambollemusigny",
+    "name": "Chambolle-Musigny",
+    "producer": "Domaine Christian Clerget",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Chambolle-Musigny, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "christian-clerget-echezeaux-grand-cru-en-orveaux",
+    "name": "Échezeaux Grand Cru En Orveaux",
+    "producer": "Domaine Christian Clerget",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Vosne-Romanée, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "christian-clerget-moreysaintdenis",
+    "name": "Morey-Saint-Denis",
+    "producer": "Domaine Christian Clerget",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Morey-Saint-Denis, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "christian-clerget-vosneromanee-les-violettes",
+    "name": "Vosne-Romanée Les Violettes",
+    "producer": "Domaine Christian Clerget",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Vosne-Romanée, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "christian-clerget-vougeot-1er-cru-les-petits-vougeots",
+    "name": "Vougeot 1er Cru Les Petits Vougeots",
+    "producer": "Domaine Christian Clerget",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Vougeot, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "cigliano-di-sopra-chianti-classico",
+    "name": "Chianti Classico 2022",
+    "producer": "Cigliano di Sopra",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "San Casciano in Val di Pesa, Toscana, Italien"
+  },
+  {
+    "slug": "clos-de-la-bonnette-cisselande-vdf",
+    "name": "Cisselande VdF 2023",
+    "producer": "Clos de la Bonnette",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Norra Rhône, Frankrike"
+  },
+  {
+    "slug": "clos-de-la-bonnette-collines-rhodaniennes-syrah-vieilles-vignes",
+    "name": "Syrah Vieilles Vignes 2023",
+    "producer": "Clos de la Bonnette",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Norra Rhône, Frankrike"
+  },
+  {
+    "slug": "clos-de-la-bonnette-condrieu-legende-bonnetta",
+    "name": "Condrieu Légende Bonnetta",
+    "producer": "Clos de la Bonnette",
+    "type": "Vitt",
+    "country": "Frankrike",
+    "region": "Condrieu, Norra Rhône, Frankrike"
+  },
+  {
+    "slug": "clos-de-la-bonnette-coterotie-prenelle",
+    "name": "Côte-Rôtie Prenelle",
+    "producer": "Clos de la Bonnette",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Côte-Rôtie, Norra Rhône, Frankrike"
+  },
+  {
+    "slug": "coffinetduvernay-btardmontrachet-grand-cru",
+    "name": "Bâtard-Montrachet Grand Cru",
+    "producer": "Domaine Coffinet-Duvernay",
+    "type": "Vitt",
+    "country": "Frankrike",
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-clos-saint-jean",
+    "name": "Chassagne-Montrachet 1er Cru Clos Saint Jean",
+    "producer": "Domaine Coffinet-Duvernay",
+    "type": "Vitt",
+    "country": "Frankrike",
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-dent-de-chien",
+    "name": "Chassagne-Montrachet 1er Cru Dent de Chien",
+    "producer": "Domaine Coffinet-Duvernay",
+    "type": "Vitt",
+    "country": "Frankrike",
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-les-caillerets",
+    "name": "Chassagne-Montrachet 1er Cru Les Caillerets",
+    "producer": "Domaine Coffinet-Duvernay",
+    "type": "Vitt",
+    "country": "Frankrike",
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-les-grands-clos",
+    "name": "Chassagne-Montrachet 1er Cru Les Grands Clos",
+    "producer": "Domaine Coffinet-Duvernay",
+    "type": "Vitt",
+    "country": "Frankrike",
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "coffinetduvernay-chassagnemontrachet-les-blanchots-dessous",
+    "name": "Chassagne-Montrachet Les Blanchots Dessous",
+    "producer": "Domaine Coffinet-Duvernay",
+    "type": "Vitt",
+    "country": "Frankrike",
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "coffinetduvernay-chassagnemontrachet-rouge",
+    "name": "Chassagne-Montrachet Rouge",
+    "producer": "Domaine Coffinet-Duvernay",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "coffinetduvernay-vin-de-france-assemblage",
+    "name": "Vin de France Assemblage",
+    "producer": "Domaine Coffinet-Duvernay",
+    "type": "Vitt",
+    "country": "Frankrike",
+    "region": "Chassagne-Montrachet, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "diego-morra-barolo-del-comune-di-verduno",
+    "name": "Barolo del Comune di Verduno",
+    "producer": "Diego Morra",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Verduno, Piemonte, Italien"
+  },
+  {
+    "slug": "diego-morra-barolo-monvigliero",
+    "name": "Barolo Monvigliero",
+    "producer": "Diego Morra",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Verduno, Piemonte, Italien"
+  },
+  {
+    "slug": "diego-morra-barolo-san-lorenzo",
+    "name": "Barolo San Lorenzo",
+    "producer": "Diego Morra",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Verduno, Piemonte, Italien"
+  },
+  {
+    "slug": "diego-morra-langhe-rosato",
+    "name": "Langhe Rosato 2022",
+    "producer": "Diego Morra",
+    "type": "Rosé",
+    "country": "Italien",
+    "region": "Verduno, Piemonte, Italien"
+  },
+  {
+    "slug": "diego-morra-verduno-pelaverga",
+    "name": "Verduno Pelaverga 2023",
+    "producer": "Diego Morra",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Verduno, Piemonte, Italien"
+  },
+  {
+    "slug": "domaine-villet-chardonnay-elevage-2-an-en-fut",
+    "name": "Chardonnay (élevage 2 an en fût)",
+    "producer": "Domaine Villet",
+    "type": "Vitt",
+    "country": "Frankrike",
+    "region": "Arbois, Jura, Frankrike"
+  },
+  {
+    "slug": "domaine-villet-pinot-noir",
+    "name": "Pinot Noir",
+    "producer": "Domaine Villet",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Arbois, Jura, Frankrike"
+  },
+  {
+    "slug": "domaine-villet-poulsard",
+    "name": "Poulsard",
+    "producer": "Domaine Villet",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Arbois, Jura, Frankrike"
+  },
+  {
+    "slug": "domaine-villet-rouge-tradition",
+    "name": "Rouge Tradition",
+    "producer": "Domaine Villet",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Arbois, Jura, Frankrike"
+  },
+  {
+    "slug": "domaine-villet-savagnin-ouille-elevage-24-mois-en-cuve",
+    "name": "Savagnin Ouillé (24 mois en cuve)",
+    "producer": "Domaine Villet",
+    "type": "Vitt",
+    "country": "Frankrike",
+    "region": "Arbois, Jura, Frankrike"
+  },
+  {
+    "slug": "domaine-villet-savagnin-ouille-elevage-30-mois-en-foudre",
+    "name": "Savagnin Ouillé (30 mois en Foudre)",
+    "producer": "Domaine Villet",
+    "type": "Vitt",
+    "country": "Frankrike",
+    "region": "Arbois, Jura, Frankrike"
+  },
+  {
+    "slug": "ettore-germano-alta-langa-extra-brut",
+    "name": "Alta Langa Extra Brut 2019",
+    "producer": "Ettore Germano",
+    "type": "Mousserande",
+    "country": "Italien",
+    "region": "Alta Langa, Piemonte, Italien"
+  },
+  {
+    "slug": "ettore-germano-alta-langa-riserva-blanc-de-blanc-pas-dose",
+    "name": "Alta Langa Riserva Blanc de Blanc Pas Dosé",
+    "producer": "Ettore Germano",
+    "type": "Mousserande",
+    "country": "Italien",
+    "region": "Alta Langa, Piemonte, Italien"
+  },
+  {
+    "slug": "ettore-germano-alta-langa-riserva-blanc-de-noir-pas-dose",
+    "name": "Alta Langa Riserva Blanc de Noir Pas Dosé",
+    "producer": "Ettore Germano",
+    "type": "Mousserande",
+    "country": "Italien",
+    "region": "Alta Langa, Piemonte, Italien"
+  },
+  {
+    "slug": "ettore-germano-barbera-dalba-superiore",
+    "name": "Barbera d'Alba Superiore",
+    "producer": "Ettore Germano",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Alba, Piemonte, Italien"
+  },
+  {
+    "slug": "ettore-germano-barolo-cerretta",
+    "name": "Barolo Cerretta 2019",
+    "producer": "Ettore Germano",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Serralunga d'Alba, Piemonte, Italien"
+  },
+  {
+    "slug": "ettore-germano-barolo-del-comune-di-serralunga-dalba",
+    "name": "Barolo del Comune di Serralunga d'Alba",
+    "producer": "Ettore Germano",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Serralunga d'Alba, Piemonte, Italien"
+  },
+  {
+    "slug": "ettore-germano-barolo-lazzarito-riserva",
+    "name": "Barolo Lazzarito Riserva",
+    "producer": "Ettore Germano",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Serralunga d'Alba, Piemonte, Italien"
+  },
+  {
+    "slug": "ettore-germano-barolo-prapo",
+    "name": "Barolo Prapò",
+    "producer": "Ettore Germano",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Serralunga d'Alba, Piemonte, Italien"
+  },
+  {
+    "slug": "ettore-germano-barolo-vignarionda",
+    "name": "Barolo Vigna Rionda",
+    "producer": "Ettore Germano",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Serralunga d'Alba, Piemonte, Italien"
+  },
+  {
+    "slug": "ettore-germano-binel-langhe-bianco",
+    "name": "Binel Langhe Bianco",
+    "producer": "Ettore Germano",
+    "type": "Vitt",
+    "country": "Italien",
+    "region": "Langhe, Piemonte, Italien"
+  },
+  {
+    "slug": "ettore-germano-herzu-langhe-riesling",
+    "name": "Hérzu Langhe Riesling 2023",
+    "producer": "Ettore Germano",
+    "type": "Vitt",
+    "country": "Italien",
+    "region": "Langhe, Piemonte, Italien"
+  },
+  {
+    "slug": "ettore-germano-langhe-chardonnay",
+    "name": "Langhe Chardonnay 2023",
+    "producer": "Ettore Germano",
+    "type": "Vitt",
+    "country": "Italien",
+    "region": "Langhe, Piemonte, Italien"
+  },
+  {
+    "slug": "ettore-germano-langhe-nascetta",
+    "name": "Langhe Nascetta 2021",
+    "producer": "Ettore Germano",
+    "type": "Vitt",
+    "country": "Italien",
+    "region": "Langhe, Piemonte, Italien"
+  },
+  {
+    "slug": "ettore-germano-rosanna-extra-brut-rose-metodo-classico",
+    "name": "Rosanna Extra Brut Rosé Metodo Classico",
+    "producer": "Ettore Germano",
+    "type": "Mousserande",
+    "country": "Italien",
+    "region": "Piemonte, Italien"
+  },
+  {
+    "slug": "fontanabianca-barbaresco-bordini",
+    "name": "Barbaresco Bordini 2021",
+    "producer": "Fontanabianca",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Neive, Piemonte, Italien"
+  },
+  {
+    "slug": "fontanabianca-barbaresco-serraboella",
+    "name": "Barbaresco Serraboella 2020",
+    "producer": "Fontanabianca",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Neive, Piemonte, Italien"
+  },
+  {
+    "slug": "fontanabianca-barbaresco",
+    "name": "Barbaresco",
+    "producer": "Fontanabianca",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Neive, Piemonte, Italien"
+  },
+  {
+    "slug": "fontanabianca-barbera-dalba-superiore",
+    "name": "Barbera d'Alba Superiore 2021",
+    "producer": "Fontanabianca",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Neive, Piemonte, Italien"
+  },
+  {
+    "slug": "fontanabianca-dolcetto-dalba",
+    "name": "Dolcetto d'Alba 2023",
+    "producer": "Fontanabianca",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Neive, Piemonte, Italien"
+  },
+  {
+    "slug": "fontanabianca-langhe-arneis-sommo",
+    "name": "Langhe Arneis \"Sommo\" 2023",
+    "producer": "Fontanabianca",
+    "type": "Vitt",
+    "country": "Italien",
+    "region": "Neive, Piemonte, Italien"
+  },
+  {
+    "slug": "fontanabianca-langhe-nebbiolo",
+    "name": "Langhe Nebbiolo",
+    "producer": "Fontanabianca",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Neive, Piemonte, Italien"
+  },
+  {
+    "slug": "la-famille-k-la-mere",
+    "name": "La Mère",
+    "producer": "Domaine La Famille K",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Morancé, Beaujolais, Frankrike"
+  },
+  {
+    "slug": "la-famille-k-le-pere-blanc",
+    "name": "Le Père Blanc",
+    "producer": "Domaine La Famille K",
+    "type": "Vitt",
+    "country": "Frankrike",
+    "region": "Morancé, Beaujolais, Frankrike"
+  },
+  {
+    "slug": "la-famille-k-le-pere-vdf-pinot-noir",
+    "name": "Le Père VdF Pinot Noir 2022",
+    "producer": "Domaine La Famille K",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Morancé, Beaujolais, Frankrike"
+  },
+  {
+    "slug": "la-famille-k-le-pere",
+    "name": "Le Père Rouge 2020",
+    "producer": "Domaine La Famille K",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Morancé, Beaujolais, Frankrike"
+  },
+  {
+    "slug": "la-famille-k-lheritiere",
+    "name": "L'Héritière Rouge 2024",
+    "producer": "Domaine La Famille K",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Morancé, Beaujolais, Frankrike"
+  },
+  {
+    "slug": "la-famille-k-loncle",
+    "name": "L'Oncle",
+    "producer": "Domaine La Famille K",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Morancé, Beaujolais, Frankrike"
+  },
+  {
+    "slug": "lapo-berti-barolo-del-comune-di-la-morra",
+    "name": "Barolo del Comune di La Morra",
+    "producer": "Lapo Berti",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "La Morra, Piemonte, Italien"
+  },
+  {
+    "slug": "lapo-berti-barolo-fossati",
+    "name": "Barolo Fossati",
+    "producer": "Lapo Berti",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "La Morra, Piemonte, Italien"
+  },
+  {
+    "slug": "lapo-berti-langhe-nebbiolo",
+    "name": "Langhe Nebbiolo",
+    "producer": "Lapo Berti",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "La Morra, Piemonte, Italien"
+  },
+  {
+    "slug": "martin-mullen-krover-kirchlay-auslese",
+    "name": "Kröver Kirchlay Auslese",
+    "producer": "Weingut Martin Müllen",
+    "type": "Vitt",
+    "country": "Tyskland",
+    "region": "Traben-Trarbach, Mosel, Tyskland"
+  },
+  {
+    "slug": "martin-mullen-krover-letterlay-spatlese-feinherb",
+    "name": "Kröver Letterlay Spätlese Feinherb",
+    "producer": "Weingut Martin Müllen",
+    "type": "Vitt",
+    "country": "Tyskland",
+    "region": "Traben-Trarbach, Mosel, Tyskland"
+  },
+  {
+    "slug": "martin-mullen-krover-paradies-spatlese-trocken",
+    "name": "Kröver Paradies Spätlese Trocken",
+    "producer": "Weingut Martin Müllen",
+    "type": "Vitt",
+    "country": "Tyskland",
+    "region": "Traben-Trarbach, Mosel, Tyskland"
+  },
+  {
+    "slug": "martin-mullen-nostel-trocken",
+    "name": "Nostel Trocken",
+    "producer": "Weingut Martin Müllen",
+    "type": "Vitt",
+    "country": "Tyskland",
+    "region": "Traben-Trarbach, Mosel, Tyskland"
+  },
+  {
+    "slug": "martin-mullen-riesling-revival-trocken",
+    "name": "Riesling Revival Trocken",
+    "producer": "Weingut Martin Müllen",
+    "type": "Vitt",
+    "country": "Tyskland",
+    "region": "Traben-Trarbach, Mosel, Tyskland"
+  },
+  {
+    "slug": "martin-mullen-trabener-wurzgarten-kabinett-feinherb",
+    "name": "Trabener Würzgarten Kabinett Feinherb",
+    "producer": "Weingut Martin Müllen",
+    "type": "Vitt",
+    "country": "Tyskland",
+    "region": "Traben-Trarbach, Mosel, Tyskland"
+  },
+  {
+    "slug": "martin-mullen-trabener-wurzgarten-spatlese-trocken",
+    "name": "Trabener Würzgarten Spätlese Trocken 2021",
+    "producer": "Weingut Martin Müllen",
+    "type": "Vitt",
+    "country": "Tyskland",
+    "region": "Traben-Trarbach, Mosel, Tyskland"
+  },
+  {
+    "slug": "martin-mullen-trarbacher-huhnerberg-auslese",
+    "name": "Trarbacher Hühnerberg Auslese",
+    "producer": "Weingut Martin Müllen",
+    "type": "Vitt",
+    "country": "Tyskland",
+    "region": "Traben-Trarbach, Mosel, Tyskland"
+  },
+  {
+    "slug": "michel-rebourgeon-beaune-1er-cru-les-chouacheux",
+    "name": "Beaune 1er Cru Les Chouacheux",
+    "producer": "Domaine Michel Rebourgeon",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Beaune, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "michel-rebourgeon-beaune-les-epenottes",
+    "name": "Beaune Les Epenottes",
+    "producer": "Domaine Michel Rebourgeon",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Pommard, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "michel-rebourgeon-pommard-1er-cru-les-arvelets",
+    "name": "Pommard 1er Cru Les Arvelets",
+    "producer": "Domaine Michel Rebourgeon",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Pommard, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "michel-rebourgeon-pommard-1er-cru-les-charmots",
+    "name": "Pommard 1er Cru Les Charmots",
+    "producer": "Domaine Michel Rebourgeon",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Pommard, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "michel-rebourgeon-pommard-1er-cru-les-rugiens",
+    "name": "Pommard 1er Cru Les Rugiens",
+    "producer": "Domaine Michel Rebourgeon",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Pommard, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "michel-rebourgeon-pommard-cuvee-william",
+    "name": "Pommard Cuvée William",
+    "producer": "Domaine Michel Rebourgeon",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Pommard, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "michel-rebourgeon-pommard-les-noizons",
+    "name": "Pommard Les Noizons",
+    "producer": "Domaine Michel Rebourgeon",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Pommard, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "michel-rebourgeon-pommard-trois-terroirs",
+    "name": "Pommard Trois Terroirs",
+    "producer": "Domaine Michel Rebourgeon",
+    "type": "Rött",
+    "country": "Frankrike",
+    "region": "Pommard, Bourgogne, Frankrike"
+  },
+  {
+    "slug": "mori-concetta-morino-chianti-classico",
+    "name": "Morino Chianti Classico 2021",
+    "producer": "Mori Concetta",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "San Casciano in Val di Pesa, Toscana, Italien"
+  },
+  {
+    "slug": "quinta-das-bagerias-abafado",
+    "name": "Abafado",
+    "producer": "Quinta das Bágeiras",
+    "type": "Starkvin",
+    "country": "Portugal",
+    "region": "Sangalhos, Bairrada, Portugal"
+  },
+  {
+    "slug": "quinta-das-bagerias-espumante-colheita-rose",
+    "name": "Espumante Colheita Rosé 2022",
+    "producer": "Quinta das Bágeiras",
+    "type": "Mousserande",
+    "country": "Portugal",
+    "region": "Sangalhos, Bairrada, Portugal"
+  },
+  {
+    "slug": "quinta-das-bagerias-espumante-colheita",
+    "name": "Espumante Colheita",
+    "producer": "Quinta das Bágeiras",
+    "type": "Mousserande",
+    "country": "Portugal",
+    "region": "Sangalhos, Bairrada, Portugal"
+  },
+  {
+    "slug": "quinta-das-bagerias-garrafeira-tinto",
+    "name": "Garrafeira Tinto 2018",
+    "producer": "Quinta das Bágeiras",
+    "type": "Rött",
+    "country": "Portugal",
+    "region": "Sangalhos, Bairrada, Portugal"
+  },
+  {
+    "slug": "quinta-das-bagerias-vinho-branco-reserva",
+    "name": "Branco Reserva 2022",
+    "producer": "Quinta das Bágeiras",
+    "type": "Vitt",
+    "country": "Portugal",
+    "region": "Sangalhos, Bairrada, Portugal"
+  },
+  {
+    "slug": "quinta-das-bagerias-vinho-tinto-reserva",
+    "name": "Tinto Reserva 2021",
+    "producer": "Quinta das Bágeiras",
+    "type": "Rött",
+    "country": "Portugal",
+    "region": "Sangalhos, Bairrada, Portugal"
+  },
+  {
+    "slug": "quinta-do-javali-clos-bonifata-2",
+    "name": "Clos Bonifata",
+    "producer": "Quinta do Javali",
+    "type": "Rött",
+    "country": "Portugal",
+    "region": "São João da Pesqueira, Douro, Portugal"
+  },
+  {
+    "slug": "quinta-do-javali-clos-fonte-do-santo",
+    "name": "Clos Fonte do Santo",
+    "producer": "Quinta do Javali",
+    "type": "Rött",
+    "country": "Portugal",
+    "region": "São João da Pesqueira, Douro, Portugal"
+  },
+  {
+    "slug": "quinta-do-javali-crazy-branco",
+    "name": "Crazy Javali Branco",
+    "producer": "Quinta do Javali",
+    "type": "Vitt",
+    "country": "Portugal",
+    "region": "São João da Pesqueira, Douro, Portugal"
+  },
+  {
+    "slug": "quinta-do-javali-crazy-javali-tinto",
+    "name": "Crazy Javali Tinto",
+    "producer": "Quinta do Javali",
+    "type": "Rött",
+    "country": "Portugal",
+    "region": "São João da Pesqueira, Douro, Portugal"
+  },
+  {
+    "slug": "quinta-do-javali-pet-nat",
+    "name": "Javali Pet Nat",
+    "producer": "Quinta do Javali",
+    "type": "Mousserande",
+    "country": "Portugal",
+    "region": "São João da Pesqueira, Douro, Portugal"
+  },
+  {
+    "slug": "quinta-do-javali-tawny-port-10-year",
+    "name": "Tawny Port 10 Year",
+    "producer": "Quinta do Javali",
+    "type": "Starkvin",
+    "country": "Portugal",
+    "region": "São João da Pesqueira, Douro, Portugal"
+  },
+  {
+    "slug": "quinta-do-javali-tawny-port",
+    "name": "Tawny Port",
+    "producer": "Quinta do Javali",
+    "type": "Starkvin",
+    "country": "Portugal",
+    "region": "São João da Pesqueira, Douro, Portugal"
+  },
+  {
+    "slug": "quinta-do-javali-tinto",
+    "name": "Javali Tinto",
+    "producer": "Quinta do Javali",
+    "type": "Rött",
+    "country": "Portugal",
+    "region": "São João da Pesqueira, Douro, Portugal"
+  },
+  {
+    "slug": "quinta-do-javali-vinhas-dos-lobatos",
+    "name": "Vinhas dos Lobatos",
+    "producer": "Quinta do Javali",
+    "type": "Rött",
+    "country": "Portugal",
+    "region": "São João da Pesqueira, Douro, Portugal"
+  },
+  {
+    "slug": "reva-barbera-dalba-superiore",
+    "name": "Barbera d'Alba Superiore",
+    "producer": "Réva",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Monforte d'Alba, Piemonte, Italien"
+  },
+  {
+    "slug": "reva-barolo-cannubi",
+    "name": "Barolo Cannubi",
+    "producer": "Réva",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Barolo, Piemonte, Italien"
+  },
+  {
+    "slug": "reva-barolo-ravera",
+    "name": "Barolo Ravera",
+    "producer": "Réva",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Monforte d'Alba, Piemonte, Italien"
+  },
+  {
+    "slug": "reva-barolo",
+    "name": "Barolo 2021",
+    "producer": "Réva",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Monforte d'Alba, Piemonte, Italien"
+  },
+  {
+    "slug": "reva-dolcetto-dalba",
+    "name": "Dolcetto d'Alba",
+    "producer": "Réva",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Monforte d'Alba, Piemonte, Italien"
+  },
+  {
+    "slug": "reva-langhe-bianco-grey",
+    "name": "Langhe Bianco Grey",
+    "producer": "Réva",
+    "type": "Vitt",
+    "country": "Italien",
+    "region": "Monforte d'Alba, Piemonte, Italien"
+  },
+  {
+    "slug": "reva-nebbiolo-dalba",
+    "name": "Nebbiolo d'Alba",
+    "producer": "Réva",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Monforte d'Alba, Piemonte, Italien"
+  },
+  {
+    "slug": "rudi-pichler-gruner-veltliner-achleithen-smaragd",
+    "name": "Grüner Veltliner Achleithen Smaragd",
+    "producer": "Rudi Pichler",
+    "type": "Vitt",
+    "country": "Österrike",
+    "region": "Wosendorf, Wachau, Österrike"
+  },
+  {
+    "slug": "rudi-pichler-gruner-veltliner-hochrain-smaragd",
+    "name": "Grüner Veltliner Hochrain Smaragd",
+    "producer": "Rudi Pichler",
+    "type": "Vitt",
+    "country": "Österrike",
+    "region": "Wosendorf, Wachau, Österrike"
+  },
+  {
+    "slug": "rudi-pichler-gruner-veltliner-kollmutz-smaragd",
+    "name": "Grüner Veltliner Kollmutz Smaragd",
+    "producer": "Rudi Pichler",
+    "type": "Vitt",
+    "country": "Österrike",
+    "region": "Wosendorf, Wachau, Österrike"
+  },
+  {
+    "slug": "rudi-pichler-gruner-veltliner-terrassen-smaragd",
+    "name": "Grüner Veltliner Terrassen Smaragd 2023",
+    "producer": "Rudi Pichler",
+    "type": "Vitt",
+    "country": "Österrike",
+    "region": "Wosendorf, Wachau, Österrike"
+  },
+  {
+    "slug": "rudi-pichler-riesling-achleithen-smaragd",
+    "name": "Riesling Achleithen Smaragd",
+    "producer": "Rudi Pichler",
+    "type": "Vitt",
+    "country": "Österrike",
+    "region": "Wosendorf, Wachau, Österrike"
+  },
+  {
+    "slug": "rudi-pichler-riesling-hochrain-smaragd",
+    "name": "Riesling Hochrain Smaragd",
+    "producer": "Rudi Pichler",
+    "type": "Vitt",
+    "country": "Österrike",
+    "region": "Wosendorf, Wachau, Österrike"
+  },
+  {
+    "slug": "rudi-pichler-riesling-kirchweg-smaragd",
+    "name": "Riesling Kirchweg Smaragd",
+    "producer": "Rudi Pichler",
+    "type": "Vitt",
+    "country": "Österrike",
+    "region": "Wosendorf, Wachau, Österrike"
+  },
+  {
+    "slug": "vadio-grande",
+    "name": "Grande",
+    "producer": "Vadio",
+    "type": "Rött",
+    "country": "Portugal",
+    "region": "Poutena, Bairrada, Portugal"
+  },
+  {
+    "slug": "vadio-perpetuum-white-sparkling",
+    "name": "Perpetuum Sparkling NV",
+    "producer": "Vadio",
+    "type": "Mousserande",
+    "country": "Portugal",
+    "region": "Poutena, Bairrada, Portugal"
+  },
+  {
+    "slug": "vadio-red",
+    "name": "Red 2020",
+    "producer": "Vadio",
+    "type": "Rött",
+    "country": "Portugal",
+    "region": "Poutena, Bairrada, Portugal"
+  },
+  {
+    "slug": "vadio-rexarte",
+    "name": "Rexarte",
+    "producer": "Vadio",
+    "type": "Rött",
+    "country": "Portugal",
+    "region": "Poutena, Bairrada, Portugal"
+  },
+  {
+    "slug": "vadio-rose-sparkling",
+    "name": "Rosé Sparkling Bruto 2020",
+    "producer": "Vadio",
+    "type": "Mousserande",
+    "country": "Portugal",
+    "region": "Poutena, Bairrada, Portugal"
+  },
+  {
+    "slug": "vadio-white",
+    "name": "White 2023",
+    "producer": "Vadio",
+    "type": "Vitt",
+    "country": "Portugal",
+    "region": "Poutena, Bairrada, Portugal"
+  },
+  {
+    "slug": "victor-charlot-instinct-premier-5050",
+    "name": "Instinct Premier 50-50 NV",
+    "producer": "Victor Charlot",
+    "type": "Mousserande",
+    "country": "Frankrike",
+    "region": "Moussy, Champagne, Frankrike"
+  },
+  {
+    "slug": "victor-charlot-instinct-premier-7525",
+    "name": "Instinct Premier 75-25 NV",
+    "producer": "Victor Charlot",
+    "type": "Mousserande",
+    "country": "Frankrike",
+    "region": "Moussy, Champagne, Frankrike"
+  },
+  {
+    "slug": "victor-charlot-lapprivoisee",
+    "name": "L'Apprivoisée",
+    "producer": "Victor Charlot",
+    "type": "Mousserande",
+    "country": "Frankrike",
+    "region": "Moussy, Champagne, Frankrike"
+  },
+  {
+    "slug": "victor-charlot-lart-de-la-ruse",
+    "name": "L'Art de la Ruse",
+    "producer": "Victor Charlot",
+    "type": "Mousserande",
+    "country": "Frankrike",
+    "region": "Moussy, Champagne, Frankrike"
+  },
+  {
+    "slug": "victor-charlot-les-terres-de-la-greve",
+    "name": "Les Terres de la Grève",
+    "producer": "Victor Charlot",
+    "type": "Mousserande",
+    "country": "Frankrike",
+    "region": "Moussy, Champagne, Frankrike"
+  },
+  {
+    "slug": "victor-charlot-noirs-de-jais",
+    "name": "Noirs de Jais",
+    "producer": "Victor Charlot",
+    "type": "Mousserande",
+    "country": "Frankrike",
+    "region": "Moussy, Champagne, Frankrike"
+  },
+  {
+    "slug": "villa-i-cipressi-brunello-di-montalcino",
+    "name": "Brunello di Montalcino",
+    "producer": "Villa i Cipressi",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Montalcino, Toscana, Italien"
+  },
+  {
+    "slug": "villa-i-cipressi-rosso-di-montalcino",
+    "name": "Rosso di Montalcino",
+    "producer": "Villa i Cipressi",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Montalcino, Toscana, Italien"
+  },
+  {
+    "slug": "villa-i-cipressi-zebras-brunello-di-montalcino",
+    "name": "Zebras Brunello di Montalcino",
+    "producer": "Villa i Cipressi",
+    "type": "Rött",
+    "country": "Italien",
+    "region": "Montalcino, Toscana, Italien"
+  }
+]
