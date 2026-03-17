@@ -28,7 +28,7 @@
     select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }
   </style>
 </head>
-<body class="bg-cream-50 text-stone-800 font-sans antialiased">
+<body class="text-stone-800 font-sans antialiased min-h-screen" style="background: linear-gradient(rgba(254,253,248,0.92), rgba(254,253,248,0.88)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1920&q=60') center/cover fixed;">
 
   <!-- Nav -->
   <nav class="bg-wine-950 sticky top-0 z-50">
@@ -124,37 +124,88 @@
       'Österrike': '🇦🇹',
     };
 
-    // Populate dropdowns
-    const countries = [...new Set(wines.map(w => w.country))].sort((a,b) => a.localeCompare(b,'sv'));
-    const producers = [...new Set(wines.map(w => w.producer))].sort((a,b) => a.localeCompare(b,'sv'));
-    const types = [...new Set(wines.map(w => w.type))].sort((a,b) => a.localeCompare(b,'sv'));
-
     const countryEl = document.getElementById('filter-country');
     const producerEl = document.getElementById('filter-producer');
     const typeEl = document.getElementById('filter-type');
     const searchEl = document.getElementById('search-text');
 
-    countries.forEach(c => { const o = document.createElement('option'); o.value = c; o.textContent = `${countryFlags[c] || ''} ${c}`; countryEl.appendChild(o); });
-    producers.forEach(p => { const o = document.createElement('option'); o.value = p; o.textContent = p; producerEl.appendChild(o); });
-    types.forEach(t => { const o = document.createElement('option'); o.value = t; o.textContent = t; typeEl.appendChild(o); });
+    function populateSelect(el, options, currentValue, defaultLabel, useFlags) {
+      el.innerHTML = '';
+      const def = document.createElement('option');
+      def.value = '';
+      def.textContent = defaultLabel;
+      el.appendChild(def);
+      options.forEach(val => {
+        const o = document.createElement('option');
+        o.value = val;
+        o.textContent = useFlags ? `${countryFlags[val] || ''} ${val}` : val;
+        if (val === currentValue) o.selected = true;
+        el.appendChild(o);
+      });
+    }
 
-    function renderResults() {
+    function getAvailable() {
       const country = countryEl.value;
       const producer = producerEl.value;
       const type = typeEl.value;
       const text = searchEl.value.toLowerCase().trim();
 
+      // Base set filtered by text only
+      let base = wines;
+      if (text) base = base.filter(w =>
+        w.name.toLowerCase().includes(text) ||
+        w.producer.toLowerCase().includes(text) ||
+        w.region.toLowerCase().includes(text)
+      );
+
+      // For each dropdown, compute available options based on OTHER filters
+      const forCountry = base
+        .filter(w => !producer || w.producer === producer)
+        .filter(w => !type || w.type === type);
+      const availableCountries = [...new Set(forCountry.map(w => w.country))].sort((a,b) => a.localeCompare(b,'sv'));
+
+      const forProducer = base
+        .filter(w => !country || w.country === country)
+        .filter(w => !type || w.type === type);
+      const availableProducers = [...new Set(forProducer.map(w => w.producer))].sort((a,b) => a.localeCompare(b,'sv'));
+
+      const forType = base
+        .filter(w => !country || w.country === country)
+        .filter(w => !producer || w.producer === producer);
+      const availableTypes = [...new Set(forType.map(w => w.type))].sort((a,b) => a.localeCompare(b,'sv'));
+
+      return { availableCountries, availableProducers, availableTypes };
+    }
+
+    function update() {
+      const country = countryEl.value;
+      const producer = producerEl.value;
+      const type = typeEl.value;
+      const text = searchEl.value.toLowerCase().trim();
+
+      // Update dropdown options based on dependencies
+      const { availableCountries, availableProducers, availableTypes } = getAvailable();
+
+      populateSelect(countryEl, availableCountries, country, 'Alla länder', true);
+      populateSelect(producerEl, availableProducers, producer, 'Alla producenter', false);
+      populateSelect(typeEl, availableTypes, type, 'Alla typer', false);
+
+      // Reset if current selection is no longer available
+      if (country && !availableCountries.includes(country)) countryEl.value = '';
+      if (producer && !availableProducers.includes(producer)) producerEl.value = '';
+      if (type && !availableTypes.includes(type)) typeEl.value = '';
+
+      // Filter results
       let filtered = wines;
-      if (country) filtered = filtered.filter(w => w.country === country);
-      if (producer) filtered = filtered.filter(w => w.producer === producer);
-      if (type) filtered = filtered.filter(w => w.type === type);
+      if (countryEl.value) filtered = filtered.filter(w => w.country === countryEl.value);
+      if (producerEl.value) filtered = filtered.filter(w => w.producer === producerEl.value);
+      if (typeEl.value) filtered = filtered.filter(w => w.type === typeEl.value);
       if (text) filtered = filtered.filter(w =>
         w.name.toLowerCase().includes(text) ||
         w.producer.toLowerCase().includes(text) ||
         w.region.toLowerCase().includes(text)
       );
 
-      // Sort by producer then name
       filtered.sort((a, b) => {
         const pc = a.producer.localeCompare(b.producer, 'sv');
         if (pc !== 0) return pc;
@@ -175,7 +226,7 @@
       noResultsEl.classList.add('hidden');
 
       resultsEl.innerHTML = filtered.map(w => `
-        <a href="sortiment/${w.slug}.html" class="flex items-center gap-4 p-4 bg-white rounded-lg border border-stone-100 hover:border-wine-200 hover:shadow-md transition-all group">
+        <a href="sortiment/${w.slug}.html" class="flex items-center gap-4 p-4 bg-white/90 backdrop-blur-sm rounded-lg border border-stone-100 hover:border-wine-200 hover:shadow-md hover:bg-white transition-all group">
           <span class="${typeColors[w.type] || 'bg-stone-500 text-white'} px-2.5 py-1 rounded text-xs font-medium uppercase tracking-wider whitespace-nowrap">${w.type}</span>
           <div class="flex-1 min-w-0">
             <h3 class="font-serif text-lg text-stone-900 group-hover:text-wine-800 transition-colors truncate">${w.name}</h3>
@@ -192,18 +243,18 @@
       producerEl.value = '';
       typeEl.value = '';
       searchEl.value = '';
-      renderResults();
+      update();
     }
 
     // Event listeners
-    countryEl.addEventListener('change', renderResults);
-    producerEl.addEventListener('change', renderResults);
-    typeEl.addEventListener('change', renderResults);
-    searchEl.addEventListener('input', renderResults);
+    countryEl.addEventListener('change', update);
+    producerEl.addEventListener('change', update);
+    typeEl.addEventListener('change', update);
+    searchEl.addEventListener('input', update);
     document.getElementById('clear-filters').addEventListener('click', clearFilters);
 
     // Initial render
-    renderResults();
+    update();
   </script>
 </body>
 </html>
