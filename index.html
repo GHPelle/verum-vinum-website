@@ -51,7 +51,7 @@
 <body class="bg-cream-50 text-stone-800 font-sans antialiased">
 
   <!-- Navigation -->
-  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-transparent">
+  <nav id="navbar" class="absolute top-0 w-full z-50 transition-all duration-500 bg-transparent">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <!-- Mobile nav -->
       <div class="flex md:hidden items-center justify-between h-16 px-2">
@@ -84,17 +84,17 @@
         </div>
       </div>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-wine-950/95 backdrop-blur-lg">
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg shadow-lg rounded-b-xl">
       <div class="px-6 py-4 space-y-3">
-        <a href="#producenter" class="block text-white/90 text-sm uppercase tracking-wider py-2">Producenter</a>
-        <a href="#sortiment" class="block text-white/90 text-sm uppercase tracking-wider py-2">Sortiment</a>
-        <a href="#restaurang" class="block text-white/90 text-sm uppercase tracking-wider py-2">Restaurang</a>
-        <a href="#systembolaget" class="block text-white/90 text-sm uppercase tracking-wider py-2">Systembolaget</a>
-        <a href="#om-oss" class="block text-white/90 text-sm uppercase tracking-wider py-2">Om oss</a>
-        <a href="mat-vin.html" class="block text-white/90 text-sm uppercase tracking-wider py-2">Mat & Vin</a>
-        <a href="blogg.html" class="block text-white/90 text-sm uppercase tracking-wider py-2">Blogg</a>
-        <a href="#event" class="block text-white/90 text-sm uppercase tracking-wider py-2">Event</a>
-        <a href="sok.html" class="block text-white/90 text-sm uppercase tracking-wider py-2">Sök viner</a>
+        <a href="#producenter" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Producenter</a>
+        <a href="#sortiment" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Sortiment</a>
+        <a href="#restaurang" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Restaurang</a>
+        <a href="#systembolaget" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Systembolaget</a>
+        <a href="#om-oss" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Om oss</a>
+        <a href="mat-vin.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Mat & Vin</a>
+        <a href="blogg.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Blogg</a>
+        <a href="#event" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Event</a>
+        <a href="sok.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Sök viner</a>
       </div>
     </div>
   </nav>
@@ -1247,15 +1247,6 @@
 
   <script>
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 80) {
-        navbar.classList.add('bg-wine-950/95', 'backdrop-blur-lg', 'shadow-lg');
-        navbar.classList.remove('bg-transparent');
-      } else {
-        navbar.classList.remove('bg-wine-950/95', 'backdrop-blur-lg', 'shadow-lg');
-        navbar.classList.add('bg-transparent');
-      }
-    });
     document.getElementById('mobile-toggle').addEventListener('click', () => {
       document.getElementById('mobile-menu').classList.toggle('hidden');
     });
