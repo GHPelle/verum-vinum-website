@@ -48,6 +48,23 @@
     .producer-detail.open { box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
   </style>
 </head>
+  <!-- Language switcher dropdown -->
+  <div class="fixed top-3 right-3 z-[60]">
+    <div class="relative">
+      <button onclick="document.getElementById('lang-dropdown').classList.toggle('hidden')" class="flex items-center gap-1.5 bg-white/95 backdrop-blur-sm rounded-lg px-2.5 py-1.5 shadow-md border border-stone-200 hover:shadow-lg transition-shadow cursor-pointer">
+        <svg class="w-6 h-4 rounded-sm" viewBox="0 0 24 16"><rect width="24" height="16" fill="#006AA7"/><rect x="7" y="0" width="3" height="16" fill="#FECC00"/><rect x="0" y="6" width="24" height="3" fill="#FECC00"/></svg>
+        <svg class="w-3 h-3 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div id="lang-dropdown" class="hidden absolute right-0 mt-1 bg-white rounded-lg shadow-xl border border-stone-200 overflow-hidden">
+        <div class="flex items-center gap-2 px-4 py-2.5 bg-wine-50 border-l-2 border-wine-500">
+          <svg class="w-6 h-4 rounded-sm" viewBox="0 0 24 16"><rect width="24" height="16" fill="#006AA7"/><rect x="7" y="0" width="3" height="16" fill="#FECC00"/><rect x="0" y="6" width="24" height="3" fill="#FECC00"/></svg> <span class="text-xs font-bold text-stone-800">Svenska</span>
+        </div>
+        <a href="en/index.html" class="flex items-center gap-2 px-4 py-2.5 hover:bg-stone-50 transition-colors">
+          <svg class="w-6 h-4 rounded-sm" viewBox="0 0 24 16"><rect width="24" height="16" fill="#012169"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" stroke-width="1.5"/><rect x="10" y="0" width="4" height="16" fill="#fff"/><rect x="0" y="6" width="24" height="4" fill="#fff"/><rect x="11" y="0" width="2" height="16" fill="#C8102E"/><rect x="0" y="6.5" width="24" height="3" fill="#C8102E"/></svg> <span class="text-xs font-medium text-stone-600">English</span>
+        </a>
+      </div>
+    </div>
+  </div>
 <body class="bg-cream-50 text-stone-800 font-sans antialiased">
 
   <!-- Navigation -->
@@ -71,10 +88,6 @@
             <a href="#sortiment" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Sortiment</a>
             <a href="#restaurang" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Restaurang</a>
             <a href="#systembolaget" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Systembolaget</a>
-      <div class="flex items-center justify-center gap-4 mt-6">
-        <span class="ring-2 ring-wine-500 rounded"><svg class="w-8 h-6 rounded shadow" viewBox="0 0 24 16"><rect width="24" height="16" fill="#006AA7"/><rect x="7" y="0" width="3" height="16" fill="#FECC00"/><rect x="0" y="6" width="24" height="3" fill="#FECC00"/></svg></span>
-        <a href="en/index.html" class="opacity-50 hover:opacity-100 transition-opacity" title="English"><svg class="w-8 h-6 rounded shadow" viewBox="0 0 24 16"><rect width="24" height="16" fill="#012169"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" stroke-width="1.5"/><rect x="10" y="0" width="4" height="16" fill="#fff"/><rect x="0" y="6" width="24" height="4" fill="#fff"/><rect x="11" y="0" width="2" height="16" fill="#C8102E"/><rect x="0" y="6.5" width="24" height="3" fill="#C8102E"/></svg></a>
-      </div>
             <a href="#om-oss" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Om oss</a>
             <a href="mat-vin.html" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Mat & Vin</a>
             <a href="blogg.html" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Blogg</a>
@@ -94,10 +107,6 @@
         <a href="#sortiment" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Sortiment</a>
         <a href="#restaurang" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Restaurang</a>
         <a href="#systembolaget" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Systembolaget</a>
-      <div class="flex items-center justify-center gap-4 mt-6">
-        <span class="ring-2 ring-wine-500 rounded"><svg class="w-8 h-6 rounded shadow" viewBox="0 0 24 16"><rect width="24" height="16" fill="#006AA7"/><rect x="7" y="0" width="3" height="16" fill="#FECC00"/><rect x="0" y="6" width="24" height="3" fill="#FECC00"/></svg></span>
-        <a href="en/index.html" class="opacity-50 hover:opacity-100 transition-opacity" title="English"><svg class="w-8 h-6 rounded shadow" viewBox="0 0 24 16"><rect width="24" height="16" fill="#012169"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" stroke-width="1.5"/><rect x="10" y="0" width="4" height="16" fill="#fff"/><rect x="0" y="6" width="24" height="4" fill="#fff"/><rect x="11" y="0" width="2" height="16" fill="#C8102E"/><rect x="0" y="6.5" width="24" height="3" fill="#C8102E"/></svg></a>
-      </div>
         <a href="#om-oss" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Om oss</a>
         <a href="mat-vin.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Mat & Vin</a>
         <a href="blogg.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Blogg</a>
@@ -1229,11 +1238,7 @@
             <li><a href="#producenter" class="hover:text-white transition-colors">Producenter</a></li>
             <li><a href="#sortiment" class="hover:text-white transition-colors">Sortiment</a></li>
             <li><a href="#restaurang" class="hover:text-white transition-colors">Restaurang</a></li>
-            <li><a href="#systembolaget" class="hover:text-white transition-colors">Systembolaget</a>
-      <div class="flex items-center justify-center gap-4 mt-6">
-        <span class="ring-2 ring-wine-500 rounded"><svg class="w-8 h-6 rounded shadow" viewBox="0 0 24 16"><rect width="24" height="16" fill="#006AA7"/><rect x="7" y="0" width="3" height="16" fill="#FECC00"/><rect x="0" y="6" width="24" height="3" fill="#FECC00"/></svg></span>
-        <a href="en/index.html" class="opacity-50 hover:opacity-100 transition-opacity" title="English"><svg class="w-8 h-6 rounded shadow" viewBox="0 0 24 16"><rect width="24" height="16" fill="#012169"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" stroke-width="1.5"/><rect x="10" y="0" width="4" height="16" fill="#fff"/><rect x="0" y="6" width="24" height="4" fill="#fff"/><rect x="11" y="0" width="2" height="16" fill="#C8102E"/><rect x="0" y="6.5" width="24" height="3" fill="#C8102E"/></svg></a>
-      </div></li>
+            <li><a href="#systembolaget" class="hover:text-white transition-colors">Systembolaget</a></li>
             <li><a href="#om-oss" class="hover:text-white transition-colors">Om oss</a></li>
           </ul>
         </div>
@@ -1268,6 +1273,13 @@
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+  <script>
+    document.addEventListener('click', function(e) {
+      var dd = document.getElementById('lang-dropdown');
+      if (dd && !e.target.closest('.fixed.top-3')) dd.classList.add('hidden');
+    });
   </script>
 </body>
 </html>
