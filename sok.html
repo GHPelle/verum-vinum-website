@@ -89,9 +89,25 @@
           </select>
         </div>
       </div>
-      <div class="flex items-center justify-between mt-4 pt-4 border-t border-stone-100">
+      <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 mt-4 pt-4 border-t border-stone-100">
         <p id="result-count" class="text-stone-500 text-sm">Visar 127 av 127 viner</p>
-        <button id="clear-filters" class="text-wine-600 hover:text-wine-800 text-sm font-medium cursor-pointer transition-colors">Rensa filter</button>
+        <div class="flex items-center gap-3 flex-wrap">
+          <div class="flex items-center gap-2">
+            <label class="text-xs text-stone-400 uppercase tracking-wider whitespace-nowrap">Sortera:</label>
+            <select id="sort-by" class="px-3 py-1.5 border border-stone-200 rounded-lg text-stone-700 text-sm bg-white focus:outline-none focus:border-wine-500 cursor-pointer pr-8">
+              <option value="default">Standard</option>
+              <option value="name">Vinnamn</option>
+              <option value="producer">Producent</option>
+              <option value="type">Typ</option>
+              <option value="price">Pris</option>
+            </select>
+          </div>
+          <button id="sort-dir" class="flex items-center gap-1 px-3 py-1.5 border border-stone-200 rounded-lg text-stone-700 text-sm bg-white hover:bg-stone-50 cursor-pointer transition-colors" title="Byt sorteringsordning">
+            <span id="sort-dir-label">A-Ö</span>
+            <svg id="sort-dir-icon" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <button id="clear-filters" class="text-wine-600 hover:text-wine-800 text-sm font-medium cursor-pointer transition-colors">Rensa</button>
+        </div>
       </div>
     </div>
 
@@ -131,18 +147,33 @@
       'Österrike': '🇦🇹',
     };
 
+    const typeOrder = {'Mousserande':1, 'Rosé':2, 'Vitt':3, 'Rött':4, 'Starkvin':5};
+
     const countryEl = document.getElementById('filter-country');
     const producerEl = document.getElementById('filter-producer');
     const typeEl = document.getElementById('filter-type');
     const searchEl = document.getElementById('search-text');
+    const sortByEl = document.getElementById('sort-by');
+    const sortDirBtn = document.getElementById('sort-dir');
+    const sortDirLabel = document.getElementById('sort-dir-label');
+    const sortDirIcon = document.getElementById('sort-dir-icon');
+    let sortAsc = true;
 
-    function populateSelect(el, options, currentValue, defaultLabel, useFlags) {
+    sortDirBtn.addEventListener('click', () => {
+      sortAsc = !sortAsc;
+      sortDirLabel.textContent = sortAsc ? 'A-Ö' : 'Ö-A';
+      sortDirIcon.style.transform = sortAsc ? '' : 'rotate(180deg)';
+      update();
+    });
+
+    function populateSelect(el, options, currentValue, defaultLabel, useFlags, customSort) {
       el.innerHTML = '';
       const def = document.createElement('option');
       def.value = '';
       def.textContent = defaultLabel;
       el.appendChild(def);
-      options.forEach(val => {
+      const sorted = customSort ? options.sort(customSort) : options.sort((a,b) => a.localeCompare(b,'sv'));
+      sorted.forEach(val => {
         const o = document.createElement('option');
         o.value = val;
         o.textContent = useFlags ? `${countryFlags[val] || ''} ${val}` : val;
@@ -195,7 +226,7 @@
 
       populateSelect(countryEl, availableCountries, country, 'Alla länder', true);
       populateSelect(producerEl, availableProducers, producer, 'Alla producenter', false);
-      populateSelect(typeEl, availableTypes, type, 'Alla typer', false);
+      populateSelect(typeEl, availableTypes, type, 'Alla typer', false, (a,b) => (typeOrder[a]||99) - (typeOrder[b]||99));
 
       // Reset if current selection is no longer available
       if (country && !availableCountries.includes(country)) countryEl.value = '';
@@ -213,10 +244,35 @@
         w.region.toLowerCase().includes(text)
       );
 
+      const sortKey = sortByEl.value;
+      const dir = sortAsc ? 1 : -1;
+
       filtered.sort((a, b) => {
-        const pc = a.producer.localeCompare(b.producer, 'sv');
-        if (pc !== 0) return pc;
-        return a.name.localeCompare(b.name, 'sv');
+        if (sortKey === 'default') {
+          // Default: Producent -> Typ (custom order) -> Pris
+          let c = a.producer.localeCompare(b.producer, 'sv') * dir;
+          if (c !== 0) return c;
+          c = ((typeOrder[a.type]||99) - (typeOrder[b.type]||99)) * dir;
+          if (c !== 0) return c;
+          const pa = a.price || 999999;
+          const pb = b.price || 999999;
+          return (pa - pb) * dir;
+        } else if (sortKey === 'name') {
+          return a.name.localeCompare(b.name, 'sv') * dir;
+        } else if (sortKey === 'producer') {
+          let c = a.producer.localeCompare(b.producer, 'sv') * dir;
+          if (c !== 0) return c;
+          return a.name.localeCompare(b.name, 'sv') * dir;
+        } else if (sortKey === 'type') {
+          let c = ((typeOrder[a.type]||99) - (typeOrder[b.type]||99)) * dir;
+          if (c !== 0) return c;
+          return a.name.localeCompare(b.name, 'sv') * dir;
+        } else if (sortKey === 'price') {
+          const pa = a.price || (sortAsc ? 999999 : -1);
+          const pb = b.price || (sortAsc ? 999999 : -1);
+          return (pa - pb) * dir;
+        }
+        return 0;
       });
 
       const resultsEl = document.getElementById('results');
@@ -253,6 +309,10 @@
       producerEl.value = '';
       typeEl.value = '';
       searchEl.value = '';
+      sortByEl.value = 'default';
+      sortAsc = true;
+      sortDirLabel.textContent = 'A-Ö';
+      sortDirIcon.style.transform = '';
       update();
     }
 
@@ -261,6 +321,7 @@
     producerEl.addEventListener('change', update);
     typeEl.addEventListener('change', update);
     searchEl.addEventListener('input', update);
+    sortByEl.addEventListener('change', update);
     document.getElementById('clear-filters').addEventListener('click', clearFilters);
 
     // Initial render
