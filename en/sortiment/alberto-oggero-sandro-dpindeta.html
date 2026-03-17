@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Alberto Oggero – Sandro d'Pindeta 2023 | Verum Vinum</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwindcss.config = {
+      theme: {
+        extend: {
+          colors: {
+            wine: { 50:'#fdf2f4', 100:'#fce7eb', 200:'#f9d0d9', 300:'#f5a9ba', 400:'#ee7895', 500:'#e44d73', 600:'#d12a5b', 700:'#b01e49', 800:'#8a1a3d', 900:'#6e1735', 950:'#3f0819' },
+            cream: { 50:'#fefdf8', 100:'#fdf9ed' },
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    html { -webkit-tap-highlight-color: transparent; }
+    a, button { touch-action: manipulation; }
+    @media (max-width: 640px) {
+      .grid.grid-cols-2 { grid-template-columns: repeat(2, 1fr) !important; }
+    }
+  </style>
+</head>
+<body class="bg-cream-50 text-stone-800 font-sans antialiased">
+
+  <!-- Nav -->
+  <nav class="bg-wine-950 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="../index.html" class="flex items-center gap-3">
+        <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-8 brightness-0 invert">
+      </a>
+      <a href="../index.html#sortiment" class="text-sm text-white/80 hover:text-white tracking-wider uppercase font-medium">&larr; Tillbaka</a>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 lg:px-8 py-16">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-stone-400 mb-8">
+      <a href="../index.html" class="hover:text-wine-600 transition-colors">Home</a>
+      <span class="mx-2">/</span>
+      <a href="../index.html#producenter" class="hover:text-wine-600 transition-colors">Alberto Oggero</a>
+      <span class="mx-2">/</span>
+      <span class="text-stone-600">Sandro d'Pindeta 2023</span>
+    </nav>
+
+    <div class="grid grid-cols-1 md:grid-cols-[1fr_1.5fr] gap-12 items-start">
+      <!-- Wine visual -->
+      <div class="bg-gradient-to-b from-stone-100 to-stone-50 rounded-2xl p-8 flex items-center justify-center min-h-[400px]">
+        <img src="https://verumvinum.se/images/64/1adquj-ao-sandro-1200xauto.jpg" alt="alberto-oggero-sandro-dpindeta" class="max-h-[380px] object-contain drop-shadow-xl">
+      </div>
+
+      <!-- Wine details -->
+      <div>
+        <span class="bg-red-900/80 text-red-100 px-3 py-1 rounded text-xs font-medium uppercase tracking-wider">Rött</span>
+        <h1 class="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-stone-900 mt-4 leading-tight">Sandro d'Pindeta 2023</h1>
+        <p class="text-wine-600 text-lg mt-2 font-medium">Alberto Oggero</p>
+
+        <div class="mt-8 space-y-4">
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-wine-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+            <div>
+              <p class="text-stone-500 text-xs uppercase tracking-wider">Region</p>
+              <p class="text-stone-800">Roero, Piemonte, Italien</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <svg class="w-5 h-5 text-wine-400 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+            <div>
+              <p class="text-stone-500 text-xs uppercase tracking-wider">Grapes</p>
+              <p class="text-stone-800">100% Nebbiolo</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-8 border-t border-stone-200">
+          <h2 class="font-serif text-xl text-stone-900 mb-3">About the wine</h2>
+          <p class="text-stone-600 leading-relaxed font-light text-lg">En karaktärsfull Nebbiolo från Roero. Fruktdriven med mjuka tanniner, perfekt för vardagsdrickande.</p>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6 p-6 bg-stone-50 rounded-xl">
+              
+              <div>
+                <p class="text-stone-400 text-xs uppercase tracking-wider mb-1">Alcohol</p>
+                <p class="text-stone-800 font-medium">13,5%</p>
+              </div>
+              <div>
+                <p class="text-stone-400 text-xs uppercase tracking-wider mb-1">Soil</p>
+                <p class="text-stone-800 font-medium">Sand</p>
+              </div>
+              <div>
+                <p class="text-stone-400 text-xs uppercase tracking-wider mb-1">Altitude</p>
+                <p class="text-stone-800 font-medium">280 m ö.h.</p>
+              </div>
+              <div>
+                <p class="text-stone-400 text-xs uppercase tracking-wider mb-1">Exposure</p>
+                <p class="text-stone-800 font-medium">Syd</p>
+              </div>
+              <div>
+                <p class="text-stone-400 text-xs uppercase tracking-wider mb-1">Ålder på vinstockar</p>
+                <p class="text-stone-800 font-medium">ca 20-25 år</p>
+              </div>
+              <div>
+                <p class="text-stone-400 text-xs uppercase tracking-wider mb-1">Farming</p>
+                <p class="text-stone-800 font-medium">Organic</p>
+              </div>
+              <div>
+                <p class="text-stone-400 text-xs uppercase tracking-wider mb-1">Serving temperature</p>
+                <p class="text-stone-800 font-medium">ca 16°C</p>
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h3 class="font-serif text-lg text-stone-900 mb-3">Vinification</h3>
+              <p class="text-stone-600 leading-relaxed font-light">6-7 dagars maceration i ståltankar, lagring på cementtankar i 8-9 månader och 2 månader på flaska.</p>
+            </div>
+        <div class="mt-10 flex flex-col sm:flex-row gap-4">
+          <a href="../index.html#producenter" class="px-6 py-3 bg-wine-800 text-white font-medium text-sm uppercase tracking-wider hover:bg-wine-900 transition-colors">All producers</a>
+          <a href="../index.html#sortiment" class="px-6 py-3 border border-wine-800 text-wine-800 font-medium text-sm uppercase tracking-wider hover:bg-wine-50 transition-colors">Selection</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-stone-900 text-stone-500 py-8 mt-16">
+    <div class="max-w-4xl mx-auto px-6 text-center text-xs">
+      <p>&copy; 2026 Verum Vinum Sverige AB</p>
+    </div>
+  </footer>
+</body>
+</html>
