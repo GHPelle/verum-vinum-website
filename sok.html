@@ -267,7 +267,7 @@
       grapeContainer.innerHTML = availableGrapes.map(g => {
         const checked = selectedGrapes.has(g) ? 'checked' : '';
         const count = applyBase(wines).filter(w => w.grape_type === g && (!country || w.country === country) && (!producer || w.producer === producer) && (!type || w.type === type)).length;
-        return `<label class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm cursor-pointer transition-colors ${selectedGrapes.has(g) ? 'bg-wine-800 text-white' : 'bg-stone-100 text-stone-600 hover:bg-stone-200'}">
+        return `<label class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-sm cursor-pointer transition-colors ${selectedGrapes.has(g) ? 'bg-emerald-600/20 text-emerald-800 border border-emerald-500/40' : 'bg-stone-100 text-stone-600 hover:bg-stone-200'}">
           <input type="checkbox" value="${g}" ${checked} class="hidden grape-cb">
           ${g} <span class="text-xs opacity-60">(${count})</span>
         </label>`;
