@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verum Vinum – iPhone Demo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      padding: 40px 20px;
+    }
+    .phone {
+      width: 280px;
+      height: 605px;
+      border-radius: 55px;
+      background: #1a1a1a;
+      padding: 12px;
+      box-shadow:
+        0 0 0 2px #333,
+        0 0 0 4px #1a1a1a,
+        0 30px 60px rgba(0,0,0,0.5),
+        inset 0 0 4px rgba(255,255,255,0.05);
+      position: relative;
+    }
+    .phone::before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 126px;
+      height: 34px;
+      background: #1a1a1a;
+      border-radius: 0 0 20px 20px;
+      z-index: 10;
+    }
+    /* Camera dot */
+    .phone::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(30px);
+      width: 12px;
+      height: 12px;
+      background: #0a0a0a;
+      border-radius: 50%;
+      z-index: 11;
+      box-shadow: inset 0 0 3px rgba(30,60,120,0.6);
+    }
+    .screen {
+      width: 100%;
+      height: 100%;
+      border-radius: 44px;
+      overflow: hidden;
+      background: #000;
+      position: relative;
+    }
+    .screen iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 44px;
+    }
+    /* Side button (power) */
+    .btn-power {
+      position: absolute;
+      right: -3px;
+      top: 180px;
+      width: 4px;
+      height: 80px;
+      background: #333;
+      border-radius: 0 2px 2px 0;
+    }
+    /* Volume buttons */
+    .btn-vol-up {
+      position: absolute;
+      left: -3px;
+      top: 160px;
+      width: 4px;
+      height: 50px;
+      background: #333;
+      border-radius: 2px 0 0 2px;
+    }
+    .btn-vol-down {
+      position: absolute;
+      left: -3px;
+      top: 220px;
+      width: 4px;
+      height: 50px;
+      background: #333;
+      border-radius: 2px 0 0 2px;
+    }
+    .btn-silent {
+      position: absolute;
+      left: -3px;
+      top: 130px;
+      width: 4px;
+      height: 22px;
+      background: #333;
+      border-radius: 2px 0 0 2px;
+    }
+    /* Home indicator */
+    .home-indicator {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 5px;
+      background: rgba(255,255,255,0.3);
+      border-radius: 3px;
+      z-index: 10;
+    }
+    h1 {
+      color: white;
+      text-align: center;
+      margin-bottom: 30px;
+      font-weight: 300;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+    .hint {
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>VERUM VINUM &mdash; Mobil</h1>
+    <div class="phone">
+      <div class="btn-power"></div>
+      <div class="btn-silent"></div>
+      <div class="btn-vol-up"></div>
+      <div class="btn-vol-down"></div>
+      <div class="screen">
+        <iframe src="index.html"></iframe>
+      </div>
+      <div class="home-indicator"></div>
+    </div>
+    <p class="hint">Scrolla i telefonen ovan &middot; Alla länkar fungerar</p>
+  </div>
+</body>
+</html>
