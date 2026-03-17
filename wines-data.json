@@ -6,7 +6,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Roero, Piemonte, Italien",
-    "price": 245
+    "price": 245,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "alberto-oggero-roero",
@@ -15,7 +17,9 @@
     "type": "Vitt",
     "country": "Italien",
     "region": "Roero, Piemonte, Italien",
-    "price": 180
+    "price": 180,
+    "grape_type": "Arneis",
+    "grapes_raw": "100% Arneis"
   },
   {
     "slug": "alberto-oggero-sandro-dpindeta",
@@ -24,7 +28,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Roero, Piemonte, Italien",
-    "price": 185
+    "price": 185,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "alberto-oggero-valle-dei-lunghi",
@@ -33,7 +39,9 @@
     "type": "Vitt",
     "country": "Italien",
     "region": "Roero, Piemonte, Italien",
-    "price": 230
+    "price": 230,
+    "grape_type": "Arneis",
+    "grapes_raw": "100% Arneis"
   },
   {
     "slug": "christian-clerget-bourgogne-rouge",
@@ -42,7 +50,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Vougeot, Bourgogne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "100% Pinot Noir"
   },
   {
     "slug": "christian-clerget-chambollemusigny-1er-cru-les-charmes",
@@ -51,7 +61,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Chambolle-Musigny, Bourgogne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "100% Pinot Noir"
   },
   {
     "slug": "christian-clerget-chambollemusigny-aux-croix",
@@ -60,7 +72,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Chambolle-Musigny, Bourgogne, Frankrike",
-    "price": 570
+    "price": 570,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "100% Pinot Noir"
   },
   {
     "slug": "christian-clerget-chambollemusigny",
@@ -69,7 +83,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Chambolle-Musigny, Bourgogne, Frankrike",
-    "price": 525
+    "price": 525,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "100% Pinot Noir"
   },
   {
     "slug": "christian-clerget-echezeaux-grand-cru-en-orveaux",
@@ -78,7 +94,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Vosne-Romanée, Bourgogne, Frankrike",
-    "price": 1500
+    "price": 1500,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "100% Pinot Noir"
   },
   {
     "slug": "christian-clerget-moreysaintdenis",
@@ -87,7 +105,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Morey-Saint-Denis, Bourgogne, Frankrike",
-    "price": 435
+    "price": 435,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "100% Pinot Noir"
   },
   {
     "slug": "christian-clerget-vosneromanee-les-violettes",
@@ -96,7 +116,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Vosne-Romanée, Bourgogne, Frankrike",
-    "price": 690
+    "price": 690,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "100% Pinot Noir"
   },
   {
     "slug": "christian-clerget-vougeot-1er-cru-les-petits-vougeots",
@@ -105,7 +127,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Vougeot, Bourgogne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "100% Pinot Noir"
   },
   {
     "slug": "cigliano-di-sopra-chianti-classico",
@@ -114,7 +138,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "San Casciano in Val di Pesa, Toscana, Italien",
-    "price": 240
+    "price": 240,
+    "grape_type": "Sangiovese",
+    "grapes_raw": "100% Sangiovese"
   },
   {
     "slug": "clos-de-la-bonnette-cisselande-vdf",
@@ -123,7 +149,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Norra Rhône, Frankrike",
-    "price": 255
+    "price": 255,
+    "grape_type": "Blend",
+    "grapes_raw": "Syrah, Grenache"
   },
   {
     "slug": "clos-de-la-bonnette-collines-rhodaniennes-syrah-vieilles-vignes",
@@ -132,7 +160,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Norra Rhône, Frankrike",
-    "price": 305
+    "price": 305,
+    "grape_type": "Syrah",
+    "grapes_raw": "Syrah"
   },
   {
     "slug": "clos-de-la-bonnette-condrieu-legende-bonnetta",
@@ -141,7 +171,9 @@
     "type": "Vitt",
     "country": "Frankrike",
     "region": "Condrieu, Norra Rhône, Frankrike",
-    "price": 605
+    "price": 605,
+    "grape_type": "Viognier",
+    "grapes_raw": "Viognier"
   },
   {
     "slug": "clos-de-la-bonnette-coterotie-prenelle",
@@ -150,7 +182,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Côte-Rôtie, Norra Rhône, Frankrike",
-    "price": 655
+    "price": 655,
+    "grape_type": "Syrah",
+    "grapes_raw": "Syrah"
   },
   {
     "slug": "coffinetduvernay-btardmontrachet-grand-cru",
@@ -159,7 +193,9 @@
     "type": "Vitt",
     "country": "Frankrike",
     "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Chardonnay",
+    "grapes_raw": "Chardonnay"
   },
   {
     "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-clos-saint-jean",
@@ -168,7 +204,9 @@
     "type": "Vitt",
     "country": "Frankrike",
     "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Chardonnay",
+    "grapes_raw": "Chardonnay"
   },
   {
     "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-dent-de-chien",
@@ -177,7 +215,9 @@
     "type": "Vitt",
     "country": "Frankrike",
     "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Chardonnay",
+    "grapes_raw": "Chardonnay"
   },
   {
     "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-les-caillerets",
@@ -186,7 +226,9 @@
     "type": "Vitt",
     "country": "Frankrike",
     "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Chardonnay",
+    "grapes_raw": "Chardonnay"
   },
   {
     "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-les-grands-clos",
@@ -195,7 +237,9 @@
     "type": "Vitt",
     "country": "Frankrike",
     "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Chardonnay",
+    "grapes_raw": "Chardonnay"
   },
   {
     "slug": "coffinetduvernay-chassagnemontrachet-les-blanchots-dessous",
@@ -204,7 +248,9 @@
     "type": "Vitt",
     "country": "Frankrike",
     "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Chardonnay",
+    "grapes_raw": "Chardonnay"
   },
   {
     "slug": "coffinetduvernay-chassagnemontrachet-rouge",
@@ -213,7 +259,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "Pinot Noir"
   },
   {
     "slug": "coffinetduvernay-vin-de-france-assemblage",
@@ -222,7 +270,9 @@
     "type": "Vitt",
     "country": "Frankrike",
     "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Blend",
+    "grapes_raw": "Aligoté, Chardonnay"
   },
   {
     "slug": "diego-morra-barolo-del-comune-di-verduno",
@@ -231,7 +281,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Verduno, Piemonte, Italien",
-    "price": 380
+    "price": 380,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "diego-morra-barolo-monvigliero",
@@ -240,7 +292,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Verduno, Piemonte, Italien",
-    "price": 545
+    "price": 545,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "diego-morra-barolo-san-lorenzo",
@@ -249,7 +303,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Verduno, Piemonte, Italien",
-    "price": 420
+    "price": 420,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "diego-morra-langhe-rosato",
@@ -258,7 +314,9 @@
     "type": "Rosé",
     "country": "Italien",
     "region": "Verduno, Piemonte, Italien",
-    "price": 120
+    "price": 120,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "diego-morra-verduno-pelaverga",
@@ -267,7 +325,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Verduno, Piemonte, Italien",
-    "price": 175
+    "price": 175,
+    "grape_type": "Pelaverga",
+    "grapes_raw": "100% Pelaverga"
   },
   {
     "slug": "domaine-villet-chardonnay-elevage-2-an-en-fut",
@@ -276,7 +336,9 @@
     "type": "Vitt",
     "country": "Frankrike",
     "region": "Arbois, Jura, Frankrike",
-    "price": 235
+    "price": 235,
+    "grape_type": "Chardonnay",
+    "grapes_raw": "Chardonnay"
   },
   {
     "slug": "domaine-villet-pinot-noir",
@@ -285,7 +347,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Arbois, Jura, Frankrike",
-    "price": 305
+    "price": 305,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "Pinot Noir"
   },
   {
     "slug": "domaine-villet-poulsard",
@@ -294,7 +358,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Arbois, Jura, Frankrike",
-    "price": 290
+    "price": 290,
+    "grape_type": "Poulsard",
+    "grapes_raw": "Poulsard"
   },
   {
     "slug": "domaine-villet-rouge-tradition",
@@ -303,7 +369,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Arbois, Jura, Frankrike",
-    "price": 290
+    "price": 290,
+    "grape_type": "Blend",
+    "grapes_raw": "Pinot Noir, Poulsard, Trousseau"
   },
   {
     "slug": "domaine-villet-savagnin-ouille-elevage-24-mois-en-cuve",
@@ -312,7 +380,9 @@
     "type": "Vitt",
     "country": "Frankrike",
     "region": "Arbois, Jura, Frankrike",
-    "price": 270
+    "price": 270,
+    "grape_type": "Savagnin",
+    "grapes_raw": "Savagnin"
   },
   {
     "slug": "domaine-villet-savagnin-ouille-elevage-30-mois-en-foudre",
@@ -321,7 +391,9 @@
     "type": "Vitt",
     "country": "Frankrike",
     "region": "Arbois, Jura, Frankrike",
-    "price": 300
+    "price": 300,
+    "grape_type": "Savagnin",
+    "grapes_raw": "Savagnin"
   },
   {
     "slug": "ettore-germano-alta-langa-extra-brut",
@@ -330,7 +402,9 @@
     "type": "Mousserande",
     "country": "Italien",
     "region": "Alta Langa, Piemonte, Italien",
-    "price": null
+    "price": null,
+    "grape_type": "Blend",
+    "grapes_raw": "Pinot Noir, Chardonnay"
   },
   {
     "slug": "ettore-germano-alta-langa-riserva-blanc-de-blanc-pas-dose",
@@ -339,7 +413,9 @@
     "type": "Mousserande",
     "country": "Italien",
     "region": "Alta Langa, Piemonte, Italien",
-    "price": 440
+    "price": 440,
+    "grape_type": "Chardonnay",
+    "grapes_raw": "Chardonnay"
   },
   {
     "slug": "ettore-germano-alta-langa-riserva-blanc-de-noir-pas-dose",
@@ -348,7 +424,9 @@
     "type": "Mousserande",
     "country": "Italien",
     "region": "Alta Langa, Piemonte, Italien",
-    "price": 440
+    "price": 440,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "Pinot Noir"
   },
   {
     "slug": "ettore-germano-barbera-dalba-superiore",
@@ -357,7 +435,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Alba, Piemonte, Italien",
-    "price": null
+    "price": null,
+    "grape_type": "Barbera",
+    "grapes_raw": "100% Barbera"
   },
   {
     "slug": "ettore-germano-barolo-cerretta",
@@ -366,7 +446,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Serralunga d'Alba, Piemonte, Italien",
-    "price": 525
+    "price": 525,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "ettore-germano-barolo-del-comune-di-serralunga-dalba",
@@ -375,7 +457,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Serralunga d'Alba, Piemonte, Italien",
-    "price": 355
+    "price": 355,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "ettore-germano-barolo-lazzarito-riserva",
@@ -384,7 +468,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Serralunga d'Alba, Piemonte, Italien",
-    "price": 900
+    "price": 900,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "ettore-germano-barolo-prapo",
@@ -393,7 +479,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Serralunga d'Alba, Piemonte, Italien",
-    "price": 525
+    "price": 525,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "ettore-germano-barolo-vignarionda",
@@ -402,7 +490,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Serralunga d'Alba, Piemonte, Italien",
-    "price": 1070
+    "price": 1070,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "ettore-germano-binel-langhe-bianco",
@@ -411,7 +501,9 @@
     "type": "Vitt",
     "country": "Italien",
     "region": "Langhe, Piemonte, Italien",
-    "price": 240
+    "price": 240,
+    "grape_type": "Blend",
+    "grapes_raw": "Riesling Renano, Chardonnay"
   },
   {
     "slug": "ettore-germano-herzu-langhe-riesling",
@@ -420,7 +512,9 @@
     "type": "Vitt",
     "country": "Italien",
     "region": "Langhe, Piemonte, Italien",
-    "price": 260
+    "price": 260,
+    "grape_type": "Riesling",
+    "grapes_raw": "Riesling"
   },
   {
     "slug": "ettore-germano-langhe-chardonnay",
@@ -429,7 +523,9 @@
     "type": "Vitt",
     "country": "Italien",
     "region": "Langhe, Piemonte, Italien",
-    "price": 170
+    "price": 170,
+    "grape_type": "Chardonnay",
+    "grapes_raw": "100% Chardonnay"
   },
   {
     "slug": "ettore-germano-langhe-nascetta",
@@ -438,7 +534,9 @@
     "type": "Vitt",
     "country": "Italien",
     "region": "Langhe, Piemonte, Italien",
-    "price": 240
+    "price": 240,
+    "grape_type": "Nascetta",
+    "grapes_raw": "100% Nascetta"
   },
   {
     "slug": "ettore-germano-rosanna-extra-brut-rose-metodo-classico",
@@ -447,7 +545,9 @@
     "type": "Mousserande",
     "country": "Italien",
     "region": "Piemonte, Italien",
-    "price": 240
+    "price": 240,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "Nebbiolo"
   },
   {
     "slug": "fontanabianca-barbaresco-bordini",
@@ -456,7 +556,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Neive, Piemonte, Italien",
-    "price": 285
+    "price": 285,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "fontanabianca-barbaresco-serraboella",
@@ -465,7 +567,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Neive, Piemonte, Italien",
-    "price": 285
+    "price": 285,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "fontanabianca-barbaresco",
@@ -474,7 +578,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Neive, Piemonte, Italien",
-    "price": 225
+    "price": 225,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "fontanabianca-barbera-dalba-superiore",
@@ -483,7 +589,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Neive, Piemonte, Italien",
-    "price": 135
+    "price": 135,
+    "grape_type": "Barbera",
+    "grapes_raw": "100% Barbera"
   },
   {
     "slug": "fontanabianca-dolcetto-dalba",
@@ -492,7 +600,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Neive, Piemonte, Italien",
-    "price": 120
+    "price": 120,
+    "grape_type": "Dolcetto",
+    "grapes_raw": "100% Dolcetto"
   },
   {
     "slug": "fontanabianca-langhe-arneis-sommo",
@@ -501,7 +611,9 @@
     "type": "Vitt",
     "country": "Italien",
     "region": "Neive, Piemonte, Italien",
-    "price": 130
+    "price": 130,
+    "grape_type": "Arneis",
+    "grapes_raw": "100% Arneis"
   },
   {
     "slug": "fontanabianca-langhe-nebbiolo",
@@ -510,7 +622,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Neive, Piemonte, Italien",
-    "price": 145
+    "price": 145,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "la-famille-k-la-mere",
@@ -519,7 +633,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Morancé, Beaujolais, Frankrike",
-    "price": 135
+    "price": 135,
+    "grape_type": "Gamay",
+    "grapes_raw": "100% Gamay"
   },
   {
     "slug": "la-famille-k-le-pere-blanc",
@@ -528,7 +644,9 @@
     "type": "Vitt",
     "country": "Frankrike",
     "region": "Morancé, Beaujolais, Frankrike",
-    "price": 155
+    "price": 155,
+    "grape_type": "Chardonnay",
+    "grapes_raw": "100% Chardonnay"
   },
   {
     "slug": "la-famille-k-le-pere-vdf-pinot-noir",
@@ -537,7 +655,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Morancé, Beaujolais, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "100% Pinot Noir"
   },
   {
     "slug": "la-famille-k-le-pere",
@@ -546,7 +666,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Morancé, Beaujolais, Frankrike",
-    "price": 145
+    "price": 145,
+    "grape_type": "Gamay",
+    "grapes_raw": "100% Gamay"
   },
   {
     "slug": "la-famille-k-lheritiere",
@@ -555,7 +677,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Morancé, Beaujolais, Frankrike",
-    "price": 120
+    "price": 120,
+    "grape_type": "Gamay",
+    "grapes_raw": "100% Gamay"
   },
   {
     "slug": "la-famille-k-loncle",
@@ -564,7 +688,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Morancé, Beaujolais, Frankrike",
-    "price": 150
+    "price": 150,
+    "grape_type": "Blend",
+    "grapes_raw": "100% Gamaret (Korsning mellan Reichensteiner och Gamay)"
   },
   {
     "slug": "lapo-berti-barolo-del-comune-di-la-morra",
@@ -573,7 +699,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "La Morra, Piemonte, Italien",
-    "price": 545
+    "price": 545,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "lapo-berti-barolo-fossati",
@@ -582,7 +710,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "La Morra, Piemonte, Italien",
-    "price": null
+    "price": null,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "Nebbiolo"
   },
   {
     "slug": "lapo-berti-langhe-nebbiolo",
@@ -591,7 +721,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "La Morra, Piemonte, Italien",
-    "price": null
+    "price": null,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "martin-mullen-krover-kirchlay-auslese",
@@ -600,7 +732,9 @@
     "type": "Vitt",
     "country": "Tyskland",
     "region": "Traben-Trarbach, Mosel, Tyskland",
-    "price": null
+    "price": null,
+    "grape_type": "Riesling",
+    "grapes_raw": "100% Riesling"
   },
   {
     "slug": "martin-mullen-krover-letterlay-spatlese-feinherb",
@@ -609,7 +743,9 @@
     "type": "Vitt",
     "country": "Tyskland",
     "region": "Traben-Trarbach, Mosel, Tyskland",
-    "price": null
+    "price": null,
+    "grape_type": "Riesling",
+    "grapes_raw": "100% Riesling"
   },
   {
     "slug": "martin-mullen-krover-paradies-spatlese-trocken",
@@ -618,7 +754,9 @@
     "type": "Vitt",
     "country": "Tyskland",
     "region": "Traben-Trarbach, Mosel, Tyskland",
-    "price": null
+    "price": null,
+    "grape_type": "Riesling",
+    "grapes_raw": "100% Riesling"
   },
   {
     "slug": "martin-mullen-nostel-trocken",
@@ -627,7 +765,9 @@
     "type": "Vitt",
     "country": "Tyskland",
     "region": "Traben-Trarbach, Mosel, Tyskland",
-    "price": null
+    "price": null,
+    "grape_type": "Riesling",
+    "grapes_raw": "100% Riesling"
   },
   {
     "slug": "martin-mullen-riesling-revival-trocken",
@@ -636,7 +776,9 @@
     "type": "Vitt",
     "country": "Tyskland",
     "region": "Traben-Trarbach, Mosel, Tyskland",
-    "price": 150
+    "price": 150,
+    "grape_type": "Riesling",
+    "grapes_raw": "100% Riesling"
   },
   {
     "slug": "martin-mullen-trabener-wurzgarten-kabinett-feinherb",
@@ -645,7 +787,9 @@
     "type": "Vitt",
     "country": "Tyskland",
     "region": "Traben-Trarbach, Mosel, Tyskland",
-    "price": 205
+    "price": 205,
+    "grape_type": "Riesling",
+    "grapes_raw": "100% Riesling"
   },
   {
     "slug": "martin-mullen-trabener-wurzgarten-spatlese-trocken",
@@ -654,7 +798,9 @@
     "type": "Vitt",
     "country": "Tyskland",
     "region": "Traben-Trarbach, Mosel, Tyskland",
-    "price": 220
+    "price": 220,
+    "grape_type": "Riesling",
+    "grapes_raw": "Riesling"
   },
   {
     "slug": "martin-mullen-trarbacher-huhnerberg-auslese",
@@ -663,7 +809,9 @@
     "type": "Vitt",
     "country": "Tyskland",
     "region": "Traben-Trarbach, Mosel, Tyskland",
-    "price": 345
+    "price": 345,
+    "grape_type": "Riesling",
+    "grapes_raw": "100% Riesling"
   },
   {
     "slug": "michel-rebourgeon-beaune-1er-cru-les-chouacheux",
@@ -672,7 +820,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Beaune, Bourgogne, Frankrike",
-    "price": 435
+    "price": 435,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "Pinot Noir"
   },
   {
     "slug": "michel-rebourgeon-beaune-les-epenottes",
@@ -681,7 +831,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Pommard, Bourgogne, Frankrike",
-    "price": 375
+    "price": 375,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "Pinot Noir"
   },
   {
     "slug": "michel-rebourgeon-pommard-1er-cru-les-arvelets",
@@ -690,7 +842,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Pommard, Bourgogne, Frankrike",
-    "price": 625
+    "price": 625,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "Pinot Noir"
   },
   {
     "slug": "michel-rebourgeon-pommard-1er-cru-les-charmots",
@@ -699,7 +853,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Pommard, Bourgogne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "Pinot Noir"
   },
   {
     "slug": "michel-rebourgeon-pommard-1er-cru-les-rugiens",
@@ -708,7 +864,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Pommard, Bourgogne, Frankrike",
-    "price": 940
+    "price": 940,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "Pinot Noir"
   },
   {
     "slug": "michel-rebourgeon-pommard-cuvee-william",
@@ -717,7 +875,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Pommard, Bourgogne, Frankrike",
-    "price": 505
+    "price": 505,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "Pinot Noir"
   },
   {
     "slug": "michel-rebourgeon-pommard-les-noizons",
@@ -726,7 +886,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Pommard, Bourgogne, Frankrike",
-    "price": 575
+    "price": 575,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "Pinot Noir"
   },
   {
     "slug": "michel-rebourgeon-pommard-trois-terroirs",
@@ -735,7 +897,9 @@
     "type": "Rött",
     "country": "Frankrike",
     "region": "Pommard, Bourgogne, Frankrike",
-    "price": 485
+    "price": 485,
+    "grape_type": "Pinot Noir",
+    "grapes_raw": "Pinot Noir"
   },
   {
     "slug": "mori-concetta-morino-chianti-classico",
@@ -744,7 +908,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "San Casciano in Val di Pesa, Toscana, Italien",
-    "price": 180
+    "price": 180,
+    "grape_type": "Blend",
+    "grapes_raw": "80% Sangiovese, 10% Canaiolo, 5% Colorino, 5% Pugnitello"
   },
   {
     "slug": "quinta-das-bagerias-abafado",
@@ -753,7 +919,9 @@
     "type": "Starkvin",
     "country": "Portugal",
     "region": "Sangalhos, Bairrada, Portugal",
-    "price": 360
+    "price": 360,
+    "grape_type": "Baga",
+    "grapes_raw": "Baga"
   },
   {
     "slug": "quinta-das-bagerias-espumante-colheita-rose",
@@ -762,7 +930,9 @@
     "type": "Mousserande",
     "country": "Portugal",
     "region": "Sangalhos, Bairrada, Portugal",
-    "price": 120
+    "price": 120,
+    "grape_type": "Baga",
+    "grapes_raw": "100% Baga"
   },
   {
     "slug": "quinta-das-bagerias-espumante-colheita",
@@ -771,7 +941,9 @@
     "type": "Mousserande",
     "country": "Portugal",
     "region": "Sangalhos, Bairrada, Portugal",
-    "price": null
+    "price": null,
+    "grape_type": "Blend",
+    "grapes_raw": "Maria Gomes, Bical, Cercial"
   },
   {
     "slug": "quinta-das-bagerias-garrafeira-tinto",
@@ -780,7 +952,9 @@
     "type": "Rött",
     "country": "Portugal",
     "region": "Sangalhos, Bairrada, Portugal",
-    "price": 300
+    "price": 300,
+    "grape_type": "Baga",
+    "grapes_raw": "100% Baga"
   },
   {
     "slug": "quinta-das-bagerias-vinho-branco-reserva",
@@ -789,7 +963,9 @@
     "type": "Vitt",
     "country": "Portugal",
     "region": "Sangalhos, Bairrada, Portugal",
-    "price": 130
+    "price": 130,
+    "grape_type": "Blend",
+    "grapes_raw": "Maria Gomes, Bical"
   },
   {
     "slug": "quinta-das-bagerias-vinho-tinto-reserva",
@@ -798,7 +974,9 @@
     "type": "Rött",
     "country": "Portugal",
     "region": "Sangalhos, Bairrada, Portugal",
-    "price": 145
+    "price": 145,
+    "grape_type": "Blend",
+    "grapes_raw": "Baga, Touriga Nacional"
   },
   {
     "slug": "quinta-do-javali-clos-bonifata-2",
@@ -807,7 +985,9 @@
     "type": "Rött",
     "country": "Portugal",
     "region": "São João da Pesqueira, Douro, Portugal",
-    "price": 225
+    "price": 225,
+    "grape_type": "Blend",
+    "grapes_raw": "Arinto, Viosinho"
   },
   {
     "slug": "quinta-do-javali-clos-fonte-do-santo",
@@ -816,7 +996,9 @@
     "type": "Rött",
     "country": "Portugal",
     "region": "São João da Pesqueira, Douro, Portugal",
-    "price": 270
+    "price": 270,
+    "grape_type": "Blend",
+    "grapes_raw": "Fältblend (30+ druvor)"
   },
   {
     "slug": "quinta-do-javali-crazy-branco",
@@ -825,7 +1007,9 @@
     "type": "Vitt",
     "country": "Portugal",
     "region": "São João da Pesqueira, Douro, Portugal",
-    "price": 145
+    "price": 145,
+    "grape_type": "Blend",
+    "grapes_raw": "Arinto, Viosinho, Rabigato, Encruzado, Gouveio, Cercial"
   },
   {
     "slug": "quinta-do-javali-crazy-javali-tinto",
@@ -834,7 +1018,9 @@
     "type": "Rött",
     "country": "Portugal",
     "region": "São João da Pesqueira, Douro, Portugal",
-    "price": 145
+    "price": 145,
+    "grape_type": "Blend",
+    "grapes_raw": "Tinta Roriz, Tinta Barroca, Touriga Franca"
   },
   {
     "slug": "quinta-do-javali-pet-nat",
@@ -843,7 +1029,9 @@
     "type": "Mousserande",
     "country": "Portugal",
     "region": "São João da Pesqueira, Douro, Portugal",
-    "price": 145
+    "price": 145,
+    "grape_type": "Blend",
+    "grapes_raw": "Tinta Roriz, Tinta Barroca, Touriga Franca"
   },
   {
     "slug": "quinta-do-javali-tawny-port-10-year",
@@ -852,7 +1040,9 @@
     "type": "Starkvin",
     "country": "Portugal",
     "region": "São João da Pesqueira, Douro, Portugal",
-    "price": 290
+    "price": 290,
+    "grape_type": "Blend",
+    "grapes_raw": "Tinta Roriz, Touriga Franca, Touriga Nacional, Tinto Cão, Tinta Barroca"
   },
   {
     "slug": "quinta-do-javali-tawny-port",
@@ -861,7 +1051,9 @@
     "type": "Starkvin",
     "country": "Portugal",
     "region": "São João da Pesqueira, Douro, Portugal",
-    "price": 140
+    "price": 140,
+    "grape_type": "Blend",
+    "grapes_raw": "Tinta Roriz, Touriga Franca, Touriga Nacional, Tinto Cão, Tinta Barroca"
   },
   {
     "slug": "quinta-do-javali-tinto",
@@ -870,7 +1062,9 @@
     "type": "Rött",
     "country": "Portugal",
     "region": "São João da Pesqueira, Douro, Portugal",
-    "price": 145
+    "price": 145,
+    "grape_type": "Blend",
+    "grapes_raw": "Tinta Roriz, Tinta Barroca, Touriga Franca, Touriga Nacional"
   },
   {
     "slug": "quinta-do-javali-vinhas-dos-lobatos",
@@ -879,7 +1073,9 @@
     "type": "Rött",
     "country": "Portugal",
     "region": "São João da Pesqueira, Douro, Portugal",
-    "price": 235
+    "price": 235,
+    "grape_type": "Blend",
+    "grapes_raw": "Field blend"
   },
   {
     "slug": "reva-barbera-dalba-superiore",
@@ -888,7 +1084,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Monforte d'Alba, Piemonte, Italien",
-    "price": 165
+    "price": 165,
+    "grape_type": "Barbera",
+    "grapes_raw": "100% Barbera"
   },
   {
     "slug": "reva-barolo-cannubi",
@@ -897,7 +1095,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Barolo, Piemonte, Italien",
-    "price": 1050
+    "price": 1050,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "reva-barolo-ravera",
@@ -906,7 +1106,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Monforte d'Alba, Piemonte, Italien",
-    "price": 600
+    "price": 600,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "reva-barolo",
@@ -915,7 +1117,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Monforte d'Alba, Piemonte, Italien",
-    "price": 315
+    "price": 315,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "reva-dolcetto-dalba",
@@ -924,7 +1128,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Monforte d'Alba, Piemonte, Italien",
-    "price": 145
+    "price": 145,
+    "grape_type": "Dolcetto",
+    "grapes_raw": "100% Dolcetto"
   },
   {
     "slug": "reva-langhe-bianco-grey",
@@ -933,7 +1139,9 @@
     "type": "Vitt",
     "country": "Italien",
     "region": "Monforte d'Alba, Piemonte, Italien",
-    "price": 175
+    "price": 175,
+    "grape_type": "Blend",
+    "grapes_raw": "70% Sauvignon Gris, 30% Sauvignon Blanc"
   },
   {
     "slug": "reva-nebbiolo-dalba",
@@ -942,7 +1150,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Monforte d'Alba, Piemonte, Italien",
-    "price": 150
+    "price": 150,
+    "grape_type": "Nebbiolo",
+    "grapes_raw": "100% Nebbiolo"
   },
   {
     "slug": "rudi-pichler-gruner-veltliner-achleithen-smaragd",
@@ -951,7 +1161,9 @@
     "type": "Vitt",
     "country": "Österrike",
     "region": "Wosendorf, Wachau, Österrike",
-    "price": 480
+    "price": 480,
+    "grape_type": "Grüner Veltliner",
+    "grapes_raw": "100% Grüner Veltliner"
   },
   {
     "slug": "rudi-pichler-gruner-veltliner-hochrain-smaragd",
@@ -960,7 +1172,9 @@
     "type": "Vitt",
     "country": "Österrike",
     "region": "Wosendorf, Wachau, Österrike",
-    "price": 345
+    "price": 345,
+    "grape_type": "Grüner Veltliner",
+    "grapes_raw": "100% Grüner Veltliner"
   },
   {
     "slug": "rudi-pichler-gruner-veltliner-kollmutz-smaragd",
@@ -969,7 +1183,9 @@
     "type": "Vitt",
     "country": "Österrike",
     "region": "Wosendorf, Wachau, Österrike",
-    "price": 335
+    "price": 335,
+    "grape_type": "Grüner Veltliner",
+    "grapes_raw": "100% Grüner Veltliner"
   },
   {
     "slug": "rudi-pichler-gruner-veltliner-terrassen-smaragd",
@@ -978,7 +1194,9 @@
     "type": "Vitt",
     "country": "Österrike",
     "region": "Wosendorf, Wachau, Österrike",
-    "price": 240
+    "price": 240,
+    "grape_type": "Grüner Veltliner",
+    "grapes_raw": "100% Grüner Veltliner"
   },
   {
     "slug": "rudi-pichler-riesling-achleithen-smaragd",
@@ -987,7 +1205,9 @@
     "type": "Vitt",
     "country": "Österrike",
     "region": "Wosendorf, Wachau, Österrike",
-    "price": 480
+    "price": 480,
+    "grape_type": "Riesling",
+    "grapes_raw": "Riesling"
   },
   {
     "slug": "rudi-pichler-riesling-hochrain-smaragd",
@@ -996,7 +1216,9 @@
     "type": "Vitt",
     "country": "Österrike",
     "region": "Wosendorf, Wachau, Österrike",
-    "price": 345
+    "price": 345,
+    "grape_type": "Riesling",
+    "grapes_raw": "100% Riesling"
   },
   {
     "slug": "rudi-pichler-riesling-kirchweg-smaragd",
@@ -1005,7 +1227,9 @@
     "type": "Vitt",
     "country": "Österrike",
     "region": "Wosendorf, Wachau, Österrike",
-    "price": 335
+    "price": 335,
+    "grape_type": "Riesling",
+    "grapes_raw": "100% Riesling"
   },
   {
     "slug": "vadio-grande",
@@ -1014,7 +1238,9 @@
     "type": "Rött",
     "country": "Portugal",
     "region": "Poutena, Bairrada, Portugal",
-    "price": 285
+    "price": 285,
+    "grape_type": "Baga",
+    "grapes_raw": "100% Baga"
   },
   {
     "slug": "vadio-perpetuum-white-sparkling",
@@ -1023,7 +1249,9 @@
     "type": "Mousserande",
     "country": "Portugal",
     "region": "Poutena, Bairrada, Portugal",
-    "price": 230
+    "price": 230,
+    "grape_type": "Blend",
+    "grapes_raw": "60% Bical, 30% Baga, 10% Cercial"
   },
   {
     "slug": "vadio-red",
@@ -1032,7 +1260,9 @@
     "type": "Rött",
     "country": "Portugal",
     "region": "Poutena, Bairrada, Portugal",
-    "price": 155
+    "price": 155,
+    "grape_type": "Baga",
+    "grapes_raw": "100% Baga"
   },
   {
     "slug": "vadio-rexarte",
@@ -1041,7 +1271,9 @@
     "type": "Rött",
     "country": "Portugal",
     "region": "Poutena, Bairrada, Portugal",
-    "price": 630
+    "price": 630,
+    "grape_type": "Baga",
+    "grapes_raw": "100% Baga"
   },
   {
     "slug": "vadio-rose-sparkling",
@@ -1050,7 +1282,9 @@
     "type": "Mousserande",
     "country": "Portugal",
     "region": "Poutena, Bairrada, Portugal",
-    "price": 230
+    "price": 230,
+    "grape_type": "Baga",
+    "grapes_raw": "100% Baga"
   },
   {
     "slug": "vadio-white",
@@ -1059,7 +1293,9 @@
     "type": "Vitt",
     "country": "Portugal",
     "region": "Poutena, Bairrada, Portugal",
-    "price": 155
+    "price": 155,
+    "grape_type": "Blend",
+    "grapes_raw": "Cercial, Bical"
   },
   {
     "slug": "victor-charlot-instinct-premier-5050",
@@ -1068,7 +1304,9 @@
     "type": "Mousserande",
     "country": "Frankrike",
     "region": "Moussy, Champagne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Blend",
+    "grapes_raw": "50% Pinot Meunier, 50% Chardonnay"
   },
   {
     "slug": "victor-charlot-instinct-premier-7525",
@@ -1077,7 +1315,9 @@
     "type": "Mousserande",
     "country": "Frankrike",
     "region": "Moussy, Champagne, Frankrike",
-    "price": 285
+    "price": 285,
+    "grape_type": "Blend",
+    "grapes_raw": "75% Pinot Meunier, 25% Chardonnay"
   },
   {
     "slug": "victor-charlot-lapprivoisee",
@@ -1086,7 +1326,9 @@
     "type": "Mousserande",
     "country": "Frankrike",
     "region": "Moussy, Champagne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Blend",
+    "grapes_raw": "75% Pinot Meunier, 25% Chardonnay"
   },
   {
     "slug": "victor-charlot-lart-de-la-ruse",
@@ -1095,7 +1337,9 @@
     "type": "Mousserande",
     "country": "Frankrike",
     "region": "Moussy, Champagne, Frankrike",
-    "price": null
+    "price": null,
+    "grape_type": "Pinot Meunier",
+    "grapes_raw": "100% Pinot Meunier"
   },
   {
     "slug": "victor-charlot-les-terres-de-la-greve",
@@ -1104,7 +1348,9 @@
     "type": "Mousserande",
     "country": "Frankrike",
     "region": "Moussy, Champagne, Frankrike",
-    "price": 370
+    "price": 370,
+    "grape_type": "Blend",
+    "grapes_raw": "70% Pinot Meunier, 30% Chardonnay"
   },
   {
     "slug": "victor-charlot-noirs-de-jais",
@@ -1113,7 +1359,9 @@
     "type": "Mousserande",
     "country": "Frankrike",
     "region": "Moussy, Champagne, Frankrike",
-    "price": 300
+    "price": 300,
+    "grape_type": "Pinot Meunier",
+    "grapes_raw": "100% Pinot Meunier"
   },
   {
     "slug": "villa-i-cipressi-brunello-di-montalcino",
@@ -1122,7 +1370,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Montalcino, Toscana, Italien",
-    "price": null
+    "price": null,
+    "grape_type": "Sangiovese",
+    "grapes_raw": "100% Brunello (Sangiovese)"
   },
   {
     "slug": "villa-i-cipressi-rosso-di-montalcino",
@@ -1131,7 +1381,9 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Montalcino, Toscana, Italien",
-    "price": null
+    "price": null,
+    "grape_type": "Sangiovese",
+    "grapes_raw": "100% Brunello (Sangiovese)"
   },
   {
     "slug": "villa-i-cipressi-zebras-brunello-di-montalcino",
@@ -1140,6 +1392,8 @@
     "type": "Rött",
     "country": "Italien",
     "region": "Montalcino, Toscana, Italien",
-    "price": null
+    "price": null,
+    "grape_type": "Sangiovese",
+    "grapes_raw": "100% Brunello (Sangiovese)"
   }
 ]
