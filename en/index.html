@@ -23,7 +23,7 @@
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    .hero-bg { background: linear-gradient(135deg, rgba(255,255,255,0.7) 0%, rgba(255,245,245,0.65) 50%, rgba(255,255,255,0.7) 100%); }
+    .hero-bg { background: linear-gradient(135deg, rgba(110,23,53,0.2) 0%, rgba(160,50,80,0.15) 50%, rgba(110,23,53,0.18) 100%); }
     .parallax { background-attachment: fixed; background-size: cover; background-position: center; }
     @supports (-webkit-touch-callout: none) { .parallax { background-attachment: scroll; } }
     @media (max-width: 768px) { .parallax { background-attachment: scroll; } }
@@ -46,10 +46,13 @@
     .producer-detail.open .producer-body { display: block !important; }
     .producer-detail.open .producer-toggle svg { transform: rotate(180deg); }
     .producer-detail.open { box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
+    .bg-vineyard-1 { background: linear-gradient(to bottom, rgba(255,255,255,0.93), rgba(255,255,255,0.96)), url('https://images.unsplash.com/photo-1560493676-04071c5f467b?w=1920&q=60') center/cover no-repeat; }
+    .bg-vineyard-2 { background: linear-gradient(to bottom, rgba(254,253,248,0.93), rgba(254,253,248,0.96)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1920&q=60') center/cover no-repeat; }
+    .bg-vineyard-3 { background: linear-gradient(to bottom, rgba(255,255,255,0.92), rgba(255,255,255,0.95)), url('https://images.unsplash.com/photo-1464638681620-e029220d6d25?w=1920&q=60') center/cover no-repeat; }
   </style>
 </head>
   <!-- Language switcher dropdown -->
-  <div class="fixed top-3 right-3 z-[60]">
+  <div class="fixed top-3 right-3 z-[60] hidden md:block">
     <div class="relative">
       <button onclick="document.getElementById('lang-dropdown').classList.toggle('hidden')" class="flex items-center gap-1.5 bg-white/95 backdrop-blur-sm rounded-lg px-2.5 py-1.5 shadow-md border border-stone-200 hover:shadow-lg transition-shadow cursor-pointer">
         <svg class="w-6 h-4 rounded-sm" viewBox="0 0 24 16"><rect width="24" height="16" fill="#012169"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" stroke-width="1.5"/><rect x="10" y="0" width="4" height="16" fill="#fff"/><rect x="0" y="6" width="24" height="4" fill="#fff"/><rect x="11" y="0" width="2" height="16" fill="#C8102E"/><rect x="0" y="6.5" width="24" height="3" fill="#C8102E"/></svg>
@@ -68,7 +71,7 @@
 <body class="bg-cream-50 text-stone-800 font-sans antialiased">
 
   <!-- Navigation -->
-  <nav id="navbar" class="absolute top-0 w-full z-50 transition-all duration-500 bg-transparent">
+  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 bg-transparent">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <!-- Mobile nav -->
       <div class="flex md:hidden items-center justify-between h-16 px-2">
@@ -85,8 +88,8 @@
           <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-[90px] brightness-0">
           <div class="flex items-center gap-8">
             <a href="#producenter" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Producers</a>
-            <a href="#sortiment" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Selection</a>
             <a href="#restaurang" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Restaurant</a>
+            <a href="#sortiment" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Selection</a>
             <a href="#systembolaget" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Systembolaget</a>
             <a href="#om-oss" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">About us</a>
             <a href="mat-vin.html" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Food & Wine</a>
@@ -104,14 +107,20 @@
     <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg shadow-lg rounded-b-xl">
       <div class="px-6 py-4 space-y-3">
         <a href="#producenter" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Producers</a>
-        <a href="#sortiment" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Selection</a>
         <a href="#restaurang" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Restaurant</a>
+        <a href="#sortiment" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Selection</a>
         <a href="#systembolaget" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Systembolaget</a>
         <a href="#om-oss" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">About us</a>
         <a href="mat-vin.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Food & Wine</a>
         <a href="blogg.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Blog</a>
         <a href="#event" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Events</a>
         <a href="sok.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Search wines</a>
+        <div class="border-t border-stone-200 pt-3 mt-1">
+          <a href="../index.html" class="flex items-center gap-2 text-stone-600 text-sm py-2 hover:text-wine-700">
+            <svg class="w-6 h-4 rounded-sm" viewBox="0 0 24 16"><rect width="24" height="16" fill="#006AA7"/><rect x="7" y="0" width="3" height="16" fill="#FECC00"/><rect x="0" y="6" width="24" height="3" fill="#FECC00"/></svg>
+            Svenska
+          </a>
+        </div>
 </div>
     </div>
   </nav>
@@ -142,7 +151,7 @@
   </section>
 
   <!-- Philosophy / Introduction -->
-  <section class="py-24 lg:py-32 bg-white">
+  <section class="py-24 lg:py-32 bg-vineyard-1">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         <div class="fade-in">
@@ -221,7 +230,7 @@
   </section>
 
   <!-- Producers -->
-  <section id="producenter" class="py-24 lg:py-32 bg-white">
+  <section id="producenter" class="py-24 lg:py-32 bg-vineyard-3">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="text-center mb-16 fade-in">
         <p class="text-wine-600 uppercase tracking-[0.2em] text-sm font-medium mb-4">Producers</p>
@@ -877,7 +886,7 @@
   </section>
 
   <!-- Sortiment with featured wines -->
-  <section id="sortiment" class="py-24 lg:py-32 bg-cream-50">
+  <section id="sortiment" class="py-24 lg:py-32 bg-vineyard-2">
     <div class="max-w-7xl mx-auto px-6 lg:px-8">
       <div class="text-center mb-16 fade-in">
         <p class="text-wine-600 uppercase tracking-[0.2em] text-sm font-medium mb-4">Selection</p>
@@ -1180,7 +1189,7 @@
   </section>
 
   <!-- Om oss -->
-  <section id="om-oss" class="py-24 lg:py-32 bg-white">
+  <section id="om-oss" class="py-24 lg:py-32 bg-vineyard-1">
     <div class="max-w-6xl mx-auto px-6 lg:px-8">
       <div class="grid lg:grid-cols-2 gap-16 items-center">
         <div class="fade-in">
@@ -1236,8 +1245,8 @@
           <h4 class="text-sm uppercase tracking-widest text-stone-300 mb-4 font-medium">Navigation</h4>
           <ul class="space-y-2 text-sm">
             <li><a href="#producenter" class="hover:text-white transition-colors">Producers</a></li>
-            <li><a href="#sortiment" class="hover:text-white transition-colors">Selection</a></li>
             <li><a href="#restaurang" class="hover:text-white transition-colors">Restaurant</a></li>
+            <li><a href="#sortiment" class="hover:text-white transition-colors">Selection</a></li>
             <li><a href="#systembolaget" class="hover:text-white transition-colors">Systembolaget</a></li>
             <li><a href="#om-oss" class="hover:text-white transition-colors">About us</a></li>
           </ul>
@@ -1266,8 +1275,21 @@
 
   <script>
     const navbar = document.getElementById('navbar');
+    let mobileMenuTimer;
+    const mobileMenu = document.getElementById('mobile-menu');
     document.getElementById('mobile-toggle').addEventListener('click', () => {
-      document.getElementById('mobile-menu').classList.toggle('hidden');
+      clearTimeout(mobileMenuTimer);
+      mobileMenu.classList.toggle('hidden');
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenuTimer = setTimeout(() => mobileMenu.classList.add('hidden'), 3000);
+      }
+    });
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        navbar.classList.add('bg-white/90', 'backdrop-blur-md', 'shadow-sm');
+      } else {
+        navbar.classList.remove('bg-white/90', 'backdrop-blur-md', 'shadow-sm');
+      }
     });
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });

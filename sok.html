@@ -28,21 +28,61 @@
     select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }
   </style>
 </head>
-<body class="text-stone-800 font-sans antialiased min-h-screen" style="background: linear-gradient(135deg, rgba(110,23,53,0.45), rgba(160,50,80,0.35), rgba(110,23,53,0.4)), url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1920&q=80') center/cover fixed;">
+<body class="text-stone-800 font-sans antialiased min-h-screen" style="background: linear-gradient(135deg, rgba(110,23,53,0.2), rgba(160,50,80,0.15), rgba(110,23,53,0.18)), url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1920&q=80') center/cover fixed;">
 
   <!-- Nav -->
   <nav class="bg-wine-950 sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-8 brightness-0 invert">
-      </a>
-      <div class="flex items-center gap-6">
-        <a href="index.html#producenter" class="text-sm text-white/70 hover:text-white tracking-wider uppercase font-medium hidden sm:block">Producenter</a>
-        <a href="index.html#sortiment" class="text-sm text-white/70 hover:text-white tracking-wider uppercase font-medium hidden sm:block">Sortiment</a>
-        <a href="index.html" class="text-sm text-white/80 hover:text-white tracking-wider uppercase font-medium">&larr; Hem</a>
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <!-- Mobile nav -->
+      <div class="flex md:hidden items-center justify-between h-16 px-2">
+        <a href="index.html"><img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-10 brightness-0 invert"></a>
+        <button id="mobile-toggle" class="text-white p-2">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+      <!-- Desktop nav -->
+      <div class="hidden md:flex flex-col items-center pt-4">
+        <div class="flex items-center justify-center w-full gap-6 mb-3">
+          <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-[90px] brightness-0 invert">
+          <div class="flex items-center gap-8">
+            <a href="index.html#producenter" class="text-xs text-white/70 hover:text-white tracking-wider uppercase font-bold whitespace-nowrap">Producenter</a>
+            <a href="index.html#restaurang" class="text-xs text-white/70 hover:text-white tracking-wider uppercase font-bold whitespace-nowrap">Restaurang</a>
+            <a href="index.html#sortiment" class="text-xs text-white/70 hover:text-white tracking-wider uppercase font-bold whitespace-nowrap">Sortiment</a>
+            <a href="index.html#systembolaget" class="text-xs text-white/70 hover:text-white tracking-wider uppercase font-bold whitespace-nowrap">Systembolaget</a>
+            <a href="index.html#om-oss" class="text-xs text-white/70 hover:text-white tracking-wider uppercase font-bold whitespace-nowrap">Om oss</a>
+            <a href="mat-vin.html" class="text-xs text-white/70 hover:text-white tracking-wider uppercase font-bold whitespace-nowrap">Mat & Vin</a>
+            <a href="blogg.html" class="text-xs text-white/70 hover:text-white tracking-wider uppercase font-bold whitespace-nowrap">Blogg</a>
+            <a href="index.html#event" class="text-xs text-white/70 hover:text-white tracking-wider uppercase font-bold whitespace-nowrap">Event</a>
+          </div>
+          <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-[90px] brightness-0 invert">
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-wine-900/95 backdrop-blur-lg shadow-lg">
+      <div class="px-6 py-4 space-y-3">
+        <a href="index.html" class="block text-white/80 text-sm uppercase tracking-wider py-2 hover:text-white">Hem</a>
+        <a href="index.html#producenter" class="block text-white/80 text-sm uppercase tracking-wider py-2 hover:text-white">Producenter</a>
+        <a href="index.html#restaurang" class="block text-white/80 text-sm uppercase tracking-wider py-2 hover:text-white">Restaurang</a>
+        <a href="index.html#sortiment" class="block text-white/80 text-sm uppercase tracking-wider py-2 hover:text-white">Sortiment</a>
+        <a href="index.html#systembolaget" class="block text-white/80 text-sm uppercase tracking-wider py-2 hover:text-white">Systembolaget</a>
+        <a href="index.html#om-oss" class="block text-white/80 text-sm uppercase tracking-wider py-2 hover:text-white">Om oss</a>
+        <a href="mat-vin.html" class="block text-white/80 text-sm uppercase tracking-wider py-2 hover:text-white">Mat & Vin</a>
+        <a href="blogg.html" class="block text-white/80 text-sm uppercase tracking-wider py-2 hover:text-white">Blogg</a>
+        <a href="index.html#event" class="block text-white/80 text-sm uppercase tracking-wider py-2 hover:text-white">Event</a>
       </div>
     </div>
   </nav>
+  <script>
+    let mobileMenuTimer;
+    const mobileMenu = document.getElementById('mobile-menu');
+    document.getElementById('mobile-toggle').addEventListener('click', () => {
+      clearTimeout(mobileMenuTimer);
+      mobileMenu.classList.toggle('hidden');
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenuTimer = setTimeout(() => mobileMenu.classList.add('hidden'), 3000);
+      }
+    });
+  </script>
 
   <main class="max-w-5xl mx-auto px-6 lg:px-8 py-12">
     <!-- Breadcrumb -->
@@ -56,7 +96,7 @@
     <div class="text-center mb-10">
       <p class="text-wine-600 uppercase tracking-[0.2em] text-sm font-medium mb-3">Sök &amp; filtrera</p>
       <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl text-stone-900 mb-3">Hitta ditt vin</h1>
-      <p class="text-stone-500 font-light max-w-xl mx-auto">Filtrera på land, producent eller typ av vin. Eller sök fritt bland alla 127 viner i vårt sortiment.<br><span class="text-wine-600 text-sm">Priserna är Restaurangpriser exkl. moms</span></p>
+      <p class="text-white font-bold max-w-xl mx-auto">Filtrera på land, producent eller typ av vin. Eller sök fritt bland alla 127 viner i vårt sortiment.<br><span class="text-white text-sm">Priserna är Restaurangpriser exkl. moms</span></p>
     </div>
 
     <!-- Filters -->
@@ -64,26 +104,26 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <!-- Free text search -->
         <div>
-          <label class="block text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Fritext</label>
+          <label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-2">Fritext</label>
           <input id="search-text" type="text" placeholder="Sök vinnamn..." class="w-full px-4 py-3 border border-stone-200 rounded-lg text-stone-800 placeholder:text-stone-400 focus:outline-none focus:border-wine-500 focus:ring-1 focus:ring-wine-500 transition-colors">
         </div>
         <!-- Country -->
         <div>
-          <label class="block text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Land</label>
+          <label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-2">Land</label>
           <select id="filter-country" class="w-full px-4 py-3 border border-stone-200 rounded-lg text-stone-800 bg-white focus:outline-none focus:border-wine-500 focus:ring-1 focus:ring-wine-500 transition-colors pr-10 cursor-pointer">
             <option value="">Alla länder</option>
           </select>
         </div>
         <!-- Producer -->
         <div>
-          <label class="block text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Producent</label>
+          <label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-2">Producent</label>
           <select id="filter-producer" class="w-full px-4 py-3 border border-stone-200 rounded-lg text-stone-800 bg-white focus:outline-none focus:border-wine-500 focus:ring-1 focus:ring-wine-500 transition-colors pr-10 cursor-pointer">
             <option value="">Alla producenter</option>
           </select>
         </div>
         <!-- Type -->
         <div>
-          <label class="block text-xs uppercase tracking-wider text-stone-400 font-medium mb-2">Typ</label>
+          <label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-2">Typ</label>
           <select id="filter-type" class="w-full px-4 py-3 border border-stone-200 rounded-lg text-stone-800 bg-white focus:outline-none focus:border-wine-500 focus:ring-1 focus:ring-wine-500 transition-colors pr-10 cursor-pointer">
             <option value="">Alla typer</option>
           </select>
@@ -144,6 +184,22 @@
       'Rosé': 'bg-pink-400/80 text-pink-50',
       'Mousserande': 'bg-yellow-300/80 text-yellow-900',
       'Starkvin': 'bg-orange-800/80 text-orange-100',
+    };
+
+    const typeRowBg = {
+      'Rött': 'background: linear-gradient(90deg, rgba(220,38,38,0.06) 0%, rgba(255,255,255,0.9) 60%);',
+      'Vitt': 'background: linear-gradient(90deg, rgba(252,211,77,0.08) 0%, rgba(255,255,255,0.9) 60%);',
+      'Rosé': 'background: linear-gradient(90deg, rgba(244,114,182,0.07) 0%, rgba(255,255,255,0.9) 60%);',
+      'Mousserande': 'background: linear-gradient(90deg, rgba(250,204,21,0.08) 0%, rgba(255,255,255,0.9) 60%);',
+      'Starkvin': 'background: linear-gradient(90deg, rgba(194,65,12,0.07) 0%, rgba(255,255,255,0.9) 60%);',
+    };
+
+    const typeIcons = {
+      'Mousserande': `<svg class="w-6 h-8" viewBox="0 0 24 36" fill="none"><ellipse cx="12" cy="4" rx="3" ry="1.5" stroke="#a16207" stroke-width="1.4" fill="#fef08a" fill-opacity="0.7"/><path d="M9 4C9 4 8 12 8 14C8 17 10 18 11.5 18.5L11.5 28" stroke="#a16207" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M15 4C15 4 16 12 16 14C16 17 14 18 12.5 18.5L12.5 28" stroke="#a16207" stroke-width="1.4" fill="none" stroke-linecap="round"/><line x1="8" y1="28" x2="16" y2="28" stroke="#a16207" stroke-width="1.4" stroke-linecap="round"/><circle cx="11" cy="8" r="0.8" fill="#a16207" opacity="0.7"/><circle cx="13" cy="10" r="0.7" fill="#a16207" opacity="0.6"/><circle cx="12" cy="6" r="0.6" fill="#a16207" opacity="0.7"/></svg>`,
+      'Rosé': `<svg class="w-6 h-8" viewBox="0 0 24 36" fill="none"><ellipse cx="12" cy="6" rx="6" ry="2" stroke="#be185d" stroke-width="1.4" fill="#f9a8d4" fill-opacity="0.7"/><path d="M6 6C6 6 7 14 9 16C10 17 11.5 17.5 11.5 17.5L11.5 28" stroke="#be185d" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M18 6C18 6 17 14 15 16C14 17 12.5 17.5 12.5 17.5L12.5 28" stroke="#be185d" stroke-width="1.4" fill="none" stroke-linecap="round"/><line x1="8" y1="28" x2="16" y2="28" stroke="#be185d" stroke-width="1.4" stroke-linecap="round"/></svg>`,
+      'Vitt': `<svg class="w-6 h-8" viewBox="0 0 24 36" fill="none"><ellipse cx="12" cy="6" rx="5.5" ry="2" stroke="#92400e" stroke-width="1.4" fill="#fcd34d" fill-opacity="0.6"/><path d="M6.5 6C6.5 6 7.5 13 9.5 15.5C10.5 16.5 11.5 17 11.5 17L11.5 28" stroke="#92400e" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M17.5 6C17.5 6 16.5 13 14.5 15.5C13.5 16.5 12.5 17 12.5 17L12.5 28" stroke="#92400e" stroke-width="1.4" fill="none" stroke-linecap="round"/><line x1="8" y1="28" x2="16" y2="28" stroke="#92400e" stroke-width="1.4" stroke-linecap="round"/></svg>`,
+      'Rött': `<svg class="w-6 h-8" viewBox="0 0 24 36" fill="none"><ellipse cx="12" cy="5" rx="6.5" ry="3" stroke="#7f1d1d" stroke-width="1.4" fill="#dc2626" fill-opacity="0.5"/><path d="M5.5 5C5.5 5 6.5 13 9 16C10 17 11.5 17.5 11.5 17.5L11.5 28" stroke="#7f1d1d" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M18.5 5C18.5 5 17.5 13 15 16C14 17 12.5 17.5 12.5 17.5L12.5 28" stroke="#7f1d1d" stroke-width="1.4" fill="none" stroke-linecap="round"/><line x1="8" y1="28" x2="16" y2="28" stroke="#7f1d1d" stroke-width="1.4" stroke-linecap="round"/></svg>`,
+      'Starkvin': `<svg class="w-6 h-8" viewBox="0 0 24 36" fill="none"><ellipse cx="12" cy="7" rx="4" ry="2.5" stroke="#7c2d12" stroke-width="1.4" fill="#c2410c" fill-opacity="0.5"/><path d="M8 7C8 7 8.5 13 10 15C10.8 16 11.5 16.5 11.5 16.5L11.5 28" stroke="#7c2d12" stroke-width="1.4" fill="none" stroke-linecap="round"/><path d="M16 7C16 7 15.5 13 14 15C13.2 16 12.5 16.5 12.5 16.5L12.5 28" stroke="#7c2d12" stroke-width="1.4" fill="none" stroke-linecap="round"/><line x1="8" y1="28" x2="16" y2="28" stroke="#7c2d12" stroke-width="1.4" stroke-linecap="round"/></svg>`,
     };
 
     const countryFlags = {
@@ -341,11 +397,11 @@
       noResultsEl.classList.add('hidden');
 
       resultsEl.innerHTML = filtered.map(w => `
-        <a href="sortiment/${w.slug}.html" class="flex items-center gap-3 sm:gap-4 p-4 bg-white/90 backdrop-blur-sm rounded-lg border border-stone-100 hover:border-wine-200 hover:shadow-md hover:bg-white transition-all group">
-          <span class="${typeColors[w.type] || 'bg-stone-500 text-white'} px-2.5 py-1 rounded text-xs font-medium uppercase tracking-wider whitespace-nowrap">${w.type}</span>
+        <a href="sortiment/${w.slug}.html" class="flex items-center gap-3 sm:gap-4 p-4 rounded-lg border border-stone-100 hover:border-wine-200 hover:shadow-md transition-all group" style="${typeRowBg[w.type] || 'background: rgba(255,255,255,0.9);'}">
+          <span class="flex flex-col items-center shrink-0 w-10" title="${w.type}">${typeIcons[w.type] || ''}<span class="text-[9px] text-stone-400 font-medium uppercase tracking-wide leading-none mt-0.5">${w.type === 'Mousserande' ? 'Mouss.' : w.type}</span></span>
           <div class="flex-1 min-w-0">
             <h3 class="font-serif text-lg text-stone-900 group-hover:text-wine-800 transition-colors truncate"><span class="text-wine-700">${w.producer}</span> ${w.name}</h3>
-            <p class="text-stone-400 text-sm truncate">${w.region}</p>
+            <p class="text-stone-400 text-sm font-bold truncate">${w.region}</p>
           </div>
           <div class="text-right shrink-0 min-w-[70px] hidden sm:block">
             ${w.price ? `<p class="text-wine-800 font-semibold">${w.price} kr</p><p class="text-stone-400 text-[10px] uppercase tracking-wider">exkl moms</p>` : `<p class="text-stone-400 text-[11px] italic">Kontakta oss</p>`}
