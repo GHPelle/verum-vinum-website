@@ -383,7 +383,7 @@
     function createAutoBackup(label) {
       const data = localStorage.getItem(DB_STORAGE_KEY);
       if (!data) return;
-      const ts = new Date().toISOString().slice(0,19).replace(/[T:]/g, '-');
+      const ts = new Date().toLocaleString('sv-SE', {year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit'}).replace(/[: ]/g, '-');
       const key = DB_BACKUP_PREFIX + ts + '_' + label;
       localStorage.setItem(key, data);
       // Clean old backups, keep MAX_BACKUPS
@@ -732,7 +732,7 @@
       const a = document.createElement('a');
       a.href = url;
       const now = new Date();
-      const ts = now.toISOString().slice(0,16).replace('T','_').replace(':','');
+      const ts = now.toLocaleString('sv-SE', {year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).replace(/[: ]/g, '-');
       a.download = `wines-db_backup_${ts}.json`;
       a.click();
       URL.revokeObjectURL(url);
