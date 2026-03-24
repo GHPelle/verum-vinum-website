@@ -333,29 +333,40 @@
     const DB_STORAGE_KEY = 'verum_vinum_db';
     const DB_BACKUP_PREFIX = 'verum_vinum_backup_';
     const MAX_BACKUPS = 10;
+    const DATA_VERSION = 2;
 
     function init() {
       const saved = localStorage.getItem(DB_STORAGE_KEY);
+      let useLocalStorage = false;
+
       if (saved) {
         try {
           const parsed = JSON.parse(saved);
-          // Validate that data looks correct
           if (parsed && parsed.wines && Array.isArray(parsed.wines) && parsed.wines.length > 0) {
-            db = parsed;
-            console.log('Laddade från localStorage:', db.wines.length, 'viner, senast sparad:', db.meta.last_saved || 'okänt');
-          } else {
-            console.warn('localStorage data ogiltig, laddar inbäddad data');
-            db = JSON.parse(JSON.stringify(INITIAL_DATA));
+            // Only use localStorage if its version matches or is newer than INITIAL_DATA
+            const localVersion = parsed.meta && parsed.meta.data_version || 0;
+            if (localVersion >= DATA_VERSION) {
+              db = parsed;
+              useLocalStorage = true;
+              console.log('Laddade från localStorage: v' + localVersion + ', ' + db.wines.length + ' viner');
+            } else {
+              console.log('Nyare INITIAL_DATA (v' + DATA_VERSION + ') ersätter localStorage (v' + localVersion + ')');
+              createAutoBackup('before_version_upgrade');
+            }
           }
         } catch(e) {
           console.error('Kunde inte parsa localStorage:', e);
-          db = JSON.parse(JSON.stringify(INITIAL_DATA));
         }
-      } else {
-        db = JSON.parse(JSON.stringify(INITIAL_DATA));
       }
+
+      if (!useLocalStorage) {
+        db = JSON.parse(JSON.stringify(INITIAL_DATA));
+        db.meta.data_version = DATA_VERSION;
+        saveToLocalStorage();
+        console.log('Laddade INITIAL_DATA v' + DATA_VERSION + ': ' + db.wines.length + ' viner');
+      }
+
       dirty = false;
-      // Create session backup at startup
       createAutoBackup('session_start');
       renderAll();
       showDataStatus();
@@ -364,6 +375,7 @@
     function saveToLocalStorage() {
       db.meta.last_saved = new Date().toISOString();
       db.meta.wine_count = db.wines.length;
+      db.meta.data_version = DATA_VERSION;
       const json = JSON.stringify(db);
       // Verify data before saving
       try {
