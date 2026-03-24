@@ -45,6 +45,49 @@
 </head>
 <body class="bg-cream-50 text-stone-800 font-sans antialiased">
 
+  <!-- Login screen -->
+  <div id="login-screen" class="fixed inset-0 z-[100] bg-white flex items-center justify-center">
+    <div class="bg-white rounded-2xl shadow-2xl p-10 max-w-sm w-full mx-4 text-center">
+      <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-20 brightness-0 mx-auto mb-6">
+      <h2 class="font-serif text-2xl text-stone-900 font-semibold mb-2">Artikelunderhåll</h2>
+      <p class="text-stone-500 text-sm mb-6">Ange lösenord för att fortsätta</p>
+      <input type="password" id="login-pw" placeholder="Lösenord" class="w-full px-4 py-3 border-2 border-stone-300 rounded-lg text-center text-lg focus:outline-none focus:border-wine-500 mb-4" onkeydown="if(event.key==='Enter') checkLogin()">
+      <button onclick="checkLogin()" class="w-full px-6 py-3 bg-wine-700 hover:bg-wine-600 text-white rounded-lg font-bold text-sm uppercase tracking-wider transition-colors">Logga in</button>
+      <p id="login-error" class="text-red-600 text-sm font-medium mt-3 hidden">Fel lösenord</p>
+    </div>
+  </div>
+
+  <script>
+    const PW_HASH = '24bcc7776e506fe65713f64be5bc13a69cf9ebb3114dc48f5e55015975ebc453';
+    const LOGIN_KEY = 'verum_vinum_auth';
+
+    async function hashPassword(pw) {
+      const data = new TextEncoder().encode(pw);
+      const buf = await crypto.subtle.digest('SHA-256', data);
+      return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function checkLogin() {
+      const pw = document.getElementById('login-pw').value;
+      const hash = await hashPassword(pw);
+      if (hash === PW_HASH) {
+        sessionStorage.setItem(LOGIN_KEY, 'true');
+        document.getElementById('login-screen').classList.add('hidden');
+      } else {
+        document.getElementById('login-error').classList.remove('hidden');
+        document.getElementById('login-pw').value = '';
+        document.getElementById('login-pw').focus();
+      }
+    }
+
+    // Check if already logged in this session
+    if (sessionStorage.getItem(LOGIN_KEY) === 'true') {
+      document.getElementById('login-screen').classList.add('hidden');
+    } else {
+      document.getElementById('login-pw').focus();
+    }
+  </script>
+
   <!-- Header -->
   <header class="bg-wine-950 text-white sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
