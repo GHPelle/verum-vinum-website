@@ -4,6 +4,8 @@
       "slug": "alberto-oggero-roero-2",
       "namn": "Roero Rosso Anime 2022",
       "producent": "Alberto Oggero",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Roero, Piemonte, Italien",
@@ -33,15 +35,15 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "alberto-oggero-roero",
       "namn": "Roero Bianco Arneis 2020",
       "producent": "Alberto Oggero",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Italien",
       "region": "Roero, Piemonte, Italien",
@@ -71,15 +73,15 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "alberto-oggero-sandro-dpindeta",
       "namn": "Sandro d'Pindeta 2023",
       "producent": "Alberto Oggero",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Roero, Piemonte, Italien",
@@ -109,15 +111,15 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "alberto-oggero-valle-dei-lunghi",
       "namn": "Valle dei Lunghi",
       "producent": "Alberto Oggero",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Italien",
       "region": "Roero, Piemonte, Italien",
@@ -147,15 +149,15 @@
       "websida": false,
       "r_prislista": false,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "cigliano-di-sopra-chianti-classico",
       "namn": "Chianti Classico 2022",
       "producent": "Cigliano di Sopra",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "San Casciano in Val di Pesa, Toscana, Italien",
@@ -185,15 +187,15 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "clos-de-la-bonnette-cisselande-vdf",
       "namn": "Cisselande VdF 2023",
       "producent": "Clos de la Bonnette",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Norra Rhône, Frankrike",
@@ -223,15 +225,15 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "clos-de-la-bonnette-collines-rhodaniennes-syrah-vieilles-vignes",
       "namn": "Syrah Vieilles Vignes 2023",
       "producent": "Clos de la Bonnette",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Norra Rhône, Frankrike",
@@ -261,15 +263,15 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "clos-de-la-bonnette-condrieu-legende-bonnetta",
       "namn": "Condrieu Légende Bonnetta 2023",
       "producent": "Clos de la Bonnette",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Frankrike",
       "region": "Condrieu, Norra Rhône, Frankrike",
@@ -299,15 +301,15 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "clos-de-la-bonnette-coterotie-prenelle",
       "namn": "Côte-Rôtie Prenelle 2022",
       "producent": "Clos de la Bonnette",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Côte-Rôtie, Norra Rhône, Frankrike",
@@ -337,15 +339,15 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "diego-morra-barolo-del-comune-di-verduno",
       "namn": "Barolo del Comune di Verduno 2019",
       "producent": "Diego Morra",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Verduno, Piemonte, Italien",
@@ -375,15 +377,15 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "diego-morra-barolo-monvigliero",
       "namn": "Barolo Monvigliero 2019",
       "producent": "Diego Morra",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Verduno, Piemonte, Italien",
@@ -413,15 +415,15 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "diego-morra-barolo-san-lorenzo",
       "namn": "Barolo San Lorenzo 2019",
       "producent": "Diego Morra",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Verduno, Piemonte, Italien",
@@ -451,15 +453,15 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "diego-morra-langhe-rosato",
       "namn": "Langhe Rosato 2022",
       "producent": "Diego Morra",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rosé",
       "land": "Italien",
       "region": "Verduno, Piemonte, Italien",
@@ -489,15 +491,15 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "diego-morra-verduno-pelaverga",
       "namn": "Verduno Pelaverga 2023",
       "producent": "Diego Morra",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Verduno, Piemonte, Italien",
@@ -527,15 +529,15 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "christian-clerget-bourgogne-rouge",
       "namn": "Bourgogne Rouge",
       "producent": "Domaine Christian Clerget",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Vougeot, Bourgogne, Frankrike",
@@ -565,15 +567,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "christian-clerget-chambollemusigny-1er-cru-les-charmes",
       "namn": "Chambolle-Musigny 1er Cru Les Charmes",
       "producent": "Domaine Christian Clerget",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Chambolle-Musigny, Bourgogne, Frankrike",
@@ -603,15 +605,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "christian-clerget-chambollemusigny-aux-croix",
       "namn": "Chambolle-Musigny Aux Croix",
       "producent": "Domaine Christian Clerget",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Chambolle-Musigny, Bourgogne, Frankrike",
@@ -641,15 +643,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "christian-clerget-chambollemusigny",
       "namn": "Chambolle-Musigny",
       "producent": "Domaine Christian Clerget",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Chambolle-Musigny, Bourgogne, Frankrike",
@@ -679,15 +681,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "christian-clerget-echezeaux-grand-cru-en-orveaux",
       "namn": "Échezeaux Grand Cru En Orveaux",
       "producent": "Domaine Christian Clerget",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Vosne-Romanée, Bourgogne, Frankrike",
@@ -717,15 +719,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "christian-clerget-moreysaintdenis",
       "namn": "Morey-Saint-Denis",
       "producent": "Domaine Christian Clerget",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Morey-Saint-Denis, Bourgogne, Frankrike",
@@ -755,15 +757,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "christian-clerget-vosneromanee-les-violettes",
       "namn": "Vosne-Romanée Les Violettes",
       "producent": "Domaine Christian Clerget",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Vosne-Romanée, Bourgogne, Frankrike",
@@ -793,15 +795,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "christian-clerget-vougeot-1er-cru-les-petits-vougeots",
       "namn": "Vougeot 1er Cru Les Petits Vougeots",
       "producent": "Domaine Christian Clerget",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Vougeot, Bourgogne, Frankrike",
@@ -831,15 +833,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-btardmontrachet-grand-cru",
       "namn": "Bâtard-Montrachet Grand Cru",
       "producent": "Domaine Coffinet-Duvernay",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Frankrike",
       "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
@@ -869,15 +871,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-clos-saint-jean",
       "namn": "Chassagne-Montrachet 1er Cru Clos Saint Jean",
       "producent": "Domaine Coffinet-Duvernay",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Frankrike",
       "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
@@ -907,15 +909,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-dent-de-chien",
       "namn": "Chassagne-Montrachet 1er Cru Dent de Chien",
       "producent": "Domaine Coffinet-Duvernay",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Frankrike",
       "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
@@ -945,15 +947,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-les-caillerets",
       "namn": "Chassagne-Montrachet 1er Cru Les Caillerets",
       "producent": "Domaine Coffinet-Duvernay",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Frankrike",
       "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
@@ -983,15 +985,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-les-grands-clos",
       "namn": "Chassagne-Montrachet 1er Cru Les Grands Clos",
       "producent": "Domaine Coffinet-Duvernay",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Frankrike",
       "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
@@ -1021,15 +1023,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-chassagnemontrachet-les-blanchots-dessous",
       "namn": "Chassagne-Montrachet Les Blanchots Dessous",
       "producent": "Domaine Coffinet-Duvernay",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Frankrike",
       "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
@@ -1059,15 +1061,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-chassagnemontrachet-rouge",
       "namn": "Chassagne-Montrachet Rouge",
       "producent": "Domaine Coffinet-Duvernay",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
@@ -1097,15 +1099,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-vin-de-france-assemblage",
       "namn": "Vin de France Assemblage",
       "producent": "Domaine Coffinet-Duvernay",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Frankrike",
       "region": "Chassagne-Montrachet, Bourgogne, Frankrike",
@@ -1135,15 +1137,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "la-famille-k-la-mere",
       "namn": "La Mère",
       "producent": "Domaine La Famille K",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Morancé, Beaujolais, Frankrike",
@@ -1173,15 +1175,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "la-famille-k-le-pere-blanc",
       "namn": "Le Père Blanc",
       "producent": "Domaine La Famille K",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Frankrike",
       "region": "Morancé, Beaujolais, Frankrike",
@@ -1211,15 +1213,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "la-famille-k-le-pere-vdf-pinot-noir",
       "namn": "Le Père VdF Pinot Noir 2022",
       "producent": "Domaine La Famille K",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Morancé, Beaujolais, Frankrike",
@@ -1249,15 +1251,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "la-famille-k-le-pere",
       "namn": "Le Père Rouge 2020",
       "producent": "Domaine La Famille K",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Morancé, Beaujolais, Frankrike",
@@ -1287,15 +1289,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "la-famille-k-lheritiere",
       "namn": "L'Héritière Rouge 2024",
       "producent": "Domaine La Famille K",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Morancé, Beaujolais, Frankrike",
@@ -1325,15 +1327,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "la-famille-k-loncle",
       "namn": "L'Oncle",
       "producent": "Domaine La Famille K",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Morancé, Beaujolais, Frankrike",
@@ -1363,15 +1365,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-beaune-1er-cru-les-chouacheux",
       "namn": "Beaune 1er Cru Les Chouacheux",
       "producent": "Domaine Michel Rebourgeon",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Beaune, Bourgogne, Frankrike",
@@ -1401,15 +1403,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-beaune-les-epenottes",
       "namn": "Beaune Les Epenottes",
       "producent": "Domaine Michel Rebourgeon",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Pommard, Bourgogne, Frankrike",
@@ -1439,15 +1441,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-pommard-1er-cru-les-arvelets",
       "namn": "Pommard 1er Cru Les Arvelets",
       "producent": "Domaine Michel Rebourgeon",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Pommard, Bourgogne, Frankrike",
@@ -1477,15 +1479,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-pommard-1er-cru-les-charmots",
       "namn": "Pommard 1er Cru Les Charmots",
       "producent": "Domaine Michel Rebourgeon",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Pommard, Bourgogne, Frankrike",
@@ -1515,15 +1517,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-pommard-1er-cru-les-rugiens",
       "namn": "Pommard 1er Cru Les Rugiens",
       "producent": "Domaine Michel Rebourgeon",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Pommard, Bourgogne, Frankrike",
@@ -1553,15 +1555,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-pommard-cuvee-william",
       "namn": "Pommard Cuvée William",
       "producent": "Domaine Michel Rebourgeon",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Pommard, Bourgogne, Frankrike",
@@ -1591,15 +1593,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-pommard-les-noizons",
       "namn": "Pommard Les Noizons",
       "producent": "Domaine Michel Rebourgeon",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Pommard, Bourgogne, Frankrike",
@@ -1629,15 +1631,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-pommard-trois-terroirs",
       "namn": "Pommard Trois Terroirs",
       "producent": "Domaine Michel Rebourgeon",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Pommard, Bourgogne, Frankrike",
@@ -1667,15 +1669,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "domaine-villet-chardonnay-elevage-2-an-en-fut",
       "namn": "Chardonnay (élevage 2 an en fût)",
       "producent": "Domaine Villet",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Frankrike",
       "region": "Arbois, Jura, Frankrike",
@@ -1705,15 +1707,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "domaine-villet-pinot-noir",
       "namn": "Pinot Noir",
       "producent": "Domaine Villet",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Arbois, Jura, Frankrike",
@@ -1743,15 +1745,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "domaine-villet-poulsard",
       "namn": "Poulsard",
       "producent": "Domaine Villet",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Arbois, Jura, Frankrike",
@@ -1781,15 +1783,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "domaine-villet-rouge-tradition",
       "namn": "Rouge Tradition",
       "producent": "Domaine Villet",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Frankrike",
       "region": "Arbois, Jura, Frankrike",
@@ -1819,15 +1821,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "domaine-villet-savagnin-ouille-elevage-24-mois-en-cuve",
       "namn": "Savagnin Ouillé (24 mois en cuve)",
       "producent": "Domaine Villet",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Frankrike",
       "region": "Arbois, Jura, Frankrike",
@@ -1857,15 +1859,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "domaine-villet-savagnin-ouille-elevage-30-mois-en-foudre",
       "namn": "Savagnin Ouillé (30 mois en Foudre)",
       "producent": "Domaine Villet",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Frankrike",
       "region": "Arbois, Jura, Frankrike",
@@ -1895,15 +1897,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-alta-langa-extra-brut",
       "namn": "Alta Langa Extra Brut 2019",
       "producent": "Ettore Germano",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Italien",
       "region": "Alta Langa, Piemonte, Italien",
@@ -1933,15 +1935,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-alta-langa-riserva-blanc-de-blanc-pas-dose",
       "namn": "Alta Langa Riserva Blanc de Blanc Pas Dosé",
       "producent": "Ettore Germano",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Italien",
       "region": "Alta Langa, Piemonte, Italien",
@@ -1971,15 +1973,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-alta-langa-riserva-blanc-de-noir-pas-dose",
       "namn": "Alta Langa Riserva Blanc de Noir Pas Dosé",
       "producent": "Ettore Germano",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Italien",
       "region": "Alta Langa, Piemonte, Italien",
@@ -2009,15 +2011,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-barbera-dalba-superiore",
       "namn": "Barbera d'Alba Superiore",
       "producent": "Ettore Germano",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Alba, Piemonte, Italien",
@@ -2047,15 +2049,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-barolo-cerretta",
       "namn": "Barolo Cerretta 2019",
       "producent": "Ettore Germano",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Serralunga d'Alba, Piemonte, Italien",
@@ -2085,15 +2087,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-barolo-del-comune-di-serralunga-dalba",
       "namn": "Barolo del Comune di Serralunga d'Alba",
       "producent": "Ettore Germano",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Serralunga d'Alba, Piemonte, Italien",
@@ -2123,15 +2125,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-barolo-lazzarito-riserva",
       "namn": "Barolo Lazzarito Riserva",
       "producent": "Ettore Germano",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Serralunga d'Alba, Piemonte, Italien",
@@ -2161,15 +2163,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-barolo-prapo",
       "namn": "Barolo Prapò",
       "producent": "Ettore Germano",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Serralunga d'Alba, Piemonte, Italien",
@@ -2199,15 +2201,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-barolo-vignarionda",
       "namn": "Barolo Vigna Rionda",
       "producent": "Ettore Germano",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Serralunga d'Alba, Piemonte, Italien",
@@ -2237,15 +2239,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-binel-langhe-bianco",
       "namn": "Binel Langhe Bianco",
       "producent": "Ettore Germano",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Italien",
       "region": "Langhe, Piemonte, Italien",
@@ -2275,15 +2277,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-herzu-langhe-riesling",
       "namn": "Hérzu Langhe Riesling 2023",
       "producent": "Ettore Germano",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Italien",
       "region": "Langhe, Piemonte, Italien",
@@ -2313,15 +2315,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-langhe-chardonnay",
       "namn": "Langhe Chardonnay 2023",
       "producent": "Ettore Germano",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Italien",
       "region": "Langhe, Piemonte, Italien",
@@ -2351,15 +2353,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-langhe-nascetta",
       "namn": "Langhe Nascetta 2021",
       "producent": "Ettore Germano",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Italien",
       "region": "Langhe, Piemonte, Italien",
@@ -2389,15 +2391,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-rosanna-extra-brut-rose-metodo-classico",
       "namn": "Rosanna Extra Brut Rosé Metodo Classico",
       "producent": "Ettore Germano",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Italien",
       "region": "Piemonte, Italien",
@@ -2427,15 +2429,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "fontanabianca-barbaresco-bordini",
       "namn": "Barbaresco Bordini 2021",
       "producent": "Fontanabianca",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Neive, Piemonte, Italien",
@@ -2465,15 +2467,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "fontanabianca-barbaresco-serraboella",
       "namn": "Barbaresco Serraboella 2020",
       "producent": "Fontanabianca",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Neive, Piemonte, Italien",
@@ -2503,15 +2505,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "fontanabianca-barbaresco",
       "namn": "Barbaresco",
       "producent": "Fontanabianca",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Neive, Piemonte, Italien",
@@ -2541,15 +2543,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "fontanabianca-barbera-dalba-superiore",
       "namn": "Barbera d'Alba Superiore 2021",
       "producent": "Fontanabianca",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Neive, Piemonte, Italien",
@@ -2579,15 +2581,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "fontanabianca-dolcetto-dalba",
       "namn": "Dolcetto d'Alba 2023",
       "producent": "Fontanabianca",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Neive, Piemonte, Italien",
@@ -2617,15 +2619,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "fontanabianca-langhe-arneis-sommo",
       "namn": "Langhe Arneis \"Sommo\" 2023",
       "producent": "Fontanabianca",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Italien",
       "region": "Neive, Piemonte, Italien",
@@ -2655,15 +2657,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "fontanabianca-langhe-nebbiolo",
       "namn": "Langhe Nebbiolo",
       "producent": "Fontanabianca",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Neive, Piemonte, Italien",
@@ -2693,15 +2695,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "lapo-berti-barolo-del-comune-di-la-morra",
       "namn": "Barolo del Comune di La Morra",
       "producent": "Lapo Berti",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "La Morra, Piemonte, Italien",
@@ -2731,15 +2733,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "lapo-berti-barolo-fossati",
       "namn": "Barolo Fossati",
       "producent": "Lapo Berti",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "La Morra, Piemonte, Italien",
@@ -2769,15 +2771,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "lapo-berti-langhe-nebbiolo",
       "namn": "Langhe Nebbiolo",
       "producent": "Lapo Berti",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "La Morra, Piemonte, Italien",
@@ -2807,15 +2809,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "mori-concetta-morino-chianti-classico",
       "namn": "Morino Chianti Classico 2021",
       "producent": "Mori Concetta",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "San Casciano in Val di Pesa, Toscana, Italien",
@@ -2845,15 +2847,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-das-bagerias-abafado",
       "namn": "Abafado",
       "producent": "Quinta das Bágeiras",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Starkvin",
       "land": "Portugal",
       "region": "Sangalhos, Bairrada, Portugal",
@@ -2883,15 +2885,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-das-bagerias-espumante-colheita-rose",
       "namn": "Espumante Colheita Rosé 2022",
       "producent": "Quinta das Bágeiras",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Portugal",
       "region": "Sangalhos, Bairrada, Portugal",
@@ -2921,15 +2923,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-das-bagerias-espumante-colheita",
       "namn": "Espumante Colheita",
       "producent": "Quinta das Bágeiras",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Portugal",
       "region": "Sangalhos, Bairrada, Portugal",
@@ -2959,15 +2961,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-das-bagerias-garrafeira-tinto",
       "namn": "Garrafeira Tinto 2018",
       "producent": "Quinta das Bágeiras",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Portugal",
       "region": "Sangalhos, Bairrada, Portugal",
@@ -2997,15 +2999,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-das-bagerias-vinho-branco-reserva",
       "namn": "Branco Reserva 2022",
       "producent": "Quinta das Bágeiras",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Portugal",
       "region": "Sangalhos, Bairrada, Portugal",
@@ -3035,15 +3037,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-das-bagerias-vinho-tinto-reserva",
       "namn": "Tinto Reserva 2021",
       "producent": "Quinta das Bágeiras",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Portugal",
       "region": "Sangalhos, Bairrada, Portugal",
@@ -3073,15 +3075,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-clos-bonifata-2",
       "namn": "Clos Bonifata",
       "producent": "Quinta do Javali",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Portugal",
       "region": "São João da Pesqueira, Douro, Portugal",
@@ -3111,15 +3113,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-clos-fonte-do-santo",
       "namn": "Clos Fonte do Santo",
       "producent": "Quinta do Javali",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Portugal",
       "region": "São João da Pesqueira, Douro, Portugal",
@@ -3149,15 +3151,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-crazy-branco",
       "namn": "Crazy Javali Branco",
       "producent": "Quinta do Javali",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Portugal",
       "region": "São João da Pesqueira, Douro, Portugal",
@@ -3187,15 +3189,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-crazy-javali-tinto",
       "namn": "Crazy Javali Tinto",
       "producent": "Quinta do Javali",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Portugal",
       "region": "São João da Pesqueira, Douro, Portugal",
@@ -3225,15 +3227,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-pet-nat",
       "namn": "Javali Pet Nat",
       "producent": "Quinta do Javali",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Portugal",
       "region": "São João da Pesqueira, Douro, Portugal",
@@ -3263,15 +3265,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-tawny-port-10-year",
       "namn": "Tawny Port 10 Year",
       "producent": "Quinta do Javali",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Starkvin",
       "land": "Portugal",
       "region": "São João da Pesqueira, Douro, Portugal",
@@ -3301,15 +3303,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-tawny-port",
       "namn": "Tawny Port",
       "producent": "Quinta do Javali",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Starkvin",
       "land": "Portugal",
       "region": "São João da Pesqueira, Douro, Portugal",
@@ -3339,15 +3341,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-tinto",
       "namn": "Javali Tinto",
       "producent": "Quinta do Javali",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Portugal",
       "region": "São João da Pesqueira, Douro, Portugal",
@@ -3377,15 +3379,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-vinhas-dos-lobatos",
       "namn": "Vinhas dos Lobatos",
       "producent": "Quinta do Javali",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Portugal",
       "region": "São João da Pesqueira, Douro, Portugal",
@@ -3415,15 +3417,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "reva-barbera-dalba-superiore",
       "namn": "Barbera d'Alba Superiore",
       "producent": "Réva",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Monforte d'Alba, Piemonte, Italien",
@@ -3453,15 +3455,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "reva-barolo-cannubi",
       "namn": "Barolo Cannubi",
       "producent": "Réva",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Barolo, Piemonte, Italien",
@@ -3491,15 +3493,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "reva-barolo-ravera",
       "namn": "Barolo Ravera",
       "producent": "Réva",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Monforte d'Alba, Piemonte, Italien",
@@ -3529,15 +3531,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "reva-barolo",
       "namn": "Barolo 2021",
       "producent": "Réva",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Monforte d'Alba, Piemonte, Italien",
@@ -3567,15 +3569,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "reva-dolcetto-dalba",
       "namn": "Dolcetto d'Alba",
       "producent": "Réva",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Monforte d'Alba, Piemonte, Italien",
@@ -3605,15 +3607,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "reva-langhe-bianco-grey",
       "namn": "Langhe Bianco Grey",
       "producent": "Réva",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Italien",
       "region": "Monforte d'Alba, Piemonte, Italien",
@@ -3643,15 +3645,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "reva-nebbiolo-dalba",
       "namn": "Nebbiolo d'Alba",
       "producent": "Réva",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Monforte d'Alba, Piemonte, Italien",
@@ -3681,15 +3683,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "rudi-pichler-gruner-veltliner-achleithen-smaragd",
       "namn": "Grüner Veltliner Achleithen Smaragd",
       "producent": "Rudi Pichler",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Österrike",
       "region": "Wosendorf, Wachau, Österrike",
@@ -3719,15 +3721,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "rudi-pichler-gruner-veltliner-hochrain-smaragd",
       "namn": "Grüner Veltliner Hochrain Smaragd",
       "producent": "Rudi Pichler",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Österrike",
       "region": "Wosendorf, Wachau, Österrike",
@@ -3757,15 +3759,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "rudi-pichler-gruner-veltliner-kollmutz-smaragd",
       "namn": "Grüner Veltliner Kollmutz Smaragd",
       "producent": "Rudi Pichler",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Österrike",
       "region": "Wosendorf, Wachau, Österrike",
@@ -3795,15 +3797,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "rudi-pichler-gruner-veltliner-terrassen-smaragd",
       "namn": "Grüner Veltliner Terrassen Smaragd 2023",
       "producent": "Rudi Pichler",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Österrike",
       "region": "Wosendorf, Wachau, Österrike",
@@ -3833,15 +3835,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "rudi-pichler-riesling-achleithen-smaragd",
       "namn": "Riesling Achleithen Smaragd",
       "producent": "Rudi Pichler",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Österrike",
       "region": "Wosendorf, Wachau, Österrike",
@@ -3871,15 +3873,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "rudi-pichler-riesling-hochrain-smaragd",
       "namn": "Riesling Hochrain Smaragd",
       "producent": "Rudi Pichler",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Österrike",
       "region": "Wosendorf, Wachau, Österrike",
@@ -3909,15 +3911,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "rudi-pichler-riesling-kirchweg-smaragd",
       "namn": "Riesling Kirchweg Smaragd",
       "producent": "Rudi Pichler",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Österrike",
       "region": "Wosendorf, Wachau, Österrike",
@@ -3947,15 +3949,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "vadio-grande",
       "namn": "Grande",
       "producent": "Vadio",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Portugal",
       "region": "Poutena, Bairrada, Portugal",
@@ -3985,15 +3987,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "vadio-perpetuum-white-sparkling",
       "namn": "Perpetuum Sparkling NV",
       "producent": "Vadio",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Portugal",
       "region": "Poutena, Bairrada, Portugal",
@@ -4023,15 +4025,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "vadio-red",
       "namn": "Red 2020",
       "producent": "Vadio",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Portugal",
       "region": "Poutena, Bairrada, Portugal",
@@ -4061,15 +4063,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "vadio-rexarte",
       "namn": "Rexarte",
       "producent": "Vadio",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Portugal",
       "region": "Poutena, Bairrada, Portugal",
@@ -4099,15 +4101,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "vadio-rose-sparkling",
       "namn": "Rosé Sparkling Bruto 2020",
       "producent": "Vadio",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Portugal",
       "region": "Poutena, Bairrada, Portugal",
@@ -4137,15 +4139,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "vadio-white",
       "namn": "White 2023",
       "producent": "Vadio",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Portugal",
       "region": "Poutena, Bairrada, Portugal",
@@ -4175,15 +4177,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "victor-charlot-instinct-premier-5050",
       "namn": "Instinct Premier 50-50 NV",
       "producent": "Victor Charlot",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Frankrike",
       "region": "Moussy, Champagne, Frankrike",
@@ -4213,15 +4215,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "victor-charlot-instinct-premier-7525",
       "namn": "Instinct Premier 75-25 NV",
       "producent": "Victor Charlot",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Frankrike",
       "region": "Moussy, Champagne, Frankrike",
@@ -4251,15 +4253,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "victor-charlot-lapprivoisee",
       "namn": "L'Apprivoisée",
       "producent": "Victor Charlot",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Frankrike",
       "region": "Moussy, Champagne, Frankrike",
@@ -4289,15 +4291,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "victor-charlot-lart-de-la-ruse",
       "namn": "L'Art de la Ruse",
       "producent": "Victor Charlot",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Frankrike",
       "region": "Moussy, Champagne, Frankrike",
@@ -4327,15 +4329,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "victor-charlot-les-terres-de-la-greve",
       "namn": "Les Terres de la Grève",
       "producent": "Victor Charlot",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Frankrike",
       "region": "Moussy, Champagne, Frankrike",
@@ -4365,15 +4367,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "victor-charlot-noirs-de-jais",
       "namn": "Noirs de Jais",
       "producent": "Victor Charlot",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Mousserande",
       "land": "Frankrike",
       "region": "Moussy, Champagne, Frankrike",
@@ -4403,15 +4405,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "villa-i-cipressi-brunello-di-montalcino",
       "namn": "Brunello di Montalcino",
       "producent": "Villa i Cipressi",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Montalcino, Toscana, Italien",
@@ -4441,15 +4443,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "villa-i-cipressi-rosso-di-montalcino",
       "namn": "Rosso di Montalcino",
       "producent": "Villa i Cipressi",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Montalcino, Toscana, Italien",
@@ -4479,15 +4481,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "villa-i-cipressi-zebras-brunello-di-montalcino",
       "namn": "Zebras Brunello di Montalcino",
       "producent": "Villa i Cipressi",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "Montalcino, Toscana, Italien",
@@ -4517,15 +4519,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "martin-mullen-krover-kirchlay-auslese",
       "namn": "Kröver Kirchlay Auslese",
       "producent": "Weingut Martin Müllen",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Tyskland",
       "region": "Traben-Trarbach, Mosel, Tyskland",
@@ -4555,15 +4557,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "martin-mullen-krover-letterlay-spatlese-feinherb",
       "namn": "Kröver Letterlay Spätlese Feinherb",
       "producent": "Weingut Martin Müllen",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Tyskland",
       "region": "Traben-Trarbach, Mosel, Tyskland",
@@ -4593,15 +4595,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "martin-mullen-krover-paradies-spatlese-trocken",
       "namn": "Kröver Paradies Spätlese Trocken",
       "producent": "Weingut Martin Müllen",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Tyskland",
       "region": "Traben-Trarbach, Mosel, Tyskland",
@@ -4631,15 +4633,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "martin-mullen-nostel-trocken",
       "namn": "Nostel Trocken",
       "producent": "Weingut Martin Müllen",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Tyskland",
       "region": "Traben-Trarbach, Mosel, Tyskland",
@@ -4669,15 +4671,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "martin-mullen-riesling-revival-trocken",
       "namn": "Riesling Revival Trocken",
       "producent": "Weingut Martin Müllen",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Tyskland",
       "region": "Traben-Trarbach, Mosel, Tyskland",
@@ -4707,15 +4709,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "martin-mullen-trabener-wurzgarten-kabinett-feinherb",
       "namn": "Trabener Würzgarten Kabinett Feinherb",
       "producent": "Weingut Martin Müllen",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Tyskland",
       "region": "Traben-Trarbach, Mosel, Tyskland",
@@ -4745,15 +4747,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "martin-mullen-trabener-wurzgarten-spatlese-trocken",
       "namn": "Trabener Würzgarten Spätlese Trocken 2021",
       "producent": "Weingut Martin Müllen",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Tyskland",
       "region": "Traben-Trarbach, Mosel, Tyskland",
@@ -4783,15 +4785,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "martin-mullen-trarbacher-huhnerberg-auslese",
       "namn": "Trarbacher Hühnerberg Auslese",
       "producent": "Weingut Martin Müllen",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Vitt",
       "land": "Tyskland",
       "region": "Traben-Trarbach, Mosel, Tyskland",
@@ -4821,15 +4823,15 @@
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "cigliano-di-sopra-chianti-classico-2023",
       "namn": "Chianti Classico 2023",
       "producent": "Cigliano di Sopra",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "San Casciano in Val di Pesa, Toscana, Italien",
@@ -4859,15 +4861,15 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     },
     {
       "slug": "cigliano-di-sopra-chianti-classico-Riserva",
       "namn": "Chianti Classico Riserva \"Vigneto Branca\" 2022",
       "producent": "Cigliano di Sopra",
+      "allokering": false,
+      "allokeringstext": "",
       "typ": "Rött",
       "land": "Italien",
       "region": "San Casciano in Val di Pesa, Toscana, Italien",
@@ -4897,10 +4899,8 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "antal_per_kolli": "6",
-      "allokering": false,
-      "allokeringstext": "",
-      "tillfalligt_slut": false
+      "tillfalligt_slut": false,
+      "antal_per_kolli": "6"
     }
   ],
   "dropdown_options": {
@@ -4927,6 +4927,8 @@
       "Villa i Cipressi",
       "Weingut Martin Müllen"
     ],
+    "allokering": false,
+    "allokeringstext": "",
     "typ": [
       "Mousserande",
       "Rosé",
@@ -5052,7 +5054,9 @@
   },
   "meta": {
     "version": "1.0",
-    "last_export": "",
-    "description": "Verum Vinum vindatabas"
+    "last_export": "2026-03-24T23:11:34.495Z",
+    "description": "Verum Vinum vindatabas",
+    "last_saved": "2026-03-24T23:11:34.487Z",
+    "wine_count": 129
   }
 }
