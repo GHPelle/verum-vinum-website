@@ -801,7 +801,7 @@
     }
 
     // ============ EVENTS ============
-    function renderActive() { if (gridVisible) renderGrid(); else renderTable(); }
+    function renderActive() { if (gridVisible) renderGrid(); else renderTable(); renderGrapeTags(); }
     document.getElementById('search').addEventListener('input', renderActive);
     document.getElementById('filter-type').addEventListener('change', renderActive);
     document.getElementById('filter-producer').addEventListener('change', renderActive);
@@ -898,12 +898,20 @@
 
     function renderGrapeTags() {
       const container = document.getElementById('grape-tags');
-      // Get unique grapes from current data
-      const grapes = [...new Set(db.wines.map(w => w.druvor).filter(d => d && d.trim()))].sort((a, b) => a.localeCompare(b, 'sv'));
+      // Filter wines by current type/producer selection first
+      const preFiltered = db.wines.filter(w => {
+        if (selectedTypes.size > 0 && !selectedTypes.has(w.typ)) return false;
+        if (selectedProducers.size > 0 && !selectedProducers.has(w.producent)) return false;
+        return true;
+      });
+      const grapes = [...new Set(preFiltered.map(w => w.druvor).filter(d => d && d.trim()))].sort((a, b) => a.localeCompare(b, 'sv'));
+
+      // Remove grape selections that are no longer available
+      selectedGrapes.forEach(g => { if (!grapes.includes(g)) selectedGrapes.delete(g); });
 
       container.innerHTML = grapes.map(g => {
         const isActive = selectedGrapes.has(g);
-        const count = db.wines.filter(w => w.druvor === g).length;
+        const count = preFiltered.filter(w => w.druvor === g).length;
         return `<button onclick="toggleGrapeTag('${g.replace(/'/g, "\\'")}')" class="px-3 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${isActive ? 'bg-green-600 text-white font-bold shadow-md' : 'bg-white border border-stone-300 text-stone-600 hover:border-wine-400 hover:text-wine-700'}">${g} <span class="${isActive ? 'opacity-80' : 'opacity-60'}">(${count})</span></button>`;
       }).join('');
 
