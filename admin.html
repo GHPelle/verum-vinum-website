@@ -21,6 +21,11 @@
     .edit-panel.hidden { transform: translateX(100%); opacity: 0; pointer-events: none; }
     .edit-panel.visible { transform: translateX(0); opacity: 1; }
     select, input, textarea { font-size: 14px; }
+    @keyframes sf-blink {
+      0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220,38,38,0.4); }
+      50% { transform: scale(1.1); box-shadow: 0 0 12px 4px rgba(220,38,38,0.5); }
+    }
+    .sf-active { animation: sf-blink 1s ease-in-out infinite; }
     @media (max-width: 640px) {
       .wine-table td, .wine-table th { padding: 6px 4px; font-size: 12px; }
       .edit-panel .grid { grid-template-columns: 1fr !important; }
@@ -894,10 +899,10 @@
       const hasFilter = selectedTypes.size > 0 || selectedLands.size > 0 || selectedProducers.size > 0 || selectedGrapes.size > 0 || selectedPrisklasser.size > 0 || search;
       if (hasFilter) {
         btn.classList.remove('bg-red-50', 'border-red-300', 'text-red-600');
-        btn.classList.add('bg-red-600', 'border-red-700', 'text-white', 'shadow-lg', 'animate-pulse');
+        btn.classList.add('bg-red-600', 'border-red-700', 'text-white', 'shadow-lg', 'sf-active');
       } else {
         btn.classList.add('bg-red-50', 'border-red-300', 'text-red-600');
-        btn.classList.remove('bg-red-600', 'border-red-700', 'text-white', 'shadow-lg', 'animate-pulse');
+        btn.classList.remove('bg-red-600', 'border-red-700', 'text-white', 'shadow-lg', 'sf-active');
       }
     }
 
