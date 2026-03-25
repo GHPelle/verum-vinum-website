@@ -147,26 +147,39 @@
     <!-- Search & filter bar -->
     <div class="py-2 sm:py-3 shrink-0">
       <!-- Mobile layout: stacked -->
-      <div class="flex flex-col gap-2 sm:hidden">
-        <input id="search-mobile" type="text" placeholder="Sök vinnamn, producent, region..." class="w-full px-3 py-2 border-2 border-stone-400 rounded-lg bg-white focus:outline-none focus:border-wine-500 font-medium text-sm" oninput="document.getElementById('search').value=this.value; renderActive();">
-        <div class="flex gap-2">
-          <select id="filter-type-mobile" class="flex-1 px-3 py-2 border-2 border-stone-400 rounded-lg bg-white cursor-pointer font-medium text-sm" onchange="document.getElementById('filter-type').value=this.value; renderActive();">
-            <option value="">Alla typer</option>
+      <div class="flex flex-col gap-1.5 sm:hidden">
+        <input id="search-mobile" type="text" placeholder="Sök..." class="w-full px-3 py-2 border-2 border-stone-400 rounded-lg bg-white focus:outline-none focus:border-wine-500 font-medium text-sm" oninput="document.getElementById('search').value=this.value; renderActive();">
+        <div class="flex gap-1.5">
+          <select class="flex-1 px-2 py-1.5 border-2 border-stone-400 rounded-lg bg-white cursor-pointer font-medium text-xs" onchange="selectedPrisklasser.clear(); if(this.value) selectedPrisklasser.add(this.value); updateMultiLabel('pris'); renderActive();">
+            <option value="">Prisklass</option>
+            <option value="< 150 kr">&lt; 150 kr</option>
+            <option value="150 - 300 kr">150-300 kr</option>
+            <option value="301 - 500 kr">301-500 kr</option>
+            <option value="> 500 kr">&gt; 500 kr</option>
           </select>
-          <select id="filter-producer-mobile" class="flex-1 px-3 py-2 border-2 border-stone-400 rounded-lg bg-white cursor-pointer font-medium text-sm" onchange="document.getElementById('filter-producer').value=this.value; renderActive();">
-            <option value="">Alla producenter</option>
+          <select class="flex-1 px-2 py-1.5 border-2 border-stone-400 rounded-lg bg-white cursor-pointer font-medium text-xs" onchange="selectedTypes.clear(); if(this.value) selectedTypes.add(this.value); updateMultiLabel('type'); renderActive();">
+            <option value="">Typ</option>
+          </select>
+          <select class="flex-1 px-2 py-1.5 border-2 border-stone-400 rounded-lg bg-white cursor-pointer font-medium text-xs" onchange="selectedLands.clear(); if(this.value) selectedLands.add(this.value); updateMultiLabel('land'); renderActive();" id="filter-land-mobile">
+            <option value="">Land</option>
           </select>
         </div>
-        <div class="flex flex-wrap gap-2">
-          <button onclick="toggleGrid()" id="grid-btn-mobile" class="px-3 py-2 bg-white border-2 border-amber-500 text-amber-600 rounded-lg text-xs font-bold uppercase tracking-wider shadow-md">SNABBREDIGERING</button>
-          <button onclick="openEditor(-1)" class="px-3 py-2 bg-white border-2 border-green-600 text-green-700 rounded-lg text-xs font-bold uppercase tracking-wider shadow-md">NYTT VIN</button>
-          <div class="relative">
-            <button onclick="event.stopPropagation(); document.getElementById('print-menu-mobile').classList.toggle('hidden')" class="px-3 py-2 bg-white border-2 border-blue-500 text-blue-600 rounded-lg text-xs font-bold uppercase tracking-wider shadow-md">UTSKRIFTER</button>
+        <div class="flex gap-1.5">
+          <select class="flex-1 px-2 py-1.5 border-2 border-stone-400 rounded-lg bg-white cursor-pointer font-medium text-xs" onchange="selectedProducers.clear(); if(this.value) selectedProducers.add(this.value); updateMultiLabel('prod'); renderActive();" id="filter-prod-mobile">
+            <option value="">Producent</option>
+          </select>
+          <button onclick="clearAllFilters()" id="sf-btn-mobile" class="px-2 py-1.5 bg-red-50 border border-red-300 text-red-600 rounded-lg text-xs font-bold shrink-0">SF</button>
+        </div>
+        <div class="flex gap-1.5">
+          <button onclick="toggleGrid()" id="grid-btn-mobile" class="flex-1 py-1.5 bg-white border-2 border-amber-500 text-amber-600 rounded-lg text-xs font-bold uppercase tracking-wider shadow-md">REDIGERA</button>
+          <button onclick="openEditor(-1)" class="flex-1 py-1.5 bg-white border-2 border-green-600 text-green-700 rounded-lg text-xs font-bold uppercase tracking-wider shadow-md">NYTT VIN</button>
+          <div class="relative flex-1">
+            <button onclick="event.stopPropagation(); document.getElementById('print-menu-mobile').classList.toggle('hidden')" class="w-full py-1.5 bg-white border-2 border-blue-500 text-blue-600 rounded-lg text-xs font-bold uppercase tracking-wider shadow-md">UTSKRIFTER</button>
             <div id="print-menu-mobile" class="hidden absolute right-0 mt-2 bg-white rounded-xl shadow-xl border border-stone-200 overflow-hidden z-30 w-48">
-              <button onclick="printList('r'); document.getElementById('print-menu-mobile').classList.add('hidden')" class="w-full text-left px-5 py-3 text-sm font-medium text-stone-700 hover:bg-blue-100 hover:text-blue-800 hover:font-bold transition-all cursor-pointer border-b border-stone-100">R-Lista</button>
-              <button onclick="printList('rf'); this.closest('[id^=print-menu]').classList.add('hidden')" class="w-full text-left px-5 py-3 text-sm font-medium text-stone-700 hover:bg-blue-100 hover:text-blue-800 hover:font-bold transition-all cursor-pointer border-b border-stone-100">R-Lista (Filtrerad)</button>
-              <button onclick="printList('sb'); document.getElementById('print-menu-mobile').classList.add('hidden')" class="w-full text-left px-5 py-3 text-sm font-medium text-stone-700 hover:bg-blue-100 hover:text-blue-800 hover:font-bold transition-all cursor-pointer border-b border-stone-100">SB-Lista</button>
-              <button onclick="printList('pi'); document.getElementById('print-menu-mobile').classList.add('hidden')" class="w-full text-left px-5 py-3 text-sm font-medium text-stone-700 hover:bg-blue-100 hover:text-blue-800 hover:font-bold transition-all cursor-pointer">PI-Lista</button>
+              <button onclick="printList('r'); document.getElementById('print-menu-mobile').classList.add('hidden')" class="w-full text-left px-4 py-2.5 text-sm font-medium text-stone-700 hover:bg-blue-100 cursor-pointer border-b border-stone-100">R-Lista</button>
+              <button onclick="printList('rf'); document.getElementById('print-menu-mobile').classList.add('hidden')" class="w-full text-left px-4 py-2.5 text-sm font-medium text-stone-700 hover:bg-blue-100 cursor-pointer border-b border-stone-100">R-Lista (Filtrerad)</button>
+              <button onclick="printList('sb'); document.getElementById('print-menu-mobile').classList.add('hidden')" class="w-full text-left px-4 py-2.5 text-sm font-medium text-stone-700 hover:bg-blue-100 cursor-pointer border-b border-stone-100">SB-Lista</button>
+              <button onclick="printList('pi'); document.getElementById('print-menu-mobile').classList.add('hidden')" class="w-full text-left px-4 py-2.5 text-sm font-medium text-stone-700 hover:bg-blue-100 cursor-pointer">PI-Lista</button>
             </div>
           </div>
         </div>
@@ -221,9 +234,9 @@
     </div>
 
     <!-- Grape tags -->
-    <div class="shrink-0 flex items-start gap-2 mb-1">
-      <button onclick="toggleGrapeTags()" id="grape-toggle-btn" class="px-2 py-1 bg-green-50 border border-green-400 hover:opacity-80 text-green-700 rounded text-xs font-bold transition-colors shrink-0 mt-1" title="Visa/dölj druvor">Druvor ▲</button>
-      <div id="grape-tags" class="flex flex-wrap gap-2 py-1"></div>
+    <div class="shrink-0 flex items-start gap-1 sm:gap-2 mb-1">
+      <button onclick="toggleGrapeTags()" id="grape-toggle-btn" class="px-2 py-1 bg-green-50 border border-green-400 hover:opacity-80 text-green-700 rounded text-[10px] sm:text-xs font-bold transition-colors shrink-0 mt-0.5" title="Visa/dölj druvor">Druvor ▲</button>
+      <div id="grape-tags" class="flex flex-wrap gap-1 sm:gap-2 py-0.5 sm:py-1 max-h-[60px] sm:max-h-none overflow-y-auto"></div>
     </div>
 
     <!-- Grid editor -->
@@ -238,7 +251,7 @@
         </div>
       </div>
       <div id="grid-container" class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-auto flex-1 min-h-0">
-        <table class="w-full text-xs border-collapse" id="grid-table">
+        <table class="text-xs border-collapse" style="min-width: 2200px;" id="grid-table">
           <thead id="grid-thead" class="bg-stone-100 sticky top-0 z-10"></thead>
           <tbody id="grid-tbody"></tbody>
         </table>
@@ -586,6 +599,22 @@
       renderMultiDropdown('type');
       renderMultiDropdown('land');
       renderMultiDropdown('prod');
+      // Update mobile selects
+      const typOpts = multiConfig.type.options();
+      const landOpts = multiConfig.land.options();
+      const prodOpts = multiConfig.prod.options();
+      document.querySelectorAll('#filter-land-mobile').forEach(el => {
+        el.innerHTML = '<option value="">Land</option>' + landOpts.map(l => `<option value="${l}">${l}</option>`).join('');
+      });
+      document.querySelectorAll('#filter-prod-mobile').forEach(el => {
+        el.innerHTML = '<option value="">Producent</option>' + prodOpts.map(p => `<option value="${p}">${p}</option>`).join('');
+      });
+      // Mobile type select (2nd select in mobile row)
+      const mobileTypeSelect = document.querySelector('.sm\\:hidden select:nth-child(2)');
+      if (mobileTypeSelect && mobileTypeSelect.options[0]?.text === 'Typ') {
+        const curVal = [...selectedTypes][0] || '';
+        mobileTypeSelect.innerHTML = '<option value="">Typ</option>' + typOpts.map(t => `<option value="${t}" ${t===curVal?'selected':''}>${t}</option>`).join('');
+      }
     }
 
     const typeRowColors = {
