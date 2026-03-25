@@ -200,6 +200,7 @@
         <!-- Hidden selects for compatibility -->
         <select id="filter-type" class="hidden"><option value="">Alla typer</option></select>
         <select id="filter-producer" class="hidden"><option value="">Alla producenter</option></select>
+        <button onclick="clearAllFilters()" class="px-2 py-2 bg-red-50 border border-red-300 hover:bg-red-100 text-red-600 rounded-lg text-xs font-bold transition-colors" title="Släpp alla filter">SF</button>
         <button onclick="toggleGrid()" id="grid-btn" class="px-3 py-2 bg-white border-2 border-amber-500 hover:bg-amber-50 text-amber-600 rounded-lg text-xs font-bold uppercase tracking-wider transition-colors whitespace-nowrap shadow-md" title="Öppna Excel-liknande vy för att snabbredigera alla viner direkt i en grid">SNABBREDIGERING</button>
         <button onclick="openEditor(-1)" class="px-3 py-2 bg-white border-2 border-green-600 hover:bg-green-50 text-green-700 rounded-lg text-xs font-bold uppercase tracking-wider transition-colors whitespace-nowrap shadow-md" title="Lägg till ett nytt vin i databasen med alla fält">NYTT VIN</button>
         <div class="relative">
@@ -885,6 +886,21 @@
     document.addEventListener('keydown', e => {
       if (e.key === 'Escape') closeEditor();
     });
+
+    // ============ CLEAR ALL FILTERS ============
+    function clearAllFilters() {
+      selectedTypes.clear();
+      selectedLands.clear();
+      selectedProducers.clear();
+      selectedGrapes.clear();
+      selectedPrisklasser.clear();
+      document.getElementById('search').value = '';
+      updateMultiLabel('type');
+      updateMultiLabel('land');
+      updateMultiLabel('prod');
+      updateMultiLabel('pris');
+      renderAll();
+    }
 
     // ============ PRISKLASS FILTER ============
     function matchPrisklass(wine) {
