@@ -812,7 +812,7 @@
     }
 
     // ============ EVENTS ============
-    function renderActive() { if (gridVisible) renderGrid(); else renderTable(); renderGrapeTags(); }
+    function renderActive() { if (gridVisible) renderGrid(); else renderTable(); renderFilterDropdowns(); renderGrapeTags(); }
     document.getElementById('search').addEventListener('input', renderActive);
     document.getElementById('filter-type').addEventListener('change', renderActive);
     document.getElementById('filter-producer').addEventListener('change', renderActive);
@@ -846,10 +846,19 @@
     let selectedLands = new Set();
     let selectedProducers = new Set();
 
+    function getFilteredOptionsFor(exclude) {
+      return db.wines.filter(w => {
+        if (exclude !== 'type' && selectedTypes.size > 0 && !selectedTypes.has(w.typ)) return false;
+        if (exclude !== 'land' && selectedLands.size > 0 && !selectedLands.has(w.land)) return false;
+        if (exclude !== 'prod' && selectedProducers.size > 0 && !selectedProducers.has(w.producent)) return false;
+        return true;
+      });
+    }
+
     const multiConfig = {
-      type: { set: () => selectedTypes, dropdownId: 'type-multi-dropdown', labelId: 'type-multi-label', wrapId: 'type-multi-wrap', options: () => db.dropdown_options.typ || [], allLabel: 'Alla typer', pluralLabel: 'typer' },
-      land: { set: () => selectedLands, dropdownId: 'land-multi-dropdown', labelId: 'land-multi-label', wrapId: 'land-multi-wrap', options: () => [...new Set(db.wines.map(w => w.land).filter(l => l && l.trim()))].sort((a,b) => a.localeCompare(b,'sv')), allLabel: 'Alla länder', pluralLabel: 'länder' },
-      prod: { set: () => selectedProducers, dropdownId: 'prod-multi-dropdown', labelId: 'prod-multi-label', wrapId: 'prod-multi-wrap', options: () => db.dropdown_options.producent || [], allLabel: 'Alla producenter', pluralLabel: 'producenter' },
+      type: { set: () => selectedTypes, dropdownId: 'type-multi-dropdown', labelId: 'type-multi-label', wrapId: 'type-multi-wrap', options: () => [...new Set(getFilteredOptionsFor('type').map(w => w.typ).filter(t => t && t.trim()))].sort((a,b) => a.localeCompare(b,'sv')), allLabel: 'Alla typer', pluralLabel: 'typer' },
+      land: { set: () => selectedLands, dropdownId: 'land-multi-dropdown', labelId: 'land-multi-label', wrapId: 'land-multi-wrap', options: () => [...new Set(getFilteredOptionsFor('land').map(w => w.land).filter(l => l && l.trim()))].sort((a,b) => a.localeCompare(b,'sv')), allLabel: 'Alla länder', pluralLabel: 'länder' },
+      prod: { set: () => selectedProducers, dropdownId: 'prod-multi-dropdown', labelId: 'prod-multi-label', wrapId: 'prod-multi-wrap', options: () => [...new Set(getFilteredOptionsFor('prod').map(w => w.producent).filter(p => p && p.trim()))].sort((a,b) => a.localeCompare(b,'sv')), allLabel: 'Alla producenter', pluralLabel: 'producenter' },
     };
 
     function toggleMultiSelect(which) {
