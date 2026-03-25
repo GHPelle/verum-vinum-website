@@ -198,6 +198,9 @@
       </div>
     </div>
 
+    <!-- Grape tags -->
+    <div id="grape-tags" class="flex flex-wrap gap-2 mb-4 py-2"></div>
+
     <!-- Grid editor -->
     <div id="grid-view" class="hidden mb-8">
       <div class="flex items-center justify-between mb-3">
@@ -513,6 +516,7 @@
     function renderAll() {
       renderTable();
       renderFilterDropdowns();
+      renderGrapeTags();
       document.getElementById('wine-count').textContent = db.wines.length + ' viner';
     }
 
@@ -532,6 +536,7 @@
       let wines = db.wines.filter(w => {
         if (selectedTypes.size > 0 && !selectedTypes.has(w.typ)) return false;
         if (selectedProducers.size > 0 && !selectedProducers.has(w.producent)) return false;
+        if (selectedGrapes.size > 0 && !selectedGrapes.has(w.druvor)) return false;
         if (search) {
           const s = (w.namn + ' ' + w.producent + ' ' + w.region + ' ' + w.druvor).toLowerCase();
           if (!s.includes(search)) return false;
@@ -888,6 +893,39 @@
       if (!e.target.closest('#prod-multi-wrap')) document.getElementById('prod-multi-dropdown').classList.add('hidden');
     });
 
+    // ============ GRAPE TAG FILTER ============
+    let selectedGrapes = new Set();
+
+    function renderGrapeTags() {
+      const container = document.getElementById('grape-tags');
+      // Get unique grapes from current data
+      const grapes = [...new Set(db.wines.map(w => w.druvor).filter(d => d && d.trim()))].sort((a, b) => a.localeCompare(b, 'sv'));
+
+      container.innerHTML = grapes.map(g => {
+        const isActive = selectedGrapes.has(g);
+        const count = db.wines.filter(w => w.druvor === g).length;
+        return `<button onclick="toggleGrapeTag('${g.replace(/'/g, "\\'")}')" class="px-3 py-1.5 rounded-full text-xs font-medium transition-all cursor-pointer ${isActive ? 'bg-green-600 text-white font-bold shadow-md' : 'bg-white border border-stone-300 text-stone-600 hover:border-wine-400 hover:text-wine-700'}">${g} <span class="${isActive ? 'opacity-80' : 'opacity-60'}">(${count})</span></button>`;
+      }).join('');
+
+      // Add clear button if any selected
+      if (selectedGrapes.size > 0) {
+        container.innerHTML = `<button onclick="clearGrapeTags()" class="px-3 py-1.5 rounded-full text-xs font-bold bg-red-50 text-red-600 border border-red-300 hover:bg-red-100 transition-all cursor-pointer">Rensa druvor &times;</button>` + container.innerHTML;
+      }
+    }
+
+    function toggleGrapeTag(grape) {
+      if (selectedGrapes.has(grape)) selectedGrapes.delete(grape);
+      else selectedGrapes.add(grape);
+      renderGrapeTags();
+      renderActive();
+    }
+
+    function clearGrapeTags() {
+      selectedGrapes.clear();
+      renderGrapeTags();
+      renderActive();
+    }
+
     // ============ REGION FILTER BY LAND ============
     function filterRegionsByLand(selectedLand) {
       const regionSelect = document.querySelector('#wine-form select[name="region"]');
@@ -1025,6 +1063,7 @@
       return db.wines.filter(w => {
         if (selectedTypes.size > 0 && !selectedTypes.has(w.typ)) return false;
         if (selectedProducers.size > 0 && !selectedProducers.has(w.producent)) return false;
+        if (selectedGrapes.size > 0 && !selectedGrapes.has(w.druvor)) return false;
         if (search) {
           const s = (w.namn + ' ' + w.producent + ' ' + w.region + ' ' + w.druvor).toLowerCase();
           if (!s.includes(search)) return false;
