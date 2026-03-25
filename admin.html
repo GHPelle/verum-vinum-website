@@ -49,7 +49,7 @@
     #grid-table tr:hover td:nth-child(1), #grid-table tr:hover td:nth-child(2) { background: #fef3c7 !important; }
   </style>
 </head>
-<body class="bg-cream-50 text-stone-800 font-sans antialiased">
+<body class="text-stone-800 font-sans antialiased" style="background: linear-gradient(to bottom, rgba(254,253,248,0.82), rgba(254,253,248,0.85)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1920&q=80') center/cover no-repeat fixed;">
 
   <!-- Login screen -->
   <div id="login-screen" class="fixed inset-0 z-[100] bg-white flex items-center justify-center">
@@ -111,12 +111,12 @@
           <button onclick="exportJSON()" class="px-4 py-2 bg-white border border-stone-300 hover:bg-stone-100 rounded-lg text-sm font-bold text-stone-700 transition-colors" title="Ladda ner en backup av hela databasen som JSON-fil med tidsstämpel">EXPORTERA JSON</button>
           <button onclick="showBackupDialog()" class="px-4 py-2 bg-yellow-400 border border-yellow-500 hover:bg-yellow-300 rounded-lg text-sm font-bold text-yellow-900 transition-colors" title="Visa sparade backups och återställ till en tidigare version">BACKUPS</button>
           <button onclick="openEditor(-1)" class="px-4 py-2 bg-wine-600 hover:bg-wine-500 rounded-lg text-sm font-bold transition-colors">+ Nytt vin</button>
+          <span id="data-status" class="text-red-300 text-xs font-bold ml-2"></span>
         </div>
         <button onclick="document.getElementById('mobile-header-menu').classList.toggle('hidden')" class="sm:hidden text-white p-1">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
       </div>
-      <div id="data-status-row" class="mt-1"><span id="data-status" class="text-green-400 text-xs sm:text-sm font-bold"></span></div>
       <div id="mobile-header-menu" class="hidden sm:hidden mt-3 flex flex-wrap gap-2 pb-2">
         <label class="px-3 py-2 bg-white border border-stone-300 rounded-lg text-xs font-bold text-stone-700 cursor-pointer">
           LADDA JSON
@@ -168,12 +168,23 @@
       <!-- Desktop layout: single row -->
       <div class="hidden sm:flex items-center gap-4">
         <input id="search" type="text" placeholder="Sök vinnamn, producent, region..." class="flex-1 px-4 py-3 border-2 border-stone-400 rounded-lg bg-white focus:outline-none focus:border-wine-500 focus:ring-1 focus:ring-wine-500 font-medium">
-        <select id="filter-type" class="px-4 py-3 border-2 border-stone-400 rounded-lg bg-white focus:outline-none focus:border-wine-500 cursor-pointer font-medium">
-          <option value="">Alla typer</option>
-        </select>
-        <select id="filter-producer" class="px-4 py-3 border-2 border-stone-400 rounded-lg bg-white focus:outline-none focus:border-wine-500 cursor-pointer font-medium">
-          <option value="">Alla producenter</option>
-        </select>
+        <div class="relative" id="type-multi-wrap">
+          <button onclick="toggleMultiSelect('type')" class="px-4 py-3 border-2 border-stone-400 rounded-lg bg-white font-medium cursor-pointer text-left min-w-[140px] flex items-center justify-between gap-2">
+            <span id="type-multi-label">Alla typer</span>
+            <svg class="w-4 h-4 text-stone-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="type-multi-dropdown" class="hidden absolute left-0 mt-1 bg-white rounded-lg shadow-xl border border-stone-200 z-40 w-52 max-h-60 overflow-y-auto py-1"></div>
+        </div>
+        <div class="relative" id="prod-multi-wrap">
+          <button onclick="toggleMultiSelect('prod')" class="px-4 py-3 border-2 border-stone-400 rounded-lg bg-white font-medium cursor-pointer text-left min-w-[180px] flex items-center justify-between gap-2">
+            <span id="prod-multi-label">Alla producenter</span>
+            <svg class="w-4 h-4 text-stone-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </button>
+          <div id="prod-multi-dropdown" class="hidden absolute left-0 mt-1 bg-white rounded-lg shadow-xl border border-stone-200 z-40 w-64 max-h-60 overflow-y-auto py-1"></div>
+        </div>
+        <!-- Hidden selects for compatibility -->
+        <select id="filter-type" class="hidden"><option value="">Alla typer</option></select>
+        <select id="filter-producer" class="hidden"><option value="">Alla producenter</option></select>
         <button onclick="toggleGrid()" id="grid-btn" class="px-6 py-3 bg-white border-2 border-amber-500 hover:bg-amber-50 text-amber-600 rounded-lg text-sm font-bold uppercase tracking-wider transition-colors whitespace-nowrap shadow-md" title="Öppna Excel-liknande vy för att snabbredigera alla viner direkt i en grid">SNABBREDIGERING</button>
         <button onclick="openEditor(-1)" class="px-6 py-3 bg-white border-2 border-green-600 hover:bg-green-50 text-green-700 rounded-lg text-sm font-bold uppercase tracking-wider transition-colors whitespace-nowrap shadow-md" title="Lägg till ett nytt vin i databasen med alla fält">NYTT VIN</button>
         <div class="relative">
@@ -506,20 +517,8 @@
     }
 
     function renderFilterDropdowns() {
-      const typeFilter = document.getElementById('filter-type');
-      const prodFilter = document.getElementById('filter-producer');
-      const curType = typeFilter.value;
-      const curProd = prodFilter.value;
-
-      typeFilter.innerHTML = '<option value="">Alla typer</option>';
-      (db.dropdown_options.typ || []).forEach(t => {
-        typeFilter.innerHTML += `<option value="${t}" ${t===curType?'selected':''}>${t}</option>`;
-      });
-
-      prodFilter.innerHTML = '<option value="">Alla producenter</option>';
-      (db.dropdown_options.producent || []).forEach(p => {
-        prodFilter.innerHTML += `<option value="${p}" ${p===curProd?'selected':''}>${p}</option>`;
-      });
+      renderMultiDropdown('type');
+      renderMultiDropdown('prod');
     }
 
     const typeRowColors = {
@@ -529,12 +528,10 @@
 
     function renderTable() {
       const search = document.getElementById('search').value.toLowerCase();
-      const typeFilter = document.getElementById('filter-type').value;
-      const prodFilter = document.getElementById('filter-producer').value;
 
       let wines = db.wines.filter(w => {
-        if (typeFilter && w.typ !== typeFilter) return false;
-        if (prodFilter && w.producent !== prodFilter) return false;
+        if (selectedTypes.size > 0 && !selectedTypes.has(w.typ)) return false;
+        if (selectedProducers.size > 0 && !selectedProducers.has(w.producent)) return false;
         if (search) {
           const s = (w.namn + ' ' + w.producent + ' ' + w.region + ' ' + w.druvor).toLowerCase();
           if (!s.includes(search)) return false;
@@ -566,7 +563,7 @@
         return `<tr class="border-b border-stone-200 hover:bg-wine-50/40 cursor-pointer transition-colors ${slutKlass}" onclick="openEditor(${idx})" style="${stripe}">
           <td class="px-4 py-3 font-bold text-stone-900">${w.namn || ''}</td>
           <td class="px-4 py-3 italic text-wine-700">${w.producent || ''}</td>
-          <td class="px-4 py-3"><span class="text-xs font-medium uppercase tracking-wider" style="color: ${{Rött:'#991b1b',Vitt:'#a3a520',Rosé:'#ec4899',Mousserande:'#ca8a04',Starkvin:'#1c1917'}[w.typ] || '#78716c'};">${w.typ || ''}</span></td>
+          <td class="px-4 py-3"><span class="text-xs font-extrabold uppercase tracking-wider" style="color: ${{Rött:'#991b1b',Vitt:'#a3a520',Rosé:'#ec4899',Mousserande:'#ca8a04',Starkvin:'#1c1917'}[w.typ] || '#78716c'};">${w.typ || ''}</span></td>
           <td class="px-4 py-3">${w.land || ''}</td>
           <td class="px-4 py-3">${w.argang || ''}</td>
           <td class="px-4 py-3 text-right font-bold" style="color: #16a34a;">${w.pris_restaurang ? w.pris_restaurang + ' kr' : '–'}</td>
@@ -828,6 +825,69 @@
       if (e.key === 'Escape') closeEditor();
     });
 
+    // ============ MULTI-SELECT FILTERS ============
+    let selectedTypes = new Set();
+    let selectedProducers = new Set();
+
+    function toggleMultiSelect(which) {
+      const dropdown = document.getElementById(which === 'type' ? 'type-multi-dropdown' : 'prod-multi-dropdown');
+      const otherDropdown = document.getElementById(which === 'type' ? 'prod-multi-dropdown' : 'type-multi-dropdown');
+      otherDropdown.classList.add('hidden');
+      dropdown.classList.toggle('hidden');
+    }
+
+    function renderMultiDropdown(which) {
+      const isType = which === 'type';
+      const dropdown = document.getElementById(isType ? 'type-multi-dropdown' : 'prod-multi-dropdown');
+      const selected = isType ? selectedTypes : selectedProducers;
+      const options = isType ? (db.dropdown_options.typ || []) : (db.dropdown_options.producent || []);
+
+      dropdown.innerHTML = `<label class="flex items-center gap-2 px-3 py-2 hover:bg-stone-50 cursor-pointer border-b border-stone-100">
+        <input type="checkbox" ${selected.size === 0 ? 'checked' : ''} onchange="clearMultiFilter('${which}')" class="w-4 h-4 accent-wine-700 cursor-pointer">
+        <span class="text-sm font-bold text-stone-700">${isType ? 'Alla typer' : 'Alla producenter'}</span>
+      </label>` + options.map(o => `<label class="flex items-center gap-2 px-3 py-2 hover:bg-stone-50 cursor-pointer">
+        <input type="checkbox" value="${o}" ${selected.has(o) ? 'checked' : ''} onchange="toggleMultiOption('${which}', '${o.replace(/'/g, "\\'")}', this.checked)" class="w-4 h-4 accent-wine-700 cursor-pointer">
+        <span class="text-sm text-stone-700">${o}</span>
+      </label>`).join('');
+    }
+
+    function toggleMultiOption(which, value, checked) {
+      const selected = which === 'type' ? selectedTypes : selectedProducers;
+      if (checked) selected.add(value); else selected.delete(value);
+      updateMultiLabel(which);
+      renderMultiDropdown(which);
+      renderActive();
+    }
+
+    function clearMultiFilter(which) {
+      if (which === 'type') selectedTypes.clear(); else selectedProducers.clear();
+      updateMultiLabel(which);
+      renderMultiDropdown(which);
+      renderActive();
+    }
+
+    function updateMultiLabel(which) {
+      const isType = which === 'type';
+      const selected = isType ? selectedTypes : selectedProducers;
+      const label = document.getElementById(isType ? 'type-multi-label' : 'prod-multi-label');
+      if (selected.size === 0) {
+        label.textContent = isType ? 'Alla typer' : 'Alla producenter';
+        label.className = 'text-stone-700';
+      } else if (selected.size === 1) {
+        label.textContent = [...selected][0];
+        label.className = 'text-wine-700 font-bold';
+      } else {
+        label.textContent = selected.size + (isType ? ' typer' : ' producenter');
+        label.className = 'text-wine-700 font-bold';
+      }
+    }
+
+    // Close dropdowns on outside click
+    document.addEventListener('click', function(e) {
+      if (!e.target.closest('#type-multi-wrap')) document.getElementById('type-multi-dropdown').classList.add('hidden');
+      if (!e.target.closest('#prod-multi-wrap')) document.getElementById('prod-multi-dropdown').classList.add('hidden');
+    });
+
     // ============ REGION FILTER BY LAND ============
     function filterRegionsByLand(selectedLand) {
       const regionSelect = document.querySelector('#wine-form select[name="region"]');
@@ -961,12 +1021,10 @@
 
     function getFilteredWines() {
       const search = document.getElementById('search').value.toLowerCase();
-      const typeFilter = document.getElementById('filter-type').value;
-      const prodFilter = document.getElementById('filter-producer').value;
 
       return db.wines.filter(w => {
-        if (typeFilter && w.typ !== typeFilter) return false;
-        if (prodFilter && w.producent !== prodFilter) return false;
+        if (selectedTypes.size > 0 && !selectedTypes.has(w.typ)) return false;
+        if (selectedProducers.size > 0 && !selectedProducers.has(w.producent)) return false;
         if (search) {
           const s = (w.namn + ' ' + w.producent + ' ' + w.region + ' ' + w.druvor).toLowerCase();
           if (!s.includes(search)) return false;
@@ -1223,7 +1281,7 @@
                 wineRows += `<tr style="line-height: 1.6;${slutStyle}">
                   <td style="padding: 1px 8px 1px 0; color: #1c1917; font-size: 12px; font-weight: 700;">${(w.namn || '').endsWith('*') ? w.namn.slice(0,-1) + '<span style="color: #dc2626; font-weight: 800; font-size: 1.3em;">*</span>' : (w.namn || '')}</td>
                   <td style="padding: 1px 8px; color: #78716c; font-size: 11px; text-align: center;">${w.argang || 'NV'}</td>
-                  <td style="padding: 1px 8px; color: ${typFarg}; font-size: 11px; text-align: center; font-weight: 600;">${w.typ || ''}</td>
+                  <td style="padding: 1px 8px; color: ${typFarg}; font-size: 11px; text-align: center; font-weight: 800;">${w.typ || ''}</td>
                   <td style="padding: 1px 8px; color: #78716c; font-size: 11px; text-align: center;">${volymVal}</td>
                   <td style="padding: 1px 8px; color: #78716c; font-size: 11px; text-align: center;">${alkoholVal}</td>
                   <td style="padding: 1px 8px; color: #78716c; font-size: 11px;">${w.druvor || ''}</td>
