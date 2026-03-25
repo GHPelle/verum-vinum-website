@@ -898,10 +898,15 @@
 
     function renderGrapeTags() {
       const container = document.getElementById('grape-tags');
-      // Filter wines by current type/producer selection first
+      // Filter wines by current type/producer/search selection first
+      const search = (document.getElementById('search').value || '').toLowerCase();
       const preFiltered = db.wines.filter(w => {
         if (selectedTypes.size > 0 && !selectedTypes.has(w.typ)) return false;
         if (selectedProducers.size > 0 && !selectedProducers.has(w.producent)) return false;
+        if (search) {
+          const s = (w.namn + ' ' + w.producent + ' ' + w.region + ' ' + w.druvor).toLowerCase();
+          if (!s.includes(search)) return false;
+        }
         return true;
       });
       const grapes = [...new Set(preFiltered.map(w => w.druvor).filter(d => d && d.trim()))].sort((a, b) => a.localeCompare(b, 'sv'));
