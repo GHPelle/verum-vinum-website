@@ -21,6 +21,9 @@
     .edit-panel.hidden { transform: translateX(100%); opacity: 0; pointer-events: none; }
     .edit-panel.visible { transform: translateX(0); opacity: 1; }
     select, input, textarea { font-size: 14px; }
+    @media (orientation: landscape) and (max-height: 500px) {
+      .landscape-hide { display: none !important; }
+    }
     @keyframes sf-blink {
       0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(220,38,38,0.4); }
       50% { transform: scale(1.1); box-shadow: 0 0 12px 4px rgba(220,38,38,0.5); }
@@ -145,7 +148,7 @@
   <main class="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-4 h-[calc(100vh-60px)] flex flex-col overflow-hidden">
 
     <!-- Logo bar -->
-    <div class="hidden sm:flex items-center justify-between mb-2 shrink-0">
+    <div class="hidden md:flex items-center justify-between mb-2 shrink-0 landscape-hide">
       <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-32 brightness-0">
       <h2 class="font-serif text-5xl text-stone-900 font-semibold text-center px-2">Verum Vinums Artikelunderhåll</h2>
       <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-32 brightness-0">
@@ -154,7 +157,7 @@
     <!-- Search & filter bar -->
     <div class="py-2 sm:py-3 shrink-0">
       <!-- Mobile layout: stacked -->
-      <div class="flex flex-col gap-1.5 sm:hidden">
+      <div class="flex flex-col gap-1.5 md:hidden">
         <input id="search-mobile" type="text" placeholder="Sök..." class="w-full px-3 py-2 border-2 border-stone-400 rounded-lg bg-white focus:outline-none focus:border-wine-500 font-medium text-sm" oninput="document.getElementById('search').value=this.value; renderActive();">
         <div class="flex gap-1.5">
           <select class="flex-1 px-2 py-1.5 border-2 border-stone-400 rounded-lg bg-white cursor-pointer font-medium text-xs" onchange="selectedPrisklasser.clear(); if(this.value) selectedPrisklasser.add(this.value); updateMultiLabel('pris'); renderActive();">
@@ -192,7 +195,7 @@
         </div>
       </div>
       <!-- Desktop layout: single row -->
-      <div class="hidden sm:flex items-center gap-2">
+      <div class="hidden md:flex items-center gap-2">
         <input id="search" type="text" placeholder="Sök..." class="w-36 xl:w-48 px-3 py-2 border-2 border-stone-400 rounded-lg bg-white focus:outline-none focus:border-wine-500 focus:ring-1 focus:ring-wine-500 font-medium text-sm">
         <div class="relative" id="pris-multi-wrap">
           <button onclick="toggleMultiSelect('pris')" class="px-3 py-2 border-2 border-stone-400 rounded-lg bg-white font-medium cursor-pointer text-left w-[130px] flex items-center justify-between gap-1 text-sm whitespace-nowrap">
