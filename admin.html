@@ -221,7 +221,10 @@
     </div>
 
     <!-- Grape tags -->
-    <div id="grape-tags" class="flex flex-wrap gap-2 mb-2 py-1 shrink-0"></div>
+    <div class="shrink-0 flex items-start gap-2 mb-1">
+      <button onclick="toggleGrapeTags()" id="grape-toggle-btn" class="px-2 py-1 bg-green-50 border border-green-400 hover:opacity-80 text-green-700 rounded text-xs font-bold transition-colors shrink-0 mt-1" title="Visa/dölj druvor">Druvor ▲</button>
+      <div id="grape-tags" class="flex flex-wrap gap-2 py-1"></div>
+    </div>
 
     <!-- Grid editor -->
     <div id="grid-view" class="hidden flex-1 min-h-0 flex flex-col mb-2">
@@ -1017,6 +1020,26 @@
         if (!e.target.closest('#' + cfg.wrapId)) document.getElementById(cfg.dropdownId).classList.add('hidden');
       });
     });
+
+    // ============ GRAPE TAGS TOGGLE ============
+    let grapeTagsVisible = true;
+
+    function toggleGrapeTags() {
+      grapeTagsVisible = !grapeTagsVisible;
+      const tags = document.getElementById('grape-tags');
+      const btn = document.getElementById('grape-toggle-btn');
+      if (grapeTagsVisible) {
+        tags.classList.remove('hidden');
+        btn.textContent = 'Druvor ▲';
+        btn.classList.remove('bg-red-50', 'border-red-300', 'text-red-600');
+        btn.classList.add('bg-green-50', 'border-green-400', 'text-green-700');
+      } else {
+        tags.classList.add('hidden');
+        btn.textContent = 'Druvor ▼';
+        btn.classList.remove('bg-green-50', 'border-green-400', 'text-green-700');
+        btn.classList.add('bg-red-50', 'border-red-300', 'text-red-600');
+      }
+    }
 
     // ============ GRAPE TAG FILTER ============
     let selectedGrapes = new Set();
