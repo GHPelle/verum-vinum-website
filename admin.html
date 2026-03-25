@@ -1308,6 +1308,7 @@
     function printRLista(filtered) {
       // Filter wines with r_prislista = true, optionally apply current page filters
       let wines = db.wines.filter(w => w.r_prislista && (w.pris_restaurang || w.allokering));
+      let filterDesc = '';
       if (filtered) {
         const search = (document.getElementById('search').value || '').toLowerCase();
         wines = wines.filter(w => {
@@ -1321,6 +1322,14 @@
           }
           return true;
         });
+        // Build filter description
+        const parts = [];
+        if (selectedTypes.size > 0) parts.push([...selectedTypes].join(', '));
+        if (selectedLands.size > 0) parts.push([...selectedLands].join(', '));
+        if (selectedProducers.size > 0) parts.push([...selectedProducers].join(', '));
+        if (selectedGrapes.size > 0) parts.push([...selectedGrapes].join(', '));
+        if (search) parts.push('"' + document.getElementById('search').value + '"');
+        filterDesc = parts.join(' | ');
       }
 
       // Group by land > region > producent
@@ -1489,7 +1498,7 @@
     <div class="header">
       <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" style="filter: brightness(0);">
       <div class="header-text">
-        <div class="header-title">Restaurangprislista ${monthYear} ${filtered ? '<span style="color: #dc2626;">(Filtrerat urval)</span>' : ''}&nbsp;(priser exkl. moms, <span style="color: #dc2626; font-weight: 800; font-size: 1.3em;">*</span> = fåtal flaskor kvar på lager)</div>
+        <div class="header-title">Restaurangprislista ${monthYear} ${filtered ? '<span style="color: #dc2626;">(Filtrerat urval: <em>' + filterDesc + '</em>)</span>' : ''}&nbsp;(priser exkl. moms, <span style="color: #dc2626; font-weight: 800; font-size: 1.3em;">*</span> = fåtal flaskor kvar på lager)</div>
         <div class="header-subtitle" style="font-size: 13px;">
           <strong>Beställ via:</strong> &nbsp;<strong>Emil Rosenquist</strong>, &nbsp;<a href="mailto:emil@verumvinum.se">emil@verumvinum.se</a> &nbsp;mobil: <strong>070-795 06 55</strong> (Stockholm, Norra &amp; Östra)<br>
           <strong>Per Jorlind</strong>, &nbsp;<a href="mailto:per@verumvinum.se">per@verumvinum.se</a> &nbsp;mobil <strong>070-876 90 12</strong> (Göteborg och Södra &amp; Västra)
