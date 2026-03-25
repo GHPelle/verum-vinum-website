@@ -43,15 +43,22 @@
     .wine-table th .col-resizer:hover, .wine-table th .col-resizer.active { background: #6e1735; }
     #grid-table tr:nth-child(even) td { background: #fefdf8; }
     #grid-table tr:hover td { background: #fef3c7 !important; }
-    #grid-table td:nth-child(1), #grid-table th:nth-child(1),
-    #grid-table td:nth-child(2), #grid-table th:nth-child(2) {
-      position: sticky; background: #fff; z-index: 2;
+    /* Kolumn 1 (Namn) alltid sticky */
+    #grid-table td:nth-child(1), #grid-table th:nth-child(1) {
+      position: sticky; left: 0; background: #fff; z-index: 2; border-right: 2px solid #d6d3d1;
     }
-    #grid-table td:nth-child(1), #grid-table th:nth-child(1) { left: 0; }
-    #grid-table td:nth-child(2), #grid-table th:nth-child(2) { left: 180px; border-right: 2px solid #d6d3d1; }
-    #grid-table th:nth-child(1), #grid-table th:nth-child(2) { background: #f5f5f4; z-index: 3; }
-    #grid-table tr:nth-child(even) td:nth-child(1), #grid-table tr:nth-child(even) td:nth-child(2) { background: #fefdf8; }
-    #grid-table tr:hover td:nth-child(1), #grid-table tr:hover td:nth-child(2) { background: #fef3c7 !important; }
+    #grid-table th:nth-child(1) { background: #f5f5f4; z-index: 3; }
+    #grid-table tr:nth-child(even) td:nth-child(1) { background: #fefdf8; }
+    #grid-table tr:hover td:nth-child(1) { background: #fef3c7 !important; }
+    /* Kolumn 2 (Producent) sticky bara på desktop */
+    @media (min-width: 640px) {
+      #grid-table td:nth-child(2), #grid-table th:nth-child(2) {
+        position: sticky; left: 180px; background: #fff; z-index: 2; border-right: 2px solid #d6d3d1;
+      }
+      #grid-table th:nth-child(2) { background: #f5f5f4; z-index: 3; }
+      #grid-table tr:nth-child(even) td:nth-child(2) { background: #fefdf8; }
+      #grid-table tr:hover td:nth-child(2) { background: #fef3c7 !important; }
+    }
   </style>
 </head>
 <body class="text-stone-800 font-sans antialiased overflow-hidden h-screen" style="background: linear-gradient(to bottom, rgba(254,253,248,0.82), rgba(254,253,248,0.85)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1920&q=80') center/cover no-repeat fixed;">
@@ -138,10 +145,10 @@
   <main class="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-4 h-[calc(100vh-60px)] flex flex-col overflow-hidden">
 
     <!-- Logo bar -->
-    <div class="flex items-center justify-between mb-2 shrink-0">
-      <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-12 sm:h-32 brightness-0">
-      <h2 class="font-serif text-lg sm:text-5xl text-stone-900 font-semibold text-center px-2">Verum Vinums Artikelunderhåll</h2>
-      <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-12 sm:h-32 brightness-0">
+    <div class="hidden sm:flex items-center justify-between mb-2 shrink-0">
+      <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-32 brightness-0">
+      <h2 class="font-serif text-5xl text-stone-900 font-semibold text-center px-2">Verum Vinums Artikelunderhåll</h2>
+      <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-32 brightness-0">
     </div>
 
     <!-- Search & filter bar -->
