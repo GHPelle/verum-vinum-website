@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="sv" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Systembolaget – Verum Vinum</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwindcss.config = {
+      theme: { extend: {
+        colors: { wine: { 50:'#fdf2f4', 100:'#fce7eb', 200:'#f9d0d9', 300:'#f5a9ba', 400:'#ee7895', 500:'#e44d73', 600:'#d12a5b', 700:'#b01e49', 800:'#8a1a3d', 900:'#6e1735', 950:'#3f0819' }, cream: { 50:'#fefdf8', 100:'#fdf9ed' } },
+        fontFamily: { serif: ['"Playfair Display"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'] }
+      }}
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    html { -webkit-tap-highlight-color: transparent; }
+    a, button { touch-action: manipulation; }
+    .sb-row:hover { background: rgba(138,26,61,0.04); }
+    .wine-card:hover .wine-img { transform: scale(1.05); }
+    .wine-img { transition: transform 0.6s ease; }
+    .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.8s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="text-stone-800 font-sans antialiased min-h-screen bg-cream-50">
+
+  <nav class="bg-white/90 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <!-- Mobile nav -->
+      <div class="flex md:hidden items-center justify-between h-16 px-2">
+        <a href="index.html"><img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-10 brightness-0"></a>
+        <button id="mobile-toggle" class="text-stone-900 p-2">
+          <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+      <!-- Desktop nav -->
+      <div class="hidden md:flex flex-col items-center pt-4">
+        <div class="flex items-center justify-center w-full gap-6 mb-3">
+          <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-[90px] brightness-0">
+          <div class="flex items-center gap-8">
+            <a href="index.html#om-oss" class="text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Om oss</a>
+            <a href="index.html#producenter" class="text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Producenter</a>
+            <a href="index.html#restaurang" class="text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Restaurang</a>
+            <a href="privatimport.html" class="text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Privatimport</a>
+            <a href="mat-vin.html" class="text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Mat & Vin</a>
+            <a href="blogg.html" class="text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Blogg</a>
+            <a href="index.html#event" class="text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Event</a>
+            <a href="sok.html" class="text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Sök</a>
+          </div>
+          <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-[90px] brightness-0">
+        </div>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg shadow-lg rounded-b-xl">
+      <div class="px-6 py-4 space-y-3">
+        <a href="index.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Hem</a>
+        <a href="index.html#om-oss" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Om oss</a>
+        <a href="index.html#producenter" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Producenter</a>
+        <a href="index.html#restaurang" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Restaurang</a>
+        <a href="privatimport.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Privatimport</a>
+        <a href="mat-vin.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Mat & Vin</a>
+        <a href="blogg.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Blogg</a>
+        <a href="index.html#event" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Event</a>
+        <a href="sok.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Sök viner</a>
+      </div>
+    </div>
+  </nav>
+  <script>
+    let mobileMenuTimer;
+    const mobileMenu = document.getElementById('mobile-menu');
+    document.getElementById('mobile-toggle').addEventListener('click', () => {
+      clearTimeout(mobileMenuTimer);
+      mobileMenu.classList.toggle('hidden');
+      if (!mobileMenu.classList.contains('hidden')) {
+        mobileMenuTimer = setTimeout(() => mobileMenu.classList.add('hidden'), 3000);
+      }
+    });
+  </script>
+
+  <!-- Hero -->
+  <section class="relative py-20 overflow-hidden" style="background: linear-gradient(135deg, rgba(68,64,60,0.85), rgba(87,83,78,0.8), rgba(68,64,60,0.85)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1920&q=80') center/cover;">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <nav class="text-sm text-white/60 font-bold mb-6"><a href="index.html" class="hover:text-white">Hem</a> <span class="mx-2">/</span> <span class="text-white">Systembolaget</span></nav>
+      <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl text-white font-bold mb-4">Beställ via Systembolaget</h1>
+      <p class="text-white/80 text-lg font-bold max-w-2xl mx-auto">Nedan finner du alla vin och vinlådor som vi har i Systembolagets tillfälliga sortiment och beställningssortiment. Produkterna köps direkt på Systembolagets hemsida och levereras till önskat Systembolag.</p>
+    </div>
+  </section>
+
+  <main class="max-w-7xl mx-auto px-6 lg:px-8 py-12">
+
+    <!-- Featured Systembolaget wines with real images -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16 fade-in">
+      <a href="https://www.systembolaget.se/produkt/vin/barolo-cerretta-9327401/" target="_blank" class="wine-card bg-stone-800/60 border border-stone-700/50 group text-center hover:border-wine-700/50 transition-colors rounded-lg overflow-hidden">
+        <div class="overflow-hidden bg-stone-800/40 p-4">
+          <img src="https://verumvinum.se/images/64/fxu6xx-ettore-germano-barolo-cerretta-2019-270x360_150x275.jpg" alt="Ettore Germano Barolo Cerretta" class="wine-img mx-auto h-52 object-contain">
+        </div>
+        <div class="p-5">
+          <h3 class="font-serif text-lg text-white">Ettore Germano Barolo Cerretta 2019</h3>
+          <p class="text-wine-400 font-serif text-xl mt-2">551 kr</p>
+          <p class="text-stone-500 text-xs mt-1">Art.nr 93274</p>
+        </div>
+      </a>
+      <a href="https://www.systembolaget.se/produkt/vin/fontanabianca-7798901/" target="_blank" class="wine-card bg-stone-800/60 border border-stone-700/50 group text-center hover:border-wine-700/50 transition-colors rounded-lg overflow-hidden">
+        <div class="overflow-hidden bg-stone-800/40 p-4">
+          <img src="https://verumvinum.se/images/64/essacn-rosatolin-270x360.jpg" alt="Fontanabianca Rosato Lin" class="wine-img mx-auto h-52 object-contain">
+        </div>
+        <div class="p-5">
+          <h3 class="font-serif text-lg text-white">Fontanabianca Langhe Rosato "Lin" 2024</h3>
+          <p class="text-wine-400 font-serif text-xl mt-2">179 kr</p>
+          <p class="text-stone-500 text-xs mt-1">Art.nr 77989</p>
+        </div>
+      </a>
+      <a href="https://www.systembolaget.se/produkt/vin/barolo-9219201/" target="_blank" class="wine-card bg-stone-800/60 border border-stone-700/50 group text-center hover:border-wine-700/50 transition-colors rounded-lg overflow-hidden">
+        <div class="overflow-hidden bg-stone-800/40 p-4">
+          <img src="https://verumvinum.se/images/64/9tofeg-reva-barolo-2019-270x360_152x291.jpg" alt="Réva Barolo" class="wine-img mx-auto h-52 object-contain">
+        </div>
+        <div class="p-5">
+          <h3 class="font-serif text-lg text-white">Réva Barolo 2021</h3>
+          <p class="text-wine-400 font-serif text-xl mt-2">389 kr</p>
+          <p class="text-stone-500 text-xs mt-1">Art.nr 92192</p>
+        </div>
+      </a>
+      <a href="https://www.systembolaget.se/produkt/vin/rudi-pichler-riesling-terassen-smaragd-7751601/" target="_blank" class="wine-card bg-stone-800/60 border border-stone-700/50 group text-center hover:border-wine-700/50 transition-colors rounded-lg overflow-hidden">
+        <div class="overflow-hidden bg-stone-800/40 p-4">
+          <img src="https://verumvinum.se/images/64/prpgzn-r-terrassen-23-270x360.jpg" alt="Rudi Pichler Riesling" class="wine-img mx-auto h-52 object-contain">
+        </div>
+        <div class="p-5">
+          <h3 class="font-serif text-lg text-white">Rudi Pichler Riesling Terassen Smaragd 2023</h3>
+          <p class="text-wine-400 font-serif text-xl mt-2">370 kr</p>
+          <p class="text-stone-500 text-xs mt-1">Art.nr 77516</p>
+        </div>
+      </a>
+    </div>
+
+    <!-- Tillfälligt sortiment -->
+    <div class="mb-12 fade-in">
+      <h3 class="font-serif text-3xl text-stone-900 mb-6 flex items-center gap-3">
+        <span class="inline-block w-3 h-3 bg-emerald-500 rounded-full"></span>
+        Tillfälligt sortiment
+      </h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm table-fixed">
+          <thead><tr class="border-b border-stone-300 text-stone-500 text-xs uppercase tracking-wider">
+            <th class="pb-3 pr-4 w-auto">Vin</th><th class="pb-3 text-right" style="width:100px;padding-right:12px">Pris</th><th class="pb-3 text-center" style="width:80px">Art.nr</th>
+          </tr></thead>
+          <tbody>
+            <tr class="sb-row border-b border-stone-200 transition-colors italic line-through opacity-60"><td class="py-3 pr-4 min-w-[200px]"><span class="text-stone-700">Ettore Germano Barolo Cerretta 2019 <span class="text-red-600 font-bold">(SLUTSÅLD)</span></span></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">551 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px">93274</td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors italic line-through opacity-60"><td class="py-3 pr-4 min-w-[200px]"><span class="text-stone-700">Fontanabianca Barbaresco Bordini 2021 <span class="text-red-600 font-bold">(SLUTSÅLD)</span></span></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">379 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px">94473</td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors italic line-through opacity-60"><td class="py-3 pr-4 min-w-[200px]"><span class="text-stone-700">Réva Barolo 2021 <span class="text-red-600 font-bold">(SLUTSÅLD)</span></span></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">389 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px">92192</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Beställningssortiment -->
+    <div class="fade-in">
+      <h3 class="font-serif text-3xl text-stone-900 mb-6 flex items-center gap-3">
+        <span class="inline-block w-3 h-3 bg-sky-500 rounded-full"></span>
+        Beställningssortiment
+      </h3>
+
+      <!-- Mousserande -->
+      <h4 class="text-wine-700 uppercase tracking-widest text-xs font-medium mb-3 mt-8">Mousserande viner</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm mb-8 table-fixed">
+          <tbody>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/ettore-germano-7324901/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Ettore Germano Alta Langa Extra Brut 2019</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">459 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/ettore-germano-7324901/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">73249</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/ettore-germano-7279601/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Ettore Germano Rosanna Extra Brut Rosé Metodo Classico NV</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">380 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/ettore-germano-7279601/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">72796</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/quinta-das-bagerias-7335901/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Quinta das Bágerias Espumante Colheita Rosé 2022</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">197 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/quinta-das-bagerias-7335901/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">73359</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/vadio-5887901/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Vadio Perpetuum Sparkling NV</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">323 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/vadio-5887901/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">58879</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/vadio-5761501/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Vadio Rosé Sparkling Bruto 2020</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">323 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/vadio-5761501/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">57615</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/victor-charlot-champagne-7354501/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Victor Charlot Instinct Premier 50-50 NV</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">416 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/victor-charlot-champagne-7354501/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">73545</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/victor-charlot-champagne-7378101/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Victor Charlot Instinct Premier 75-25 NV</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">416 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/victor-charlot-champagne-7378101/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">73781</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Vita -->
+      <h4 class="text-wine-700 uppercase tracking-widest text-xs font-medium mb-3">Vita viner</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm mb-8 table-fixed">
+          <tbody>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/ettore-germano-7671801/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Ettore Germano Hérzu Langhe Riesling 2023</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">400 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/ettore-germano-7671801/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">76718</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/ettore-germano-7492601/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Ettore Germano Langhe Chardonnay 2023</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">270 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/ettore-germano-7492601/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">74926</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/ettore-germano-7549301/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Ettore Germano Langhe Nascetta 2021</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">373 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/ettore-germano-7549301/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">75493</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/fontanabianca-7526001/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Fontanabianca Langhe Arneis "Sommo" 2023</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">212 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/fontanabianca-7526001/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">75260</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/martin-mullen-7671201/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Martin Müllen Trabener Würzgarten Riesling Spätlese Trocken 2021</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">345 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/martin-mullen-7671201/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">76712</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/martin-mullen-7693101/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Martin Müllen Trarbacher Hühnerberg Riesling Spätlese Trocken 2021</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">425 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/martin-mullen-7693101/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">76931</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/quinta-das-bagerias-branco-reserva-7768401/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Quinta das Bágeiras Branco Reserva 2022</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">220 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/quinta-das-bagerias-branco-reserva-7768401/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">77684</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/rudi-pichler-gruner-veltliner-federspiel-7564401/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Rudi Pichler Grüner Veltliner Federspiel 2023</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">295 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/rudi-pichler-gruner-veltliner-federspiel-7564401/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">75644</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/rudi-pichler-gruner-veltliner-terassen-smaragd-7958301/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Rudi Pichler Grüner Veltliner Terassen Smaragd 2023</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">370 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/rudi-pichler-gruner-veltliner-terassen-smaragd-7958301/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">79583</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/vadio-7990201/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Vadio White 2023</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">260 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/vadio-7990201/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">79902</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Rosé -->
+      <h4 class="text-wine-700 uppercase tracking-widest text-xs font-medium mb-3">Rosé viner</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm mb-8 table-fixed">
+          <tbody>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/diego-morra-5802601/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Diego Morra Langhe Rosato 2022</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">245 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/diego-morra-5802601/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">58026</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/fontanabianca-7798901/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Fontanabianca Langhe Rosato "Lin" 2024</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">179 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/fontanabianca-7798901/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">77989</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Röda -->
+      <h4 class="text-wine-700 uppercase tracking-widest text-xs font-medium mb-3">Röda viner</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm mb-8 table-fixed">
+          <tbody>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/alberto-oggero-7905101/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Alberto Oggero Barbera d'Asti Montoliva 2023</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">250 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/alberto-oggero-7905101/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">79051</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/alberto-oggero-7867901/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Alberto Oggero Sandro d'Pindeta 2023</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">280 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/alberto-oggero-7867901/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">78679</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/ca-rome-5969101/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Ca' Rome' Barbaresco Chiaramanti Riserva 2012</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">521 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/ca-rome-5969101/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">59691</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/cigliano-di-sopra-7646301/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Cigliano di Sopra Chianti Classico 2022</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">380 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/cigliano-di-sopra-7646301/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">76463</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/clos-de-la-bonnette-7816501/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Clos de la Bonnette Cisselande 2023</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">385 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/clos-de-la-bonnette-7816501/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">78165</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/clos-de-la-bonnette-7022901/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Clos de la Bonnette Syrah Vieilles Vignes 2023</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">430 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/clos-de-la-bonnette-7022901/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">70229</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/diego-morra-7109701/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Diego Morra Verduno Pelaverga 2023</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">275 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/diego-morra-7109701/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">71097</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/fontanabianca-barbaresco-5197701/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Fontanabianca Barbaresco Serraboella 2020</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">419 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/fontanabianca-barbaresco-5197701/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">51977</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/fontanabianca-7065401/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Fontanabianca Barbera d'Alba Superiore 2021</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">219 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/fontanabianca-7065401/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">70654</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/fontanabianca-7109501/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Fontanabianca Dolcetto d'Alba 2023</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">200 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/fontanabianca-7109501/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">71095</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/domaine-la-famille-k-7470501/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">La Famille K L'Héritière Rouge 2024</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">193 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/domaine-la-famille-k-7470501/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">74705</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/le-pere-rouge-2020-7120101/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">La Famille K Le Père Rouge 2020</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">212 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/le-pere-rouge-2020-7120101/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">71201</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/domaine-la-famille-k-7101901/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">La Famille K Le Père VdF Pinot Noir 2022</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">217 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/domaine-la-famille-k-7101901/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">71019</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/mori-concetta-morino-7906301/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Mori Concetta Morino Chianti Classico 2021</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">265 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/mori-concetta-morino-7906301/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">79063</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/quinta-das-bagerias-7456801/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Quinta das Bágeiras Garrafeira Tinto 2018</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">469 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/quinta-das-bagerias-7456801/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">74568</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/quinta-das-bagerias-tinto-reserva-7486701/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Quinta das Bágeiras Tinto Reserva 2021</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">245 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/quinta-das-bagerias-tinto-reserva-7486701/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">74867</a></td></tr>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/vadio-7310501/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Vadio Red 2020</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">255 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/vadio-7310501/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">73105</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Vinlådor -->
+      <h4 class="text-wine-700 uppercase tracking-widest text-xs font-medium mb-3">Vinlådor</h4>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left text-sm table-fixed">
+          <tbody>
+            <tr class="sb-row border-b border-stone-200 transition-colors"><td class="py-3 pr-4 min-w-[200px]"><a href="https://www.systembolaget.se/produkt/vin/diego-morra-barolo-verduno-7303509/" target="_blank" class="text-stone-700 hover:text-wine-700 transition-colors">Diego Morra Verduno Barolo 3-pack</a></td><td class="py-3 text-stone-600 font-mono text-right" style="width:100px;padding-right:12px">1 899 kr</td><td class="py-3 text-stone-400 font-mono text-center" style="width:80px"><a href="https://www.systembolaget.se/produkt/vin/diego-morra-barolo-verduno-7303509/" target="_blank" class="text-stone-400 hover:text-wine-700 transition-colors">73035</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="bg-stone-900 text-stone-500 py-8">
+    <div class="max-w-5xl mx-auto px-6 text-center text-xs">
+      <p>&copy; 2026 Verum Vinum Sverige AB &middot; <a href="index.html" class="hover:text-stone-300">Hem</a> &middot; <a href="sok.html" class="hover:text-stone-300">Sök viner</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
