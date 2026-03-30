@@ -162,24 +162,36 @@
       <div class="flex flex-col gap-1.5 md:hidden">
         <input id="search-mobile" type="text" placeholder="Sök..." class="w-full px-3 py-2 border-2 border-stone-400 rounded-lg bg-white focus:outline-none focus:border-wine-500 font-medium text-sm" oninput="document.getElementById('search').value=this.value; renderActive();">
         <div class="flex gap-1.5">
-          <select class="flex-1 px-2 py-1.5 border-2 border-stone-400 rounded-lg bg-white cursor-pointer font-medium text-xs" onchange="selectedPrisklasser.clear(); if(this.value) selectedPrisklasser.add(this.value); updateMultiLabel('pris'); renderActive();">
-            <option value="">Prisklass</option>
-            <option value="< 150 kr">&lt; 150 kr</option>
-            <option value="150 - 300 kr">150-300 kr</option>
-            <option value="301 - 500 kr">301-500 kr</option>
-            <option value="> 500 kr">&gt; 500 kr</option>
-          </select>
-          <select class="flex-1 px-2 py-1.5 border-2 border-stone-400 rounded-lg bg-white cursor-pointer font-medium text-xs" onchange="selectedTypes.clear(); if(this.value) selectedTypes.add(this.value); updateMultiLabel('type'); renderActive();">
-            <option value="">Typ</option>
-          </select>
-          <select class="flex-1 px-2 py-1.5 border-2 border-stone-400 rounded-lg bg-white cursor-pointer font-medium text-xs" onchange="selectedLands.clear(); if(this.value) selectedLands.add(this.value); updateMultiLabel('land'); renderActive();" id="filter-land-mobile">
-            <option value="">Land</option>
-          </select>
+          <div class="relative flex-1" id="pris-wrap-m">
+            <button onclick="toggleSokMobile('pris-m')" class="w-full px-2 py-1.5 border-2 border-stone-400 rounded-lg bg-white font-medium text-xs text-left flex items-center justify-between">
+              <span id="pris-label-m" class="truncate">Prisklass</span>
+              <svg class="w-3 h-3 text-stone-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="pris-dd-m" class="hidden absolute left-0 mt-1 bg-white rounded-lg shadow-xl border border-stone-200 z-50 w-48 max-h-48 overflow-y-auto py-1"></div>
+          </div>
+          <div class="relative flex-1" id="type-wrap-m">
+            <button onclick="toggleSokMobile('type-m')" class="w-full px-2 py-1.5 border-2 border-stone-400 rounded-lg bg-white font-medium text-xs text-left flex items-center justify-between">
+              <span id="type-label-m" class="truncate">Typ</span>
+              <svg class="w-3 h-3 text-stone-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="type-dd-m" class="hidden absolute left-0 mt-1 bg-white rounded-lg shadow-xl border border-stone-200 z-50 w-48 max-h-48 overflow-y-auto py-1"></div>
+          </div>
+          <div class="relative flex-1" id="land-wrap-m">
+            <button onclick="toggleSokMobile('land-m')" class="w-full px-2 py-1.5 border-2 border-stone-400 rounded-lg bg-white font-medium text-xs text-left flex items-center justify-between">
+              <span id="land-label-m" class="truncate">Land</span>
+              <svg class="w-3 h-3 text-stone-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="land-dd-m" class="hidden absolute left-0 mt-1 bg-white rounded-lg shadow-xl border border-stone-200 z-50 w-48 max-h-48 overflow-y-auto py-1"></div>
+          </div>
         </div>
         <div class="flex gap-1.5">
-          <select class="flex-1 px-2 py-1.5 border-2 border-stone-400 rounded-lg bg-white cursor-pointer font-medium text-xs" onchange="selectedProducers.clear(); if(this.value) selectedProducers.add(this.value); updateMultiLabel('prod'); renderActive();" id="filter-prod-mobile">
-            <option value="">Producent</option>
-          </select>
+          <div class="relative flex-1" id="prod-wrap-m">
+            <button onclick="toggleSokMobile('prod-m')" class="w-full px-2 py-1.5 border-2 border-stone-400 rounded-lg bg-white font-medium text-xs text-left flex items-center justify-between">
+              <span id="prod-label-m" class="truncate">Producent</span>
+              <svg class="w-3 h-3 text-stone-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div id="prod-dd-m" class="hidden absolute left-0 mt-1 bg-white rounded-lg shadow-xl border border-stone-200 z-50 w-64 max-h-48 overflow-y-auto py-1"></div>
+          </div>
           <button onclick="clearAllFilters()" id="sf-btn-mobile" class="px-2 py-1.5 bg-red-50 border border-red-300 text-red-600 rounded-lg text-xs font-bold shrink-0">SF</button>
         </div>
         <div class="flex gap-1.5">
@@ -907,7 +919,7 @@
     }
 
     // ============ EVENTS ============
-    function renderActive() { if (gridVisible) renderGrid(); else renderTable(); renderFilterDropdowns(); renderGrapeTags(); updateSfButton(); }
+    function renderActive() { if (gridVisible) renderGrid(); else renderTable(); renderFilterDropdowns(); renderGrapeTags(); updateSfButton(); renderAllMobileDropdowns(); }
     document.getElementById('search').addEventListener('input', renderActive);
     document.getElementById('filter-type').addEventListener('change', renderActive);
     document.getElementById('filter-producer').addEventListener('change', renderActive);
@@ -1053,6 +1065,81 @@
         label.className = 'text-red-600 font-bold';
       }
     }
+
+    // ============ MOBILE MULTI-SELECT ============
+    const mobileFilterMap = {
+      'pris-m': { set: () => selectedPrisklasser, labelId: 'pris-label-m', ddId: 'pris-dd-m', wrapId: 'pris-wrap-m', allLabel: 'Prisklass', plural: 'prisklasser', options: () => Object.keys(prisklassRanges) },
+      'type-m': { set: () => selectedTypes, labelId: 'type-label-m', ddId: 'type-dd-m', wrapId: 'type-wrap-m', allLabel: 'Typ', plural: 'typer', options: () => multiConfig.type.options() },
+      'land-m': { set: () => selectedLands, labelId: 'land-label-m', ddId: 'land-dd-m', wrapId: 'land-wrap-m', allLabel: 'Land', plural: 'länder', options: () => multiConfig.land.options() },
+      'prod-m': { set: () => selectedProducers, labelId: 'prod-label-m', ddId: 'prod-dd-m', wrapId: 'prod-wrap-m', allLabel: 'Producent', plural: 'producenter', options: () => multiConfig.prod.options() },
+    };
+
+    function toggleSokMobile(which) {
+      Object.keys(mobileFilterMap).forEach(k => {
+        const dd = document.getElementById(mobileFilterMap[k].ddId);
+        if (k === which) dd.classList.toggle('hidden');
+        else dd.classList.add('hidden');
+      });
+    }
+
+    function renderMobileDropdown(which) {
+      const cfg = mobileFilterMap[which];
+      const dd = document.getElementById(cfg.ddId);
+      if (!dd) return;
+      const selected = cfg.set();
+      const opts = cfg.options();
+      dd.innerHTML = `<label class="flex items-center gap-2 px-3 py-2 hover:bg-stone-50 cursor-pointer border-b border-stone-100">
+        <input type="checkbox" ${selected.size === 0 ? 'checked' : ''} onchange="clearMobileFilter('${which}')" class="w-4 h-4 accent-wine-700 cursor-pointer">
+        <span class="text-xs font-bold text-stone-700">${cfg.allLabel}</span>
+      </label>` + opts.map(o => `<label class="flex items-center gap-2 px-3 py-2 hover:bg-stone-50 cursor-pointer">
+        <input type="checkbox" ${selected.has(o) ? 'checked' : ''} onchange="toggleMobileOption('${which}', '${o.replace(/'/g, "\\'")}', this.checked)" class="w-4 h-4 accent-wine-700 cursor-pointer">
+        <span class="text-xs text-stone-700">${o}</span>
+      </label>`).join('');
+    }
+
+    function toggleMobileOption(which, value, checked) {
+      const s = mobileFilterMap[which].set();
+      if (checked) s.add(value); else s.delete(value);
+      updateMobileLabel(which);
+      // Sync desktop labels too
+      const desktopMap = {'pris-m':'pris','type-m':'type','land-m':'land','prod-m':'prod'};
+      if (desktopMap[which]) updateMultiLabel(desktopMap[which]);
+      renderAllMobileDropdowns();
+      renderActive();
+    }
+
+    function clearMobileFilter(which) {
+      mobileFilterMap[which].set().clear();
+      updateMobileLabel(which);
+      const desktopMap = {'pris-m':'pris','type-m':'type','land-m':'land','prod-m':'prod'};
+      if (desktopMap[which]) updateMultiLabel(desktopMap[which]);
+      renderAllMobileDropdowns();
+      renderActive();
+    }
+
+    function updateMobileLabel(which) {
+      const cfg = mobileFilterMap[which];
+      const label = document.getElementById(cfg.labelId);
+      if (!label) return;
+      const selected = cfg.set();
+      if (selected.size === 0) { label.textContent = cfg.allLabel; label.className = 'truncate text-stone-700'; }
+      else if (selected.size === 1) { label.textContent = [...selected][0]; label.className = 'truncate text-red-600 font-bold'; }
+      else { label.textContent = selected.size + ' ' + cfg.plural; label.className = 'truncate text-red-600 font-bold'; }
+    }
+
+    function renderAllMobileDropdowns() {
+      Object.keys(mobileFilterMap).forEach(k => renderMobileDropdown(k));
+    }
+
+    // Close mobile dropdowns on outside click
+    document.addEventListener('click', function(e) {
+      Object.keys(mobileFilterMap).forEach(k => {
+        if (!e.target.closest('#' + mobileFilterMap[k].wrapId)) {
+          const dd = document.getElementById(mobileFilterMap[k].ddId);
+          if (dd) dd.classList.add('hidden');
+        }
+      });
+    });
 
     // Close dropdowns on outside click
     document.addEventListener('click', function(e) {
