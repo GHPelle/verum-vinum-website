@@ -23,7 +23,7 @@
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    .hero-bg { background: linear-gradient(135deg, rgba(110,23,53,0.2) 0%, rgba(160,50,80,0.15) 50%, rgba(110,23,53,0.18) 100%); }
+    .hero-bg { background: linear-gradient(135deg, rgba(255,255,255,0.55) 0%, rgba(255,245,245,0.5) 50%, rgba(255,255,255,0.55) 100%); }
     .parallax { background-attachment: fixed; background-size: cover; background-position: center; }
     @supports (-webkit-touch-callout: none) { .parallax { background-attachment: scroll; } }
     @media (max-width: 768px) { .parallax { background-attachment: scroll; } }
@@ -142,7 +142,7 @@
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
         <a href="#producenter" class="px-8 py-3.5 border-2 border-stone-900/40 text-stone-900 font-bold text-sm uppercase tracking-wider hover:bg-stone-900/10 transition-colors">Våra producenter</a>
-        <a href="#sortiment" class="px-8 py-3.5 border-2 border-stone-900/40 text-stone-900 font-bold text-sm uppercase tracking-wider hover:bg-stone-900/10 transition-colors">Utforska sortimentet</a>
+        <a href="sok.html" class="px-8 py-3.5 border-2 border-stone-900/40 text-stone-900 font-bold text-sm uppercase tracking-wider hover:bg-stone-900/10 transition-colors">Utforska sortimentet</a>
       </div>
     </div>
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
@@ -201,9 +201,9 @@
             Nyfiken på att prova några av våra viner? Kontakta oss så bokar vi in en provning när det passar er.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 mt-2">
-            <a href="restaurangprislista-mars-2026.pdf" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-stone-900 font-medium text-sm uppercase tracking-wider hover:bg-stone-100 transition-colors rounded border-2 border-stone-300 shadow-lg" target="_blank">
+            <a href="javascript:void(0)" onclick="openRLista('sv')" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-stone-900 font-medium text-sm uppercase tracking-wider hover:bg-stone-100 transition-colors rounded border-2 border-stone-300 shadow-lg cursor-pointer">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              Prislista Restaurang (PDF)
+              Prislista Restaurang
             </a>
             <a href="mailto:info@verumvinum.se" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-wine-800 text-wine-800 font-medium text-sm uppercase tracking-wider hover:bg-wine-50 transition-colors rounded">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
@@ -247,7 +247,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/j4qi3z-germano-580xauto_171x195.jpg" alt="Ettore Germano" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/j4qi3z-germano-580xauto_171x195.jpg" alt="Ettore Germano" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Serralunga d'Alba, Piemonte</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Ettore Germano</h4>
@@ -264,19 +264,19 @@
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
                   <li><a href="sortiment/ettore-germano-alta-langa-extra-brut.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Alta Langa Extra Brut</a></li>
-                  <li><a href="sortiment/ettore-germano-alta-langa-riserva-blanc-de-blanc-pas-dose.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Alta Langa Riserva Blanc de Blanc Pas Dosé</a></li>
-                  <li><a href="sortiment/ettore-germano-alta-langa-riserva-blanc-de-noir-pas-dose.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Alta Langa Riserva Blanc de Noir Pas Dosé</a></li>
+                  <li><a href="sortiment/ettore-germano-alta-langa-riserva-blanc-de-blanc-pas-dose.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Alta Langa Riserva Blanc de Blanc Pas Dosé*</a></li>
+                  <li><a href="sortiment/ettore-germano-alta-langa-riserva-blanc-de-noir-pas-dose.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Alta Langa Riserva Blanc de Noir Pas Dosé*</a></li>
                   <li><a href="sortiment/ettore-germano-rosanna-extra-brut-rose-metodo-classico.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Rosanna Extra Brut Rosé Metodo Classico</a></li>
-                  <li><a href="sortiment/ettore-germano-langhe-chardonnay.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Langhe Chardonnay</a></li>
                   <li><a href="sortiment/ettore-germano-binel-langhe-bianco.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Binel Langhe Bianco</a></li>
-                  <li><a href="sortiment/ettore-germano-langhe-nascetta.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Langhe Nascetta</a></li>
                   <li><a href="sortiment/ettore-germano-herzu-langhe-riesling.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Hérzu Langhe Riesling</a></li>
-                  <li><a href="sortiment/ettore-germano-barbera-dalba-superiore.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barbera d'Alba Superiore</a></li>
-                  <li><a href="sortiment/ettore-germano-barolo-del-comune-di-serralunga-dalba.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo del Comune di Serralunga d'Alba</a></li>
+                  <li><a href="sortiment/ettore-germano-langhe-chardonnay.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Langhe Chardonnay</a></li>
+                  <li><a href="sortiment/ettore-germano-langhe-nascetta.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Langhe Nascetta</a></li>
                   <li><a href="sortiment/ettore-germano-barolo-cerretta.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo Cerretta</a></li>
+                  <li><a href="sortiment/ettore-germano-barolo-lazzarito-riserva.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo Lazzarito Riserva*</a></li>
                   <li><a href="sortiment/ettore-germano-barolo-prapo.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo Prapò</a></li>
-                  <li><a href="sortiment/ettore-germano-barolo-lazzarito-riserva.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo Lazzarito Riserva</a></li>
-                  <li><a href="sortiment/ettore-germano-barolo-vignarionda.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo Vigna Rionda</a></li>
+                  <li><a href="sortiment/ettore-germano-barolo-vignarionda.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo Vigna Rionda*</a></li>
+                  <li><a href="sortiment/ettore-germano-barolo-del-comune-di-serralunga-dalba.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo del Comune di Serralunga d&#x27;Alba</a></li>
+                  <li><a href="sortiment/ettore-germano-langhe-doc-rosso-ezelindo-2012.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Langhe DOC Rosso Ezelindo*</a></li>
                 </ul>
                 <a href="https://www.ettoregermano.com/en/" target="_blank" class="inline-block mt-4 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -285,7 +285,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/a2gy6r-foto-botti-matteo-e-francy-new-generation-2-270x203.jpg" alt="Fontanabianca" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/a2gy6r-foto-botti-matteo-e-francy-new-generation-2-270x203.jpg" alt="Fontanabianca" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Neive, Piemonte</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Fontanabianca</h4>
@@ -300,13 +300,14 @@
                 <p>Jordmålen på kalkhaltig lera och medium strukturerad jord ger de perfekta druvorna för att producera parfymerade, eleganta och fyllig viner. Alla viner tillverkas med 100% druvor av samma sort.</p>
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
-                  <li><a href="sortiment/fontanabianca-langhe-arneis-sommo.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Langhe Arneis "Sommo"</a></li>
-                  <li><a href="sortiment/fontanabianca-dolcetto-dalba.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Dolcetto d'Alba</a></li>
-                  <li><a href="sortiment/fontanabianca-barbera-dalba-superiore.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barbera d'Alba Superiore</a></li>
-                  <li><a href="sortiment/fontanabianca-langhe-nebbiolo.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Langhe Nebbiolo</a></li>
+                  <li><a href="sortiment/fontanabianca-alta-langa-classe-91-docg.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Alta Langa &quot;Classe 91&quot; DOCG*</a></li>
+                  <li><a href="sortiment/fontanabianca-langhe-arneis-sommo.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Langhe Arneis &quot;Sommo&quot;</a></li>
                   <li><a href="sortiment/fontanabianca-barbaresco.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barbaresco</a></li>
                   <li><a href="sortiment/fontanabianca-barbaresco-bordini.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barbaresco Bordini</a></li>
                   <li><a href="sortiment/fontanabianca-barbaresco-serraboella.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barbaresco Serraboella</a></li>
+                  <li><a href="sortiment/fontanabianca-barbera-dalba-superiore.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barbera d&#x27;Alba Superiore</a></li>
+                  <li><a href="sortiment/fontanabianca-dolcetto-dalba.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Dolcetto d&#x27;Alba</a></li>
+                  <li><a href="sortiment/fontanabianca-langhe-nebbiolo.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Langhe Nebbiolo</a></li>
                 </ul>
                 <a href="https://www.fontanabianca.it/en/fontanabianca.php" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -315,7 +316,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/njhco7-diego-morra-270x203.jpg" alt="Diego Morra" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/njhco7-diego-morra-270x203.jpg" alt="Diego Morra" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Verduno, Piemonte</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Diego Morra</h4>
@@ -331,10 +332,10 @@
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
                   <li><a href="sortiment/diego-morra-langhe-rosato.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Langhe Rosato</a></li>
-                  <li><a href="sortiment/diego-morra-verduno-pelaverga.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Verduno Pelaverga</a></li>
-                  <li><a href="sortiment/diego-morra-barolo-del-comune-di-verduno.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo del Comune di Verduno</a></li>
-                  <li><a href="sortiment/diego-morra-barolo-san-lorenzo.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo San Lorenzo</a></li>
                   <li><a href="sortiment/diego-morra-barolo-monvigliero.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo Monvigliero</a></li>
+                  <li><a href="sortiment/diego-morra-barolo-san-lorenzo.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo San Lorenzo</a></li>
+                  <li><a href="sortiment/diego-morra-barolo-del-comune-di-verduno.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo del Comune di Verduno</a></li>
+                  <li><a href="sortiment/diego-morra-verduno-pelaverga.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Verduno Pelaverga</a></li>
                 </ul>
                 <a href="https://morrawines.com/en/" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -343,7 +344,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/v4ugqx-alberto-oggero-och-hans-hund-taxi-270x203.jpeg" alt="Alberto Oggero" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/v4ugqx-alberto-oggero-och-hans-hund-taxi-270x203.jpeg" alt="Alberto Oggero" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Roero, Piemonte</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Alberto Oggero</h4>
@@ -358,10 +359,10 @@
                 <p>Utmaningen med att jobba med en otroligt hyllad druva och en underskattad druva motiverar Alberto som nu skapat tre olika Nebbiolo och två olika Arneis med likheten att alla tydligt avspeglar sin terroir.</p>
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
+                  <li><a href="sortiment/alberto-oggero-roero.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Roero Bianco Arneis</a></li>
                   <li><a href="sortiment/alberto-oggero-valle-dei-lunghi.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Valle dei Lunghi</a></li>
-                  <li><a href="sortiment/alberto-oggero-roero.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Roero Arneis</a></li>
-                  <li><a href="sortiment/alberto-oggero-sandro-dpindeta.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Sandro d'Pindeta</a></li>
-                  <li><a href="sortiment/alberto-oggero-roero-2.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Roero</a></li>
+                  <li><a href="sortiment/alberto-oggero-roero-2.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Roero Rosso Anime</a></li>
+                  <li><a href="sortiment/alberto-oggero-sandro-dpindeta.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Sandro d&#x27;Pindeta</a></li>
                 </ul>
                 <a href="https://www.albertooggero.it/?lang=en" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -370,7 +371,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/ke1wqg-dsc-0312-270x203.jpg" alt="Réva" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/ke1wqg-dsc-0312-270x203.jpg" alt="Réva" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Monforte d'Alba, Piemonte</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Réva</h4>
@@ -386,12 +387,13 @@
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
                   <li><a href="sortiment/reva-langhe-bianco-grey.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Langhe Bianco Grey</a></li>
-                  <li><a href="sortiment/reva-dolcetto-dalba.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Dolcetto d'Alba</a></li>
-                  <li><a href="sortiment/reva-barbera-dalba-superiore.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barbera d'Alba Superiore</a></li>
-                  <li><a href="sortiment/reva-nebbiolo-dalba.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Nebbiolo d'Alba</a></li>
+                  <li><a href="sortiment/reva-barbera-dalba-superiore.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barbera d&#x27;Alba Superiore</a></li>
                   <li><a href="sortiment/reva-barolo.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo</a></li>
-                  <li><a href="sortiment/reva-barolo-ravera.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo Ravera</a></li>
                   <li><a href="sortiment/reva-barolo-cannubi.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo Cannubi</a></li>
+                  <li><a href="sortiment/reva-barolo-ravera.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo Ravera</a></li>
+                  <li><a href="sortiment/reva-barolo-del-comune-di-serralunga-2019.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo del Comune di Serralunga</a></li>
+                  <li><a href="sortiment/reva-dolcetto-dalba.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Dolcetto d&#x27;Alba</a></li>
+                  <li><a href="sortiment/reva-nebbiolo-dalba.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Lange Nebbiolo</a></li>
                 </ul>
                 <a href="https://www.revawinery.com/en/" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -400,7 +402,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/u2m1lv-lapo-berti-provar-barolo-fossati-270x203_152x130.jpg" alt="Lapo Berti" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/u2m1lv-lapo-berti-provar-barolo-fossati-270x203_152x130.jpg" alt="Lapo Berti" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">La Morra, Piemonte</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Lapo Berti</h4>
@@ -415,9 +417,8 @@
                 <p>Lapo adderar ingenting till sina viner förutom minimalt med svavel. Han producerar ungefär 3500st flaskor totalt och jobbar enbart med Nebbiolo. Idag har Lapo 4st olika viner. En Pet Nat, en Langhe Nebbiolo och två Barolo där kronjuvelen är hans Barolo Fossati.</p>
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
-                  <li><a href="sortiment/lapo-berti-langhe-nebbiolo.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Langhe Nebbiolo</a></li>
+                  <li><a href="sortiment/lapo-berti-vino-frizzante-rosato-nv-pet-nat.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Vino Frizzante Rosato NV (Pet Nat)</a></li>
                   <li><a href="sortiment/lapo-berti-barolo-del-comune-di-la-morra.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo del Comune di La Morra</a></li>
-                  <li><a href="sortiment/lapo-berti-barolo-fossati.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Barolo Fossati</a></li>
                 </ul>
               </div>
             </div>
@@ -425,7 +426,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/hcca0y-matteo-och-maddalena-270x203_151x156.jpg" alt="Cigliano di Sopra" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/hcca0y-matteo-och-maddalena-270x203_151x156.jpg" alt="Cigliano di Sopra" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">San Casciano in Val di Pesa, Toscana</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Cigliano di Sopra</h4>
@@ -441,6 +442,8 @@
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="text-sm">
                   <li><a href="sortiment/cigliano-di-sopra-chianti-classico.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Chianti Classico</a></li>
+                  <li><a href="sortiment/cigliano-di-sopra-chianti-classico-2023.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Chianti Classico</a></li>
+                  <li><a href="sortiment/cigliano-di-sopra-chianti-classico-Riserva.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Chianti Classico Riserva &quot;Vigneto Branca&quot;</a></li>
                 </ul>
                 <a href="https://www.ciglianodisopra.it/?lang=en" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -449,7 +452,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/tggknw-mori-concetta-270x203.jpg" alt="Mori Concetta" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/tggknw-mori-concetta-270x203.jpg" alt="Mori Concetta" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">San Casciano in Val di Pesa, Toscana</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Mori Concetta</h4>
@@ -472,7 +475,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/dxi3hz-familjen-framfor-zebra-brunello-i-montalcino-270x203.jpg" alt="Villa i Cipressi" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/dxi3hz-familjen-framfor-zebra-brunello-i-montalcino-270x203.jpg" alt="Villa i Cipressi" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Montalcino, Toscana</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Villa i Cipressi</h4>
@@ -487,9 +490,9 @@
                 <p>Från vingårdarnas allra bästa druvor gör man dessutom Zebras Brunello di Montalcino.</p>
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="text-sm">
-                  <li><a href="sortiment/villa-i-cipressi-rosso-di-montalcino.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Rosso di Montalcino</a></li>
                   <li><a href="sortiment/villa-i-cipressi-brunello-di-montalcino.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Brunello di Montalcino</a></li>
-                  <li><a href="sortiment/villa-i-cipressi-zebras-brunello-di-montalcino.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Zebras Brunello di Montalcino</a></li>
+                  <li><a href="sortiment/villa-i-cipressi-zebras-brunello-di-montalcino.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Brunello di Montalcino Zebras</a></li>
+                  <li><a href="sortiment/villa-i-cipressi-rosso-di-montalcino.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Rosso di Montalcino</a></li>
                 </ul>
                 <a href="https://villacipressi.it/en/" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -508,7 +511,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/aqntei-victor-charlot-270x203.jpg" alt="Victor Charlot" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/aqntei-victor-charlot-270x203.jpg" alt="Victor Charlot" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Moussy, Champagne</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Victor Charlot</h4>
@@ -523,12 +526,12 @@
                 <p>Samtliga viner har i alla tider jäst på ståltank och utan malolaktisk jäsning men Victor har nu börjat experimentera med 6st barriquer så fler spännande cuveer är på gång!</p>
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
-                  <li><a href="sortiment/victor-charlot-instinct-premier-5050.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Instinct Premier 50-50</a></li>
-                  <li><a href="sortiment/victor-charlot-instinct-premier-7525.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Instinct Premier 75-25</a></li>
-                  <li><a href="sortiment/victor-charlot-noirs-de-jais.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Noirs de Jais</a></li>
-                  <li><a href="sortiment/victor-charlot-les-terres-de-la-greve.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Les Terres de la Grève</a></li>
-                  <li><a href="sortiment/victor-charlot-lapprivoisee.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">L'Apprivoisée</a></li>
-                  <li><a href="sortiment/victor-charlot-lart-de-la-ruse.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">L'Art de la Ruse</a></li>
+                  <li><a href="sortiment/victor-charlot-instinct-premier-5050.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Champagne Instinct Premier 50-50 NV</a></li>
+                  <li><a href="sortiment/victor-charlot-instinct-premier-7525.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Champagne Instinct Premier 75-25 NV</a></li>
+                  <li><a href="sortiment/victor-charlot-les-terres-de-la-greve.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Champagne Les Terres de la Grève</a></li>
+                  <li><a href="sortiment/victor-charlot-champagne-lueurs-de-blancs.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Champagne Lueurs de Blancs</a></li>
+                  <li><a href="sortiment/victor-charlot-noirs-de-jais.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Champagne Noirs de Jais</a></li>
+                  <li><a href="sortiment/victor-charlot-champagne-a-la-trace-fatlagrad.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Champagne À la Trace (Fatlagrad)</a></li>
                 </ul>
                 <a href="https://champagne-charlot.fr/" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -537,7 +540,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/3aoipq-familjen-clerget-270x203.jpg" alt="Domaine Christian Clerget" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/3aoipq-familjen-clerget-270x203.jpg" alt="Domaine Christian Clerget" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Vougeot, Bourgogne</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Domaine Christian Clerget</h4>
@@ -553,11 +556,11 @@
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
                   <li><a href="sortiment/christian-clerget-bourgogne-rouge.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Bourgogne Rouge</a></li>
-                  <li><a href="sortiment/christian-clerget-moreysaintdenis.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Morey-Saint-Denis</a></li>
                   <li><a href="sortiment/christian-clerget-chambollemusigny.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Chambolle-Musigny</a></li>
-                  <li><a href="sortiment/christian-clerget-chambollemusigny-aux-croix.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Chambolle-Musigny Aux Croix</a></li>
-                  <li><a href="sortiment/christian-clerget-vosneromanee-les-violettes.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Vosne-Romanée Les Violettes</a></li>
                   <li><a href="sortiment/christian-clerget-chambollemusigny-1er-cru-les-charmes.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Chambolle-Musigny 1er Cru Les Charmes</a></li>
+                  <li><a href="sortiment/christian-clerget-chambollemusigny-aux-croix.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Chambolle-Musigny Aux Croix</a></li>
+                  <li><a href="sortiment/christian-clerget-moreysaintdenis.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Morey-Saint-Denis</a></li>
+                  <li><a href="sortiment/christian-clerget-vosneromanee-les-violettes.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Vosne-Romanée Les Violettes</a></li>
                   <li><a href="sortiment/christian-clerget-vougeot-1er-cru-les-petits-vougeots.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Vougeot 1er Cru Les Petits Vougeots</a></li>
                   <li><a href="sortiment/christian-clerget-echezeaux-grand-cru-en-orveaux.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Échezeaux Grand Cru En Orveaux</a></li>
                 </ul>
@@ -568,7 +571,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/muo8uy-familjen-coffinet-duvernay-270x203_150x72.jpg" alt="Domaine Coffinet-Duvernay" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/muo8uy-familjen-coffinet-duvernay-270x203_150x72.jpg" alt="Domaine Coffinet-Duvernay" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Chassagne-Montrachet, Bourgogne</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Domaine Coffinet-Duvernay</h4>
@@ -598,7 +601,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/bstyv7-whatsapp-image-2026-01-27-at-121840-270x203_149x118.jpg" alt="Domaine Michel Rebourgeon" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/bstyv7-whatsapp-image-2026-01-27-at-121840-270x203_149x118.jpg" alt="Domaine Michel Rebourgeon" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Pommard, Bourgogne</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Domaine Michel Rebourgeon</h4>
@@ -613,14 +616,19 @@
                 <p>Du ska kunna dricka vinerna unga om du önskar men även utan problem kunna lagra i 15 år. Efter att flera år arbetat ekologiskt så bestämde man sig 2020 för att även certifiera sig.</p>
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
-                  <li><a href="sortiment/michel-rebourgeon-beaune-les-epenottes.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Beaune Les Epenottes</a></li>
-                  <li><a href="sortiment/michel-rebourgeon-pommard-cuvee-william.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Pommard Cuvée William</a></li>
-                  <li><a href="sortiment/michel-rebourgeon-pommard-les-noizons.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Pommard Les Noizons</a></li>
-                  <li><a href="sortiment/michel-rebourgeon-pommard-trois-terroirs.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Pommard Trois Terroirs</a></li>
-                  <li><a href="sortiment/michel-rebourgeon-beaune-1er-cru-les-chouacheux.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Beaune 1er Cru Les Chouacheux</a></li>
-                  <li><a href="sortiment/michel-rebourgeon-pommard-1er-cru-les-arvelets.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Pommard 1er Cru Les Arvelets</a></li>
+                  <li><a href="sortiment/domaine-michel-rebourgeon-bourgogne-cote-d-or-blanc-2023.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Bourgogne Cote d’Or Blanc</a></li>
+                  <li><a href="sortiment/domaine-michel-rebourgeon-pernand-vergelesses-les-pins-2023.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Pernand Vergelesses Les Pins Blanc</a></li>
+                  <li><a href="sortiment/domaine-michel-rebourgeon-saint-romain-la-perriere-2023.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Saint Romain La Perrière Blanc</a></li>
+                  <li><a href="sortiment/michel-rebourgeon-beaune-1er-cru-les-chouacheux.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Beaune 1er Cru Les Chouacheux*</a></li>
+                  <li><a href="sortiment/michel-rebourgeon-beaune-les-epenottes.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Beaune Les Epenottes*</a></li>
+                  <li><a href="sortiment/domaine-michel-rebourgeon-bourgogne-cote-d-or-rouge-2023.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Bourgogne Cote d’Or Rouge</a></li>
+                  <li><a href="sortiment/michel-rebourgeon-pommard-1er-cru-les-arvelets.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Pommard 1er Cru Les Arvelets*</a></li>
                   <li><a href="sortiment/michel-rebourgeon-pommard-1er-cru-les-charmots.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Pommard 1er Cru Les Charmots</a></li>
-                  <li><a href="sortiment/michel-rebourgeon-pommard-1er-cru-les-rugiens.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Pommard 1er Cru Les Rugiens</a></li>
+                  <li><a href="sortiment/michel-rebourgeon-pommard-1er-cru-les-rugiens.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Pommard 1er Cru Les Rugiens*</a></li>
+                  <li><a href="sortiment/michel-rebourgeon-pommard-cuvee-william.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Pommard Cuvée William*</a></li>
+                  <li><a href="sortiment/michel-rebourgeon-pommard-les-noizons.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Pommard Les Noizons*</a></li>
+                  <li><a href="sortiment/michel-rebourgeon-pommard-trois-terroirs.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Pommard Trois Terroirs*</a></li>
+                  <li><a href="sortiment/domaine-michel-rebourgeon-santenay-vieilles-vignes-2023.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Santenay Vieilles Vignes Rouge</a></li>
                 </ul>
                 <a href="https://www.domaine-michel-rebourgeon.com/" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -629,7 +637,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/i4ho7t-la-famille-k-270x203.jpg" alt="Domaine La Famille K" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/i4ho7t-la-famille-k-270x203.jpg" alt="Domaine La Famille K" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Morancé, Beaujolais</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Domaine La Famille K</h4>
@@ -644,12 +652,13 @@
                 <p>Deras viner kommer i 4 olika familjer. L'Héritière, La Mère, Le Père och L'Oncle. Dom tre första familjerna består av ett rött vin på 100% Gamay och ett vitt vin på 100% Chardonnay men med olika vinifikationer och stilar.</p>
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
-                  <li><a href="sortiment/la-famille-k-lheritiere.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">L'Héritière</a></li>
+                  <li><a href="sortiment/domaine-la-famille-k-le-pere-cremant-de-bourgogne-bdb.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Le Père Crémant de Bourgogne BdB </a></li>
+                  <li><a href="sortiment/la-famille-k-le-pere-blanc.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Le Père Blanc</a></li>
+                  <li><a href="sortiment/la-famille-k-lheritiere.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">L&#x27;Héritière Rouge</a></li>
+                  <li><a href="sortiment/la-famille-k-loncle.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">L&#x27;Oncle Gamaret</a></li>
                   <li><a href="sortiment/la-famille-k-la-mere.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">La Mère</a></li>
                   <li><a href="sortiment/la-famille-k-le-pere.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Le Père Rouge</a></li>
-                  <li><a href="sortiment/la-famille-k-le-pere-blanc.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Le Père Blanc</a></li>
                   <li><a href="sortiment/la-famille-k-le-pere-vdf-pinot-noir.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Le Père VdF Pinot Noir</a></li>
-                  <li><a href="sortiment/la-famille-k-loncle.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">L'Oncle</a></li>
                 </ul>
                 <a href="http://www.lafamillek.com/index_english.html" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -658,7 +667,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/0kdghr-domaine-villet-270x203.jpg" alt="Domaine Villet" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/0kdghr-domaine-villet-270x203.jpg" alt="Domaine Villet" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Arbois, Jura</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Domaine Villet</h4>
@@ -687,7 +696,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/thbtcb-closdelabonnette-270x203_148x176.jpg" alt="Clos de la Bonnette" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/thbtcb-closdelabonnette-270x203_148x176.jpg" alt="Clos de la Bonnette" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Condrieu, Norra Rhône</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Clos de la Bonnette</h4>
@@ -704,8 +713,8 @@
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
                   <li><a href="sortiment/clos-de-la-bonnette-condrieu-legende-bonnetta.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Condrieu Légende Bonnetta</a></li>
                   <li><a href="sortiment/clos-de-la-bonnette-cisselande-vdf.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Cisselande VdF</a></li>
-                  <li><a href="sortiment/clos-de-la-bonnette-collines-rhodaniennes-syrah-vieilles-vignes.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Syrah Vieilles Vignes</a></li>
                   <li><a href="sortiment/clos-de-la-bonnette-coterotie-prenelle.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Côte-Rôtie Prenelle</a></li>
+                  <li><a href="sortiment/clos-de-la-bonnette-collines-rhodaniennes-syrah-vieilles-vignes.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Syrah Vieilles Vignes</a></li>
                 </ul>
                 <a href="https://www.clos-de-la-bonnette.fr/en/visiting-us/" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -724,7 +733,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/nbivtd-vinmakaren-mario-sergio-270x203.jpeg" alt="Quinta das Bágeiras" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/nbivtd-vinmakaren-mario-sergio-270x203.jpeg" alt="Quinta das Bágeiras" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Sangalhos, Bairrada</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Quinta das Bágeiras</h4>
@@ -741,10 +750,11 @@
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
                   <li><a href="sortiment/quinta-das-bagerias-espumante-colheita.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Espumante Colheita</a></li>
                   <li><a href="sortiment/quinta-das-bagerias-espumante-colheita-rose.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Espumante Colheita Rosé</a></li>
+                  <li><a href="sortiment/quinta-das-bagerias-espumante-colheita-kopia-mn35djqo.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Espumante Colheita TINTO</a></li>
                   <li><a href="sortiment/quinta-das-bagerias-vinho-branco-reserva.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Branco Reserva</a></li>
-                  <li><a href="sortiment/quinta-das-bagerias-vinho-tinto-reserva.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Tinto Reserva</a></li>
-                  <li><a href="sortiment/quinta-das-bagerias-garrafeira-tinto.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Garrafeira Tinto</a></li>
-                  <li><a href="sortiment/quinta-das-bagerias-abafado.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Abafado</a></li>
+                  <li><a href="sortiment/quinta-das-bagerias-garrafeira-tinto.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Garrafeira Tinto*</a></li>
+                  <li><a href="sortiment/quinta-das-bagerias-vinho-tinto-reserva.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Tinto Reserva*</a></li>
+                  <li><a href="sortiment/quinta-das-bagerias-abafado.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Abafado*</a></li>
                 </ul>
                 <a href="https://www.quintadasbageiras.pt/indexEN.html" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -753,7 +763,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/ilzscg-paret-bakom-vadio-i-sin-vingard-i-bairrada-270x203.jpg" alt="Vadio" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/ilzscg-paret-bakom-vadio-i-sin-vingard-i-bairrada-270x203.jpg" alt="Vadio" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Poutena, Bairrada</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Vadio</h4>
@@ -768,11 +778,15 @@
                 <p>Luis arbetade under 13år med vintillverkning hos producenten Herdade do Esporao. Utöver Vadio så är han även ansvarig vinmakare hos Herdade de Coelheiros.</p>
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
-                  <li><a href="sortiment/vadio-perpetuum-white-sparkling.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Perpetuum White Sparkling</a></li>
-                  <li><a href="sortiment/vadio-rose-sparkling.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Rosé Sparkling</a></li>
+                  <li><a href="sortiment/vadio-perpetuum-white-sparkling.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Perpetuum Sparkling NV</a></li>
+                  <li><a href="sortiment/vadio-rose-sparkling.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Rosé Sparkling Brut</a></li>
+                  <li><a href="sortiment/vadio-finuum-white-nv-solera-2007.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Finuum White NV (Solera 2007)*</a></li>
                   <li><a href="sortiment/vadio-white.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">White</a></li>
-                  <li><a href="sortiment/vadio-red.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Red</a></li>
+                  <li><a href="sortiment/vadio-white-2023.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">White</a></li>
                   <li><a href="sortiment/vadio-grande.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Grande</a></li>
+                  <li><a href="sortiment/vadio-grande-2017.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Grande*</a></li>
+                  <li><a href="sortiment/vadio-red.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Red</a></li>
+                  <li><a href="sortiment/vadio-red-2013.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Red *</a></li>
                   <li><a href="sortiment/vadio-rexarte.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Rexarte</a></li>
                 </ul>
                 <a href="https://en.vadio.pt/" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
@@ -781,7 +795,7 @@
           </div>
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/yxgcnf-095-270x203.jpg" alt="Quinta do Javali" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/yxgcnf-095-270x203.jpg" alt="Quinta do Javali" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">São João da Pesqueira, Douro</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Quinta do Javali</h4>
@@ -796,15 +810,17 @@
                 <p>Sen 2023 är sonen Antonio 100% ansvarig för dom stilla vinerna. Antonios filosofi är att verkligen visa deras vingårdar och dess terroir. "Man ska känna växtplatsen." Tveklöst en av dom mest intressanta producenterna i Douro!</p>
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
-                  <li><a href="sortiment/quinta-do-javali-crazy-branco.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Crazy Javali Branco</a></li>
-                  <li><a href="sortiment/quinta-do-javali-crazy-javali-tinto.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Crazy Javali Tinto</a></li>
-                  <li><a href="sortiment/quinta-do-javali-pet-nat.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Pet Nat</a></li>
-                  <li><a href="sortiment/quinta-do-javali-tinto.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Javali Tinto</a></li>
+                  <li><a href="sortiment/quinta-do-javali-pet-nat.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Javali Pet Nat</a></li>
                   <li><a href="sortiment/quinta-do-javali-clos-bonifata-2.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Clos Bonifata</a></li>
-                  <li><a href="sortiment/quinta-do-javali-vinhas-dos-lobatos.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Vinhas dos Lobatos</a></li>
+                  <li><a href="sortiment/quinta-do-javali-crazy-branco.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Crazy Javali Branco</a></li>
                   <li><a href="sortiment/quinta-do-javali-clos-fonte-do-santo.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Clos Fonte do Santo</a></li>
+                  <li><a href="sortiment/quinta-do-javali-crazy-javali-tinto.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Crazy Javali Tinto</a></li>
+                  <li><a href="sortiment/quinta-do-javali-tinto.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Javali Tinto</a></li>
+                  <li><a href="sortiment/quinta-do-javali-vinhas-dos-lobatos.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Vinhas dos Lobatos</a></li>
+                  <li><a href="sortiment/quinta-do-javali-quinta-do-javali-vintage-port-2012.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Quinta do Javali Vintage Port 2012*</a></li>
                   <li><a href="sortiment/quinta-do-javali-tawny-port.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Tawny Port</a></li>
                   <li><a href="sortiment/quinta-do-javali-tawny-port-10-year.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Tawny Port 10 Year</a></li>
+                  <li><a href="sortiment/quinta-do-javali-tawny-port-20year.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Tawny Port 20 Year*</a></li>
                 </ul>
                 <a href="https://www.quintadojavali.com/index-en.html" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -813,7 +829,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/qirs9k-weingut-martin-mullen-270x203_158x88.jpg" alt="Weingut Martin Müllen" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/qirs9k-weingut-martin-mullen-270x203_158x88.jpg" alt="Weingut Martin Müllen" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Traben-Trarbach, Mosel</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Weingut Martin Müllen</h4>
@@ -828,14 +844,14 @@
                 <p>Det är med stor passion och kärlek till sina viner som Martin och hans son Jonas sköter om sina rankor noggrant. Skörden sker helt manuellt för att försäkra sig om att man bara använder de druvor som är av högsta kvalité.</p>
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
+                  <li><a href="sortiment/martin-mullen-nostel-trocken.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Nostel Riesling Trocken*** *</a></li>
                   <li><a href="sortiment/martin-mullen-riesling-revival-trocken.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Riesling Revival Trocken</a></li>
-                  <li><a href="sortiment/martin-mullen-nostel-trocken.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Nostel Trocken</a></li>
+                  <li><a href="sortiment/martin-mullen-trabener-wurzgarten-kabinett-feinherb.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Trabener Würzgarten Spätlese Feinherb (18,1 gr/l)*</a></li>
                   <li><a href="sortiment/martin-mullen-trabener-wurzgarten-spatlese-trocken.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Trabener Würzgarten Spätlese Trocken</a></li>
-                  <li><a href="sortiment/martin-mullen-krover-paradies-spatlese-trocken.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Kröver Paradies Spätlese Trocken</a></li>
-                  <li><a href="sortiment/martin-mullen-trabener-wurzgarten-kabinett-feinherb.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Trabener Würzgarten Kabinett Feinherb</a></li>
-                  <li><a href="sortiment/martin-mullen-krover-letterlay-spatlese-feinherb.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Kröver Letterlay Spätlese Feinherb</a></li>
-                  <li><a href="sortiment/martin-mullen-krover-kirchlay-auslese.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Kröver Kirchlay Auslese</a></li>
                   <li><a href="sortiment/martin-mullen-trarbacher-huhnerberg-auslese.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Trarbacher Hühnerberg Auslese</a></li>
+                  <li><a href="sortiment/weingut-martin-mullen-trarbacher-huhnerberg-kabinett-2022-13-6-gr-l.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Trarbacher Hühnerberg Kabinett* (13,6 gr/l)</a></li>
+                  <li><a href="sortiment/weingut-martin-mullen-trarbacher-huhnerberg-spatlese-2021.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Trarbacher Hühnerberg Spätlese</a></li>
+                  <li><a href="sortiment/weingut-martin-mullen-trarbacher-ungsberg-spatburgunder-2022.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Trarbacher Ungsberg Spätburgunder*</a></li>
                 </ul>
                 <a href="http://www.muellen.de/weine-besonderer-lagen.html" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -844,7 +860,7 @@
 
           <div class="producer-detail border border-stone-100 bg-white overflow-hidden fade-in">
             <div class="flex flex-col cursor-pointer" onclick="this.parentElement.classList.toggle('open')">
-              <div class="overflow-hidden aspect-[4/3] bg-stone-50"><img src="https://verumvinum.se/images/64/swkaaf-familjen-pichler-270x203.jpg" alt="Rudi Pichler" class="w-full h-full object-cover"></div>
+              <div class="overflow-hidden aspect-[4/3] bg-stone-100 flex items-center justify-center"><img src="https://verumvinum.se/images/64/swkaaf-familjen-pichler-270x203.jpg" alt="Rudi Pichler" class="w-full h-full object-contain p-2"></div>
               <div class="p-6 flex flex-col justify-center">
                 <span class="text-xs uppercase tracking-widest text-wine-400 font-medium">Wosendorf, Wachau</span>
                 <h4 class="font-serif text-3xl text-stone-900 mt-1">Rudi Pichler</h4>
@@ -858,13 +874,22 @@
                 <p>Det här är viner som kombinerar precision med seriöst djup, tillgängliga unga men med många lager av smak som väntar på att vecklas ut. Rudi vill alltid komplexitet i vinerna framför koncentration.</p>
                 <h5 class="text-stone-800 font-medium text-sm uppercase tracking-wider mt-6 mb-3">Tillgängliga viner:</h5>
                 <ul class="grid sm:grid-cols-2 gap-x-6 gap-y-1 text-sm">
-                  <li><a href="sortiment/rudi-pichler-gruner-veltliner-terrassen-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Grüner Veltliner Terrassen Smaragd</a></li>
-                  <li><a href="sortiment/rudi-pichler-gruner-veltliner-kollmutz-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Grüner Veltliner Kollmutz Smaragd</a></li>
-                  <li><a href="sortiment/rudi-pichler-gruner-veltliner-hochrain-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Grüner Veltliner Hochrain Smaragd</a></li>
                   <li><a href="sortiment/rudi-pichler-gruner-veltliner-achleithen-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Grüner Veltliner Achleithen Smaragd</a></li>
-                  <li><a href="sortiment/rudi-pichler-riesling-kirchweg-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Riesling Kirchweg Smaragd</a></li>
-                  <li><a href="sortiment/rudi-pichler-riesling-hochrain-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Riesling Hochrain Smaragd</a></li>
+                  <li><a href="sortiment/rudi-pichler-gruner-veltliner-achleithen-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Grüner Veltliner Achleithen Smaragd</a></li>
+                  <li><a href="sortiment/rudi-pichler-gruner-veltliner-federspiel.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Grüner Veltliner Federspiel*</a></li>
+                  <li><a href="sortiment/rudi-pichler-gruner-veltliner-hochrain-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Grüner Veltliner Hochrain Smaragd</a></li>
+                  <li><a href="sortiment/rudi-pichler-gruner-veltliner-hochrain-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Grüner Veltliner Hochrain Smaragd</a></li>
+                  <li><a href="sortiment/rudi-pichler-gruner-veltliner-kollmutz-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Grüner Veltliner Kollmutz Smaragd</a></li>
+                  <li><a href="sortiment/rudi-pichler-gruner-veltliner-kollmutz-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Grüner Veltliner Kollmutz Smaragd</a></li>
+                  <li><a href="sortiment/rudi-pichler-gruner-veltliner-terrassen-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Grüner Veltliner Terrassen Smaragd</a></li>
+                  <li><a href="sortiment/rudi-pichler-riesling-terrassen-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Grüner Veltliner Terrassen Smaragd*</a></li>
                   <li><a href="sortiment/rudi-pichler-riesling-achleithen-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Riesling Achleithen Smaragd</a></li>
+                  <li><a href="sortiment/rudi-pichler-riesling-achleithen-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Riesling Achleithen Smaragd</a></li>
+                  <li><a href="sortiment/rudi-pichler-riesling-hochrain-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Riesling Hochrain Smaragd</a></li>
+                  <li><a href="sortiment/rudi-pichler-riesling-hochrain-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Riesling Hochrain Smaragd*</a></li>
+                  <li><a href="sortiment/rudi-pichler-riesling-kirchweg-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Riesling Kirchweg Smaragd</a></li>
+                  <li><a href="sortiment/rudi-pichler-riesling-kirchweg-smaragd.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Riesling Kirchweg Smaragd</a></li>
+                  <li><a href="sortiment/rudi-pichler-riesling-terrassen-smaragd-mn54sbim.html" class="text-wine-600 hover:text-wine-800 hover:underline font-semibold">Riesling Terrassen Smaragd*</a></li>
                 </ul>
                 <a href="https://www.rudipichler.at/en/" target="_blank" class="inline-block mt-2 text-wine-600 hover:text-wine-800 text-sm font-medium underline">Besök producentens hemsida &rarr;</a>
               </div>
@@ -1303,5 +1328,6 @@
       if (dd && !e.target.closest('.fixed.top-3')) dd.classList.add('hidden');
     });
   </script>
+  <script src="r-lista.js"></script>
 </body>
 </html>

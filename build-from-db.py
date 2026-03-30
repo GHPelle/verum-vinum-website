@@ -167,6 +167,7 @@ def build_page(wine, lang, existing_images):
         lbl_ratings = "Betyg"
         lbl_all_producers = "Alla producenter"
         lbl_selection = "Sortiment"
+        lbl_back_btn = "&larr; Tillbaka"
     else:
         lbl_back = "&larr; Back"
         lbl_home = "Home"
@@ -179,6 +180,7 @@ def build_page(wine, lang, existing_images):
         lbl_ratings = "Ratings"
         lbl_all_producers = "All producers"
         lbl_selection = "Selection"
+        lbl_back_btn = "&larr; Back"
 
     title = f"{esc(producent)} – {esc(namn)} | Verum Vinum"
 
@@ -333,7 +335,7 @@ def build_page(wine, lang, existing_images):
 {about_html}
         <div class="mt-10 flex flex-col sm:flex-row gap-4">
           <a href="../index.html#producenter" class="px-6 py-3 bg-wine-800 text-white font-medium text-sm uppercase tracking-wider hover:bg-wine-900 transition-colors">{lbl_all_producers}</a>
-          <a href="../index.html#sortiment" class="px-6 py-3 border border-wine-800 text-wine-800 font-medium text-sm uppercase tracking-wider hover:bg-wine-50 transition-colors">{lbl_selection}</a>
+          <a href="javascript:history.back()" class="px-6 py-3 border border-wine-800 text-wine-800 font-medium text-sm uppercase tracking-wider hover:bg-wine-50 transition-colors cursor-pointer">{lbl_back_btn}</a>
         </div>
       </div>
     </div>

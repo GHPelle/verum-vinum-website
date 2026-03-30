@@ -201,13 +201,13 @@
             Curious to try some of our wines? Contact us and we'll book a tasting at your convenience.
           </p>
           <div class="flex flex-col sm:flex-row gap-4 mt-2">
-            <a href="../restaurangprislista-mars-2026.pdf" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-stone-900 font-medium text-sm uppercase tracking-wider hover:bg-stone-100 transition-colors rounded border-2 border-stone-300 shadow-lg" target="_blank">
+            <a href="javascript:void(0)" onclick="openRLista('en')" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-stone-900 font-medium text-sm uppercase tracking-wider hover:bg-stone-100 transition-colors rounded border-2 border-stone-300 shadow-lg cursor-pointer">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-              Prislista Restaurang (PDF)
+              Restaurant Price List
             </a>
             <a href="mailto:info@verumvinum.se" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-wine-800 text-wine-800 font-medium text-sm uppercase tracking-wider hover:bg-wine-50 transition-colors rounded">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              Kontakta oss
+              Contact us
             </a>
           </div>
           <div class="mt-8 grid sm:grid-cols-2 gap-4 text-sm text-stone-600">
@@ -1303,5 +1303,6 @@
       if (dd && !e.target.closest('.fixed.top-3')) dd.classList.add('hidden');
     });
   </script>
+  <script src="../r-lista.js"></script>
 </body>
 </html>

@@ -29,6 +29,8 @@
       "exponering": "Syd",
       "alder_vinstockar": "ca 30 år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -36,8 +38,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "alberto-oggero-roero",
@@ -69,14 +70,15 @@
       "exponering": "Ost, Sydost",
       "alder_vinstockar": "ca 20 år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "alberto-oggero-sandro-dpindeta",
@@ -107,6 +109,8 @@
       "exponering": "Syd",
       "alder_vinstockar": "ca 20-25 år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -114,8 +118,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "alberto-oggero-valle-dei-lunghi",
@@ -147,14 +150,15 @@
       "exponering": "Sydväst",
       "alder_vinstockar": "ca 80 år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": true,
-      "forslutningstyp": ""
+      "tillfalligt_slut": true
     },
     {
       "slug": "cigliano-di-sopra-chianti-classico",
@@ -185,6 +189,8 @@
       "exponering": "Sydväst, Väst",
       "alder_vinstockar": "ca 20-45 år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -192,8 +198,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "clos-de-la-bonnette-cisselande-vdf",
@@ -224,6 +229,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -231,8 +238,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "clos-de-la-bonnette-collines-rhodaniennes-syrah-vieilles-vignes",
@@ -263,6 +269,8 @@
       "exponering": "",
       "alder_vinstockar": "ca 45 år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -270,8 +278,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "clos-de-la-bonnette-condrieu-legende-bonnetta",
@@ -302,6 +309,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -309,8 +318,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "clos-de-la-bonnette-coterotie-prenelle",
@@ -341,6 +349,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -348,8 +358,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "diego-morra-barolo-del-comune-di-verduno",
@@ -380,6 +389,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -387,8 +398,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "diego-morra-barolo-monvigliero",
@@ -419,6 +429,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -426,8 +438,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "diego-morra-barolo-san-lorenzo",
@@ -458,6 +469,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -465,8 +478,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "diego-morra-langhe-rosato",
@@ -497,6 +509,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Diam-kork (teknisk kork)",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -504,8 +518,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "diego-morra-verduno-pelaverga",
@@ -536,6 +549,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Diam-kork (teknisk kork)",
+      "vaxad": false,
       "serveringstemperatur": "14-16°C",
       "betyg": "",
       "matforslag": "",
@@ -543,8 +558,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "christian-clerget-bourgogne-rouge",
@@ -575,6 +589,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -582,8 +598,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": true,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "christian-clerget-chambollemusigny-1er-cru-les-charmes",
@@ -615,14 +630,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": true,
-      "forslutningstyp": ""
+      "tillfalligt_slut": true
     },
     {
       "slug": "christian-clerget-chambollemusigny-aux-croix",
@@ -654,14 +670,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "christian-clerget-chambollemusigny",
@@ -693,14 +710,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "christian-clerget-echezeaux-grand-cru-en-orveaux",
@@ -732,14 +750,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "christian-clerget-moreysaintdenis",
@@ -771,14 +790,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "christian-clerget-vosneromanee-les-violettes",
@@ -810,14 +830,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "christian-clerget-vougeot-1er-cru-les-petits-vougeots",
@@ -849,14 +870,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": true,
-      "forslutningstyp": ""
+      "tillfalligt_slut": true
     },
     {
       "slug": "coffinetduvernay-btardmontrachet-grand-cru",
@@ -887,15 +909,16 @@
       "exponering": "",
       "alder_vinstockar": "30+ år",
       "odling": "Ekologisk",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
+      "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-clos-saint-jean",
@@ -926,15 +949,16 @@
       "exponering": "",
       "alder_vinstockar": "50+ år",
       "odling": "Ekologisk",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
+      "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-dent-de-chien",
@@ -965,15 +989,16 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
+      "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-les-caillerets",
@@ -1004,15 +1029,16 @@
       "exponering": "",
       "alder_vinstockar": "80+ år",
       "odling": "Ekologisk",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
+      "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-chassagnemontrachet-1er-cru-les-grands-clos",
@@ -1043,15 +1069,16 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
+      "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-chassagnemontrachet-les-blanchots-dessous",
@@ -1082,15 +1109,16 @@
       "exponering": "",
       "alder_vinstockar": "50+ år",
       "odling": "Ekologisk",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
+      "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-chassagnemontrachet-rouge",
@@ -1121,15 +1149,16 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
+      "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "coffinetduvernay-vin-de-france-assemblage",
@@ -1160,15 +1189,16 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
+      "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": false,
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "la-famille-k-la-mere",
@@ -1200,14 +1230,15 @@
       "exponering": "",
       "alder_vinstockar": "50+ år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "la-famille-k-le-pere-blanc",
@@ -1239,14 +1270,15 @@
       "exponering": "",
       "alder_vinstockar": "20+ år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "la-famille-k-le-pere-vdf-pinot-noir",
@@ -1278,14 +1310,15 @@
       "exponering": "",
       "alder_vinstockar": "4+ år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": true,
-      "forslutningstyp": ""
+      "tillfalligt_slut": true
     },
     {
       "slug": "la-famille-k-le-pere",
@@ -1317,14 +1350,15 @@
       "exponering": "",
       "alder_vinstockar": "90+ år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "la-famille-k-lheritiere",
@@ -1356,14 +1390,15 @@
       "exponering": "",
       "alder_vinstockar": "50+ år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "la-famille-k-loncle",
@@ -1395,14 +1430,15 @@
       "exponering": "",
       "alder_vinstockar": "25+ år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "michel-rebourgeon-beaune-1er-cru-les-chouacheux",
@@ -1433,6 +1469,8 @@
       "exponering": "",
       "alder_vinstockar": "65+ år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -1440,8 +1478,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-beaune-les-epenottes",
@@ -1472,6 +1509,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -1479,8 +1518,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-pommard-1er-cru-les-arvelets",
@@ -1511,6 +1549,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -1518,8 +1558,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-pommard-1er-cru-les-charmots",
@@ -1550,6 +1589,8 @@
       "exponering": "",
       "alder_vinstockar": "60+ år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -1557,8 +1598,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-pommard-1er-cru-les-rugiens",
@@ -1589,6 +1629,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -1596,8 +1638,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-pommard-cuvee-william",
@@ -1628,6 +1669,8 @@
       "exponering": "",
       "alder_vinstockar": "30+ år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -1635,8 +1678,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-pommard-les-noizons",
@@ -1667,6 +1709,8 @@
       "exponering": "",
       "alder_vinstockar": "80+ år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -1674,8 +1718,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "michel-rebourgeon-pommard-trois-terroirs",
@@ -1706,6 +1749,8 @@
       "exponering": "",
       "alder_vinstockar": "30+ år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -1713,8 +1758,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "domaine-villet-chardonnay-elevage-2-an-en-fut",
@@ -1745,6 +1789,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -1752,8 +1798,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": true,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "domaine-villet-pinot-noir",
@@ -1784,6 +1829,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -1791,8 +1838,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "domaine-villet-poulsard",
@@ -1823,6 +1869,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -1830,8 +1878,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "domaine-villet-rouge-tradition",
@@ -1862,6 +1909,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -1869,8 +1918,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "domaine-villet-savagnin-ouille-elevage-24-mois-en-cuve",
@@ -1901,6 +1949,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -1908,8 +1958,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "domaine-villet-savagnin-ouille-elevage-30-mois-en-foudre",
@@ -1940,6 +1989,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -1947,8 +1998,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-alta-langa-extra-brut",
@@ -1980,14 +2030,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "8-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": true,
-      "forslutningstyp": ""
+      "tillfalligt_slut": true
     },
     {
       "slug": "ettore-germano-alta-langa-riserva-blanc-de-blanc-pas-dose",
@@ -2019,14 +2070,15 @@
       "exponering": "Sydost, Sydväst",
       "alder_vinstockar": "13 år",
       "odling": "",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "8-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "ettore-germano-alta-langa-riserva-blanc-de-noir-pas-dose",
@@ -2058,14 +2110,15 @@
       "exponering": "Sydost, Sydväst",
       "alder_vinstockar": "15 år",
       "odling": "",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "8-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "ettore-germano-barolo-cerretta",
@@ -2097,14 +2150,15 @@
       "exponering": "Syd, sydost",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": true,
-      "forslutningstyp": ""
+      "tillfalligt_slut": true
     },
     {
       "slug": "ettore-germano-barolo-del-comune-di-serralunga-dalba",
@@ -2135,6 +2189,8 @@
       "exponering": "Syd, Ost",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -2142,8 +2198,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-barolo-lazzarito-riserva",
@@ -2175,14 +2230,15 @@
       "exponering": "Syd, Sydväst",
       "alder_vinstockar": "90 år",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "ettore-germano-barolo-prapo",
@@ -2213,6 +2269,8 @@
       "exponering": "Sydost",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -2220,8 +2278,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-barolo-vignarionda",
@@ -2253,14 +2310,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "ettore-germano-binel-langhe-bianco",
@@ -2292,14 +2350,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Skruvkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "ettore-germano-herzu-langhe-riesling",
@@ -2330,6 +2389,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Skruvkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -2337,8 +2398,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-langhe-chardonnay",
@@ -2369,6 +2429,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Skruvkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -2376,8 +2438,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-langhe-nascetta",
@@ -2408,6 +2469,8 @@
       "exponering": "Sydost",
       "alder_vinstockar": "15 år",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -2415,8 +2478,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "ettore-germano-rosanna-extra-brut-rose-metodo-classico",
@@ -2448,14 +2510,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "8-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "fontanabianca-barbaresco-bordini",
@@ -2487,14 +2550,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Green Experience",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "fontanabianca-barbaresco-serraboella",
@@ -2526,14 +2590,15 @@
       "exponering": "",
       "alder_vinstockar": "ca 15 år",
       "odling": "Green Experience",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "fontanabianca-barbaresco",
@@ -2565,14 +2630,15 @@
       "exponering": "",
       "alder_vinstockar": "ca 30 år",
       "odling": "Green Experience",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "fontanabianca-barbera-dalba-superiore",
@@ -2604,14 +2670,15 @@
       "exponering": "",
       "alder_vinstockar": "ca 30 år",
       "odling": "Green Experience",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "fontanabianca-dolcetto-dalba",
@@ -2643,14 +2710,15 @@
       "exponering": "",
       "alder_vinstockar": "ca 25 år",
       "odling": "Green Experience",
+      "forslutningstyp": "Diam-kork (teknisk kork)",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "fontanabianca-langhe-arneis-sommo",
@@ -2682,14 +2750,15 @@
       "exponering": "",
       "alder_vinstockar": "ca 15 år",
       "odling": "Green Experience",
+      "forslutningstyp": "Diam-kork (teknisk kork)",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "fontanabianca-langhe-nebbiolo",
@@ -2721,14 +2790,15 @@
       "exponering": "",
       "alder_vinstockar": "ca 12 år",
       "odling": "Green Experience",
+      "forslutningstyp": "Diam-kork (teknisk kork)",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "lapo-berti-barolo-del-comune-di-la-morra",
@@ -2760,14 +2830,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "lapo-berti-barolo-fossati",
@@ -2798,6 +2869,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "",
       "betyg": "",
       "matforslag": "",
@@ -2805,8 +2878,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "lapo-berti-langhe-nebbiolo",
@@ -2837,6 +2909,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "",
       "betyg": "",
       "matforslag": "",
@@ -2844,8 +2918,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "mori-concetta-morino-chianti-classico",
@@ -2877,14 +2950,15 @@
       "exponering": "Sydost",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "quinta-das-bagerias-abafado",
@@ -2916,14 +2990,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Okänd",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "quinta-das-bagerias-espumante-colheita-rose",
@@ -2955,14 +3030,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
+      "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": true,
-      "forslutningstyp": ""
+      "tillfalligt_slut": true
     },
     {
       "slug": "quinta-das-bagerias-espumante-colheita",
@@ -2994,14 +3070,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": true,
-      "forslutningstyp": ""
+      "tillfalligt_slut": true
     },
     {
       "slug": "quinta-das-bagerias-garrafeira-tinto",
@@ -3033,14 +3110,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "quinta-das-bagerias-vinho-branco-reserva",
@@ -3072,14 +3150,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "quinta-das-bagerias-vinho-tinto-reserva",
@@ -3111,14 +3190,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
+      "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "quinta-do-javali-clos-bonifata-2",
@@ -3149,6 +3229,8 @@
       "exponering": "",
       "alder_vinstockar": "25+ år",
       "odling": "Biodynamisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": true,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -3156,8 +3238,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-clos-fonte-do-santo",
@@ -3188,15 +3269,16 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Biodynamisk",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": true,
+      "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-crazy-branco",
@@ -3227,15 +3309,16 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Biodynamisk",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
+      "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-crazy-javali-tinto",
@@ -3266,15 +3349,16 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Biodynamisk",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
+      "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-pet-nat",
@@ -3305,15 +3389,16 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Biodynamisk",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Kronkork (PetNat)",
+      "vaxad": false,
+      "serveringstemperatur": "8-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-tawny-port-10-year",
@@ -3345,14 +3430,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Stopselkork(t-kork / stopper cork)",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": true,
-      "forslutningstyp": ""
+      "tillfalligt_slut": true
     },
     {
       "slug": "quinta-do-javali-tawny-port",
@@ -3371,6 +3457,8 @@
       "kategori": "",
       "gtin": "",
       "antal_per_kolli": "6",
+      "forslutningstyp": "Stopselkork(t-kork / stopper cork)",
+      "vaxad": false,
       "pris_restaurang": 140,
       "pris_privatimport": null,
       "pris_sb": null,
@@ -3390,8 +3478,7 @@
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "quinta-do-javali-tinto",
@@ -3422,15 +3509,16 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Biodynamisk",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
+      "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "quinta-do-javali-vinhas-dos-lobatos",
@@ -3461,15 +3549,16 @@
       "exponering": "",
       "alder_vinstockar": "60+ år",
       "odling": "Biodynamisk",
-      "serveringstemperatur": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": true,
+      "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "reva-barbera-dalba-superiore",
@@ -3500,6 +3589,8 @@
       "exponering": "Sydost",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Diam-kork (teknisk kork)",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -3507,8 +3598,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "reva-barolo-cannubi",
@@ -3539,6 +3629,8 @@
       "exponering": "Öst",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -3546,8 +3638,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "reva-barolo-ravera",
@@ -3578,6 +3669,8 @@
       "exponering": "Öst, sydost",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -3585,8 +3678,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "reva-barolo",
@@ -3617,6 +3709,8 @@
       "exponering": "Syd, Sydväst",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -3624,8 +3718,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "reva-dolcetto-dalba",
@@ -3656,6 +3749,8 @@
       "exponering": "Syd",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Diam-kork (teknisk kork)",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -3663,8 +3758,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "reva-langhe-bianco-grey",
@@ -3695,6 +3789,8 @@
       "exponering": "Syd, sydost",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Diam-kork (teknisk kork)",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -3702,8 +3798,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "reva-nebbiolo-dalba",
@@ -3734,6 +3829,8 @@
       "exponering": "Sydost",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Diam-kork (teknisk kork)",
+      "vaxad": false,
       "serveringstemperatur": "18-20°C",
       "betyg": "",
       "matforslag": "",
@@ -3741,8 +3838,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "rudi-pichler-gruner-veltliner-achleithen-smaragd",
@@ -3773,6 +3869,8 @@
       "exponering": "",
       "alder_vinstockar": "50+ år",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -3780,8 +3878,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "rudi-pichler-gruner-veltliner-hochrain-smaragd",
@@ -3812,6 +3909,8 @@
       "exponering": "",
       "alder_vinstockar": "40+ år",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -3819,8 +3918,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "rudi-pichler-gruner-veltliner-kollmutz-smaragd",
@@ -3851,6 +3949,8 @@
       "exponering": "",
       "alder_vinstockar": "40+ år",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -3858,8 +3958,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "rudi-pichler-riesling-achleithen-smaragd",
@@ -3890,6 +3989,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -3897,8 +3998,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "rudi-pichler-riesling-hochrain-smaragd",
@@ -3929,6 +4029,8 @@
       "exponering": "",
       "alder_vinstockar": "20-40+ år",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -3936,8 +4038,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "rudi-pichler-riesling-kirchweg-smaragd",
@@ -3968,6 +4069,8 @@
       "exponering": "",
       "alder_vinstockar": "20-40+ år",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
@@ -3975,8 +4078,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "vadio-grande",
@@ -4008,14 +4110,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "vadio-perpetuum-white-sparkling",
@@ -4046,6 +4149,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "8-12°C",
       "betyg": "",
       "matforslag": "",
@@ -4053,8 +4158,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "vadio-red",
@@ -4085,6 +4189,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -4092,8 +4198,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "vadio-rexarte",
@@ -4124,6 +4229,8 @@
       "exponering": "Norr",
       "alder_vinstockar": "0,3 hektar, ca 1300 flaskor",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -4131,8 +4238,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "vadio-rose-sparkling",
@@ -4164,14 +4270,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "8-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "vadio-white",
@@ -4202,6 +4309,8 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "8-12°C",
       "betyg": "",
       "matforslag": "",
@@ -4209,8 +4318,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "victor-charlot-instinct-premier-5050",
@@ -4242,14 +4350,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": true,
-      "forslutningstyp": ""
+      "tillfalligt_slut": true
     },
     {
       "slug": "victor-charlot-instinct-premier-7525",
@@ -4281,14 +4390,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "victor-charlot-les-terres-de-la-greve",
@@ -4320,14 +4430,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "victor-charlot-noirs-de-jais",
@@ -4359,14 +4470,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "villa-i-cipressi-brunello-di-montalcino",
@@ -4398,14 +4510,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "ca 18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "villa-i-cipressi-rosso-di-montalcino",
@@ -4424,6 +4537,8 @@
       "kategori": "",
       "gtin": "",
       "antal_per_kolli": "6",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "pris_restaurang": 200,
       "pris_privatimport": null,
       "pris_sb": null,
@@ -4440,11 +4555,10 @@
       "serveringstemperatur": "ca 18°C",
       "betyg": "",
       "matforslag": "",
-      "websida": false,
+      "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "villa-i-cipressi-zebras-brunello-di-montalcino",
@@ -4463,6 +4577,8 @@
       "kategori": "",
       "gtin": "",
       "antal_per_kolli": "6",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "pris_restaurang": 490,
       "pris_privatimport": null,
       "pris_sb": null,
@@ -4479,11 +4595,10 @@
       "serveringstemperatur": "ca 18°C",
       "betyg": "",
       "matforslag": "",
-      "websida": false,
+      "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "martin-mullen-nostel-trocken",
@@ -4515,14 +4630,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "martin-mullen-riesling-revival-trocken",
@@ -4554,14 +4670,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Skruvkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "martin-mullen-trabener-wurzgarten-kabinett-feinherb",
@@ -4593,14 +4710,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "martin-mullen-trabener-wurzgarten-spatlese-trocken",
@@ -4632,14 +4750,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "martin-mullen-trarbacher-huhnerberg-auslese",
@@ -4671,14 +4790,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "cigliano-di-sopra-chianti-classico-2023",
@@ -4709,6 +4829,8 @@
       "exponering": "Sydväst, Väst",
       "alder_vinstockar": "ca 20-45 år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -4716,8 +4838,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "cigliano-di-sopra-chianti-classico-Riserva",
@@ -4748,6 +4869,8 @@
       "exponering": "Sydväst, Väst",
       "alder_vinstockar": "ca 20-45 år",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
@@ -4755,8 +4878,7 @@
       "r_prislista": true,
       "pi_lista": false,
       "tillfalligt_slut": false,
-      "antal_per_kolli": "6",
-      "forslutningstyp": ""
+      "antal_per_kolli": "6"
     },
     {
       "slug": "domaine-la-famille-k-le-pere-cremant-de-bourgogne-bdb",
@@ -4788,14 +4910,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "8-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "ettore-germano-langhe-doc-rosso-ezelindo-2012",
@@ -4827,14 +4950,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "reva-barolo-del-comune-di-serralunga-2019",
@@ -4866,14 +4990,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "weingut-martin-mullen-trarbacher-ungsberg-spatburgunder-2022",
@@ -4905,14 +5030,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "weingut-martin-mullen-trarbacher-huhnerberg-kabinett-2022-13-6-gr-l",
@@ -4944,14 +5070,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "weingut-martin-mullen-trarbacher-huhnerberg-spatlese-2021",
@@ -4983,14 +5110,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "vadio-white-2023",
@@ -5022,14 +5150,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "8-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "vadio-finuum-white-nv-solera-2007",
@@ -5060,15 +5189,16 @@
       "hojd": "",
       "exponering": "",
       "alder_vinstockar": "",
-      "odling": "",
+      "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "vadio-grande-2017",
@@ -5100,14 +5230,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "vadio-red-2013",
@@ -5139,14 +5270,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "quinta-das-bagerias-espumante-colheita-kopia-mn35djqo",
@@ -5178,14 +5310,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "quinta-do-javali-tawny-port-20year",
@@ -5217,14 +5350,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Stopselkork(t-kork / stopper cork)",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "quinta-do-javali-quinta-do-javali-vintage-port-2012",
@@ -5255,15 +5389,16 @@
       "hojd": "",
       "exponering": "",
       "alder_vinstockar": "",
-      "odling": "",
+      "odling": "Ekologisk",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "victor-charlot-champagne-a-la-trace-fatlagrad",
@@ -5295,14 +5430,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "victor-charlot-champagne-lueurs-de-blancs",
@@ -5334,14 +5470,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "domaine-michel-rebourgeon-bourgogne-cote-d-or-blanc-2023",
@@ -5373,14 +5510,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Diam-kork (teknisk kork)",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "domaine-michel-rebourgeon-bourgogne-cote-d-or-rouge-2023",
@@ -5412,14 +5550,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Diam-kork (teknisk kork)",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "domaine-michel-rebourgeon-santenay-vieilles-vignes-2023",
@@ -5451,14 +5590,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Diam-kork (teknisk kork)",
+      "vaxad": false,
       "serveringstemperatur": "16-18°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "domaine-michel-rebourgeon-pernand-vergelesses-les-pins-2023",
@@ -5490,14 +5630,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Diam-kork (teknisk kork)",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "domaine-michel-rebourgeon-saint-romain-la-perriere-2023",
@@ -5529,14 +5670,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "Ekologisk",
+      "forslutningstyp": "Diam-kork (teknisk kork)",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "rudi-pichler-gruner-veltliner-terrassen-smaragd",
@@ -5568,14 +5710,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": true,
-      "forslutningstyp": ""
+      "tillfalligt_slut": true
     },
     {
       "slug": "rudi-pichler-gruner-veltliner-federspiel",
@@ -5607,14 +5750,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "rudi-pichler-riesling-hochrain-smaragd",
@@ -5646,14 +5790,15 @@
       "exponering": "",
       "alder_vinstockar": "20-40+ år",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "rudi-pichler-gruner-veltliner-achleithen-smaragd",
@@ -5685,14 +5830,15 @@
       "exponering": "",
       "alder_vinstockar": "50+ år",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "rudi-pichler-riesling-achleithen-smaragd",
@@ -5724,14 +5870,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "rudi-pichler-gruner-veltliner-hochrain-smaragd",
@@ -5763,14 +5910,15 @@
       "exponering": "",
       "alder_vinstockar": "40+ år",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "rudi-pichler-riesling-terrassen-smaragd",
@@ -5802,14 +5950,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "rudi-pichler-riesling-terrassen-smaragd-mn54sbim",
@@ -5841,14 +5990,15 @@
       "exponering": "",
       "alder_vinstockar": "",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "rudi-pichler-gruner-veltliner-kollmutz-smaragd",
@@ -5880,14 +6030,15 @@
       "exponering": "",
       "alder_vinstockar": "40+ år",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "rudi-pichler-riesling-kirchweg-smaragd",
@@ -5919,14 +6070,15 @@
       "exponering": "",
       "alder_vinstockar": "20-40+ år",
       "odling": "",
+      "forslutningstyp": "Naturkork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
     },
     {
       "slug": "fontanabianca-alta-langa-classe-91-docg",
@@ -5957,15 +6109,56 @@
       "hojd": "",
       "exponering": "",
       "alder_vinstockar": "",
-      "odling": "",
+      "odling": "Green Experience",
+      "forslutningstyp": "Champagnekork",
+      "vaxad": false,
       "serveringstemperatur": "10-12°C",
       "betyg": "",
       "matforslag": "",
       "websida": true,
       "r_prislista": true,
       "pi_lista": false,
-      "tillfalligt_slut": false,
-      "forslutningstyp": ""
+      "tillfalligt_slut": false
+    },
+    {
+      "slug": "lapo-berti-vino-frizzante-rosato-nv-pet-nat",
+      "namn": "Vino Frizzante Rosato NV (Pet Nat)",
+      "producent": "Lapo Berti",
+      "allokering": false,
+      "allokeringstext": "",
+      "typ": "Mousserande",
+      "land": "Italien",
+      "region": "La Morra, Piemonte, Italien",
+      "druvor": "Nebbiolo",
+      "alkohol": "13,5",
+      "volym": 750,
+      "argang": "NV",
+      "artikelnummer": "VV0036",
+      "kategori": "",
+      "gtin": "",
+      "antal_per_kolli": "6",
+      "forslutningstyp": "Kronkork (PetNat)",
+      "vaxad": false,
+      "pris_restaurang": 235,
+      "pris_privatimport": null,
+      "pris_sb": null,
+      "inkopspris_sb": null,
+      "sb_artikelnr": "",
+      "sb_sortiment": "",
+      "om_vinet": "PetNat på 100% Nebbiolo",
+      "vinifiering": "",
+      "jordman": "",
+      "hojd": "",
+      "exponering": "",
+      "alder_vinstockar": "",
+      "odling": "",
+      "serveringstemperatur": "8-12°C",
+      "betyg": "",
+      "matforslag": "",
+      "websida": true,
+      "r_prislista": true,
+      "pi_lista": false,
+      "tillfalligt_slut": false
     }
   ],
   "dropdown_options": {
@@ -6107,6 +6300,18 @@
       "Ekologisk",
       "Green Experience"
     ],
+    "forslutningstyp": [
+      "Champagnekork",
+      "Diam-kork (teknisk kork)",
+      "Glaspropp (Vinolok)",
+      "Kronkork (PetNat)",
+      "Naturkork",
+      "Okänd",
+      "Skruvkork",
+      "Stopselkork(t-kork / stopper cork)",
+      "Syntetisk kork"
+    ],
+    "vaxad": false,
     "serveringstemperatur": [
       "10-12°C",
       "14-16°C",
@@ -6125,23 +6330,14 @@
       "1",
       "12",
       "6"
-    ],
-    "forslutningstyp": [
-      "Champagnekork",
-      "Diam-kork (teknisk kork)",
-      "Glaspropp (Vinolok)",
-      "Kronkork (PetNat)",
-      "Naturkork",
-      "Okänd",
-      "Skruvkork",
-      "Syntetisk kork"
     ]
   },
   "meta": {
     "version": "1.0",
-    "last_export": "2026-03-24T23:37:23.391Z",
+    "last_export": "2026-03-30T14:41:58.260Z",
     "description": "Verum Vinum vindatabas",
-    "last_saved": "2026-03-24T23:37:23.376Z",
-    "wine_count": 153
+    "last_saved": "2026-03-30T14:41:58.238Z",
+    "wine_count": 154,
+    "data_version": 3
   }
 }
