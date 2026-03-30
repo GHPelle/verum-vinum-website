@@ -99,7 +99,7 @@ function openRLista(lang) {
         const allAllokerade = pData.wines.every(w => w.allokering);
         if (allAllokerade) {
           const allokText = pData.wines[0].allokeringstext || 'Endast mot Allokering Kontakta oss vid intresse!';
-          sectionsHTML += `<div class="producer-block" style="padding: 14px 0 6px 0;">${prodHeader}<br><span style="color: #dc2626; font-weight: 700; font-style: italic; font-size: 12px;">${allokText}</span></div>`;
+          sectionsHTML += `<div class="producer-block" style="padding: 14px 0 6px 0;">${prodHeader}<br><br><span style="color: #dc2626; font-weight: 700; font-style: italic; font-size: 12px;">${allokText}</span></div>`;
         } else {
           let wineRows = '';
           pData.wines.filter(w => !w.allokering).forEach(w => {
