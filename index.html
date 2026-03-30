@@ -23,6 +23,9 @@
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
+    @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .animate-ticker { animation: ticker 30s linear infinite; }
+    .animate-ticker:hover { animation-play-state: paused; }
     .hero-bg { background: linear-gradient(135deg, rgba(255,255,255,0.55) 0%, rgba(255,245,245,0.5) 50%, rgba(255,255,255,0.55) 100%); }
     .parallax { background-attachment: fixed; background-size: cover; background-position: center; }
     @supports (-webkit-touch-callout: none) { .parallax { background-attachment: scroll; } }
@@ -87,6 +90,7 @@
         <div class="flex items-center justify-center w-full gap-6 mb-3">
           <a href="#"><img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-[90px] brightness-0"></a>
           <div class="flex items-center gap-8">
+            <a href="#" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap border-b-2 border-wine-600 text-wine-700 pb-1">Hem</a>
             <a href="#om-oss" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Om oss</a>
             <a href="#producenter" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Producenter</a>
             <a href="#restaurang" class="nav-link text-xs text-stone-900/80 hover:text-stone-900 tracking-wider uppercase font-bold whitespace-nowrap">Restaurang</a>
@@ -106,6 +110,7 @@
     </div>
     <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg shadow-lg rounded-b-xl">
       <div class="px-6 py-4 space-y-3">
+        <a href="#" class="block text-wine-700 font-bold text-sm uppercase tracking-wider py-2 hover:text-wine-700 border-l-4 border-wine-600 pl-3">Hem</a>
         <a href="#om-oss" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Om oss</a>
         <a href="#producenter" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Producenter</a>
         <a href="#restaurang" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Restaurang</a>
@@ -114,7 +119,7 @@
         <a href="mat-vin.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Mat & Vin</a>
         <a href="blogg.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Blogg</a>
         <a href="#event" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Event</a>
-        <a href="sok.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Sök viner</a>
+        <a href="sok.html" class="block text-stone-800 text-sm uppercase tracking-wider py-2 hover:text-wine-700">Sök</a>
         <div class="border-t border-stone-200 pt-3 mt-1">
           <a href="en/index.html" class="flex items-center gap-2 text-stone-600 text-sm py-2 hover:text-wine-700">
             <svg class="w-6 h-4 rounded-sm" viewBox="0 0 24 16"><rect width="24" height="16" fill="#012169"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#fff" stroke-width="3"/><path d="M0,0 L24,16 M24,0 L0,16" stroke="#C8102E" stroke-width="1.5"/><rect x="10" y="0" width="4" height="16" fill="#fff"/><rect x="0" y="6" width="24" height="4" fill="#fff"/><rect x="11" y="0" width="2" height="16" fill="#C8102E"/><rect x="0" y="6.5" width="24" height="3" fill="#C8102E"/></svg>
@@ -145,8 +150,30 @@
         <a href="sok.html" class="px-8 py-3.5 border-2 border-stone-900/40 text-stone-900 font-bold text-sm uppercase tracking-wider hover:bg-stone-900/10 transition-colors">Utforska sortimentet</a>
       </div>
     </div>
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-      <svg class="w-6 h-6 text-stone-900/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+    <!-- Event ticker -->
+    <div class="absolute bottom-0 left-0 right-0 bg-white/85 backdrop-blur-sm py-3" style="overflow: hidden;">
+      <div style="display: inline-flex; gap: 4rem; white-space: nowrap; animation: ticker 30s linear infinite; padding-left: 100%;">
+        <span class="text-stone-900 font-extrabold text-sm uppercase tracking-wider">Kommande Event:</span>
+        <a href="https://www.dryckvinbar.se/" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold transition-colors" style="color: #2563eb;">
+          <span class="font-extrabold">★ 23 APR</span> Gästspel, Dryck Vinbar — Stockholm
+        </a>
+        <a href="https://tickster.com/se/sv/events/n09dxbuf4yhrut3/2026-04-25/udda-vin-gbg" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold transition-colors" style="color: #16a34a;">
+          <span class="font-extrabold">★ 25 APR</span> Udda Vin GBG — Världskulturmuseet, Göteborg
+        </a>
+        <a href="https://www.tickster.com/se/sv/events/x2x7vu5y2t2ur1w/2026-05-30/megahaveriet" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold transition-colors" style="color: #9333ea;">
+          <span class="font-extrabold">★ 30 MAJ</span> Mega Haveri — Wine Mechanics, Göteborg
+        </a>
+        <span class="text-stone-900 font-extrabold text-sm uppercase tracking-wider">Kommande Event:</span>
+        <a href="https://www.dryckvinbar.se/" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold transition-colors" style="color: #2563eb;">
+          <span class="font-extrabold">★ 23 APR</span> Gästspel, Dryck Vinbar — Stockholm
+        </a>
+        <a href="https://tickster.com/se/sv/events/n09dxbuf4yhrut3/2026-04-25/udda-vin-gbg" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold transition-colors" style="color: #16a34a;">
+          <span class="font-extrabold">★ 25 APR</span> Udda Vin GBG — Världskulturmuseet, Göteborg
+        </a>
+        <a href="https://www.tickster.com/se/sv/events/x2x7vu5y2t2ur1w/2026-05-30/megahaveriet" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold transition-colors" style="color: #9333ea;">
+          <span class="font-extrabold">★ 30 MAJ</span> Mega Haveri — Wine Mechanics, Göteborg
+        </a>
+      </div>
     </div>
   </section>
 
@@ -180,7 +207,7 @@
           <h3 class="font-serif text-xl text-stone-900">Emil Rosenquist</h3>
           <p class="text-wine-600 text-sm mb-2">Stockholm, Östra och Norra Sverige</p>
           <p class="text-stone-500 text-sm"><a href="tel:0707950655" class="hover:text-wine-600 transition-colors">070-795 06 55</a></p>
-          <a href="mailto:emil@verumvinum.se" class="text-wine-600 text-sm hover:text-wine-800 transition-colors">emil@verumvinum.se</a>
+          <span class="text-wine-600 text-sm hover:text-wine-800 transition-colors underline cursor-pointer" onclick="window.location='mai'+'lto:'+'emil'+'&#64;'+'verumvinum.se'">emil<span style="display:none">REMOVE</span>&#64;verumvinum&#46;se</span>
         </div>
         <div class="text-center">
           <div class="w-24 h-24 bg-wine-100 rounded-full mx-auto mb-4 flex items-center justify-center">
@@ -189,7 +216,7 @@
           <h3 class="font-serif text-xl text-stone-900">Per Jorlind</h3>
           <p class="text-wine-600 text-sm mb-2">Göteborg, Västra och Södra Sverige</p>
           <p class="text-stone-500 text-sm"><a href="tel:0708769012" class="hover:text-wine-600 transition-colors">070-876 90 12</a></p>
-          <a href="mailto:per@verumvinum.se" class="text-wine-600 text-sm hover:text-wine-800 transition-colors">per@verumvinum.se</a>
+          <span class="text-wine-600 text-sm hover:text-wine-800 transition-colors underline cursor-pointer" onclick="window.location='mai'+'lto:'+'per'+'&#64;'+'verumvinum.se'">per<span style="display:none">REMOVE</span>&#64;verumvinum&#46;se</span>
         </div>
       </div>
     </div>
@@ -911,9 +938,13 @@
       <div class="text-center mb-10 fade-in">
         <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-stone-900">Restaurang</h2>
       </div>
-      <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <div class="grid lg:grid-cols-2 gap-16 items-start">
         <div class="relative fade-in order-1 lg:order-1">
           <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=80" alt="Fine dining with wine" class="w-full aspect-[4/3] object-cover shadow-2xl rounded-xl">
+          <a href="sok.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-stone-900 font-medium text-sm uppercase tracking-wider hover:bg-stone-100 transition-colors rounded border-2 border-stone-300 shadow-lg mt-6 w-full">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+            Sök i vårt sortiment
+          </a>
         </div>
         <div class="fade-in order-2 lg:order-2">
           <h3 class="font-serif text-2xl sm:text-3xl text-stone-900 leading-tight mb-6">Viner för restaurang</h3>
@@ -931,23 +962,23 @@
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
               Prislista Restaurang
             </a>
-            <a href="mailto:info@verumvinum.se" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-wine-800 text-wine-800 font-medium text-sm uppercase tracking-wider hover:bg-wine-50 transition-colors rounded">
+            <span onclick="window.location='mai'+'lto:'+'info'+'&#64;'+'verumvinum.se'" class="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-wine-800 text-wine-800 font-medium text-sm uppercase tracking-wider hover:bg-wine-50 transition-colors rounded cursor-pointer">
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
               Kontakta oss
-            </a>
+            </span>
           </div>
           <div class="mt-8 grid sm:grid-cols-2 gap-4 text-sm text-stone-600">
             <div>
               <strong class="text-stone-800">Emil Rosenquist</strong><br>
               Stockholm, Östra och Norra Sverige<br>
               <a href="tel:0707950655" class="text-wine-600 hover:text-wine-800">070-795 06 55</a><br>
-              <a href="mailto:emil@verumvinum.se" class="text-wine-600 hover:text-wine-800">emil@verumvinum.se</a>
+              <span class="text-wine-600 hover:text-wine-800 underline cursor-pointer" onclick="window.location='mai'+'lto:'+'emil'+'&#64;'+'verumvinum.se'">emil<span style="display:none">REMOVE</span>&#64;verumvinum&#46;se</span>
             </div>
             <div>
               <strong class="text-stone-800">Per Jorlind</strong><br>
               Göteborg, Västra och Södra Sverige<br>
               <a href="tel:0708769012" class="text-wine-600 hover:text-wine-800">070-876 90 12</a><br>
-              <a href="mailto:per@verumvinum.se" class="text-wine-600 hover:text-wine-800">per@verumvinum.se</a>
+              <span class="text-wine-600 hover:text-wine-800 underline cursor-pointer" onclick="window.location='mai'+'lto:'+'per'+'&#64;'+'verumvinum.se'">per<span style="display:none">REMOVE</span>&#64;verumvinum&#46;se</span>
             </div>
           </div>
         </div>
