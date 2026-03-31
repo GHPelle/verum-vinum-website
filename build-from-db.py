@@ -64,9 +64,14 @@ def esc(text):
     return escape(str(text))
 
 
-def build_image_html(slug, wine_type, existing_images):
+def build_image_html(slug, wine_type, existing_images, db_bild=None):
     """Return the wine visual div HTML."""
-    img_url = existing_images.get(slug)
+    # Prefer database bild field, then existing scan
+    img_url = None
+    if db_bild:
+        img_url = f'../images/viner/{db_bild}'
+    if not img_url:
+        img_url = existing_images.get(slug)
     if img_url:
         return (
             f'      <div class="bg-gradient-to-b from-stone-100 to-stone-50 rounded-2xl p-8 flex items-center justify-center min-h-[400px]">\n'
@@ -186,7 +191,7 @@ def build_page(wine, lang, existing_images):
 
     title = f"{esc(producent)} – {esc(namn)} | Verum Vinum"
 
-    image_html = build_image_html(slug, typ, existing_images)
+    image_html = build_image_html(slug, typ, existing_images, wine.get('bild', ''))
     details_grid = build_details_grid(wine, lang)
 
     # Build optional sections

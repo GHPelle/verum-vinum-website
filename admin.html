@@ -398,6 +398,19 @@
         </div>
       </fieldset>
 
+      <!-- Bild -->
+      <fieldset>
+        <legend class="font-serif text-lg text-wine-800 font-semibold mb-4 border-b border-wine-100 pb-2 w-full">Bild</legend>
+        <div>
+          <label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Bildfil (filnamn i images/viner/)</label>
+          <div class="flex gap-1">
+            <input name="bild" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg" placeholder="t.ex. ettore-germano-barolo-1200xauto.jpg">
+            <button type="button" onclick="var b=document.querySelector('input[name=bild]').value; if(b) window.open('images/viner/'+b,'_blank')" class="shrink-0 px-3 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-sm font-bold" title="Förhandsgranska bild">👁</button>
+          </div>
+          <p class="text-stone-400 text-xs mt-1">Lägg bilden i mappen images/viner/ och ange filnamnet här</p>
+        </div>
+      </fieldset>
+
       <!-- Publicering -->
       <fieldset>
         <legend class="font-serif text-lg text-wine-800 font-semibold mb-4 border-b border-wine-100 pb-2 w-full">Publicering & Listor</legend>
@@ -459,7 +472,7 @@
     const DB_STORAGE_KEY = 'verum_vinum_db';
     const DB_BACKUP_PREFIX = 'verum_vinum_backup_';
     const MAX_BACKUPS = 10;
-    const DATA_VERSION = 6;
+    const DATA_VERSION = 8;
 
     function mergeDropdownOptions(target, source) {
       // Add any dropdown options from source that don't exist in target
