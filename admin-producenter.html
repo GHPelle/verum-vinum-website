@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin – Verum Vinum Producentregister</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwindcss.config = {
+      theme: { extend: {
+        colors: { wine: { 50:'#fdf2f4', 100:'#fce7eb', 200:'#f9d0d9', 300:'#f5a9ba', 400:'#ee7895', 500:'#e44d73', 600:'#d12a5b', 700:'#b01e49', 800:'#8a1a3d', 900:'#6e1735', 950:'#3f0819' }, cream: { 50:'#fefdf8', 100:'#fdf9ed' } },
+        fontFamily: { serif: ['"Playfair Display"', 'Georgia', 'serif'], sans: ['"Inter"', 'system-ui', 'sans-serif'] }
+      }}
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    html { scroll-behavior: smooth; }
+    .edit-panel { transition: transform 0.3s ease, opacity 0.3s ease; }
+    .edit-panel.hidden { transform: translateX(100%); opacity: 0; pointer-events: none; }
+    .edit-panel.visible { transform: translateX(0); opacity: 1; }
+    select, input, textarea { font-size: 14px; }
+    @media (orientation: landscape) and (max-height: 500px) {
+      .landscape-hide { display: none !important; }
+      header { display: none !important; }
+      main { height: 100vh !important; }
+    }
+    @media (max-width: 640px) {
+      .prod-table td, .prod-table th { padding: 6px 4px; font-size: 12px; }
+      .edit-panel .grid { grid-template-columns: 1fr !important; }
+      .edit-panel .grid-cols-2 { grid-template-columns: 1fr !important; }
+      .edit-panel .col-span-2 { grid-column: span 1 !important; }
+    }
+  </style>
+</head>
+<body class="text-stone-800 font-sans antialiased overflow-hidden h-screen" style="background: linear-gradient(to bottom, rgba(254,253,248,0.82), rgba(254,253,248,0.85)), url('https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=1920&q=80') center/cover no-repeat fixed;">
+
+  <!-- Login screen -->
+  <div id="login-screen" class="fixed inset-0 z-[100] bg-white flex items-center justify-center">
+    <div class="bg-white rounded-2xl shadow-2xl p-10 max-w-sm w-full mx-4 text-center">
+      <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-20 brightness-0 mx-auto mb-6">
+      <h2 class="font-serif text-2xl text-stone-900 font-semibold mb-2">Producentregister</h2>
+      <p class="text-stone-500 text-sm mb-6">Ange lösenord för att fortsätta</p>
+      <input type="password" id="login-pw" placeholder="Lösenord" class="w-full px-4 py-3 border-2 border-stone-300 rounded-lg text-center text-lg focus:outline-none focus:border-wine-500 mb-4" onkeydown="if(event.key==='Enter') checkLogin()">
+      <button onclick="checkLogin()" class="w-full px-6 py-3 bg-wine-700 hover:bg-wine-600 text-white rounded-lg font-bold text-sm uppercase tracking-wider transition-colors">Logga in</button>
+      <p id="login-error" class="text-red-600 text-sm font-medium mt-3 hidden">Fel lösenord</p>
+    </div>
+  </div>
+
+  <script>
+    const PW_HASH = '24bcc7776e506fe65713f64be5bc13a69cf9ebb3114dc48f5e55015975ebc453';
+    const LOGIN_KEY = 'verum_vinum_auth';
+
+    async function hashPassword(pw) {
+      const data = new TextEncoder().encode(pw);
+      const buf = await crypto.subtle.digest('SHA-256', data);
+      return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
+    }
+
+    async function checkLogin() {
+      const pw = document.getElementById('login-pw').value;
+      const hash = await hashPassword(pw);
+      if (hash === PW_HASH) {
+        sessionStorage.setItem(LOGIN_KEY, 'true');
+        document.getElementById('login-screen').classList.add('hidden');
+      } else {
+        document.getElementById('login-error').classList.remove('hidden');
+        document.getElementById('login-pw').value = '';
+        document.getElementById('login-pw').focus();
+      }
+    }
+
+    if (sessionStorage.getItem(LOGIN_KEY) === 'true') {
+      document.getElementById('login-screen').classList.add('hidden');
+    } else {
+      document.getElementById('login-pw').focus();
+    }
+  </script>
+
+  <!-- Header -->
+  <header class="bg-white/90 backdrop-blur-md shadow-sm text-stone-900 sticky top-0 z-50 border-b border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2 sm:gap-4">
+          <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-6 sm:h-8 brightness-0">
+          <h1 class="font-serif text-sm sm:text-xl font-bold text-stone-900">Producentregister</h1>
+          <span id="producer-count" class="bg-stone-200 text-stone-900 text-[10px] sm:text-xs px-2 py-1 rounded-full font-bold">0 producenter</span>
+        </div>
+        <div class="hidden sm:flex items-center gap-3">
+          <a href="admin.html" class="px-4 py-2 bg-wine-50 border border-wine-300 hover:bg-wine-100 rounded-lg text-sm font-bold text-wine-700 transition-colors">Vindatabas</a>
+          <label class="px-4 py-2 bg-white border border-stone-300 hover:bg-stone-100 rounded-lg text-sm font-bold text-stone-700 cursor-pointer transition-colors" title="Importera en tidigare sparad databasfil (JSON)">
+            LADDA JSON
+            <input type="file" id="load-json" accept=".json" class="hidden">
+          </label>
+          <button onclick="exportJSON()" class="px-4 py-2 bg-white border border-stone-300 hover:bg-stone-100 rounded-lg text-sm font-bold text-stone-700 transition-colors" title="Ladda ner en backup av hela databasen som JSON-fil">EXPORTERA JSON</button>
+          <button onclick="showBackupDialog()" class="px-4 py-2 bg-yellow-400 border border-yellow-500 hover:bg-yellow-300 rounded-lg text-sm font-bold text-yellow-900 transition-colors" title="Visa sparade backups">BACKUPS</button>
+          <button onclick="openEditor(-1)" class="px-4 py-2 bg-wine-600 hover:bg-wine-500 text-white rounded-lg text-sm font-bold transition-colors">+ NY PRODUCENT</button>
+          <span id="data-status" class="text-red-600 text-xs font-bold ml-2"></span>
+        </div>
+        <button onclick="document.getElementById('mobile-header-menu').classList.toggle('hidden')" class="sm:hidden text-stone-700 p-1">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+      <div id="mobile-header-menu" class="hidden sm:hidden mt-3 flex flex-wrap gap-2 pb-2">
+        <a href="admin.html" class="px-3 py-2 bg-wine-50 border border-wine-300 rounded-lg text-xs font-bold text-wine-700">Vindatabas</a>
+        <label class="px-3 py-2 bg-white border border-stone-300 rounded-lg text-xs font-bold text-stone-700 cursor-pointer">
+          LADDA JSON
+          <input type="file" accept=".json" class="hidden" onchange="document.getElementById('load-json').files = this.files; document.getElementById('load-json').dispatchEvent(new Event('change'))">
+        </label>
+        <button onclick="exportJSON()" class="px-3 py-2 bg-white border border-stone-300 rounded-lg text-xs font-bold text-stone-700">EXPORTERA</button>
+        <button onclick="showBackupDialog()" class="px-3 py-2 bg-yellow-400 border border-yellow-500 rounded-lg text-xs font-bold text-yellow-900">BACKUPS</button>
+        <button onclick="openEditor(-1)" class="px-3 py-2 bg-wine-600 rounded-lg text-xs font-bold text-white">+ NY PRODUCENT</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main class="max-w-7xl mx-auto px-3 sm:px-6 py-2 sm:py-4 h-[calc(100vh-60px)] flex flex-col overflow-hidden">
+
+    <!-- Logo bar -->
+    <div class="hidden md:flex items-center justify-between mb-2 shrink-0 landscape-hide">
+      <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-32 brightness-0">
+      <h2 class="font-serif text-5xl text-stone-900 font-semibold text-center px-2">Verum Vinums Producentregister</h2>
+      <img src="https://verumvinum.se/static/64/logo-2023.svg" alt="Verum Vinum" class="h-32 brightness-0">
+    </div>
+
+    <!-- Search & filter bar -->
+    <div class="py-2 sm:py-3 shrink-0">
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+        <input id="search" type="text" placeholder="Sök producent..." class="flex-1 px-3 py-2 border-2 border-stone-400 rounded-lg bg-white focus:outline-none focus:border-wine-500 font-medium text-sm" oninput="renderTable()">
+        <select id="filter-land" class="px-3 py-2 border-2 border-stone-400 rounded-lg bg-white font-medium text-sm cursor-pointer" onchange="renderTable()">
+          <option value="">Alla länder</option>
+        </select>
+        <button onclick="clearFilters()" class="px-3 py-2 bg-red-50 border border-red-300 hover:bg-red-100 text-red-600 rounded-lg text-xs font-bold transition-all shrink-0" title="Rensa filter">RENSA</button>
+        <button onclick="openEditor(-1)" class="px-6 py-2 bg-white border-2 border-green-600 hover:bg-green-50 text-green-700 rounded-lg text-xs font-bold uppercase tracking-wider transition-colors whitespace-nowrap shadow-md" title="Lägg till en ny producent">NY PRODUCENT</button>
+      </div>
+    </div>
+
+    <!-- Producer table -->
+    <div class="bg-white rounded-xl shadow-sm border border-stone-100 overflow-auto flex-1 min-h-0">
+      <table class="w-full text-sm prod-table" id="main-table">
+        <thead class="bg-stone-100 border-b-2 border-stone-300 sticky top-0 z-10">
+          <tr>
+            <th class="text-left px-4 py-3 font-extrabold text-stone-700 uppercase tracking-wider text-xs cursor-pointer hover:text-wine-700" onclick="sortTable('namn')">Producent</th>
+            <th class="text-left px-4 py-3 font-extrabold text-stone-700 uppercase tracking-wider text-xs cursor-pointer hover:text-wine-700" onclick="sortTable('land')">Land</th>
+            <th class="text-left px-4 py-3 font-extrabold text-stone-700 uppercase tracking-wider text-xs cursor-pointer hover:text-wine-700 hidden sm:table-cell" onclick="sortTable('region')">Region</th>
+            <th class="text-left px-4 py-3 font-extrabold text-stone-700 uppercase tracking-wider text-xs hidden md:table-cell">By/Ort</th>
+            <th class="text-left px-4 py-3 font-extrabold text-stone-700 uppercase tracking-wider text-xs hidden lg:table-cell">Certifieringar</th>
+            <th class="text-center px-4 py-3 font-extrabold text-stone-700 uppercase tracking-wider text-xs">Web</th>
+          </tr>
+        </thead>
+        <tbody id="producer-table"></tbody>
+      </table>
+    </div>
+  </main>
+
+  <!-- Edit panel (slide-in) -->
+  <div id="edit-overlay" class="fixed inset-0 bg-black/30 z-40 hidden" onclick="closeEditor()"></div>
+  <div id="edit-panel" class="edit-panel hidden fixed top-0 right-0 w-full max-w-xl h-full bg-white shadow-2xl z-50 overflow-y-auto">
+    <div class="sticky top-0 bg-white border-b border-stone-200 px-6 py-4 flex items-center justify-between z-10">
+      <h2 id="editor-title" class="font-serif text-xl text-stone-900 font-semibold">Ny producent</h2>
+      <div class="flex items-center gap-3">
+        <button onclick="saveProducer()" class="px-6 py-2 bg-green-50 text-green-700 hover:bg-green-100 rounded-lg text-sm font-bold transition-colors">Spara</button>
+        <button onclick="deleteProducer()" id="btn-delete" class="px-4 py-2 bg-red-50 text-red-700 hover:bg-red-100 rounded-lg text-sm font-medium transition-colors hidden">Radera</button>
+        <button onclick="closeEditor()" class="text-stone-400 hover:text-stone-600 p-1">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <form id="producer-form" class="px-6 py-6 space-y-8">
+
+      <!-- Grundinfo -->
+      <fieldset>
+        <legend class="font-serif text-lg text-wine-800 font-semibold mb-4 border-b border-wine-100 pb-2 w-full">Grundinfo</legend>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="col-span-2"><label class="flex items-center gap-2 text-xs uppercase tracking-wider text-stone-400 font-bold mb-1"><input type="checkbox" name="vis_namn" class="w-4 h-4 accent-green-600 cursor-pointer" title="Visa på extern web"> Producent Namn <span class="text-red-500">*</span></label><input name="namn" class="w-full px-3 py-2 border border-stone-200 rounded-lg" required></div>
+          <div class="col-span-2" data-dropdown="land"><label class="flex items-center gap-2 text-xs uppercase tracking-wider text-stone-400 font-bold mb-1"><input type="checkbox" name="vis_land" class="w-4 h-4 accent-green-600 cursor-pointer" title="Visa på extern web"> Land</label><div class="flex gap-1"><select name="land" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer" onchange="filterRegionsByLand(this.value)"></select><button type="button" onclick="addOption('land')" class="shrink-0 px-3 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till nytt land">+</button></div></div>
+          <div class="col-span-2" data-dropdown="region"><label class="flex items-center gap-2 text-xs uppercase tracking-wider text-stone-400 font-bold mb-1"><input type="checkbox" name="vis_region" class="w-4 h-4 accent-green-600 cursor-pointer" title="Visa på extern web"> Region</label><div class="flex gap-1"><select name="region" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('region')" class="shrink-0 px-3 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny region">+</button></div></div>
+          <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">By/Ort</label><input name="by_ort" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
+          <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Adressfält</label><input name="adress" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
+          <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Telefon</label><input name="telefon" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
+          <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Mailadress Admin</label><input name="mailadress_admin" type="email" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
+          <div class="col-span-2"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Instagram</label><input name="instagram" class="w-full px-3 py-2 border border-stone-200 rounded-lg" placeholder="@producent"></div>
+          <div class="col-span-2">
+            <label class="flex items-center gap-2 text-xs uppercase tracking-wider text-stone-400 font-bold mb-2"><input type="checkbox" name="vis_certifieringar" class="w-4 h-4 accent-green-600 cursor-pointer" title="Visa på extern web"> Certifieringar</label>
+            <div class="flex flex-wrap gap-4">
+              <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="cert_ekologisk" class="w-5 h-5 accent-wine-700 cursor-pointer"><span class="text-sm">Ekologisk</span></label>
+              <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="cert_biodynamisk" class="w-5 h-5 accent-wine-700 cursor-pointer"><span class="text-sm">Biodynamisk</span></label>
+              <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="cert_hev" class="w-5 h-5 accent-wine-700 cursor-pointer"><span class="text-sm">HEV</span></label>
+              <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="cert_naturvin" class="w-5 h-5 accent-wine-700 cursor-pointer"><span class="text-sm">Naturvin</span></label>
+              <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="cert_konventionell" class="w-5 h-5 accent-wine-700 cursor-pointer"><span class="text-sm">Konventionell</span></label>
+              <label class="flex items-center gap-2 cursor-pointer"><input type="checkbox" name="cert_green_experience" class="w-5 h-5 accent-wine-700 cursor-pointer"><span class="text-sm">Green Experience</span></label>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+
+      <!-- Kontaktperson -->
+      <fieldset>
+        <legend class="font-serif text-lg text-wine-800 font-semibold mb-4 border-b border-wine-100 pb-2 w-full">Kontaktperson</legend>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="col-span-2"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Kontaktperson</label><input name="kontaktperson" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
+          <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Mobiltelefon</label><input name="mobiltelefon" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
+          <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">WhatsApp</label><input name="whatsapp" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
+          <div class="col-span-2"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Mailadress</label><input name="mailadress_kontakt" type="email" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
+        </div>
+      </fieldset>
+
+      <!-- Beskrivning -->
+      <fieldset>
+        <legend class="font-serif text-lg text-wine-800 font-semibold mb-4 border-b border-wine-100 pb-2 w-full">Beskrivning</legend>
+        <div class="space-y-4">
+          <div><label class="flex items-center gap-2 text-xs uppercase tracking-wider text-stone-400 font-bold mb-1"><input type="checkbox" name="vis_beskrivning" class="w-4 h-4 accent-green-600 cursor-pointer" title="Visa på extern web"> Beskrivning Producent</label><textarea name="beskrivning" rows="6" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></textarea></div>
+          <div><label class="flex items-center gap-2 text-xs uppercase tracking-wider text-stone-400 font-bold mb-1"><input type="checkbox" name="vis_ursprungsbeteckningar" class="w-4 h-4 accent-green-600 cursor-pointer" title="Visa på extern web"> Ursprungsbeteckningar</label><textarea name="ursprungsbeteckningar" rows="2" class="w-full px-3 py-2 border border-stone-200 rounded-lg" placeholder="Kommaseparerade, t.ex. DOC Barolo, DOCG Barbaresco"></textarea></div>
+          <div><label class="flex items-center gap-2 text-xs uppercase tracking-wider text-stone-400 font-bold mb-1"><input type="checkbox" name="vis_vingardslagen" class="w-4 h-4 accent-green-600 cursor-pointer" title="Visa på extern web"> Vingårdslägen</label><input name="vingardslagen" class="w-full px-3 py-2 border border-stone-200 rounded-lg" placeholder="Kommaseparerade, t.ex. Rocche di Castiglione, Paiagallo"></div>
+        </div>
+      </fieldset>
+
+      <!-- Länkar -->
+      <fieldset>
+        <legend class="font-serif text-lg text-wine-800 font-semibold mb-4 border-b border-wine-100 pb-2 w-full">Länkar</legend>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="col-span-2"><label class="flex items-center gap-2 text-xs uppercase tracking-wider text-stone-400 font-bold mb-1"><input type="checkbox" name="vis_websida" class="w-4 h-4 accent-green-600 cursor-pointer" title="Visa på extern web"> Websida</label><div class="flex gap-1"><input name="websida_url" type="url" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg" placeholder="https://"><button type="button" onclick="var u=document.querySelector('input[name=websida_url]').value; if(u){if(!u.startsWith('http'))u='https://'+u; window.open(u,'_blank')}" class="shrink-0 px-3 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-sm font-bold" title="Öppna websida">↗</button></div></div>
+          <div class="col-span-2"><label class="flex items-center gap-2 text-xs uppercase tracking-wider text-stone-400 font-bold mb-1"><input type="checkbox" name="vis_googlemaps" class="w-4 h-4 accent-green-600 cursor-pointer" title="Visa på extern web"> Google Maps</label><div class="flex gap-1"><input name="googlemaps" type="url" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg" placeholder="https://maps.google.com/..."><button type="button" onclick="var u=document.querySelector('input[name=googlemaps]').value; if(u) window.open(u,'_blank')" class="shrink-0 px-3 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-sm font-bold" title="Öppna Google Maps">↗</button></div></div>
+          <div class="col-span-2"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Prislista PDF</label><input name="prislista_pdf" class="w-full px-3 py-2 border border-stone-200 rounded-lg" placeholder="URL eller sökväg"></div>
+          <div class="col-span-2"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Produktbeskrivningar PDF</label><input name="produktbeskrivningar_pdf" class="w-full px-3 py-2 border border-stone-200 rounded-lg" placeholder="URL eller sökväg"></div>
+        </div>
+      </fieldset>
+
+      <!-- Publicering -->
+      <fieldset>
+        <legend class="font-serif text-lg text-wine-800 font-semibold mb-4 border-b border-wine-100 pb-2 w-full">Publicering</legend>
+        <div>
+          <label class="flex items-center gap-3 cursor-pointer">
+            <input type="checkbox" name="extern_web" class="w-5 h-5 accent-wine-700 cursor-pointer">
+            <span class="text-sm font-medium">Extern Web — visas på den publika hemsidan</span>
+          </label>
+        </div>
+      </fieldset>
+
+    </form>
+  </div>
+
+  <!-- Backup dialog -->
+  <div id="backup-dialog" class="hidden fixed inset-0 z-[60] flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/40" onclick="document.getElementById('backup-dialog').classList.add('hidden')"></div>
+    <div class="relative bg-white rounded-xl shadow-2xl max-w-lg w-full mx-4 p-8">
+      <h3 class="font-serif text-xl text-stone-900 font-semibold mb-4">Sparade backups</h3>
+      <p class="text-stone-500 text-sm mb-4">Klicka på en backup för att återställa. Max 10 backups sparas automatiskt.</p>
+      <div id="backup-list" class="space-y-2 max-h-60 overflow-y-auto"></div>
+      <div class="mt-6 flex justify-between">
+        <button onclick="createManualBackup()" class="px-4 py-2 bg-green-50 text-green-700 border border-green-300 hover:bg-green-100 rounded-lg text-sm font-medium transition-colors">Skapa backup nu</button>
+        <button onclick="document.getElementById('backup-dialog').classList.add('hidden')" class="px-6 py-2 bg-stone-100 text-stone-600 hover:bg-stone-200 rounded-lg text-sm font-medium transition-colors">Stäng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Delete confirmation dialog -->
+  <div id="delete-dialog" class="hidden fixed inset-0 z-[60] flex items-center justify-center">
+    <div class="absolute inset-0 bg-black/40" onclick="cancelDelete()"></div>
+    <div class="relative bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 p-8 text-center">
+      <svg class="w-14 h-14 text-red-500 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+      <p class="text-stone-800 text-lg font-bold mb-2">OBS! Vill du verkligen radera posten?</p>
+      <p class="text-stone-500 mb-8">Denna åtgärd kan inte ångras.</p>
+      <div class="flex justify-center gap-4">
+        <button onclick="cancelDelete()" autofocus class="px-8 py-3 bg-green-50 text-green-700 border-2 border-green-500 hover:bg-green-100 rounded-lg text-sm font-bold transition-colors focus:outline-none focus:ring-2 focus:ring-green-500">Ångra</button>
+        <button onclick="confirmDelete()" class="px-8 py-3 bg-red-50 text-red-700 border-2 border-red-300 hover:bg-red-100 rounded-lg text-sm font-medium transition-colors">Radera</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // ============ STATE ============
+    let db = { producers: [], dropdown_options: {}, meta: {} };
+    let editingIndex = -1;
+    let sortField = 'namn';
+    let sortAsc = true;
+    let dirty = false;
+
+    const dropdownFields = ['land', 'region'];
+    const certFields = ['cert_ekologisk', 'cert_biodynamisk', 'cert_hev', 'cert_naturvin', 'cert_konventionell', 'cert_green_experience'];
+    const visFields = ['vis_namn', 'vis_land', 'vis_region', 'vis_certifieringar', 'vis_beskrivning', 'vis_ursprungsbeteckningar', 'vis_vingardslagen', 'vis_websida', 'vis_googlemaps'];
+    const booleanFields = ['extern_web', ...certFields, ...visFields];
+    const textFields = ['namn', 'by_ort', 'adress', 'telefon', 'mailadress_admin', 'instagram',
+      'kontaktperson', 'mobiltelefon', 'whatsapp', 'mailadress_kontakt',
+      'beskrivning', 'ursprungsbeteckningar', 'vingardslagen',
+      'websida_url', 'googlemaps', 'prislista_pdf', 'produktbeskrivningar_pdf'];
+
+    // ============ EMBEDDED DATA ============
+    const INITIAL_DATA = {"producers":[{"namn":"Alberto Oggero","land":"Italien","region":"Roero, Piemonte, Italien","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":true,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"När Alberto bestämde sig för att vinet skulle bli hans livsverk och han skulle skapa sin vingård så hade han några få mål i tankarna. Han ville skapa viner som avspeglade terroir på bästa möjliga sätt, få nytt liv i gamla vinrankor samt göra viner som var fullt drickbara när han släppte dom.\n\nNebbiolo skulle vara ett vin du kunde dricka till vardags och ihop med middagen utan att behöva gå till rustika rätter och samtidigt se Arneis som en typ av Nebbiolo Bianco.\n\nUtmaningen med att jobba med en otroligt hyllad druva och en underskattad druva motiverar Alberto som nu skapat tre olika Nebbiolo och två olika Arneis med likheten att alla tydligt avspeglar sin terroir.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Cigliano di Sopra","land":"Italien","region":"San Casciano in Val di Pesa, Toscana, Italien","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":true,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Efter avslutade studier i vinmakning och oenologi 2017 så arbetade dom båda hos olika producenter i Toscana innan dom åkte till USA för att arbeta med stjärnduon Sashi Moorman och Rajat Parr hos deras Kalifornien och Oregon baserade vinhus Domaine de la Cote, Sandhi, Pence Vineyards och Eveningland.\n\nTill slut så landade dom tillbaka i Toscana och närmare sagt norra Chianti där Maddalenas föräldrar tagit över en gård med gamla vingårdar som dom båda restaurerade och införde ekologisk odling samt vissa experiment med biodynamisk odling. Idag har dom ca 7hk med jordmån av sand, lera, kalk och stora gamla flodstenar.\n\nAll skörd sker naturligtvis för hand och vinerna jäser med den naturliga jästen där man använder 30% hela klasar. Lagrat i franska tonneauxer och barriquer. Vinet filtreras inte och användandet av sulfiter hålls till minimum.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Clos de la Bonnette","land":"Frankrike","region":"Norra Rhône, Frankrike","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":true,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Gården och dess vingårdar övergavs efter andra världskriget och fram till att familjen tog över. Vingårdarna har aldrig varit besprutade och det är något som Isabelle tog vara på och fortsatte arbeta helt ekologiskt och även certifierade sig. Det dröjde till 2009 innan familjen vinifierade en årgång själva.\n\nVingårdarna vid domänen ligger på otroligt vackra terrasser på ena sidan av en dalgång med utsikt över Rhone. Kvaliteten på frukten är så hög att Marcel Guigal ville köpa deras druvor och skriva ett kontrakt med dom. Tack och lov tackade de artigt nej.\n\nPå grund av smala terrasser och branta sluttningar är platsen olämplig för mekaniska skördare, traktorer eller hästar. Så allt måste göras för hand. Totalt har man ca 5hk vingårdar i Condrieu och Cote-Rotie.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Diego Morra","land":"Italien","region":"Verduno, Piemonte, Italien","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":false,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Idag har familjen ca 30 hektar vingårdar i Verduno, La Morra och Roddi. Diego har producerat vin under eget namn sen 2009 och men första årgången av Barolo kom först 2011. 2013 ändrade han etiketterna och världen fick för första gången bekanta sig med hans tre M.\n\nM:en står för Mosca som är familjens hus som ligger i hjärtat av Monvigliero som även den utgör ett av M:en och är den viktigaste vingården för familjen. Sista M:et är familjens namn Morra.\n\nDiego har senaste åren verkligen tagit en stor plats hos många vinälskare. Inte mest med sin Barolo Monvigliero och San Lorenzo men även med sin fantastiska Pelaverga.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Domaine Christian Clerget","land":"Frankrike","region":"Vougeot, Bourgogne, Frankrike","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":true,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Familjens vingårdar är på totalt 6hk som ligger runt byn Vougeot med vinstockar i Chambolle-Musigny, Morey-Saint-Denis, Vougeot och Vosne-Romanée.\n\nSedan Justine tog över så har hon ständigt haft en strävan efter att förbättra och att dra erfarenheter från tidigare generationer. En av hennes första initiativ var att trimma om vingårdarna till ekologisk odling och 2017 blev dom certifierade av Ecocert.\n\nSkörden sker alltid manuellt av ett litet team av rutinerade arbetare. Druvorna macererar alltid minst tre veckor och vinifieringen sker utan tillsatt jäst och med så lite påverkan som möjligt. Lagringstiden är sedan 18 månader på fat innan det är dags för buteljering.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Domaine Coffinet-Duvernay","land":"Frankrike","region":"Chassagne-Montrachet, Bourgogne, Frankrike","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":true,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Idag är det sonen Bastien (5:e generationens vinmakare) som har huvudansvaret för familjens gårdar och vineri. Bastien bestämde 2012 efter avslutade studier att jobba med sin mamma och pappa och 2018 tog han över huvudansvaret.\n\nHan säger själv att han är ett stort fan av sin fars viner och vill behålla så mycket som möjligt som det varit tidigare. Men med tanke på de senaste årens klimatförhållanden var han tvungen att se över sitt tillvägagångssätt.\n\nBastien arbetar ekologiskt i vingårdarna utan att vara certifierad och idag har familjen 6,5 hk vinstockar exklusivt spridda över 14 Chassagne-Montrachet appellationer.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Domaine La Famille K","land":"Frankrike","region":"Morancé, Beaujolais, Frankrike","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":true,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Efter att dom levt ett storstadsliv med stress så var det dags att skola om sig och uppfylla drömmen om att arbeta med sin passion.\n\nMålet med La Familie K var att ta hand om de gamla rankorna på ett miljövänligt sätt och producera opretentiösa viner av hög kvalité som är tillgängliga för alla. Mängden svavel hålls till minimala mängder och sedan 2022 så är La Famille K ekologiskt certifierade.\n\nDeras viner kommer i 4 olika familjer. L'Héritière, La Mère, Le Père och L'Oncle. Dom tre första familjerna består av ett rött vin på 100% Gamay och ett vitt vin på 100% Chardonnay men med olika vinifikationer och stilar.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Domaine Michel Rebourgeon","land":"Frankrike","region":"Beaune, Bourgogne, Frankrike","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":true,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Michel tog över domänen 1964 från sin mor och far med totalt 3hk vingårdar och har under åren lyckats köpa 1,25hk mer och har idag vingårdar i Pommard, Beaune och Volnay.\n\nIdag är det William som har huvudansvaret. Williams hårda arbete i vingårdarna tillsammans med sitt tankesätt i vineriet har verkligen höjt vinerna till en ny nivå! Genom att minska extraktionen har elegansen blivit tydligare och William har även aldrig velat tumma på fräschören.\n\nDu ska kunna dricka vinerna unga om du önskar men även utan problem kunna lagra i 15 år. Efter att flera år arbetat ekologiskt så bestämde man sig 2020 för att även certifiera sig.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Domaine Villet","land":"Frankrike","region":"Arbois, Jura, Frankrike","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":true,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Idag drivs domänen av Nathanael Villet, som vidareutvecklar familjens filosofi med fokus på hantverk, hållbarhet och respekt för terroiren. Vingårdarna brukas utan kemikalier sedan 1988 och är ekologiskt certifierade.\n\nMed totalt 5,7 hektar uppdelat på 7 vingårdar som består av cirka 50% Chardonnay, 20% Savagnin, 15% Poulsard, 8% Pinot Noir och 7% Trousseau.\n\nPortföljen är bred och består av både ouillé och sous voile viner så väl som mousserande, pet nat, Macvin du Jura och Vin Jaune.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Ettore Germano","land":"Italien","region":"Serralunga d'Alba, Piemonte, Italien","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":false,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Med start redan 1856 så har familjens yta tredubblats till den totala yta som familjen idag. Förutom dom 10 hektar som man har i Serralunga d'Alba där även tillverkningen sker så har man även 9 hektar i Cigliè, Alta Langa.\n\nIdag styrs företaget av Sergio Germano som ärvde det av sin far Ettore Germano som startade vintillverkningen under namnet Ettore Germano 1975. Efter sin examen i oenologi 1985 så skaffade sig Sergio erfarenhet hos tre större vintillverkare innan han valde att komma hem och hjälpa sin far med tillverkningen.\n\n1988 så buteljerade man 5000st flaskor delat på Barolo, Dolcetto och Barbera. Det stora genombrottet kom först 1993 då man skördade betydligt mer druvor som sedan buteljerades.\n\nEttore Germano har idag yta i dom välkända vingårdarna Prapò, Lazzarito, Cerretta och Vigna Rionda.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Fontanabianca","land":"Italien","region":"Neive, Piemonte, Italien","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":false,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Fontanabianca hittar man i Piemonte eller närmare sagt Neive. Dom beskriver det själva som \"i hjärtat av Barbaresco's terroir\". Det är de röda vinerna som ligger i fokus och framförallt just Barbaresco rik på elegans och parfym.\n\nIdag är det den tredje generationens vinmakare Matteo Pola som rattar vineriet efter ha tagit över efter sin far Aldo vars far Franco startade Fontanabianca 1969. Fontana har under flera decennier tillverkat vin som tydligt varit identifierade med Neives kullar och den fantastiska vinregion som Piemonte är.\n\nJordmålen på kalkhaltig lera och medium strukturerad jord ger de perfekta druvorna för att producera parfymerade, eleganta och fyllig viner. Alla viner tillverkas med 100% druvor av samma sort.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Lapo Berti","land":"Italien","region":"La Morra, Piemonte, Italien","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":true,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Hans andra stora passion i livet är att resa och valde helt naturligt att slå samman sina två stora intressen. Lapo har nu över 20 års erfarenhet av vinmakning och har under den tiden arbetat i Italien, Australien, Frankrike (Bourgogne), USA (Oregon) och Nya Zeeland (Otago).\n\nSedan 2012 så har han jobbat med sitt eget Barolo projekt i La Morra då Lapo som många av oss andra älskar Nebbiolo. Han äger inga vingårdar utan arrenderar en del i vingården Fossati samt köper druvor från vänner i La Morra området.\n\nLapo adderar ingenting till sina viner förutom minimalt med svavel. Han producerar ungefär 3500st flaskor totalt och jobbar enbart med Nebbiolo. Idag har Lapo 4st olika viner. En Pet Nat, en Langhe Nebbiolo och två Barolo där kronjuvelen är hans Barolo Fossati.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Mori Concetta","land":"Italien","region":"San Casciano in Val di Pesa, Toscana, Italien","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":true,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"1970 planerade man dom första vinrankorna och 1971 dom första olivträden och mellan 1971 och 1972 så bygges vineriet för att börja producera en Chianti Classico.\n\nNär Massimo's mamma gick bort 2014 så ärvde han hela egendomen som varit en stor del av hans liv där han fortsätter att producera en Chianti Classico i världsklass och deras prisade olivolja. När Massimo tog över helt så började han med att byta ut några av dom gamla rankorna mot nya samt att han började jobba helt ekologiskt och sen 2015 så är samtliga produkter ekologiskt certifierade.\n\nTotalt har Mori Concetta 1,2hk vingård i nordvästra Chianti Classico och närmare sagt San Cascaino in Val di Pesa.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Quinta das Bágeiras","land":"Portugal","region":"Sangalhos, Bairrada, Portugal","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":false,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Vingårdarna ärvde han från sin farfar Fausto och sin morfar Armando och tillsammans med sin far Abel så började dom buteljera sina egna viner efter att tidigare producerat vin för att sälja på lösvikt.\n\nHans övertygelse var enkel: han ville att produktionen av hans viner skulle ske med traditionella metoder, utan att ignorera den ständiga utvecklingen inom vinodling och oenologi. Det är därför alla deras druvor är handplockade, deras röda viner produceras i lagares utan tillsatt jäst och varför deras mousserande viner inte har något restsocker.\n\nMario Sergios tro är att kvalitet inte betyder något utan identitet.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Quinta do Javali","land":"Portugal","region":"São João da Pesqueira, Douro, Portugal","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":false,"cert_biodynamisk":true,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"År 2000 fick svärsonen frågan om han ville ta över och Quinta do Javali startades. Quinta do Javali är världens minsta producent av portvin som endast gör portvin på sina egna druvor som dom själva vinifierar och även lagrar på egen hand.\n\n2016 testade man att börja odla biodynamiskt i den äldsta vingården Clos Fonte do Santos med rankor upp till 90 år gamla och med ett 30-tal olika druvor. Det visade sig bli en succé och efter det började man arbeta biodynamiskt i samtliga vingårdar.\n\nSen 2023 är sonen Antonio 100% ansvarig för dom stilla vinerna. Antonios filosofi är att verkligen visa deras vingårdar och dess terroir. \"Man ska känna växtplatsen.\" Tveklöst en av dom mest intressanta producenterna i Douro!","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Rudi Pichler","land":"Österrike","region":"Wosendorf, Wachau, Österrike","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":false,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Idag odlar den noggranne Rudolf Pichler IV, känd som Rudi, femton hektar vingård inklusive några av de erkända \"grands crus\" i Wachau. Vingårdarna består av 65% Grüner Veltliner, 30% Riesling och 5% delat på Weissburgunder och Roter Veltliner.\n\nDet här är viner som kombinerar precision med seriöst djup, tillgängliga unga men med många lager av smak som väntar på att vecklas ut. Rudi vill alltid komplexitet i vinerna framför koncentration.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Réva","land":"Italien","region":"Monforte d'Alba, Piemonte, Italien","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":true,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"\"Vi vill skapa viner som är unika, exakta och som verkligen får dig att känna att vinerna är tillverkade med respekt för druvorna och sin terroir\". Detta var hur Daniele presenterade Réva för oss när vi träffade honom för första gången.\n\nEtt av Révas mål är även att tillverka viner som ska vara drickbara direkt men som även klarar flera års lagring i källaren. Dom har vingårdar i sex olika områden vilka är Monforte d'Alba, Barolo, Novello, Serralunga d'Alba, Grinzane Cavour och Roddino. Réva har hektar i dom tre eftertraktade vingårdarna Cannubi, Ravera och Lazzarito.\n\nFörutom sina röda viner så gör Réva en väldigt unik vit blend för Piemonte. Vinet Langhe Bianco Grey görs nämligen på 70% Sauvignon Gris och 30% Sauvignon Blanc, testa!","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Vadio","land":"Portugal","region":"Poutena, Bairrada, Portugal","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":true,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Vadio startade 2005 med Luis i spetsen som vinmakare. När dom startade 2005 så hade paret 0,5 hektar vingård och har idag totalt 7,5 hektar.\n\nEn av dom viktigaste aspekterna för Luis är att hans viner tydligt ska visa respekten för regionens stil och traditioner. Vinernas karaktär ska tydligt avspegla regionen.\n\nLuis arbetade under 13år med vintillverkning hos producenten Herdade do Esporao. Utöver Vadio så är han även ansvarig vinmakare hos Herdade de Coelheiros.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Victor Charlot","land":"Frankrike","region":"Moussy, Champagne, Frankrike","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":false,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Det dröjde dock till 1960 innan familjen själva började producera Champagne och enda till 2000 innan man skötte samtliga delar av framställandet själva. Familjens vingårdar är på totalt 6,5hk och består av 70% Pinot Meunier och 30% Chardonnay.\n\nAtt vinerna tydligt avspeglar sin terroir och sanna natur är A och O för Victor och hans fru Charlotte. Medans han ville bära vidare sitt arv från sin familj så fortsätter Victor även att bryta ny mark med nya cuveer utöver dom som funnits i familjen sedan starten.\n\nSamtliga viner har i alla tider jäst på ståltank och utan malolaktisk jäsning men Victor har nu börjat experimentera med 6st barriquer så fler spännande cuveer är på gång!","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Villa i Cipressi","land":"Italien","region":"Montalcino, Toscana, Italien","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":true,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Huberts dröm och mål var att börja odla och tillverka högkvalitativa viner och olivoljor. Den stora vändningen kom under 90-talet när Hubert köpte upp mer land för just odling av oliver och vindruvor. Idag jobbar förutom Hubert själv även hans fru Patrizia och deras söner Dario och Federico.\n\nÅr 2000 så började familjen att tillverka Brunello di Montalcino och Rosso di Montalcino. Familjen har 3,5 hektar av Sangiovese på två platser i Montalcino, en i syd och en i väst. Druvorna från de två vingårdarna med helt annorlunda jordmån och mikroklimat blandas sedan för att skapa ett rikare och hög kvalitativare vin.\n\nFrån vingårdarnas allra bästa druvor gör man dessutom Zebras Brunello di Montalcino.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true},{"namn":"Weingut Martin Müllen","land":"Tyskland","region":"Traben-Trarbach, Mosel, Tyskland","by_ort":"","adress":"","telefon":"","mailadress_admin":"","instagram":"","cert_ekologisk":false,"cert_biodynamisk":false,"cert_hev":false,"cert_naturvin":false,"cert_konventionell":false,"cert_green_experience":false,"kontaktperson":"","mobiltelefon":"","whatsapp":"","mailadress_kontakt":"","beskrivning":"Sedan 1991 har Martin odlat Riesling i bland annat vingårdarna Kröver Paradies, Kröver Letterlay, Kröver Kirchlay och Kröver Stefensberg.\n\nAlla vingårdar har sin egen karaktär och magi vilket avspeglar sig i Martins breda utbud av Riesling viner. Intentionen är att producera Riesling viner med finess och en rik smakpalett som kräver mer än en klunk för att avslöja vinets hemligheter.\n\nDet är med stor passion och kärlek till sina viner som Martin och hans son Jonas sköter om sina rankor noggrant. Skörden sker helt manuellt för att försäkra sig om att man bara använder de druvor som är av högsta kvalité.","ursprungsbeteckningar":"","vingardslagen":"","websida_url":"","googlemaps":"","prislista_pdf":"","produktbeskrivningar_pdf":"","extern_web":false,"vis_namn":true,"vis_land":true,"vis_region":true,"vis_certifieringar":true,"vis_beskrivning":true,"vis_ursprungsbeteckningar":true,"vis_vingardslagen":true,"vis_websida":true,"vis_googlemaps":true}],"dropdown_options":{"land":["Frankrike","Italien","Portugal","Tyskland","Österrike"],"region":["Arbois, Jura, Frankrike","Beaune, Bourgogne, Frankrike","Chassagne-Montrachet, Bourgogne, Frankrike","La Morra, Piemonte, Italien","Monforte d'Alba, Piemonte, Italien","Montalcino, Toscana, Italien","Morancé, Beaujolais, Frankrike","Moussy, Champagne, Frankrike","Neive, Piemonte, Italien","Norra Rhône, Frankrike","Poutena, Bairrada, Portugal","Roero, Piemonte, Italien","San Casciano in Val di Pesa, Toscana, Italien","Sangalhos, Bairrada, Portugal","Serralunga d'Alba, Piemonte, Italien","São João da Pesqueira, Douro, Portugal","Traben-Trarbach, Mosel, Tyskland","Verduno, Piemonte, Italien","Vougeot, Bourgogne, Frankrike","Wosendorf, Wachau, Österrike"],"certifieringar":["Biodynamisk","Ekologisk","Green Experience","HEV","Konventionell","Naturvin"]},"meta":{"data_version":4,"description":"Verum Vinum Producentregister"}};
+    const DB_STORAGE_KEY = 'verum_vinum_producers_db';
+    const DB_BACKUP_PREFIX = 'verum_vinum_producers_backup_';
+    const MAX_BACKUPS = 10;
+    const DATA_VERSION = 4;
+
+    // ============ DATA MANAGEMENT ============
+    function mergeDropdownOptions(target, source) {
+      if (!source.dropdown_options) return;
+      if (!target.dropdown_options) target.dropdown_options = {};
+      Object.keys(source.dropdown_options).forEach(key => {
+        if (!target.dropdown_options[key]) {
+          target.dropdown_options[key] = source.dropdown_options[key];
+        } else {
+          source.dropdown_options[key].forEach(val => {
+            if (!target.dropdown_options[key].includes(val)) {
+              target.dropdown_options[key].push(val);
+              target.dropdown_options[key].sort((a, b) => a.localeCompare(b, 'sv'));
+            }
+          });
+        }
+      });
+    }
+
+    function mergeNewFields(db) {
+      const template = INITIAL_DATA.producers[0];
+      if (!template) return;
+      db.producers.forEach(p => {
+        Object.keys(template).forEach(key => {
+          if (!(key in p)) p[key] = template[key];
+        });
+      });
+    }
+
+    function init() {
+      const saved = localStorage.getItem(DB_STORAGE_KEY);
+      let useLocalStorage = false;
+
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          if (parsed && parsed.producers && Array.isArray(parsed.producers) && parsed.producers.length > 0) {
+            const localVersion = parsed.meta && parsed.meta.data_version || 0;
+            if (localVersion >= DATA_VERSION) {
+              db = parsed;
+              useLocalStorage = true;
+              console.log('Laddade från localStorage: v' + localVersion + ', ' + db.producers.length + ' producenter');
+            } else {
+              console.log('Nyare INITIAL_DATA (v' + DATA_VERSION + ') ersätter localStorage (v' + localVersion + ')');
+              createAutoBackup('before_version_upgrade');
+            }
+          }
+        } catch(e) {
+          console.error('Kunde inte parsa localStorage:', e);
+        }
+      }
+
+      if (!useLocalStorage) {
+        db = JSON.parse(JSON.stringify(INITIAL_DATA));
+        db.meta.data_version = DATA_VERSION;
+        saveToLocalStorage();
+        console.log('Laddade INITIAL_DATA v' + DATA_VERSION + ': ' + db.producers.length + ' producenter');
+      }
+
+      mergeDropdownOptions(db, INITIAL_DATA);
+      mergeNewFields(db);
+      saveToLocalStorage();
+
+      dirty = false;
+      createAutoBackup('session_start');
+      renderAll();
+      showDataStatus();
+    }
+
+    function saveToLocalStorage() {
+      db.meta.last_saved = new Date().toISOString();
+      db.meta.producer_count = db.producers.length;
+      db.meta.data_version = DATA_VERSION;
+      const json = JSON.stringify(db);
+      try {
+        const verify = JSON.parse(json);
+        if (!verify.producers || verify.producers.length === 0) {
+          console.error('VARNING: Försökte spara tom databas, avbrutet!');
+          return;
+        }
+        localStorage.setItem(DB_STORAGE_KEY, json);
+        showDataStatus();
+      } catch(e) {
+        console.error('Fel vid sparning:', e);
+        alert('Fel vid sparning! Exportera en backup via Exportera JSON.');
+      }
+    }
+
+    function createAutoBackup(label) {
+      const data = localStorage.getItem(DB_STORAGE_KEY);
+      if (!data) return;
+      const ts = new Date().toLocaleString('sv-SE', {year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',second:'2-digit'}).replace(/[: ]/g, '-');
+      const key = DB_BACKUP_PREFIX + ts + '_' + label;
+      localStorage.setItem(key, data);
+      const allKeys = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && k.startsWith(DB_BACKUP_PREFIX)) allKeys.push(k);
+      }
+      allKeys.sort();
+      while (allKeys.length > MAX_BACKUPS) {
+        localStorage.removeItem(allKeys.shift());
+      }
+    }
+
+    function listBackups() {
+      const backups = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const k = localStorage.key(i);
+        if (k && k.startsWith(DB_BACKUP_PREFIX)) {
+          try {
+            const d = JSON.parse(localStorage.getItem(k));
+            backups.push({ key: k, count: d.producers ? d.producers.length : 0, date: k.replace(DB_BACKUP_PREFIX, '') });
+          } catch(e) {}
+        }
+      }
+      return backups.sort((a, b) => b.key.localeCompare(a.key));
+    }
+
+    function restoreBackup(key) {
+      const data = localStorage.getItem(key);
+      if (!data) return;
+      if (!confirm('Återställ från backup? Nuvarande data sparas som backup först.')) return;
+      createAutoBackup('before_restore');
+      localStorage.setItem(DB_STORAGE_KEY, data);
+      db = JSON.parse(data);
+      dirty = false;
+      renderAll();
+      showDataStatus();
+      alert('Återställd! ' + db.producers.length + ' producenter laddade.');
+    }
+
+    function showDataStatus() {
+      const statusEl = document.getElementById('data-status');
+      if (!statusEl) return;
+      const saved = db.meta.last_saved;
+      const backups = listBackups();
+      let text = db.producers.length + ' producenter';
+      if (saved) {
+        const d = new Date(saved);
+        text += ' | Senast sparad: ' + d.toLocaleString('sv-SE');
+      }
+      text += ' | ' + backups.length + ' backups';
+      statusEl.textContent = text;
+    }
+
+    // ============ RENDER ============
+    function renderAll() {
+      renderTable();
+      renderFilterDropdowns();
+      document.getElementById('producer-count').textContent = db.producers.length + ' producenter';
+    }
+
+    function renderFilterDropdowns() {
+      const filterLand = document.getElementById('filter-land');
+      const currentVal = filterLand.value;
+      const lands = [...new Set(db.producers.map(p => p.land).filter(Boolean))].sort((a, b) => a.localeCompare(b, 'sv'));
+      filterLand.innerHTML = '<option value="">Alla länder</option>' + lands.map(l => `<option value="${l}" ${l === currentVal ? 'selected' : ''}>${l}</option>`).join('');
+    }
+
+    function getCertifications(p) {
+      const certs = [];
+      if (p.cert_ekologisk) certs.push('Ekologisk');
+      if (p.cert_biodynamisk) certs.push('Biodynamisk');
+      if (p.cert_hev) certs.push('HEV');
+      if (p.cert_naturvin) certs.push('Naturvin');
+      if (p.cert_konventionell) certs.push('Konventionell');
+      if (p.cert_green_experience) certs.push('Green Experience');
+      return certs;
+    }
+
+    function renderTable() {
+      const search = document.getElementById('search').value.toLowerCase();
+      const filterLand = document.getElementById('filter-land').value;
+
+      let producers = db.producers.filter(p => {
+        if (filterLand && p.land !== filterLand) return false;
+        if (search) {
+          const s = (p.namn + ' ' + p.land + ' ' + p.region + ' ' + p.by_ort + ' ' + getCertifications(p).join(' ')).toLowerCase();
+          if (!s.includes(search)) return false;
+        }
+        return true;
+      });
+
+      // Sort
+      producers.sort((a, b) => {
+        let va = (a[sortField] || '').toString().toLowerCase();
+        let vb = (b[sortField] || '').toString().toLowerCase();
+        const cmp = va.localeCompare(vb, 'sv');
+        return sortAsc ? cmp : -cmp;
+      });
+
+      const tbody = document.getElementById('producer-table');
+      const check = v => v ? '<span class="text-green-600 font-bold">&#10003;</span>' : '<span class="text-stone-300">–</span>';
+
+      tbody.innerHTML = producers.map((p, rowIdx) => {
+        const idx = db.producers.indexOf(p);
+        const stripe = rowIdx % 2 === 1 ? 'background-color: #f5f5f4;' : 'background-color: #ffffff;';
+        const certs = getCertifications(p);
+        const certBadges = certs.map(c => {
+          const colors = {
+            'Ekologisk': 'bg-green-100 text-green-800',
+            'Biodynamisk': 'bg-purple-100 text-purple-800',
+            'HEV': 'bg-blue-100 text-blue-800',
+            'Naturvin': 'bg-amber-100 text-amber-800',
+            'Konventionell': 'bg-stone-100 text-stone-600',
+            'Green Experience': 'bg-teal-100 text-teal-700'
+          };
+          return `<span class="inline-block px-1.5 py-0.5 rounded text-[10px] font-bold ${colors[c] || 'bg-stone-100 text-stone-600'}">${c}</span>`;
+        }).join(' ');
+
+        return `<tr class="border-b border-stone-200 hover:bg-wine-50/40 cursor-pointer transition-colors" onclick="openEditor(${idx})" style="${stripe}">
+          <td class="px-4 py-3 font-bold text-stone-900">${p.namn || ''}</td>
+          <td class="px-4 py-3">${p.land || ''}</td>
+          <td class="px-4 py-3 hidden sm:table-cell text-sm">${p.region || ''}</td>
+          <td class="px-4 py-3 hidden md:table-cell">${p.by_ort || ''}</td>
+          <td class="px-4 py-3 hidden lg:table-cell">${certBadges || '<span class="text-stone-300">–</span>'}</td>
+          <td class="px-4 py-3 text-center">${check(p.extern_web)}</td>
+        </tr>`;
+      }).join('');
+    }
+
+    function sortTable(field) {
+      if (sortField === field) sortAsc = !sortAsc;
+      else { sortField = field; sortAsc = true; }
+      renderTable();
+    }
+
+    // ============ EDITOR ============
+    function openEditor(index) {
+      editingIndex = index;
+      const panel = document.getElementById('edit-panel');
+      const overlay = document.getElementById('edit-overlay');
+      const title = document.getElementById('editor-title');
+      const deleteBtn = document.getElementById('btn-delete');
+      const form = document.getElementById('producer-form');
+
+      // Populate dropdowns
+      dropdownFields.forEach(field => {
+        const select = form.querySelector(`select[name="${field}"]`);
+        if (!select) return;
+        const opts = db.dropdown_options[field] || [];
+        select.innerHTML = '<option value="">– Välj –</option>' + opts.map(o => `<option value="${o}">${o}</option>`).join('');
+      });
+
+      if (index >= 0) {
+        title.textContent = 'Redigera producent';
+        deleteBtn.classList.remove('hidden');
+        const producer = db.producers[index];
+        Object.keys(producer).forEach(key => {
+          const el = form.querySelector(`[name="${key}"]`);
+          if (!el) return;
+          if (booleanFields.includes(key)) el.checked = !!producer[key];
+          else if (el.tagName === 'SELECT') el.value = producer[key] || '';
+          else el.value = producer[key] ?? '';
+        });
+      } else {
+        title.textContent = 'Ny producent';
+        deleteBtn.classList.add('hidden');
+        form.reset();
+      }
+
+      // Filter regions based on selected land
+      const landVal = form.querySelector('select[name="land"]').value;
+      filterRegionsByLand(landVal);
+      if (index >= 0) {
+        form.querySelector('select[name="region"]').value = db.producers[index].region || '';
+      }
+
+      panel.classList.remove('hidden');
+      requestAnimationFrame(() => panel.classList.add('visible'));
+      overlay.classList.remove('hidden');
+    }
+
+    function closeEditor() {
+      const panel = document.getElementById('edit-panel');
+      const overlay = document.getElementById('edit-overlay');
+      panel.classList.remove('visible');
+      setTimeout(() => { panel.classList.add('hidden'); overlay.classList.add('hidden'); }, 300);
+    }
+
+    function saveProducer() {
+      const form = document.getElementById('producer-form');
+      const producer = {};
+
+      form.querySelectorAll('input, select, textarea').forEach(el => {
+        const name = el.name;
+        if (!name) return;
+        if (booleanFields.includes(name)) producer[name] = el.checked;
+        else producer[name] = el.value;
+      });
+
+      if (!producer.namn) { alert('Producent Namn krävs'); return; }
+
+      if (editingIndex >= 0) {
+        db.producers[editingIndex] = producer;
+      } else {
+        db.producers.push(producer);
+      }
+
+      dirty = true;
+      saveToLocalStorage();
+      closeEditor();
+      renderAll();
+    }
+
+    function deleteProducer() {
+      if (editingIndex < 0) return;
+      document.getElementById('delete-dialog').classList.remove('hidden');
+    }
+
+    function confirmDelete() {
+      db.producers.splice(editingIndex, 1);
+      dirty = true;
+      saveToLocalStorage();
+      document.getElementById('delete-dialog').classList.add('hidden');
+      closeEditor();
+      renderAll();
+    }
+
+    function cancelDelete() {
+      document.getElementById('delete-dialog').classList.add('hidden');
+    }
+
+    // ============ DROPDOWN OPTIONS ============
+    function addOption(field) {
+      const label = { land: 'land', region: 'region' };
+      const val = prompt(`Ny ${label[field] || field}:`);
+      if (!val || !val.trim()) return;
+      const trimmed = val.trim();
+      if (!db.dropdown_options[field]) db.dropdown_options[field] = [];
+      if (!db.dropdown_options[field].includes(trimmed)) {
+        db.dropdown_options[field].push(trimmed);
+        db.dropdown_options[field].sort((a, b) => a.localeCompare(b, 'sv'));
+      }
+      const select = document.querySelector(`#producer-form select[name="${field}"]`);
+      if (select) {
+        const opts = db.dropdown_options[field];
+        select.innerHTML = '<option value="">– Välj –</option>' + opts.map(o => `<option value="${o}">${o}</option>`).join('');
+        select.value = trimmed;
+      }
+      dirty = true;
+      renderFilterDropdowns();
+    }
+
+    function filterRegionsByLand(selectedLand) {
+      const regionSelect = document.querySelector('#producer-form select[name="region"]');
+      if (!regionSelect) return;
+      const currentRegion = regionSelect.value;
+      const allRegions = db.dropdown_options.region || [];
+
+      let filtered;
+      if (selectedLand) {
+        filtered = allRegions.filter(r => r.toLowerCase().includes(selectedLand.toLowerCase()));
+      } else {
+        filtered = allRegions;
+      }
+
+      regionSelect.innerHTML = '<option value="">– Välj –</option>' + filtered.map(o =>
+        `<option value="${o}" ${o === currentRegion ? 'selected' : ''}>${o}</option>`
+      ).join('');
+    }
+
+    // ============ JSON I/O ============
+    document.getElementById('load-json').addEventListener('change', e => {
+      const file = e.target.files[0];
+      if (!file) return;
+      if (!confirm(`OBS! Du är på väg att ersätta all data med filen "${file.name}".\nNuvarande data (${db.producers.length} producenter) sparas som backup.\n\nFortsätt?`)) {
+        e.target.value = '';
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = ev => {
+        try {
+          const imported = JSON.parse(ev.target.result);
+          if (!imported.producers || !Array.isArray(imported.producers)) {
+            alert('Ogiltig fil — saknar producentdata.');
+            return;
+          }
+          createAutoBackup('before_import');
+          db = imported;
+          saveToLocalStorage();
+          dirty = false;
+          renderAll();
+          showDataStatus();
+          alert('Importerat ' + db.producers.length + ' producenter från ' + file.name);
+        } catch(err) { alert('Kunde inte läsa JSON-filen: ' + err.message); }
+      };
+      reader.readAsText(file);
+      e.target.value = '';
+    });
+
+    function exportJSON() {
+      saveToLocalStorage();
+      db.meta.last_export = new Date().toISOString();
+      const json = JSON.stringify(db, null, 2);
+      const blob = new Blob([json], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      const now = new Date();
+      const ts = now.toLocaleString('sv-SE', {year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'}).replace(/[: ]/g, '-');
+      a.download = `producers-db_backup_${ts}.json`;
+      a.click();
+      URL.revokeObjectURL(url);
+      dirty = false;
+    }
+
+    // ============ BACKUP DIALOG ============
+    function showBackupDialog() {
+      const list = document.getElementById('backup-list');
+      const backups = listBackups();
+      if (backups.length === 0) {
+        list.innerHTML = '<p class="text-stone-400 text-sm italic">Inga backups sparade ännu.</p>';
+      } else {
+        list.innerHTML = backups.map(b => {
+          const label = b.date.replace(/_/g, ' ').replace(/-/g, ':').replace(/:/,' ').replace(/:/,'-').replace(/:/,'-');
+          return `<button onclick="restoreBackup('${b.key}')" class="w-full text-left px-4 py-3 bg-stone-50 hover:bg-blue-50 hover:text-blue-800 rounded-lg text-sm transition-colors flex justify-between items-center">
+            <span>${label}</span>
+            <span class="text-stone-400 text-xs">${b.count} producenter</span>
+          </button>`;
+        }).join('');
+      }
+      document.getElementById('backup-dialog').classList.remove('hidden');
+    }
+
+    function createManualBackup() {
+      createAutoBackup('manuell');
+      showBackupDialog();
+      showDataStatus();
+    }
+
+    // ============ FILTER ============
+    function clearFilters() {
+      document.getElementById('search').value = '';
+      document.getElementById('filter-land').value = '';
+      renderTable();
+    }
+
+    // ============ EVENTS ============
+    document.getElementById('search').addEventListener('input', renderTable);
+    document.getElementById('filter-land').addEventListener('change', renderTable);
+
+    window.addEventListener('beforeunload', e => {
+      if (dirty) { e.preventDefault(); e.returnValue = ''; }
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') closeEditor();
+    });
+
+    // ============ INIT ============
+    init();
+  </script>
+
+</body>
+</html>
