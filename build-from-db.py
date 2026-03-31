@@ -47,7 +47,9 @@ def load_existing_images():
         try:
             with open(fpath, "r", encoding="utf-8") as f:
                 content = f.read()
-            m = re.search(r'<img src="(https://verumvinum\.se/images/64/[^"]+)"', content)
+            m = re.search(r'<img src="(\.\./images/viner/[^"]+)"', content)
+            if not m:
+                m = re.search(r'<img src="(images/viner/[^"]+)"', content)
             if m:
                 images[slug] = m.group(1)
         except Exception:
