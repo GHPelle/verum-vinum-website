@@ -141,7 +141,7 @@ function openRLista(lang) {
 
   const months = ['Januari','Februari','Mars','April','Maj','Juni','Juli','Augusti','September','Oktober','November','December'];
   const now = new Date();
-  const monthYear = months[now.getMonth()] + ' ' + now.getFullYear();
+  const monthYear = 'Maj ' + now.getFullYear();
 
   const html = `<!DOCTYPE html>
 <html lang="sv">
