@@ -306,7 +306,6 @@
     const DB_STORAGE_KEY = 'verum_vinum_producers_db';
     const DB_BACKUP_PREFIX = 'verum_vinum_producers_backup_';
     const MAX_BACKUPS = 10;
-    const DATA_VERSION = 6;
 
     // ============ DATA MANAGEMENT ============
     function mergeDropdownOptions(target, source) {
@@ -336,36 +335,41 @@
       });
     }
 
+    function mergeNewProducers(db) {
+      const existingNames = new Set(db.producers.map(p => p.namn));
+      let added = 0;
+      INITIAL_DATA.producers.forEach(p => {
+        if (!existingNames.has(p.namn)) {
+          db.producers.push(JSON.parse(JSON.stringify(p)));
+          added++;
+        }
+      });
+      if (added > 0) console.log('Mergade ' + added + ' nya producenter från INITIAL_DATA');
+    }
+
     function init() {
       const saved = localStorage.getItem(DB_STORAGE_KEY);
-      let useLocalStorage = false;
 
       if (saved) {
         try {
           const parsed = JSON.parse(saved);
           if (parsed && parsed.producers && Array.isArray(parsed.producers) && parsed.producers.length > 0) {
-            const localVersion = parsed.meta && parsed.meta.data_version || 0;
-            if (localVersion >= DATA_VERSION) {
-              db = parsed;
-              useLocalStorage = true;
-              console.log('Laddade från localStorage: v' + localVersion + ', ' + db.producers.length + ' producenter');
-            } else {
-              console.log('Nyare INITIAL_DATA (v' + DATA_VERSION + ') ersätter localStorage (v' + localVersion + ')');
-              createAutoBackup('before_version_upgrade');
-            }
+            db = parsed;
+            console.log('Laddade från localStorage: ' + db.producers.length + ' producenter');
+          } else {
+            db = JSON.parse(JSON.stringify(INITIAL_DATA));
+            console.log('Laddade INITIAL_DATA (localStorage var tom): ' + db.producers.length + ' producenter');
           }
         } catch(e) {
           console.error('Kunde inte parsa localStorage:', e);
+          db = JSON.parse(JSON.stringify(INITIAL_DATA));
         }
-      }
-
-      if (!useLocalStorage) {
+      } else {
         db = JSON.parse(JSON.stringify(INITIAL_DATA));
-        db.meta.data_version = DATA_VERSION;
-        saveToLocalStorage();
-        console.log('Laddade INITIAL_DATA v' + DATA_VERSION + ': ' + db.producers.length + ' producenter');
+        console.log('Laddade INITIAL_DATA (ingen localStorage): ' + db.producers.length + ' producenter');
       }
 
+      mergeNewProducers(db);
       mergeDropdownOptions(db, INITIAL_DATA);
       mergeNewFields(db);
       saveToLocalStorage();
@@ -379,7 +383,6 @@
     function saveToLocalStorage() {
       db.meta.last_saved = new Date().toISOString();
       db.meta.producer_count = db.producers.length;
-      db.meta.data_version = DATA_VERSION;
       const json = JSON.stringify(db);
       try {
         const verify = JSON.parse(json);
