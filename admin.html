@@ -1702,7 +1702,8 @@
         const sortedRegions = Object.keys(regions).sort((a, b) => a.localeCompare(b, 'sv'));
 
         sortedRegions.forEach(region => {
-          sectionsHTML += `<div class="region-heading" style="padding: 16px 0 6px 0; border-bottom: 1px solid #d6d3d1;"><span style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #78716c;">${region}</span></div>`;
+          const regionBreak = (region.includes('Jura')) ? 'page-break-before: always;' : '';
+          sectionsHTML += `<div class="region-heading" style="padding: 16px 0 6px 0; border-bottom: 1px solid #d6d3d1; ${regionBreak}"><span style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; color: #78716c;">${region}</span></div>`;
 
           const producers = regions[region];
           const sortedProducers = Object.keys(producers).sort((a, b) => a.localeCompare(b, 'sv'));
@@ -1720,7 +1721,8 @@
             const allAllokerade = pData.wines.every(w => w.allokering);
             if (allAllokerade) {
               const allokText = pData.wines[0].allokeringstext || 'Endast mot Allokering Kontakta oss vid intresse!';
-              sectionsHTML += `<div class="producer-block" style="padding: 14px 0 6px 0;">${prodHeader}<br><br><span style="color: #dc2626; font-weight: 700; font-style: italic; font-size: 12px;">${allokText}</span></div>`;
+              const afterAllokBreak = (prod === 'Domaine Coffinet-Duvernay') ? 'page-break-after: always;' : '';
+              sectionsHTML += `<div class="producer-block" style="padding: 14px 0 6px 0; ${afterAllokBreak}">${prodHeader}<br><br><span style="color: #dc2626; font-weight: 700; font-style: italic; font-size: 12px;">${allokText}</span></div>`;
             } else {
               let wineRows = '';
               pData.wines.filter(w => !w.allokering).forEach(w => {
