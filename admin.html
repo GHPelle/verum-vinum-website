@@ -327,12 +327,12 @@
         <div class="grid grid-cols-2 gap-4">
           <div class="col-span-2"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Slug</label><div class="flex gap-1"><input name="slug" id="slug-input" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg bg-stone-50 text-stone-500" readonly><button type="button" id="slug-lock-btn" onclick="toggleSlugLock()" class="px-3 py-2 bg-amber-50 text-amber-700 hover:bg-amber-100 rounded-lg text-xs font-bold transition-colors border border-amber-300" title="Lås upp slug-fältet för redigering">Lås upp</button></div></div>
           <div class="col-span-2"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Namn</label><input name="namn" class="w-full px-3 py-2 border border-stone-200 rounded-lg" required></div>
-          <div class="col-span-2" data-dropdown="producent"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Producent</label><div class="flex gap-1"><select name="producent" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('producent')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button></div></div>
+          <div class="col-span-2" data-dropdown="producent"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Producent</label><div class="flex gap-1"><select name="producent" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('producent')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button><button type="button" onclick="editOptions('producent')" class="px-2 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-xs font-bold" title="Redigera lista">✎</button></div></div>
           <div><label class="flex items-center gap-2 cursor-pointer mt-4"><input type="checkbox" name="allokering" class="w-5 h-5 accent-wine-700 cursor-pointer" onchange="toggleAllokeringstext(this.checked)"><span class="text-xs uppercase tracking-wider text-stone-400 font-bold">Allokering</span></label></div>
           <div class="col-span-2"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Allokeringstext</label><input name="allokeringstext" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
-          <div data-dropdown="typ"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Typ</label><div class="flex gap-1"><select name="typ" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('typ')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button></div></div>
-          <div data-dropdown="land"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Land</label><div class="flex gap-1"><select name="land" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer" onchange="filterRegionsByLand(this.value)"></select><button type="button" onclick="addOption('land')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button></div></div>
-          <div class="col-span-2" data-dropdown="region"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Region</label><div class="flex gap-1"><select name="region" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('region')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button></div></div>
+          <div data-dropdown="typ"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Typ</label><div class="flex gap-1"><select name="typ" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('typ')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button><button type="button" onclick="editOptions('typ')" class="px-2 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-xs font-bold" title="Redigera lista">✎</button></div></div>
+          <div data-dropdown="land"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Land</label><div class="flex gap-1"><select name="land" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer" onchange="filterRegionsByLand(this.value)"></select><button type="button" onclick="addOption('land')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button><button type="button" onclick="editOptions('land')" class="px-2 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-xs font-bold" title="Redigera lista">✎</button></div></div>
+          <div class="col-span-2" data-dropdown="region"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Region</label><div class="flex gap-1"><select name="region" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('region')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button><button type="button" onclick="editOptions('region')" class="px-2 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-xs font-bold" title="Redigera lista">✎</button></div></div>
         </div>
       </fieldset>
 
@@ -340,15 +340,15 @@
       <fieldset>
         <legend class="font-serif text-lg text-wine-800 font-semibold mb-4 border-b border-wine-100 pb-2 w-full">Druvor & Detaljer</legend>
         <div class="grid grid-cols-2 gap-4">
-          <div class="col-span-2" data-dropdown="druvor"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Druvor</label><div class="flex gap-1"><select name="druvor" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('druvor')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button></div></div>
+          <div class="col-span-2" data-dropdown="druvor"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Druvor</label><div class="flex gap-1"><select name="druvor" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('druvor')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button><button type="button" onclick="editOptions('druvor')" class="px-2 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-xs font-bold" title="Redigera lista">✎</button></div></div>
           <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Alkohol</label><input name="alkohol" class="w-full px-3 py-2 border border-stone-200 rounded-lg" placeholder="14.5%"></div>
-          <div data-dropdown="volym"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Volym (ml)</label><div class="flex gap-1"><select name="volym" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('volym')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button></div></div>
-          <div data-dropdown="argang"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Årgång</label><div class="flex gap-1"><select name="argang" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('argang')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button></div></div>
+          <div data-dropdown="volym"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Volym (ml)</label><div class="flex gap-1"><select name="volym" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('volym')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button><button type="button" onclick="editOptions('volym')" class="px-2 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-xs font-bold" title="Redigera lista">✎</button></div></div>
+          <div data-dropdown="argang"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Årgång</label><div class="flex gap-1"><select name="argang" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('argang')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button><button type="button" onclick="editOptions('argang')" class="px-2 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-xs font-bold" title="Redigera lista">✎</button></div></div>
           <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Artikelnummer</label><input name="artikelnummer" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
           <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Kategori</label><input name="kategori" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
           <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">GTIN</label><input name="gtin" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
-          <div data-dropdown="antal_per_kolli"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Antal fl./kolli</label><div class="flex gap-1"><select name="antal_per_kolli" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('antal_per_kolli')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button></div></div>
-          <div data-dropdown="forslutningstyp"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Förslutningstyp</label><div class="flex gap-1"><select name="forslutningstyp" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('forslutningstyp')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button></div></div>
+          <div data-dropdown="antal_per_kolli"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Antal fl./kolli</label><div class="flex gap-1"><select name="antal_per_kolli" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('antal_per_kolli')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button><button type="button" onclick="editOptions('antal_per_kolli')" class="px-2 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-xs font-bold" title="Redigera lista">✎</button></div></div>
+          <div data-dropdown="forslutningstyp"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Förslutningstyp</label><div class="flex gap-1"><select name="forslutningstyp" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('forslutningstyp')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button><button type="button" onclick="editOptions('forslutningstyp')" class="px-2 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-xs font-bold" title="Redigera lista">✎</button></div></div>
           <div></div>
           <div><label class="flex items-center gap-2 cursor-pointer mt-2"><input type="checkbox" name="vaxad" class="w-5 h-5 accent-wine-700 cursor-pointer"><span class="text-xs uppercase tracking-wider text-stone-400 font-bold">Vaxad</span></label></div>
         </div>
@@ -363,7 +363,7 @@
           <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Pris SB</label><input name="pris_sb" type="number" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
           <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Inköpspris SB</label><input name="inkopspris_sb" type="number" step="0.01" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
           <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">SB-Artikelnr</label><input name="sb_artikelnr" class="w-full px-3 py-2 border border-stone-200 rounded-lg"></div>
-          <div data-dropdown="sb_sortiment"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">SB-Sortiment</label><div class="flex gap-1"><select name="sb_sortiment" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('sb_sortiment')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button></div></div>
+          <div data-dropdown="sb_sortiment"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">SB-Sortiment</label><div class="flex gap-1"><select name="sb_sortiment" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('sb_sortiment')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button><button type="button" onclick="editOptions('sb_sortiment')" class="px-2 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-xs font-bold" title="Redigera lista">✎</button></div></div>
         </div>
       </fieldset>
 
@@ -384,8 +384,8 @@
           <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Höjd</label><input name="hojd" class="w-full px-3 py-2 border border-stone-200 rounded-lg" placeholder="320 m ö.h."></div>
           <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Exponering</label><input name="exponering" class="w-full px-3 py-2 border border-stone-200 rounded-lg" placeholder="Syd, Sydost"></div>
           <div><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Ålder vinstockar</label><input name="alder_vinstockar" class="w-full px-3 py-2 border border-stone-200 rounded-lg" placeholder="ca 30 år"></div>
-          <div data-dropdown="odling"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Odling</label><div class="flex gap-1"><select name="odling" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('odling')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button></div></div>
-          <div data-dropdown="serveringstemperatur"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Serveringstemperatur</label><div class="flex gap-1"><select name="serveringstemperatur" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('serveringstemperatur')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button></div></div>
+          <div data-dropdown="odling"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Odling</label><div class="flex gap-1"><select name="odling" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('odling')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button><button type="button" onclick="editOptions('odling')" class="px-2 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-xs font-bold" title="Redigera lista">✎</button></div></div>
+          <div data-dropdown="serveringstemperatur"><label class="block text-xs uppercase tracking-wider text-stone-400 font-bold mb-1">Serveringstemperatur</label><div class="flex gap-1"><select name="serveringstemperatur" class="flex-1 px-3 py-2 border border-stone-200 rounded-lg cursor-pointer"></select><button type="button" onclick="addOption('serveringstemperatur')" class="px-2 py-2 bg-wine-50 text-wine-700 hover:bg-wine-100 rounded-lg text-lg font-bold" title="Lägg till ny">+</button><button type="button" onclick="editOptions('serveringstemperatur')" class="px-2 py-2 bg-blue-50 text-blue-600 hover:bg-blue-100 rounded-lg text-xs font-bold" title="Redigera lista">✎</button></div></div>
         </div>
       </fieldset>
 
@@ -883,7 +883,69 @@
         select.value = trimmed;
       }
       dirty = true;
+      saveToLocalStorage();
       renderFilterDropdowns();
+    }
+
+    function editOptions(field) {
+      const labels = { producent:'Producent', typ:'Typ', land:'Land', region:'Region', druvor:'Druvor', volym:'Volym', sb_sortiment:'SB-Sortiment', argang:'Årgång', odling:'Odling', serveringstemperatur:'Serveringstemperatur', antal_per_kolli:'Antal fl/kolli', forslutningstyp:'Förslutningstyp' };
+      const label = labels[field] || field;
+      const opts = db.dropdown_options[field] || [];
+      if (opts.length === 0) { alert('Inga val att redigera'); return; }
+
+      const overlay = document.createElement('div');
+      overlay.className = 'fixed inset-0 bg-black/40 z-[70] flex items-center justify-center';
+      overlay.onclick = function(e) { if (e.target === overlay) overlay.remove(); };
+
+      const dialog = document.createElement('div');
+      dialog.className = 'bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 p-6 max-h-[80vh] flex flex-col';
+      dialog.innerHTML = `
+        <h3 class="font-serif text-xl text-stone-900 font-semibold mb-4">Redigera ${label}-listan</h3>
+        <p class="text-stone-500 text-xs mb-4">Klicka på ett värde för att redigera. Klicka ✕ för att ta bort.</p>
+        <div id="edit-opts-list" class="space-y-2 overflow-y-auto flex-1 mb-4"></div>
+        <button onclick="this.closest('.fixed').remove()" class="px-6 py-2 bg-stone-100 text-stone-600 hover:bg-stone-200 rounded-lg text-sm font-medium transition-colors w-full">Stäng</button>
+      `;
+      overlay.appendChild(dialog);
+      document.body.appendChild(overlay);
+
+      function renderOptsList() {
+        const list = document.getElementById('edit-opts-list');
+        const currentOpts = db.dropdown_options[field] || [];
+        list.innerHTML = currentOpts.map((o, i) => `
+          <div class="flex items-center gap-2">
+            <span class="flex-1 px-3 py-2 bg-stone-50 rounded-lg text-sm text-stone-800 cursor-pointer hover:bg-blue-50 hover:text-blue-800 transition-colors" onclick="editSingleOpt('${field}', ${i})">${o}</span>
+            <button onclick="deleteSingleOpt('${field}', ${i})" class="shrink-0 px-2 py-2 text-red-400 hover:text-red-600 hover:bg-red-50 rounded-lg transition-colors text-sm font-bold" title="Ta bort">✕</button>
+          </div>
+        `).join('');
+      }
+      renderOptsList();
+
+      window.editSingleOpt = function(f, idx) {
+        const oldVal = db.dropdown_options[f][idx];
+        const newVal = prompt('Ändra värde:', oldVal);
+        if (newVal === null || !newVal.trim()) return;
+        const trimmed = newVal.trim();
+        db.wines.forEach(w => { if (w[f] === oldVal) w[f] = trimmed; });
+        db.dropdown_options[f][idx] = trimmed;
+        db.dropdown_options[f].sort((a, b) => a.localeCompare(b, 'sv'));
+        dirty = true;
+        saveToLocalStorage();
+        renderOptsList();
+        renderAll();
+      };
+
+      window.deleteSingleOpt = function(f, idx) {
+        const val = db.dropdown_options[f][idx];
+        const usedBy = db.wines.filter(w => w[f] === val);
+        if (usedBy.length > 0) {
+          if (!confirm(`"${val}" används av ${usedBy.length} vin(er). Ta bort ändå?`)) return;
+        }
+        db.dropdown_options[f].splice(idx, 1);
+        dirty = true;
+        saveToLocalStorage();
+        renderOptsList();
+        renderAll();
+      };
     }
 
     // ============ JSON I/O ============
